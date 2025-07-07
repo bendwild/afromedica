@@ -8,14 +8,12 @@
   width: 100%;
   z-index: 1000;
 
-  background-color: var(--color-light);
-  border-bottom: 1px solid var(--color-lightgray);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  background-color: var(--gray-0);
+  border-bottom: 1px solid var(--gray-3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 
-  padding: 0.75rem 0;
-  font-family: 'Clash Display', var(--font-header), sans-serif;
-
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.4rem 0; /* reduced vertical padding for a slimmer navbar */
+  font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
 }
 
 .nav-container {
@@ -29,7 +27,8 @@
 }
 
 .nav-logo img {
-  height: 44px;
+  height: 36px; /* slightly smaller logo for better vertical fit */
+  display: block;
 }
 
 .nav-menu {
@@ -37,27 +36,32 @@
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
-  gap: 2.25rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
+  align-items: center; /* vertically center the nav links */
+}
+
+.nav-menu li {
+  display: flex;
+  align-items: center; /* ensure each link is vertically centered */
 }
 
 .nav-link {
   text-decoration: none;
-  color: var(--color-darkgray);
+  color: var(--gray-9);
   font-weight: 600;
   font-size: 1.1rem;
-  transition: color 0.2s ease, background-color 0.2s ease;
-  padding: 0.3rem 0.5rem;
-  border-radius: 0.5rem;
+  line-height: 1.2; /* tighter line height for better vertical alignment */
+  transition: color 0.2s ease;
+  padding: 0.25rem 0; /* small vertical padding to improve click area but keep slim */
 }
 
 .nav-link:hover {
-  color: var(--color-dark);
-  background-color: var(--color-highlight);
+  color: var(--accent);
 }
 
-// === Adjust page padding to avoid overlap ===
+// === Page Content Adjustment ===
 main, .page {
-  padding-top: 5rem;
+  padding-top: 3.8rem; /* adjusted for smaller navbar height */
 }
