@@ -8,60 +8,104 @@
   width: 100%;
   z-index: 1000;
 
-  background-color: var(--gray-0);
+  background-color: #ffffff;
   border-bottom: 1px solid var(--gray-3);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 
-  padding: 0.4rem 0; /* reduced vertical padding for a slimmer navbar */
+  padding: 0.6rem 0; // increased for taller navbar
   font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
+  box-sizing: border-box;
 }
 
+// Navbar layout
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
   padding: 0 1.5rem;
+  margin: 0 auto;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  overflow: hidden; // prevents overflow on small screens
+}
+
+// Logo
+.nav-logo {
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo img {
-  height: 36px; /* slightly smaller logo for better vertical fit */
+  height: 40px; // larger logo for better visibility
   display: block;
 }
 
+// Nav Menu
 .nav-menu {
-  list-style: none;
   display: flex;
-  flex-grow: 1;
+  align-items: center;
   justify-content: flex-end;
-  gap: 2rem;
+  flex-grow: 1;
+  list-style: none;
   margin: 0;
   padding: 0;
-  align-items: center; /* vertically center the nav links */
+  gap: 1.5rem; // slight gap reduction to avoid overflow
+  flex-wrap: wrap; // allows wrapping if space is tight
 }
 
 .nav-menu li {
   display: flex;
-  align-items: center; /* ensure each link is vertically centered */
+  align-items: center;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--gray-9);
   font-weight: 600;
-  font-size: 1.1rem;
-  line-height: 1.2; /* tighter line height for better vertical alignment */
+  font-size: 1rem;
+  line-height: 1.2;
+  padding: 0.4rem 0;
   transition: color 0.2s ease;
-  padding: 0.25rem 0; /* small vertical padding to improve click area but keep slim */
 }
 
 .nav-link:hover {
   color: var(--accent);
 }
 
-// === Page Content Adjustment ===
+// === Remove Excess White Space Below Navbar ===
 main, .page {
-  padding-top: 3.8rem; /* adjusted for smaller navbar height */
+  padding-top: 2.8rem !important; // tighten top padding
 }
+
+.page-header {
+  margin-top: 0 !important;
+  padding-top: 0.5rem !important;
+}
+
+.page-header h1,
+.page h1:first-child,
+.center > article h1:first-child {
+  margin-top: 0.5rem !important;
+  padding-top: 0 !important;
+}
+
+// Also for markdown content
+.center > article > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+// Align sidebar top spacing with content
+.sidebar.right {
+  padding-top: 4.8rem !important;
+  margin-top: 0 !important;
+}
+.sidebar.left {
+  padding-top: 2.8rem !important;
+  margin-top: 0 !important;
+}
+
+
+
