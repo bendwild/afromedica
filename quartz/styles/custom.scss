@@ -97,3 +97,11 @@ main, .page {
   padding-top: 0 !important;
 }
 
+// Align sidebar top spacing with content
+.sidebar.left,
+.sidebar.right {
+  padding-top: 2.8rem !important;
+  margin-top: 0 !important;
+}
+
+
