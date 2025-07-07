@@ -74,13 +74,26 @@
   color: var(--accent);
 }
 
-// === Page Content Adjustment ===
+// === Remove Excess White Space Below Navbar ===
 main, .page {
-  padding-top: 0.5rem; // adjusted for taller navbar height
+  padding-top: 2.8rem !important; // tighten top padding
 }
 
-// Reduce margin above first page title
-.page-header h1,
-.page h1:first-child {
-  margin-top: 0.5rem;
+.page-header {
+  margin-top: 0 !important;
+  padding-top: 0.5rem !important;
 }
+
+.page-header h1,
+.page h1:first-child,
+.center > article h1:first-child {
+  margin-top: 0.5rem !important;
+  padding-top: 0 !important;
+}
+
+// Also for markdown content
+.center > article > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
