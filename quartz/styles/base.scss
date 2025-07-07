@@ -162,10 +162,11 @@ a {
 }
 
 .page {
-  max-width: 100%;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
+  max-width: calc(#{map.get($breakpoints, desktop)} + 300px);
+  margin: 0 auto;
+  & article {
+    & > h1 {
+      font-size: 2rem;
     }
 
     & li:has(> input[type="checkbox"]) {
