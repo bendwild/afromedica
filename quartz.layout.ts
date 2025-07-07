@@ -9,8 +9,10 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      LinkedIn: "https://www.linkedin.com/company/afromedica/?viewAsMember=true",
+      Facebook: "https://www.facebook.com/AfroMedica",
+      Instagram: "https://www.instagram.com/_afromedica_/?hl=nl",
+      "Discord Community": "https://discord.gg/qUcCAHassB",
     },
   }),
 }
