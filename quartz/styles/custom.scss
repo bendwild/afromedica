@@ -8,11 +8,11 @@
   width: 100%;
   z-index: 1000;
 
-  background-color: var(--gray-0);
+  background-color: #ffffff; // or #fef6f9
   border-bottom: 1px solid var(--gray-3);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 
-  padding: 0.3rem 0; // slightly smaller vertical padding
+  padding: 0.3rem 0;
   font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
 }
 
