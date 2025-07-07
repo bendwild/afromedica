@@ -1,5 +1,6 @@
 ---
 title: About us
+publish: true
 ---
 # Origin
 

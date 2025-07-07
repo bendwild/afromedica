@@ -1,3 +1,6 @@
+---
+publish: true
+---
 So you're interested in joining the board of AfroMedica? Great!
 
 The next step is figuring out where you fit in our team. We distributed our objectives into different taskforces. Each taskforce has a specific set of tasks and responsibilities. Feel free to take your time to learn more about the different taskforces. 

@@ -1,5 +1,6 @@
 ---
 title: Welcome!
+publish: true
 ---
 
 <div class="feature-grid">

@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Why become a member?
   
 ## 1. Be the first one to know about our events
