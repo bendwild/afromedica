@@ -1,3 +1,63 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// === Custom Navbar Styles ===
+.main-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background-color: var(--color-light);
+  border-bottom: 1px solid var(--color-lightgray);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+
+  padding: 0.75rem 0;
+  font-family: 'Clash Display', var(--font-header), sans-serif;
+
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.nav-logo img {
+  height: 44px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  gap: 2.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-darkgray);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.nav-link:hover {
+  color: var(--color-dark);
+  background-color: var(--color-highlight);
+}
+
+// === Adjust page padding to avoid overlap ===
+main, .page {
+  padding-top: 5rem;
+}

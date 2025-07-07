@@ -1,20 +1,23 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import CustomNavbar from "./quartz/components/CustomNavbar" // 👈 Import your navbar
 
-// components shared across all pages
+// Components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
+  header: [CustomNavbar()], // 👈 Add navbar here
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      LinkedIn: "https://www.linkedin.com/company/afromedica/?viewAsMember=true",
+      Facebook: "https://www.facebook.com/AfroMedica",
+      Instagram: "https://www.instagram.com/_afromedica_/?hl=nl",
+      "Discord Community": "https://discord.gg/qUcCAHassB",
     },
   }),
 }
 
-// components for pages that display a single page (e.g. a single note)
+// Components for individual content pages (notes, pages)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
@@ -47,9 +50,13 @@ export const defaultContentPageLayout: PageLayout = {
   ],
 }
 
-// components for pages that display lists of pages  (e.g. tags or folders)
+// Components for list pages (tags, folders, etc.)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [
+    Component.Breadcrumbs(),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
+  ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),

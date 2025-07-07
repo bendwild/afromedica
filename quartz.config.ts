@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -20,38 +20,38 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-      fontOrigin: "googleFonts",
-      cdnCaching: true,
-      typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
-      },
-      colors: {
-        lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
-        },
-        darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
-        },
-      },
+  fontOrigin: "googleFonts",
+  cdnCaching: true,
+  typography: {
+    header: "Clash Display",
+    body: "Inter",
+    code: "JetBrains Mono",
+  },
+  colors: {
+    lightMode: {
+      light: "#fffdfc",             // off-white
+      lightgray: "#f6f2ee",         // pale beige
+      gray: "#bfb8b0",              // muted taupe gray
+      darkgray: "#776b5d",          // earthy taupe
+      dark: "#3a2c2d",              // deep brown-cherry
+      secondary: "#9bc5aa",         // pastel sage green
+      tertiary: "#f4c2a1",          // warm peachy coral
+      highlight: "rgba(250, 190, 140, 0.2)", // light warm orange glow
+      textHighlight: "#fef08a88",   // soft banana yellow translucent
     },
+    darkMode: {
+      light: "#2e2a28",             // charcoal brown
+      lightgray: "#3c3937",         // dark muted gray-brown
+      gray: "#8f867f",              // dusty rose-gray
+      darkgray: "#e0dad4",          // light bone
+      dark: "#fefdfc",              // near-white
+      secondary: "#adcbb7",         // soft pastel green
+      tertiary: "#f2b99d",          // mellow coral
+      highlight: "rgba(250, 190, 140, 0.2)", // warm orange glow
+      textHighlight: "#fde68a88",   // gentle amber
+    },
+  },
+}
   },
   plugins: {
     transformers: [
