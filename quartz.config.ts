@@ -29,26 +29,26 @@ const config: QuartzConfig = {
   },
   colors: {
     lightMode: {
-      light: "#fefcfb",            // near white
-      lightgray: "#f3f0ee",        // very light beige/gray
-      gray: "#b8b5b0",             // warm gray
-      darkgray: "#6d6a75",         // muted gray-lavender
-      dark: "#3c3744",             // deep muted violet-brown
-      secondary: "#88bdbc",        // soft pastel teal (logo-based)
-      tertiary: "#e3c6b8",         // pale apricot/pink
-      highlight: "rgba(136, 189, 188, 0.2)",  // light pastel teal
-      textHighlight: "#fff3a088",  // warm yellow-orange translucent
+      light: "#fffdfc",             // off-white
+      lightgray: "#f6f2ee",         // pale beige
+      gray: "#bfb8b0",              // muted taupe gray
+      darkgray: "#776b5d",          // earthy taupe
+      dark: "#3a2c2d",              // deep brown-cherry
+      secondary: "#9bc5aa",         // pastel sage green
+      tertiary: "#f4c2a1",          // warm peachy coral
+      highlight: "rgba(250, 190, 140, 0.2)", // light warm orange glow
+      textHighlight: "#fef08a88",   // soft banana yellow translucent
     },
     darkMode: {
-      light: "#2c2b30",            // dark charcoal
-      lightgray: "#403f44",        // softer gray
-      gray: "#8e8c94",             // dusty lavender gray
-      darkgray: "#d5d1d8",         // soft off-white
-      dark: "#f3f2f4",             // near-white
-      secondary: "#aedbd8",        // lighter pastel teal
-      tertiary: "#eacac0",         // soft pale coral
-      highlight: "rgba(136, 189, 188, 0.2)",  // light pastel teal
-      textHighlight: "#ffe49988",  // soft amber yellow
+      light: "#2e2a28",             // charcoal brown
+      lightgray: "#3c3937",         // dark muted gray-brown
+      gray: "#8f867f",              // dusty rose-gray
+      darkgray: "#e0dad4",          // light bone
+      dark: "#fefdfc",              // near-white
+      secondary: "#adcbb7",         // soft pastel green
+      tertiary: "#f2b99d",          // mellow coral
+      highlight: "rgba(250, 190, 140, 0.2)", // warm orange glow
+      textHighlight: "#fde68a88",   // gentle amber
     },
   },
 }
