@@ -8,36 +8,38 @@
   width: 100%;
   z-index: 1000;
 
-  background-color: #ffffff; // or #fef6f9
+  background-color: #ffffff; // pastel or white background
   border-bottom: 1px solid var(--gray-3);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 
-  padding: 0.3rem 0;
+  padding: 0.3rem 0; // slim height
   font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
 }
 
+// Navbar layout
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  gap: 1.5rem; // ensures space between logo and menu
+  max-width: 100%; // Full-width container
+  padding: 0 2rem;
+  margin: 0;
+  gap: 1.5rem; // spacing between logo and menu
 }
 
+// Logo
 .nav-logo {
   display: flex;
   align-items: center;
 }
 
 .nav-logo img {
-  height: 32px; // reduced for better alignment
+  height: 32px;
   display: block;
 }
 
-// Nav Menu Layout
+// Nav Menu
 .nav-menu {
   display: flex;
   align-items: center;
@@ -58,7 +60,7 @@
   text-decoration: none;
   color: var(--gray-9);
   font-weight: 600;
-  font-size: 1rem; // slightly smaller for cleaner look
+  font-size: 1rem;
   line-height: 1.2;
   padding: 0.3rem 0;
   transition: color 0.2s ease;
@@ -70,5 +72,5 @@
 
 // === Page Content Adjustment ===
 main, .page {
-  padding-top: 3.4rem; // matches adjusted navbar height
+  padding-top: 3.4rem; // adjusted to match navbar height
 }
