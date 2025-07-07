@@ -78,3 +78,9 @@
 main, .page {
   padding-top: 0.5rem; // adjusted for taller navbar height
 }
+
+// Reduce margin above first page title
+.page-header h1,
+.page h1:first-child {
+  margin-top: 0.5rem;
+}
