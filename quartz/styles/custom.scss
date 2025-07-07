@@ -1,3 +1,45 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+/* === Custom Navbar Styles === */
+.main-navigation {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Schibsted Grotesk', sans-serif;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.nav-logo img {
+  height: 40px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #ff3c38;
+}
