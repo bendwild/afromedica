@@ -42,3 +42,4 @@ Become part of the movement.
 </div>
 
 <a class="button" href="/join">Join Us →</a>
+
