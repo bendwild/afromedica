@@ -12,7 +12,7 @@
   border-bottom: 1px solid var(--gray-3);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 
-  padding: 0.4rem 0; /* reduced vertical padding for a slimmer navbar */
+  padding: 0.3rem 0; // slightly smaller vertical padding
   font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
 }
 
@@ -24,37 +24,44 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  gap: 1.5rem; // ensures space between logo and menu
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo img {
-  height: 36px; /* slightly smaller logo for better vertical fit */
+  height: 32px; // reduced for better alignment
   display: block;
 }
 
+// Nav Menu Layout
 .nav-menu {
-  list-style: none;
   display: flex;
-  flex-grow: 1;
+  align-items: center;
   justify-content: flex-end;
-  gap: 2rem;
+  flex-grow: 1;
+  list-style: none;
   margin: 0;
   padding: 0;
-  align-items: center; /* vertically center the nav links */
+  gap: 2rem;
 }
 
 .nav-menu li {
   display: flex;
-  align-items: center; /* ensure each link is vertically centered */
+  align-items: center;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--gray-9);
   font-weight: 600;
-  font-size: 1.1rem;
-  line-height: 1.2; /* tighter line height for better vertical alignment */
+  font-size: 1rem; // slightly smaller for cleaner look
+  line-height: 1.2;
+  padding: 0.3rem 0;
   transition: color 0.2s ease;
-  padding: 0.25rem 0; /* small vertical padding to improve click area but keep slim */
 }
 
 .nav-link:hover {
@@ -63,5 +70,5 @@
 
 // === Page Content Adjustment ===
 main, .page {
-  padding-top: 3.8rem; /* adjusted for smaller navbar height */
+  padding-top: 3.4rem; // matches adjusted navbar height
 }
