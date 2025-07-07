@@ -8,12 +8,14 @@
   width: 100%;
   z-index: 1000;
 
-  background-color: var(--gray-0);
-  border-bottom: 1px solid var(--gray-3);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  background-color: var(--color-light);
+  border-bottom: 1px solid var(--color-lightgray);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 
-  padding: 0.75rem 0;  // remove side padding so logo aligns with content grid
-  font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
+  padding: 0.75rem 0;
+  font-family: 'Clash Display', var(--font-header), sans-serif;
+
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-container {
@@ -23,11 +25,11 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;  // apply inner padding here to match rest of layout
+  padding: 0 1.5rem;
 }
 
 .nav-logo img {
-  height: 42px;
+  height: 44px;
 }
 
 .nav-menu {
@@ -35,24 +37,27 @@
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
-  gap: 2rem;              // more space between links
+  gap: 2.25rem;
   margin: 0;
   padding: 0;
 }
 
 .nav-link {
   text-decoration: none;
-  color: var(--gray-9);
+  color: var(--color-darkgray);
   font-weight: 600;
-  font-size: 1.1rem;       // larger text
-  transition: color 0.2s ease;
+  font-size: 1.1rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .nav-link:hover {
-  color: var(--accent);
+  color: var(--color-dark);
+  background-color: var(--color-highlight);
 }
 
-// === Page Content Adjustment ===
+// === Adjust page padding to avoid overlap ===
 main, .page {
-  padding-top: 4.5rem;
+  padding-top: 5rem;
 }
