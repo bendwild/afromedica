@@ -15,10 +15,10 @@ const CustomNavbar: QuartzComponent = () => {
           </a>
         </div>
         <ul className="nav-menu">
-          <li><a href={`${BASE_PATH}/about`} className="nav-link">About Us</a></li>
-          <li><a href={`${BASE_PATH}/afrocademy`} className="nav-link">Afrocademy</a></li>
+          <li><a href={`${BASE_PATH}/About/about`} className="nav-link">About Us</a></li>
+          <li><a href={`${BASE_PATH}/Afromedica academy/afrocademy`} className="nav-link">Afrocademy</a></li>
           <li><a href={`${BASE_PATH}/projects`} className="nav-link">Projects</a></li>
-          <li><a href={`${BASE_PATH}/team`} className="nav-link">Team</a></li>
+          <li><a href={`${BASE_PATH}/About/team`} className="nav-link">Team</a></li>
           <li><a href={`${BASE_PATH}/contact`} className="nav-link">Contact</a></li>
         </ul>
       </div>
