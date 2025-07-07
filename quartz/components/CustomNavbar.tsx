@@ -7,7 +7,7 @@ const CustomNavbar: QuartzComponent = () => {
     <nav className="main-navigation">
       <div className="nav-container">
         <div className="nav-logo">
-          <a href={`${BASE_PATH}/index`}>
+          <a href={${BASE_PATH}/index}>
             <img
               src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/afromedica%20(6).png"
               alt="AfroMedica Logo"
@@ -15,18 +15,11 @@ const CustomNavbar: QuartzComponent = () => {
           </a>
         </div>
         <ul className="nav-menu">
-          <li><a href={`${BASE_PATH}/about`} className="nav-link">About Us</a></li>
-
-          <li className="dropdown">
-            <a href="#" className="nav-link">What We Do ▾</a>
-            <ul className="dropdown-content">
-              <li><a href={`${BASE_PATH}/afrocademy`} className="nav-link">Afrocademy</a></li>
-              <li><a href={`${BASE_PATH}/projects`} className="nav-link">Projects</a></li>
-            </ul>
-          </li>
-
-          <li><a href={`${BASE_PATH}/team`} className="nav-link">Team</a></li>
-          <li><a href={`${BASE_PATH}/contact`} className="nav-link">Contact</a></li>
+          <li><a href={${BASE_PATH}/about} className="nav-link">About Us</a></li>
+          <li><a href={${BASE_PATH}/afrocademy} className="nav-link">Afrocademy</a></li>
+          <li><a href={${BASE_PATH}/projects} className="nav-link">Projects</a></li>
+          <li><a href={${BASE_PATH}/team} className="nav-link">Team</a></li>
+          <li><a href={${BASE_PATH}/contact} className="nav-link">Contact</a></li>
         </ul>
       </div>
     </nav>
