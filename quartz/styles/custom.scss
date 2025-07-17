@@ -17,36 +17,86 @@
   background-color: var(--lightgray);
   border-bottom: 1px solid var(--gray);
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
-  padding: 0.9rem 0;
+  padding: 0.9rem 1.5rem;
   font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
   transition: background-color 0.3s ease;
 }
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-logo img {
+  height: 44px;
+  filter: brightness(1);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  display: inline-block;
+}
+
 .nav-link {
   color: var(--dark);
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
+  padding: 0.5rem 0;
 }
+
 .nav-link:hover {
   color: var(--accent);
-}
-.nav-logo img {
-  height: 44px;
-  filter: brightness(1);
 }
 
 @media (prefers-color-scheme: dark) {
   .main-navigation {
     background-color: var(--darkgray);
   }
+
   .nav-link {
     color: var(--light);
   }
+
   .nav-link:hover {
     color: var(--accent);
   }
+
   .nav-logo img {
     filter: brightness(1.2);
+  }
+}
+
+// === Responsive Navbar ===
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    display: block;
   }
 }
 
@@ -59,16 +109,21 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
   transition: transform 0.2s, background-color 0.3s, color 0.3s;
 }
+
 .card:hover {
   transform: translateY(-5px);
   background-color: var(--secondary);
   border-color: var(--accent);
   color: var(--light);
 }
-.card h3, .card p {
+
+.card h3,
+.card p {
   transition: color 0.3s;
 }
-.card:hover h3, .card:hover p {
+
+.card:hover h3,
+.card:hover p {
   color: var(--light);
 }
 
@@ -82,6 +137,7 @@
   text-decoration: none;
   transition: background-color 0.2s, color 0.2s;
 }
+
 .button:hover {
   background-color: var(--darkgray);
   color: var(--lightgray);
@@ -95,15 +151,18 @@
   padding: 1rem;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
+
 .recent-notes h3,
 .recent-notes p,
 .recent-notes a {
   color: var(--dark);
   transition: color 0.3s;
 }
+
 .recent-notes:hover {
   background-color: var(--secondary);
 }
+
 .recent-notes:hover h3,
 .recent-notes:hover p,
 .recent-notes:hover a {
@@ -118,22 +177,27 @@ footer {
   padding: 2rem 1rem;
   text-align: center;
 }
+
 footer a {
   color: var(--dark);
   text-decoration: underline;
   transition: color 0.2s;
 }
+
 footer a:hover {
   color: var(--accent);
 }
+
 @media (prefers-color-scheme: dark) {
   footer {
     background-color: var(--darkgray);
     color: var(--gray);
   }
+
   footer a {
     color: var(--light);
   }
+
   footer a:hover {
     color: var(--accent);
   }
@@ -146,15 +210,18 @@ footer a:hover {
   border-radius: 1rem;
   padding: 1rem;
 }
+
 .toc ul {
   list-style: none;
   padding-left: 0;
 }
+
 .toc a {
   color: var(--dark);
   text-decoration: none;
   transition: color 0.3s;
 }
+
 .toc a:hover {
   color: var(--accent);
 }
@@ -165,18 +232,22 @@ footer a:hover {
   border: 1px solid var(--gray);
   border-radius: 1rem;
 }
+
 .graph-controls {
   background-color: var(--lightgray);
   border-bottom: 1px solid var(--gray);
 }
+
 .graph-node {
   stroke: var(--accent);
   fill: var(--tertiary);
   transition: fill 0.3s;
 }
+
 .graph-node:hover {
   fill: var(--accent);
 }
+
 .graph-link {
   stroke: var(--gray);
 }
