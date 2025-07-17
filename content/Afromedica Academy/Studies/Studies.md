@@ -1,4 +1,5 @@
 ---
 publish: true
+created: 18-07-2025
 ---
 We believe that research is a key component to making change, which is why we are dedicated to conducting and aiding in studies that will make an impact. By following our studies, you can become part of a growing community that is committed to creating a better world. With your help, we can gain more followers and make a real difference.

@@ -1,5 +1,6 @@
 ---
 publish: true
+created: 18-07-2025
 ---
 <Carousel>
 <img src="image1.jpg" alt="First image">
