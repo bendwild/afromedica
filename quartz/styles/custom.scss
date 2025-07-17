@@ -2,14 +2,14 @@
 
 // === Color Token Overrides ===
 :root {
-  --light: #fdfaf6;
-  --lightgray: #f6f2ec;
-  --gray: #b3a89c;
-  --darkgray: #3e3a35;
-  --dark: #1e1c1a;
-  --secondary: #d6a57c;
-  --tertiary: #e4cfc3;
-  --accent: #c96f3d;
+  --light: #dbcdc6; /* Timberwolf */
+  --lightgray: #ead7d1; /* Champagne pink */
+  --gray: #dd99bb; /* Amaranth pink */
+  --darkgray: #7b506f; /* Chinese violet */
+  --dark: #1f1a38; /* Dark purple */
+  --secondary: #dd99bb;
+  --tertiary: #ead7d1;
+  --accent: #7b506f;
 }
 
 // === Navbar ===
@@ -74,7 +74,7 @@
 
 // === Buttons ===
 .button {
-  background-color: var(--secondary);
+  background-color: var(--accent);
   color: var(--light);
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -83,8 +83,8 @@
   transition: background-color 0.2s, color 0.2s;
 }
 .button:hover {
-  background-color: var(--accent);
-  color: var(--light);
+  background-color: var(--darkgray);
+  color: var(--lightgray);
 }
 
 // === Recent Notes ===
