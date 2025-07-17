@@ -23,32 +23,32 @@ const config: QuartzConfig = {
     fontOrigin: "googleFonts",
     cdnCaching: true,
     typography: {
-    header: "Clash Display",
+    header: "Playfair Display",
     body: "Inter",
     code: "JetBrains Mono",
     },
     colors: {
     lightMode: {
-      light: "#FFF8EA",     // Background
-      lightgray: "#9E7676", // UI elements
-      gray: "#815B5B",      // Subtle elements
-      darkgray: "#594545",  // Text and headers
-      dark: "#594545",      // Strong accents
-      secondary: "#815B5B", // Cards/hover bg
-      tertiary: "#9E7676",  // Cards/hover border
-      highlight: "rgba(129, 91, 91, 0.1)", // Light hover effect
-      textHighlight: "#FFF8EA88", // Faint selection
+      light: "#f2e9e4",     // Isabelline – background
+      lightgray: "#c9ada7", // Pale Dogwood – cards/buttons
+      gray: "#9a8c98",      // Rose Quartz – dividers/borders
+      darkgray: "#4a4e69",  // Ultra Violet – subheadings
+      dark: "#22223b",      // Space Cadet – headings
+      secondary: "#423F3B", // Black Olive – button hover
+      tertiary: "#D0D1CE",  // Timberwolf – soft hover border
+      highlight: "rgba(154, 140, 152, 0.1)", // light glow
+      textHighlight: "#22223b55", // subtle mark
     },
     darkMode: {
-      light: "#594545",     // Background
-      lightgray: "#815B5B", // UI elements
-      gray: "#9E7676",      // Mid accents
-      darkgray: "#FFF8EA",  // Text
-      dark: "#FFF8EA",      // Strong text
-      secondary: "#9E7676", // Cards
-      tertiary: "#815B5B",  // Cards/hover
-      highlight: "rgba(158, 118, 118, 0.1)", // Glow
-      textHighlight: "#FFF8EA44", // Soft highlight
+      light: "#22223b",     // Space Cadet – background
+      lightgray: "#4a4e69", // Ultra Violet – card/button
+      gray: "#9a8c98",      // Rose Quartz – dividers
+      darkgray: "#f2e9e4",  // Isabelline – text
+      dark: "#f2e9e4",      // Isabelline – headers
+      secondary: "#c9ada7", // Pale Dogwood – accents
+      tertiary: "#D0D1CE",  // Timberwolf – hover edges
+      highlight: "rgba(242, 233, 228, 0.06)", // glow
+      textHighlight: "#f2e9e455", // soft mark
         },
       },
     }
