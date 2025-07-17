@@ -42,7 +42,7 @@ export default {
       title: "Graph View",
     },
     recentNotes: {
-      title: "WHat's new?",
+      title: "What's new?",
       seeRemainingMore: ({ remaining }) => `See ${remaining} more →`,
     },
     transcludes: {
