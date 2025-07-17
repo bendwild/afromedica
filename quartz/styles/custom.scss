@@ -2,27 +2,27 @@
 
 // === Color Token Overrides ===
 :root {
-  --light: #dbcdc6; /* Timberwolf */
-  --lightgray: #ead7d1; /* Champagne pink */
-  --gray: #dd99bb; /* Amaranth pink */
-  --darkgray: #7b506f; /* Chinese violet */
-  --dark: #1f1a38; /* Dark purple */
-  --secondary: #dd99bb;
-  --tertiary: #ead7d1;
-  --accent: #7b506f;
+  --light: #FFF8EA;
+  --lightgray: #9E7676;
+  --gray: #815B5B;
+  --darkgray: #594545;
+  --dark: #594545;
+  --secondary: #815B5B;
+  --tertiary: #9E7676;
+  --accent: #594545;
 }
 
-// === Navbar ===
+// === Fixed Edge-to-Edge Navbar ===
 .main-navigation {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--lightgray);
+  background-color: var(--light);
   border-bottom: 1px solid var(--gray);
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
   padding: 0.9rem 0;
-  font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
+  font-family: 'Clash Display', var(--font-header), sans-serif;
   transition: background-color 0.3s ease;
   z-index: 1000;
 }
@@ -63,12 +63,12 @@
 }
 
 .nav-link:hover {
-  color: var(--accent);
+  color: var(--secondary);
 }
 
 @media (prefers-color-scheme: dark) {
   .main-navigation {
-    background-color: var(--darkgray);
+    background-color: var(--lightgray);
   }
 
   .nav-link {
@@ -76,7 +76,7 @@
   }
 
   .nav-link:hover {
-    color: var(--accent);
+    color: var(--tertiary);
   }
 
   .nav-logo img {
@@ -84,7 +84,6 @@
   }
 }
 
-// === Responsive Navbar ===
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -108,9 +107,11 @@
   }
 }
 
-// === Compensate for fixed navbar height ===
 body {
-  padding-top: 70px; // Adjust if your navbar height changes
+  padding-top: 70px;
+  background-color: var(--light);
+  color: var(--dark);
+  font-family: 'Inter', sans-serif;
 }
 
 // === Cards ===
@@ -126,7 +127,7 @@ body {
 .card:hover {
   transform: translateY(-5px);
   background-color: var(--secondary);
-  border-color: var(--accent);
+  border-color: var(--tertiary);
   color: var(--light);
 }
 
@@ -152,7 +153,7 @@ body {
 }
 
 .button:hover {
-  background-color: var(--darkgray);
+  background-color: var(--gray);
   color: var(--lightgray);
 }
 
@@ -184,7 +185,7 @@ body {
 
 // === Footer ===
 footer {
-  background-color: var(--lightgray);
+  background-color: var(--light);
   color: var(--darkgray);
   border-top: 1px solid var(--gray);
   padding: 2rem 1rem;
@@ -198,12 +199,12 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--accent);
+  color: var(--secondary);
 }
 
 @media (prefers-color-scheme: dark) {
   footer {
-    background-color: var(--darkgray);
+    background-color: var(--lightgray);
     color: var(--gray);
   }
 
@@ -212,7 +213,7 @@ footer a:hover {
   }
 
   footer a:hover {
-    color: var(--accent);
+    color: var(--tertiary);
   }
 }
 
@@ -236,7 +237,7 @@ footer a:hover {
 }
 
 .toc a:hover {
-  color: var(--accent);
+  color: var(--secondary);
 }
 
 // === Graph View ===
