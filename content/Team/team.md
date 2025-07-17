@@ -11,7 +11,7 @@ AfroMedica is made up of a group of dedicated students who have a passion for ma
 <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
 
   <div style="text-align: center;">
-    <img src="content/Extra/Images/FotoBenjamin (1).jpg" alt="Member 1" style="width:150px; border-radius: 50%;">
+    <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin (1).jpg" alt="Member 1" style="width:150px; border-radius: 50%;">
     <p> [[Benjamin De Wilde]] </p>
     <p>Role or short bio</p>
   </div>
