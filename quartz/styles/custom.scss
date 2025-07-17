@@ -2,19 +2,19 @@
 
 // === Color Tokens ===
 :root {
-  --light: #f8f9fa;
-  --lightgray: #e9ecef;
-  --gray: #adb5bd;
-  --darkgray: #495057;
-  --dark: #212529;
-  --secondary: #A187B8;
-  --tertiary: #dee2e6;
-  --accent: #A187B8;
+  --light: #f8f9fa;          /* seasalt */
+  --lightgray: #e9ecef;      /* anti-flash-white */
+  --gray: #adb5bd;           /* french-gray */
+  --darkgray: #495057;       /* slate-gray */
+  --dark: #212529;           /* eerie-black */
+  --secondary: #A187B8;      /* african-violet */
+  --tertiary: #dee2e6;       /* platinum */
+  --accent: #A187B8;         /* african-violet */
   --highlight: rgba(161, 135, 184, 0.08);
   --textHighlight: #A187B855;
 }
 
-// === Fixed, Full-Width Navbar ===
+// === Navbar ===
 .main-navigation {
   position: fixed;
   top: 0;
@@ -29,13 +29,13 @@
 }
 
 .nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
 .nav-logo img {
@@ -87,12 +87,14 @@
   }
 }
 
+// === Body & Typography ===
 body {
   padding-top: 80px;
   background-color: var(--light);
   color: var(--dark);
   font-family: 'Inter', sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
 }
 
 // === Cards ===
@@ -131,6 +133,9 @@ body {
   font-weight: 600;
   text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
 }
 
 .button:hover {
@@ -171,6 +176,7 @@ footer {
   border-top: 1px solid var(--gray);
   padding: 2rem 1rem;
   text-align: center;
+  font-size: 0.9rem;
 }
 
 footer a {
@@ -235,13 +241,13 @@ footer a:hover {
 // === Dark Mode ===
 @media (prefers-color-scheme: dark) {
   :root {
-    --light: #212529;      /* Eerie Black */
-    --lightgray: #343a40;  /* Onyx */
-    --gray: #6c757d;       /* Slate Gray */
-    --darkgray: #dee2e6;   /* Platinum */
-    --dark: #f8f9fa;       /* Seasalt */
-    --secondary: #A187B8;  /* African Violet */
-    --tertiary: #adb5bd;   /* French gray */
+    --light: #212529;      /* eerie-black */
+    --lightgray: #343a40;  /* onyx */
+    --gray: #6c757d;       /* slate-gray */
+    --darkgray: #dee2e6;   /* platinum */
+    --dark: #f8f9fa;       /* seasalt */
+    --secondary: #A187B8;  /* african-violet */
+    --tertiary: #adb5bd;   /* french-gray-2 */
     --accent: #A187B8;
     --highlight: rgba(161, 135, 184, 0.06);
     --textHighlight: #A187B855;
