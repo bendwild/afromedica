@@ -297,3 +297,28 @@ footer a:hover {
     color: var(--secondary);
   }
 }
+// === Layout Fixes ===
+
+.page-columns {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+  min-height: 60vh; // Adjust as needed for vertical stretch
+}
+
+.page-columns > .left,
+.page-columns > .center,
+.page-columns > .right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+// Allow child components to expand as needed
+.card,
+.recent-notes,
+.graph-container {
+  flex-grow: 1;
+}
