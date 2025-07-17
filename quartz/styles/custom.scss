@@ -8,17 +8,16 @@
   width: 100%;
   z-index: 1000;
 
-  background-color: #e6e1d8; /* slightly darker pastel white */
-  border-bottom: 1px solid #c1bba9; /* darker muted clay border */
-  box-shadow: 0 1px 8px rgba(150, 135, 110, 0.15); /* warmer, stronger shadow */
-
-  padding: 0.9rem 0; // increased height for better logo spacing
+  background-color: var(--lightgray); // darker than page background
+  border-bottom: 1px solid var(--gray);
+  box-shadow: 0 1px 8px rgba(150, 135, 110, 0.15);
+  padding: 0.9rem 0;
   font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
   box-sizing: border-box;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   @media (max-width: 768px) {
-    padding: 1rem 0.8rem; // extra horizontal space on mobile
+    padding: 1rem 0.8rem;
   }
 }
 
@@ -44,14 +43,12 @@
   display: flex;
   align-items: center;
 }
-
 .nav-logo img {
   height: 44px;
-  filter: none;      // remove all filters causing artifacts
-  opacity: 0.9;      // subtle transparency for softness
+  filter: none;
+  opacity: 0.9;
   display: block;
 }
-
 
 // === Nav Menu ===
 .nav-menu {
@@ -63,7 +60,7 @@
   margin: 0;
   padding: 0;
   gap: 1.5rem;
-  flex-wrap: wrap; // allow wrapping if needed
+  flex-wrap: wrap;
 
   @media (max-width: 768px) {
     gap: 1rem;
@@ -78,21 +75,21 @@
 
 .nav-link {
   text-decoration: none;
-  color: var(--dark);          // dark text for nav links
+  color: var(--dark);
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.2;
   padding: 0.4rem 0;
-  transition: color 0.25s ease;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--secondary);      // muted clay accent on hover
+  color: var(--secondary);
 }
 
 // === Remove Excess White Space Below Navbar ===
 main, .page {
-  padding-top: 4.2rem !important; // matches taller navbar height
+  padding-top: 4.2rem !important;
 
   @media (max-width: 768px) {
     padding-top: 5rem !important;
@@ -140,45 +137,75 @@ main, .page {
 }
 
 .card {
-  background-color: var(--light);                // pastel white background
-  border: 1px solid rgba(180, 154, 122, 0.3);    // soft muted clay border
+  background-color: var(--lightgray);
+  border: 1px solid var(--gray);
   border-radius: 1rem;
   padding: 1.2rem;
-  box-shadow: 0 2px 6px rgba(180, 154, 122, 0.12); // soft clay tinted shadow
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(180, 154, 122, 0.3);  // stronger warm shadow on hover
-  border-color: var(--secondary);                   // clay accent border on hover
-}
-.card h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
+  box-shadow: 0 2px 6px rgba(180, 154, 122, 0.12);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, color 0.3s ease;
   color: var(--dark);
 }
-.card p {
-  margin: 0.5rem 0 0;
-  color: var(--darkgray);
+
+.card:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  box-shadow: 0 6px 15px rgba(180, 154, 122, 0.3);
+  color: var(--light);
+  transform: translateY(-5px);
+}
+
+.card h3, .card p {
+  transition: color 0.3s ease;
+}
+
+.card:hover h3, .card:hover p {
+  color: var(--light);
 }
 
 // === Button Styling ===
 .button {
   display: inline-block;
-  background-color: var(--secondary);
-  color: var(--light);
-  padding: 0.6rem 1.4rem;
+  background-color: var(--lightgray);
+  color: var(--dark);
+  border: 1.5px solid var(--gray);
   border-radius: 8px;
+  padding: 0.6rem 1.4rem;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(167, 154, 122, 0.3);
-  border: 1.5px solid transparent;
 }
+
 .button:hover {
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
+  color: var(--light);
+  border-color: var(--secondary);
   box-shadow: 0 4px 12px rgba(167, 154, 122, 0.5);
-  border-color: var(--tertiary);
+}
+
+// === Recent Notes Section ===
+.recent-notes {
+  background-color: var(--lightgray);
+  border: 1px solid var(--gray);
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   color: var(--dark);
+}
+
+.recent-notes:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--light);
+}
+
+.recent-notes h3, .recent-notes p, .recent-notes a {
+  transition: color 0.3s ease;
+}
+
+.recent-notes:hover h3,
+.recent-notes:hover p,
+.recent-notes:hover a {
+  color: var(--light);
 }
