@@ -20,38 +20,38 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-    fontOrigin: "googleFonts",
-    cdnCaching: true,
-    typography: {
-    header: "Playfair Display",
-    body: "Inter",
-    code: "JetBrains Mono",
-    },
-    colors: {
-    lightMode: {
-      light: "#f2e9e4",     // Isabelline – background
-      lightgray: "#c9ada7", // Pale Dogwood – cards/buttons
-      gray: "#9a8c98",      // Rose Quartz – dividers/borders
-      darkgray: "#4a4e69",  // Ultra Violet – subheadings
-      dark: "#22223b",      // Space Cadet – headings
-      secondary: "#423F3B", // Black Olive – button hover
-      tertiary: "#D0D1CE",  // Timberwolf – soft hover border
-      highlight: "rgba(154, 140, 152, 0.1)", // light glow
-      textHighlight: "#22223b55", // subtle mark
-    },
-    darkMode: {
-      light: "#22223b",     // Space Cadet – background
-      lightgray: "#4a4e69", // Ultra Violet – card/button
-      gray: "#9a8c98",      // Rose Quartz – dividers
-      darkgray: "#f2e9e4",  // Isabelline – text
-      dark: "#f2e9e4",      // Isabelline – headers
-      secondary: "#c9ada7", // Pale Dogwood – accents
-      tertiary: "#D0D1CE",  // Timberwolf – hover edges
-      highlight: "rgba(242, 233, 228, 0.06)", // glow
-      textHighlight: "#f2e9e455", // soft mark
+      fontOrigin: "googleFonts",
+      cdnCaching: true,
+      typography: {
+        header: "Merriweather",
+        body: "Cabin",
+        code: "IBM Plex Mono",
+      },
+      colors: {
+        lightMode: {
+          light: "#f8f9fa",      // seasalt
+          lightgray: "#e9ecef",  // anti-flash-white
+          gray: "#adb5bd",       // french-gray
+          darkgray: "#495057",   // slate-gray
+          dark: "#212529",       // eerie-black
+          secondary: "#A187B8",  // african-violet
+          tertiary: "#dee2e6",   // platinum
+          highlight: "rgba(161, 135, 184, 0.08)",
+          textHighlight: "#A187B855",
+        },
+        darkMode: {
+          light: "#212529",      // eerie-black
+          lightgray: "#343a40",  // onyx
+          gray: "#6c757d",       // slate-gray
+          darkgray: "#dee2e6",   // platinum
+          dark: "#f8f9fa",       // seasalt
+          secondary: "#A187B8",  // african-violet
+          tertiary: "#adb5bd",   // french-gray-2
+          highlight: "rgba(161, 135, 184, 0.06)",
+          textHighlight: "#A187B855",
         },
       },
-    }
+    },
   },
   plugins: {
     transformers: [
@@ -66,7 +66,10 @@ const config: QuartzConfig = {
         },
         keepBackground: false,
       }),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      Plugin.ObsidianFlavoredMarkdown({ 
+        enableInHtmlEmbed: true, 
+        enableCheckbox: true,
+      }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),

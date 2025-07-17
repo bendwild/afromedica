@@ -2,17 +2,19 @@
 
 // === Color Tokens ===
 :root {
-  --light: #f2e9e4;
-  --lightgray: #c9ada7;
-  --gray: #9a8c98;
-  --darkgray: #4a4e69;
-  --dark: #22223b;
-  --secondary: #423f3b;
-  --tertiary: #d0d1ce;
-  --accent: #4a4e69;
+  --light: #f8f9fa;          /* seasalt */
+  --lightgray: #e9ecef;      /* anti-flash-white */
+  --gray: #adb5bd;           /* french-gray */
+  --darkgray: #495057;       /* slate-gray */
+  --dark: #212529;           /* eerie-black */
+  --secondary: #A187B8;      /* african-violet */
+  --tertiary: #dee2e6;       /* platinum */
+  --accent: #A187B8;         /* african-violet */
+  --highlight: rgba(161, 135, 184, 0.08);
+  --textHighlight: #A187B855;
 }
 
-// === Fixed, Full-Width Navbar ===
+// === Navbar ===
 .main-navigation {
   position: fixed;
   top: 0;
@@ -27,13 +29,13 @@
 }
 
 .nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
 .nav-logo img {
@@ -65,24 +67,7 @@
   color: var(--accent);
 }
 
-@media (prefers-color-scheme: dark) {
-  .main-navigation {
-    background-color: var(--lightgray);
-  }
-
-  .nav-link {
-    color: var(--darkgray);
-  }
-
-  .nav-link:hover {
-    color: var(--tertiary);
-  }
-
-  .nav-logo img {
-    filter: brightness(1.2);
-  }
-}
-
+// === Responsive Navbar ===
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -102,12 +87,27 @@
   }
 }
 
+// === Body & Typography ===
 body {
-  padding-top: 80px;
+  padding-top: 0;
   background-color: var(--light);
   color: var(--dark);
   font-family: 'Inter', sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+}
+
+// === Equal Top Spacing Under Navbar ===
+.page-body {
+  display: flex;
+  padding-top: 6rem; /* Equal spacing across all columns */
+}
+
+.page-left,
+.page-main,
+.page-right {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 // === Cards ===
@@ -146,10 +146,13 @@ body {
   font-weight: 600;
   text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
 }
 
 .button:hover {
-  background-color: var(--gray);
+  background-color: var(--darkgray);
   color: var(--lightgray);
 }
 
@@ -186,6 +189,7 @@ footer {
   border-top: 1px solid var(--gray);
   padding: 2rem 1rem;
   text-align: center;
+  font-size: 0.9rem;
 }
 
 footer a {
@@ -196,21 +200,6 @@ footer a {
 
 footer a:hover {
   color: var(--secondary);
-}
-
-@media (prefers-color-scheme: dark) {
-  footer {
-    background-color: var(--lightgray);
-    color: var(--tertiary);
-  }
-
-  footer a {
-    color: var(--darkgray);
-  }
-
-  footer a:hover {
-    color: var(--tertiary);
-  }
 }
 
 // === Table of Contents ===
@@ -260,4 +249,76 @@ footer a:hover {
 
 .graph-link {
   stroke: var(--gray);
+}
+
+// === Dark Mode ===
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light: #212529;      /* eerie-black */
+    --lightgray: #343a40;  /* onyx */
+    --gray: #6c757d;       /* slate-gray */
+    --darkgray: #dee2e6;   /* platinum */
+    --dark: #f8f9fa;       /* seasalt */
+    --secondary: #A187B8;  /* african-violet */
+    --tertiary: #adb5bd;   /* french-gray-2 */
+    --accent: #A187B8;
+    --highlight: rgba(161, 135, 184, 0.06);
+    --textHighlight: #A187B855;
+  }
+
+  .main-navigation {
+    background-color: var(--lightgray);
+    border-bottom-color: var(--gray);
+  }
+
+  .nav-link {
+    color: var(--darkgray);
+  }
+
+  .nav-link:hover {
+    color: var(--accent);
+  }
+
+  .nav-logo img {
+    filter: brightness(1.2);
+  }
+
+  footer {
+    background-color: var(--lightgray);
+    color: var(--tertiary);
+    border-top-color: var(--gray);
+  }
+
+  footer a {
+    color: var(--darkgray);
+  }
+
+  footer a:hover {
+    color: var(--secondary);
+  }
+}
+// === Layout Fixes ===
+
+.page-columns {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+  min-height: 60vh; // Adjust as needed for vertical stretch
+}
+
+.page-columns > .left,
+.page-columns > .center,
+.page-columns > .right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+// Allow child components to expand as needed
+.card,
+.recent-notes,
+.graph-container {
+  flex-grow: 1;
 }
