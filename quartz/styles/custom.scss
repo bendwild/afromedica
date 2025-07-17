@@ -2,14 +2,17 @@
 
 // === Color Tokens ===
 :root {
-  --light: #f2e9e4;
-  --lightgray: #c9ada7;
-  --gray: #9a8c98;
-  --darkgray: #4a4e69;
-  --dark: #22223b;
-  --secondary: #423f3b;
-  --tertiary: #d0d1ce;
-  --accent: #4a4e69;
+  /* Light mode colors */
+  --light: #f4f3ee;         /* Isabelline */
+  --lightgray: #bcb8b1;     /* Silver */
+  --gray: #8a817c;          /* Battleship gray */
+  --darkgray: #463f3a;      /* Taupe */
+  --dark: #463f3a;          /* Taupe */
+  --secondary: #e0afa0;     /* Melon */
+  --tertiary: #dcd8d5;      /* Taupe 900 */
+  --highlight: rgba(224, 175, 160, 0.1); /* Melon transparent */
+  --textHighlight: #463f3b55;  /* Taupe transparent */
+  --accent: #e0afa0;        /* Melon */
 }
 
 // === Fixed, Full-Width Navbar ===
@@ -66,8 +69,24 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode colors */
+    --light: #463f3a;        /* Taupe */
+    --lightgray: #6f645d;    /* Taupe 600 */
+    --gray: #978b82;         /* Taupe 700 */
+    --darkgray: #f4f3ee;     /* Isabelline */
+    --dark: #f4f3ee;         /* Isabelline */
+    --secondary: #e0afa0;    /* Melon */
+    --tertiary: #b9b1ac;     /* Taupe 800 */
+    --highlight: rgba(224, 175, 160, 0.06);
+    --textHighlight: #f4f3ee55;
+    --accent: #e0afa0;       /* Melon */
+  }
+
   .main-navigation {
     background-color: var(--lightgray);
+    border-bottom-color: var(--gray);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
   }
 
   .nav-link {
@@ -75,7 +94,7 @@
   }
 
   .nav-link:hover {
-    color: var(--tertiary);
+    color: var(--accent);
   }
 
   .nav-logo img {
@@ -139,7 +158,7 @@ body {
 
 // === Buttons ===
 .button {
-  background-color: var(--accent);
+  background-color: var(--darkgray);
   color: var(--light);
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -202,6 +221,7 @@ footer a:hover {
   footer {
     background-color: var(--lightgray);
     color: var(--tertiary);
+    border-top-color: var(--gray);
   }
 
   footer a {
