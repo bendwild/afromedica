@@ -1,223 +1,202 @@
 @use "./base.scss";
 
-// === Custom Navbar Styles ===
+// === Color Token Overrides ===
+:root {
+  --light: #fdfaf6;
+  --lightgray: #f2f0ed;
+  --gray: #b0a99f;
+  --darkgray: #4e4742;
+  --dark: #2e2a26;
+  --secondary: #6b9ba5;
+  --tertiary: #bbada1;
+  --accent: #dfa375;
+}
+
+// === Navbar ===
 .main-navigation {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-
   background-color: var(--lightgray);
   border-bottom: 1px solid var(--gray);
-  box-shadow: 0 1px 8px rgba(150, 135, 110, 0.15);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
   padding: 0.9rem 0;
   font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
-  box-sizing: border-box;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-
-  @media (max-width: 768px) {
-    padding: 1rem 0.8rem;
-  }
+  transition: background-color 0.3s ease;
 }
 
 .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
   max-width: 1200px;
   padding: 0 1.5rem;
   margin: 0 auto;
-  gap: 1.5rem;
-  box-sizing: border-box;
-
-  @media (max-width: 768px) {
-    padding: 0 1rem;
-  }
-}
-
-.nav-logo {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
+
 .nav-logo img {
   height: 44px;
   display: block;
-  filter: brightness(1); // default brightness
 }
 
-// === Nav Menu ===
 .nav-menu {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-grow: 1;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   gap: 1.5rem;
+  list-style: none;
   flex-wrap: wrap;
-
-  @media (max-width: 768px) {
-    gap: 1rem;
-    font-size: 0.95rem;
-  }
-}
-
-.nav-menu li {
-  display: flex;
-  align-items: center;
 }
 
 .nav-link {
-  text-decoration: none;
   color: var(--dark);
   font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.2;
-  padding: 0.4rem 0;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
-
 .nav-link:hover {
-  color: var(--secondary);
+  color: var(--accent);
 }
 
-// === Dark mode navbar fix ===
 @media (prefers-color-scheme: dark) {
   .main-navigation {
     background-color: var(--darkgray);
-    border-bottom: 1px solid var(--gray);
   }
-
   .nav-link {
     color: var(--light);
   }
-
   .nav-link:hover {
-    color: var(--secondary);
+    color: var(--accent);
   }
-
   .nav-logo img {
-    filter: brightness(1.2); // make logo more visible
+    filter: brightness(1.2);
   }
 }
 
-// === Remove Excess White Space Below Navbar ===
-main, .page {
-  padding-top: 4.2rem !important;
-
-  @media (max-width: 768px) {
-    padding-top: 5rem !important;
-  }
-}
-
-.page-header {
-  margin-top: 0 !important;
-  padding-top: 0.3rem !important;
-}
-
-.page-header h1,
-.page h1:first-child,
-.center > article h1:first-child {
-  margin-top: 0.5rem !important;
-  padding-top: 0 !important;
-}
-
-.center > article > *:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-// === Sidebar alignment ===
-.sidebar.left,
-.sidebar.right {
-  padding-top: 4.2rem !important;
-  margin-top: 0 !important;
-
-  @media (max-width: 768px) {
-    padding-top: 2rem !important;
-  }
-}
-
-// === Card Components ===
-.card-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin-top: 2rem;
-}
-
+// === Cards ===
 .card {
   background-color: var(--lightgray);
   border: 1px solid var(--gray);
   border-radius: 1rem;
   padding: 1.2rem;
-  box-shadow: 0 2px 6px rgba(180, 154, 122, 0.12);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  color: var(--dark);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s, background-color 0.3s, color 0.3s;
 }
-
 .card:hover {
-  background-color: var(--secondary);
-  border-color: var(--secondary);
-  box-shadow: 0 6px 15px rgba(180, 154, 122, 0.3);
-  color: var(--light);
   transform: translateY(-5px);
+  background-color: var(--secondary);
+  color: var(--light);
 }
-
-.card h3, .card p {
-  color: var(--dark);
-  transition: color 0.3s ease;
+.card h3,
+.card p {
+  transition: color 0.3s;
 }
-.card:hover h3, .card:hover p {
+.card:hover h3,
+.card:hover p {
   color: var(--light);
 }
 
-// === Button Styling ===
+// === Buttons ===
 .button {
   display: inline-block;
-  background-color: var(--lightgray);
-  color: var(--dark);
-  border-radius: 8px;
-  padding: 0.6rem 1.2rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.button:hover {
   background-color: var(--secondary);
   color: var(--light);
-  box-shadow: 0 4px 12px rgba(167, 154, 122, 0.3);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.button:hover {
+  background-color: var(--accent);
+  color: var(--light);
 }
 
-// === Recent Notes Section ===
+// === Recent Notes ===
 .recent-notes {
   background-color: var(--lightgray);
   border: 1px solid var(--gray);
   border-radius: 1rem;
   padding: 1rem;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  color: var(--dark);
 }
-
-.recent-notes:hover {
-  background-color: var(--secondary);
-  border-color: var(--secondary);
-  color: var(--light);
-}
-
 .recent-notes h3,
 .recent-notes p,
 .recent-notes a {
   color: var(--dark);
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
-
 .recent-notes:hover h3,
 .recent-notes:hover p,
 .recent-notes:hover a {
   color: var(--light);
+}
+
+// === Footer ===
+footer {
+  background-color: var(--lightgray);
+  color: var(--darkgray);
+  border-top: 1px solid var(--gray);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+footer a {
+  color: var(--dark);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+footer a:hover {
+  color: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  footer {
+    background-color: var(--darkgray);
+    color: var(--gray);
+  }
+  footer a {
+    color: var(--light);
+  }
+  footer a:hover {
+    color: var(--accent);
+  }
+}
+
+// === Table of Contents ===
+.toc {
+  background-color: var(--lightgray);
+  border: 1px solid var(--gray);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+.toc a {
+  color: var(--dark);
+  text-decoration: none;
+}
+.toc a:hover {
+  color: var(--accent);
+}
+
+// === Graph View ===
+.graph-container {
+  background-color: var(--light);
+  border: 1px solid var(--gray);
+  border-radius: 1rem;
+}
+.graph-container .graph-controls {
+  background-color: var(--lightgray);
+  border-bottom: 1px solid var(--gray);
+}
+.graph-container .graph-node {
+  stroke: var(--accent);
+  fill: var(--secondary);
+}
+.graph-container .graph-node:hover {
+  fill: var(--accent);
+}
+.graph-container .graph-link {
+  stroke: var(--gray);
 }
