@@ -20,38 +20,38 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-  fontOrigin: "googleFonts",
-  cdnCaching: true,
-  typography: {
-    header: "Clash Display",
-    body: "Inter",
-    code: "JetBrains Mono",
-  },
-  colors: {
-    lightMode: {
-      light: "#fffdfc",             // off-white
-      lightgray: "#f6f2ee",         // pale beige
-      gray: "#bfb8b0",              // muted taupe gray
-      darkgray: "#776b5d",          // earthy taupe
-      dark: "#3a2c2d",              // deep brown-cherry
-      secondary: "#9bc5aa",         // pastel sage green
-      tertiary: "#f4c2a1",          // warm peachy coral
-      highlight: "rgba(250, 190, 140, 0.2)", // light warm orange glow
-      textHighlight: "#fef08a88",   // soft banana yellow translucent
-    },
-    darkMode: {
-      light: "#2e2a28",             // charcoal brown
-      lightgray: "#3c3937",         // dark muted gray-brown
-      gray: "#8f867f",              // dusty rose-gray
-      darkgray: "#e0dad4",          // light bone
-      dark: "#fefdfc",              // near-white
-      secondary: "#adcbb7",         // soft pastel green
-      tertiary: "#f2b99d",          // mellow coral
-      highlight: "rgba(250, 190, 140, 0.2)", // warm orange glow
-      textHighlight: "#fde68a88",   // gentle amber
-    },
-  },
-}
+      fontOrigin: "googleFonts",
+      cdnCaching: true,
+      typography: {
+        header: "Clash Display",
+        body: "Inter",
+        code: "JetBrains Mono",
+      },
+      colors: {
+        lightMode: {
+          light: "#FFFFFF",           // White background
+          lightgray: "#F5F5F4",       // Warm light gray
+          gray: "#D6D3D1",            // Neutral stone gray
+          darkgray: "#4B4B4B",        // Dark muted gray
+          dark: "#1C3A3E",            // Deep AfroMedica teal
+          secondary: "#F8B133",       // Gold accent
+          tertiary: "#DDAF94",        // Clay pink
+          highlight: "rgba(248, 177, 51, 0.1)",   // Gold-tinted callout bg
+          textHighlight: "#fff3b088", // Banana yellow translucent
+        },
+        darkMode: {
+          light: "#1F1F1F",           // Dark base
+          lightgray: "#2A2A2A",       // Subtle container contrast
+          gray: "#5A5A5A",            // Medium gray
+          darkgray: "#D4D4D8",        // Pale gray text
+          dark: "#F8F8F8",            // Lightest text
+          secondary: "#F8B133",       // Gold accent
+          tertiary: "#DDAF94",        // Clay pink
+          highlight: "rgba(248, 177, 51, 0.1)",   // Warm glow
+          textHighlight: "#fde68a88", // Gentle amber
+        },
+      },
+    }
   },
   plugins: {
     transformers: [
@@ -75,7 +75,6 @@ const config: QuartzConfig = {
       Plugin.ClickableImages(),
     ],
     filters: [Plugin.ExplicitPublish()],
-
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
@@ -90,7 +89,6 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
     ],
   },
