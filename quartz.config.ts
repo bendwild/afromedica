@@ -19,39 +19,37 @@ const config: QuartzConfig = {
     baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
-    theme: {
-    fontOrigin: "googleFonts",
-    cdnCaching: true,
-    typography: {
-    header: "Playfair Display",
-    body: "Inter",
-    code: "JetBrains Mono",
-    },
-    colors: {
-    lightMode: {
-      light: "#f2e9e4",     // Isabelline – background
-      lightgray: "#c9ada7", // Pale Dogwood – cards/buttons
-      gray: "#9a8c98",      // Rose Quartz – dividers/borders
-      darkgray: "#4a4e69",  // Ultra Violet – subheadings
-      dark: "#22223b",      // Space Cadet – headings
-      secondary: "#423F3B", // Black Olive – button hover
-      tertiary: "#D0D1CE",  // Timberwolf – soft hover border
-      highlight: "rgba(154, 140, 152, 0.1)", // light glow
-      textHighlight: "#22223b55", // subtle mark
-    },
-    darkMode: {
-      light: "#22223b",     // Space Cadet – background
-      lightgray: "#4a4e69", // Ultra Violet – card/button
-      gray: "#9a8c98",      // Rose Quartz – dividers
-      darkgray: "#f2e9e4",  // Isabelline – text
-      dark: "#f2e9e4",      // Isabelline – headers
-      secondary: "#c9ada7", // Pale Dogwood – accents
-      tertiary: "#D0D1CE",  // Timberwolf – hover edges
-      highlight: "rgba(242, 233, 228, 0.06)", // glow
-      textHighlight: "#f2e9e455", // soft mark
+     theme: {
+      typography: {
+        header: "Playfair Display",
+        body: "Inter",
+        code: "JetBrains Mono",
+      },
+      colors: {
+        lightMode: {
+          light: "#f4f3ee",         // Isabelline – background
+          lightgray: "#bcb8b1",     // Silver – cards/buttons background
+          gray: "#8a817c",          // Battleship gray – borders, dividers
+          darkgray: "#463f3a",      // Taupe – subheadings, secondary text
+          dark: "#463f3a",          // Taupe – headings, main text
+          secondary: "#e0afa0",     // Melon – buttons hover, highlights
+          tertiary: "#dcd8d5",      // Taupe 900 (light) – subtle border, hover edges
+          highlight: "rgba(224,175,160,0.1)", // Melon with transparency for glow
+          textHighlight: "#463f3b55",           // Taupe transparent mark
+        },
+        darkMode: {
+          light: "#463f3a",          // Taupe – background dark
+          lightgray: "#6f645d",      // Taupe 600 – cards/buttons dark bg
+          gray: "#978b82",           // Taupe 700 – borders/dividers dark
+          darkgray: "#f4f3ee",       // Isabelline – text/light elements on dark
+          dark: "#f4f3ee",           // Isabelline – headings
+          secondary: "#e0afa0",      // Melon – accents on dark
+          tertiary: "#b9b1ac",       // Taupe 800 – hover edges on dark
+          highlight: "rgba(224,175,160,0.06)", // Melon subtle glow
+          textHighlight: "#f4f3ee55",             // Isabelline transparent mark
         },
       },
-    }
+    },
   },
   plugins: {
     transformers: [
