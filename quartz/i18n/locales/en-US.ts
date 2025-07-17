@@ -42,7 +42,7 @@ export default {
       title: "Graph View",
     },
     recentNotes: {
-      title: "Recent Notes",
+      title: "What's new?",
       seeRemainingMore: ({ remaining }) => `See ${remaining} more →`,
     },
     transcludes: {
@@ -67,7 +67,7 @@ export default {
     },
     error: {
       title: "Not Found",
-      notFound: "Either this page is private or doesn't exist.",
+      notFound: "Sorry, the page you’re looking for doesn’t exist or may have been moved.",
       home: "Return to Homepage",
     },
     folderContent: {
