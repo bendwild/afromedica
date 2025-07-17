@@ -29,26 +29,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#fdfaf6",           // broken pastel white
-          lightgray: "#f4f4f5",       // subtle gray containers
-          gray: "#d4d4d8",            // muted borders/text
-          darkgray: "#52525b",        // subheadings
-          dark: "#1a1a1a",            // main text
-          secondary: "#b49a7a",       // muted clay accent
-          tertiary: "#c9bdae",        // beige hover/focus
-          highlight: "rgba(167, 109, 82, 0.06)", // soft clay bg
-          textHighlight: "#f1e9e088", // paper yellow highlight
+          light: "#dbcdc6",       // Timberwolf
+          lightgray: "#ead7d1",   // Champagne pink
+          gray: "#dd99bb",        // Amaranth pink
+          darkgray: "#7b506f",    // Chinese violet
+          dark: "#1f1a38",        // Dark purple
+          secondary: "#dd99bb",   // Accent pink
+          tertiary: "#ead7d1",    // Hover neutral
+          highlight: "rgba(221, 153, 187, 0.08)", // Amaranth pink glow
+          textHighlight: "#f4e9f088",             // Light soft lavender
         },
         darkMode: {
-          light: "#18181b",           // dark base background
-          lightgray: "#232326",       // containers
-          gray: "#4b4b50",            // dimmed text
-          darkgray: "#d4d4d8",        // heading contrast
-          dark: "#f4f4f5",            // text on dark
-          secondary: "#d59b83",       // lighter clay
-          tertiary: "#a78f85",        // hover/focus
-          highlight: "rgba(213, 155, 131, 0.08)", // clay glow
-          textHighlight: "#f4f1ec88", // soft paper highlight
+          light: "#1f1a38",       // Dark purple
+          lightgray: "#7b506f",   // Chinese violet
+          gray: "#dd99bb",        // Amaranth pink
+          darkgray: "#ead7d1",    // Champagne pink
+          dark: "#dbcdc6",        // Timberwolf
+          secondary: "#dd99bb",   // Accent
+          tertiary: "#ead7d1",    // Hover/focus
+          highlight: "rgba(221, 153, 187, 0.12)", // Subtle glow
+          textHighlight: "#f8eaf188",             // Pale rose
         },
       },
     },
