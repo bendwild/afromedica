@@ -7,12 +7,15 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: var(--light);
-  border-bottom: 1px solid var(--lightgray);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+  background-color: var(--light);      // broken pastel white background
+  border-bottom: 1px solid var(--lightgray);  // subtle border
+  box-shadow: 0 1px 6px rgba(167, 154, 122, 0.1); // soft muted clay shadow
+
   padding: 0.9rem 0; // increased height for better logo spacing
   font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
   box-sizing: border-box;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   @media (max-width: 768px) {
     padding: 1rem 0.8rem; // extra horizontal space on mobile
@@ -43,6 +46,8 @@
 }
 .nav-logo img {
   height: 44px; // bigger for better visibility
+  /* Optional subtle tint to blend with clay accent if logo is grayscale */
+  filter: brightness(0) saturate(100%) invert(13%) sepia(15%) saturate(258%) hue-rotate(4deg) brightness(95%) contrast(91%);
   display: block;
 }
 
@@ -71,16 +76,16 @@
 
 .nav-link {
   text-decoration: none;
-  color: var(--dark);
+  color: var(--dark);          // dark text for nav links
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.2;
   padding: 0.4rem 0;
-  transition: color 0.2s ease;
+  transition: color 0.25s ease;
 }
 
 .nav-link:hover {
-  color: var(--secondary);
+  color: var(--secondary);      // muted clay accent on hover
 }
 
 // === Remove Excess White Space Below Navbar ===
@@ -133,16 +138,17 @@ main, .page {
 }
 
 .card {
-  background-color: var(--light);
-  border: 1px solid var(--lightgray);
+  background-color: var(--light);                // pastel white background
+  border: 1px solid rgba(180, 154, 122, 0.3);    // soft muted clay border
   border-radius: 1rem;
   padding: 1.2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(180, 154, 122, 0.12); // soft clay tinted shadow
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(180, 154, 122, 0.3);  // stronger warm shadow on hover
+  border-color: var(--secondary);                   // clay accent border on hover
 }
 .card h3 {
   margin-top: 0;
@@ -159,12 +165,18 @@ main, .page {
   display: inline-block;
   background-color: var(--secondary);
   color: var(--light);
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 1.4rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(167, 154, 122, 0.3);
+  border: 1.5px solid transparent;
 }
 .button:hover {
   background-color: var(--tertiary);
+  box-shadow: 0 4px 12px rgba(167, 154, 122, 0.5);
+  border-color: var(--tertiary);
+  color: var(--dark);
 }
