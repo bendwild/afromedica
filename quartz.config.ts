@@ -20,38 +20,38 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-      fontOrigin: "googleFonts",
-      cdnCaching: true,
-      typography: {
-        header: "Clash Display",
-        body: "Inter",
-        code: "JetBrains Mono",
-      },
-      colors: {
-        lightMode: {
-          light: "#dbcdc6",       // Timberwolf
-          lightgray: "#ead7d1",   // Champagne pink
-          gray: "#dd99bb",        // Amaranth pink
-          darkgray: "#7b506f",    // Chinese violet
-          dark: "#1f1a38",        // Dark purple
-          secondary: "#dd99bb",   // Accent pink
-          tertiary: "#ead7d1",    // Hover neutral
-          highlight: "rgba(221, 153, 187, 0.08)", // Amaranth pink glow
-          textHighlight: "#f4e9f088",             // Light soft lavender
-        },
-        darkMode: {
-          light: "#1f1a38",       // Dark purple
-          lightgray: "#7b506f",   // Chinese violet
-          gray: "#dd99bb",        // Amaranth pink
-          darkgray: "#ead7d1",    // Champagne pink
-          dark: "#dbcdc6",        // Timberwolf
-          secondary: "#dd99bb",   // Accent
-          tertiary: "#ead7d1",    // Hover/focus
-          highlight: "rgba(221, 153, 187, 0.12)", // Subtle glow
-          textHighlight: "#f8eaf188",             // Pale rose
-        },
-      },
+    fontOrigin: "googleFonts",
+    cdnCaching: true,
+    typography: {
+    header: "Clash Display",
+    body: "Inter",
+    code: "JetBrains Mono",
     },
+    colors: {
+    lightMode: {
+      light: "#FFF8EA",     // Background
+      lightgray: "#9E7676", // UI elements
+      gray: "#815B5B",      // Subtle elements
+      darkgray: "#594545",  // Text and headers
+      dark: "#594545",      // Strong accents
+      secondary: "#815B5B", // Cards/hover bg
+      tertiary: "#9E7676",  // Cards/hover border
+      highlight: "rgba(129, 91, 91, 0.1)", // Light hover effect
+      textHighlight: "#FFF8EA88", // Faint selection
+    },
+    darkMode: {
+      light: "#594545",     // Background
+      lightgray: "#815B5B", // UI elements
+      gray: "#9E7676",      // Mid accents
+      darkgray: "#FFF8EA",  // Text
+      dark: "#FFF8EA",      // Strong text
+      secondary: "#9E7676", // Cards
+      tertiary: "#815B5B",  // Cards/hover
+      highlight: "rgba(158, 118, 118, 0.1)", // Glow
+      textHighlight: "#FFF8EA44", // Soft highlight
+        },
+      },
+    }
   },
   plugins: {
     transformers: [
