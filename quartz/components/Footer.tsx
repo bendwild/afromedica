@@ -2,15 +2,23 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import style from "./styles/footer.scss"
 import { version } from "../../package.json"
 import { i18n } from "../i18n"
+import { FaLinkedin, FaFacebook, FaInstagram, FaDiscord } from "react-icons/fa"
 
 interface LinkItem {
   url: string
-  icon: JSX.Element
   label: string
 }
 
 interface Options {
   links: Record<string, LinkItem>
+}
+
+// Map keys to icon components here
+const iconMap: Record<string, JSX.Element> = {
+  linkedin: <FaLinkedin />,
+  facebook: <FaFacebook />,
+  instagram: <FaInstagram />,
+  discord: <FaDiscord />,
 }
 
 export default ((opts?: Options) => {
@@ -25,10 +33,10 @@ export default ((opts?: Options) => {
           <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
         </p>
         <ul>
-          {Object.entries(links).map(([key, { url, icon, label }]) => (
+          {Object.entries(links).map(([key, { url, label }]) => (
             <li key={key}>
               <a href={url} aria-label={label} target="_blank" rel="noopener noreferrer">
-                {icon}
+                {iconMap[key.toLowerCase()] || label}
               </a>
             </li>
           ))}
