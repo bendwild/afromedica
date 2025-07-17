@@ -20,38 +20,38 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-      fontOrigin: "googleFonts",
-      cdnCaching: true,
-      typography: {
-        header: "Clash Display",
-        body: "Inter",
-        code: "JetBrains Mono",
-      },
-      colors: {
-        lightMode: {
-          light: "#fdfaf6",           // broken pastel white
-          lightgray: "#f4f4f5",       // subtle gray containers
-          gray: "#d4d4d8",            // muted borders/text
-          darkgray: "#52525b",        // subheadings
-          dark: "#1a1a1a",            // main text
-          secondary: "#b49a7a",       // muted clay accent
-          tertiary: "#c9bdae",        // beige hover/focus
-          highlight: "rgba(167, 109, 82, 0.06)", // soft clay bg
-          textHighlight: "#f1e9e088", // paper yellow highlight
-        },
-        darkMode: {
-          light: "#18181b",           // dark base background
-          lightgray: "#232326",       // containers
-          gray: "#4b4b50",            // dimmed text
-          darkgray: "#d4d4d8",        // heading contrast
-          dark: "#f4f4f5",            // text on dark
-          secondary: "#d59b83",       // lighter clay
-          tertiary: "#a78f85",        // hover/focus
-          highlight: "rgba(213, 155, 131, 0.08)", // clay glow
-          textHighlight: "#f4f1ec88", // soft paper highlight
-        },
-      },
+    fontOrigin: "googleFonts",
+    cdnCaching: true,
+    typography: {
+    header: "Playfair Display",
+    body: "Inter",
+    code: "JetBrains Mono",
     },
+    colors: {
+    lightMode: {
+      light: "#f2e9e4",     // Isabelline – background
+      lightgray: "#c9ada7", // Pale Dogwood – cards/buttons
+      gray: "#9a8c98",      // Rose Quartz – dividers/borders
+      darkgray: "#4a4e69",  // Ultra Violet – subheadings
+      dark: "#22223b",      // Space Cadet – headings
+      secondary: "#423F3B", // Black Olive – button hover
+      tertiary: "#D0D1CE",  // Timberwolf – soft hover border
+      highlight: "rgba(154, 140, 152, 0.1)", // light glow
+      textHighlight: "#22223b55", // subtle mark
+    },
+    darkMode: {
+      light: "#22223b",     // Space Cadet – background
+      lightgray: "#4a4e69", // Ultra Violet – card/button
+      gray: "#9a8c98",      // Rose Quartz – dividers
+      darkgray: "#f2e9e4",  // Isabelline – text
+      dark: "#f2e9e4",      // Isabelline – headers
+      secondary: "#c9ada7", // Pale Dogwood – accents
+      tertiary: "#D0D1CE",  // Timberwolf – hover edges
+      highlight: "rgba(242, 233, 228, 0.06)", // glow
+      textHighlight: "#f2e9e455", // soft mark
+        },
+      },
+    }
   },
   plugins: {
     transformers: [

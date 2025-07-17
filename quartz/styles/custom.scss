@@ -1,53 +1,113 @@
 @use "./base.scss";
 
-// === Color Token Overrides ===
+// === Color Tokens ===
 :root {
-  --light: #dbcdc6; /* Timberwolf */
-  --lightgray: #ead7d1; /* Champagne pink */
-  --gray: #dd99bb; /* Amaranth pink */
-  --darkgray: #7b506f; /* Chinese violet */
-  --dark: #1f1a38; /* Dark purple */
-  --secondary: #dd99bb;
-  --tertiary: #ead7d1;
-  --accent: #7b506f;
+  --light: #f2e9e4;
+  --lightgray: #c9ada7;
+  --gray: #9a8c98;
+  --darkgray: #4a4e69;
+  --dark: #22223b;
+  --secondary: #423f3b;
+  --tertiary: #d0d1ce;
+  --accent: #4a4e69;
 }
 
-// === Navbar ===
+// === Fixed, Full-Width Navbar ===
 .main-navigation {
-  background-color: var(--lightgray);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--light);
   border-bottom: 1px solid var(--gray);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
-  padding: 0.9rem 0;
-  font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+  font-family: 'Clash Display', sans-serif;
+  z-index: 1000;
 }
-.nav-link {
-  color: var(--dark);
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.2s ease;
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
-.nav-link:hover {
-  color: var(--accent);
-}
+
 .nav-logo img {
   height: 44px;
   filter: brightness(1);
 }
 
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  display: inline-block;
+}
+
+.nav-link {
+  color: var(--dark);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
 @media (prefers-color-scheme: dark) {
   .main-navigation {
-    background-color: var(--darkgray);
+    background-color: var(--lightgray);
   }
+
   .nav-link {
-    color: var(--light);
+    color: var(--darkgray);
   }
+
   .nav-link:hover {
-    color: var(--accent);
+    color: var(--tertiary);
   }
+
   .nav-logo img {
     filter: brightness(1.2);
   }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-link {
+    width: 100%;
+    display: block;
+  }
+}
+
+body {
+  padding-top: 80px;
+  background-color: var(--light);
+  color: var(--dark);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 // === Cards ===
@@ -56,19 +116,24 @@
   border: 1px solid var(--gray);
   border-radius: 1rem;
   padding: 1.2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s, background-color 0.3s, color 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, background-color 0.3s, border-color 0.3s;
 }
+
 .card:hover {
   transform: translateY(-5px);
   background-color: var(--secondary);
-  border-color: var(--accent);
+  border-color: var(--tertiary);
   color: var(--light);
 }
-.card h3, .card p {
-  transition: color 0.3s;
+
+.card h3,
+.card p {
+  transition: color 0.3s ease;
 }
-.card:hover h3, .card:hover p {
+
+.card:hover h3,
+.card:hover p {
   color: var(--light);
 }
 
@@ -80,10 +145,11 @@
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
+
 .button:hover {
-  background-color: var(--darkgray);
+  background-color: var(--gray);
   color: var(--lightgray);
 }
 
@@ -95,15 +161,18 @@
   padding: 1rem;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
+
 .recent-notes h3,
 .recent-notes p,
 .recent-notes a {
   color: var(--dark);
   transition: color 0.3s;
 }
+
 .recent-notes:hover {
   background-color: var(--secondary);
 }
+
 .recent-notes:hover h3,
 .recent-notes:hover p,
 .recent-notes:hover a {
@@ -112,30 +181,35 @@
 
 // === Footer ===
 footer {
-  background-color: var(--lightgray);
+  background-color: var(--light);
   color: var(--darkgray);
   border-top: 1px solid var(--gray);
   padding: 2rem 1rem;
   text-align: center;
 }
+
 footer a {
   color: var(--dark);
   text-decoration: underline;
   transition: color 0.2s;
 }
+
 footer a:hover {
-  color: var(--accent);
+  color: var(--secondary);
 }
+
 @media (prefers-color-scheme: dark) {
   footer {
-    background-color: var(--darkgray);
-    color: var(--gray);
+    background-color: var(--lightgray);
+    color: var(--tertiary);
   }
+
   footer a {
-    color: var(--light);
+    color: var(--darkgray);
   }
+
   footer a:hover {
-    color: var(--accent);
+    color: var(--tertiary);
   }
 }
 
@@ -146,15 +220,18 @@ footer a:hover {
   border-radius: 1rem;
   padding: 1rem;
 }
+
 .toc ul {
   list-style: none;
   padding-left: 0;
 }
+
 .toc a {
   color: var(--dark);
   text-decoration: none;
   transition: color 0.3s;
 }
+
 .toc a:hover {
   color: var(--accent);
 }
@@ -165,18 +242,22 @@ footer a:hover {
   border: 1px solid var(--gray);
   border-radius: 1rem;
 }
+
 .graph-controls {
   background-color: var(--lightgray);
   border-bottom: 1px solid var(--gray);
 }
+
 .graph-node {
   stroke: var(--accent);
   fill: var(--tertiary);
   transition: fill 0.3s;
 }
+
 .graph-node:hover {
   fill: var(--accent);
 }
+
 .graph-link {
   stroke: var(--gray);
 }
