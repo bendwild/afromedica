@@ -19,34 +19,27 @@ const config: QuartzConfig = {
     baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
-     theme: {
-      typography: {
-        header: "Playfair Display",
-        body: "Inter",
-        code: "JetBrains Mono",
+    theme: {
+    typography: {
+      bodyFont: "'Inter', sans-serif",
+      headerFont: "'Clash Display', sans-serif",
+    },
+    colors: {
+      light: {
+        background: "#f8f9fa",       // Seasalt
+        secondaryBackground: "#e9ecef", // Anti-flash white
+        text: "#212529",             // Eerie Black
+        gray: "#adb5bd",             // French gray
+        highlight: "rgba(161, 135, 184, 0.08)", // African Violet soft
+        link: "#A187B8",             // African Violet accent
       },
-      colors: {
-        lightMode: {
-          light: "#f4f3ee",         // Isabelline – background
-          lightgray: "#bcb8b1",     // Silver – cards/buttons background
-          gray: "#8a817c",          // Battleship gray – borders, dividers
-          darkgray: "#463f3a",      // Taupe – subheadings, secondary text
-          dark: "#463f3a",          // Taupe – headings, main text
-          secondary: "#e0afa0",     // Melon – buttons hover, highlights
-          tertiary: "#dcd8d5",      // Taupe 900 (light) – subtle border, hover edges
-          highlight: "rgba(224,175,160,0.1)", // Melon with transparency for glow
-          textHighlight: "#463f3b55",           // Taupe transparent mark
-        },
-        darkMode: {
-          light: "#463f3a",          // Taupe – background dark
-          lightgray: "#6f645d",      // Taupe 600 – cards/buttons dark bg
-          gray: "#978b82",           // Taupe 700 – borders/dividers dark
-          darkgray: "#f4f3ee",       // Isabelline – text/light elements on dark
-          dark: "#f4f3ee",           // Isabelline – headings
-          secondary: "#e0afa0",      // Melon – accents on dark
-          tertiary: "#b9b1ac",       // Taupe 800 – hover edges on dark
-          highlight: "rgba(224,175,160,0.06)", // Melon subtle glow
-          textHighlight: "#f4f3ee55",             // Isabelline transparent mark
+      dark: {
+        background: "#212529",       // Eerie Black
+        secondaryBackground: "#343a40", // Onyx
+        text: "#f8f9fa",             // Seasalt
+        gray: "#6c757d",             // Slate gray
+        highlight: "rgba(161, 135, 184, 0.06)",
+        link: "#A187B8",
         },
       },
     },
