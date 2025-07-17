@@ -2,17 +2,16 @@
 
 // === Color Tokens ===
 :root {
-  /* Light mode colors */
-  --light: #f4f3ee;         /* Isabelline */
-  --lightgray: #bcb8b1;     /* Silver */
-  --gray: #8a817c;          /* Battleship gray */
-  --darkgray: #463f3a;      /* Taupe */
-  --dark: #463f3a;          /* Taupe */
-  --secondary: #e0afa0;     /* Melon */
-  --tertiary: #dcd8d5;      /* Taupe 900 */
-  --highlight: rgba(224, 175, 160, 0.1); /* Melon transparent */
-  --textHighlight: #463f3b55;  /* Taupe transparent */
-  --accent: #e0afa0;        /* Melon */
+  --light: #f8f9fa;
+  --lightgray: #e9ecef;
+  --gray: #adb5bd;
+  --darkgray: #495057;
+  --dark: #212529;
+  --secondary: #A187B8;
+  --tertiary: #dee2e6;
+  --accent: #A187B8;
+  --highlight: rgba(161, 135, 184, 0.08);
+  --textHighlight: #A187B855;
 }
 
 // === Fixed, Full-Width Navbar ===
@@ -68,40 +67,7 @@
   color: var(--accent);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Dark mode colors */
-    --light: #463f3a;        /* Taupe */
-    --lightgray: #6f645d;    /* Taupe 600 */
-    --gray: #978b82;         /* Taupe 700 */
-    --darkgray: #f4f3ee;     /* Isabelline */
-    --dark: #f4f3ee;         /* Isabelline */
-    --secondary: #e0afa0;    /* Melon */
-    --tertiary: #b9b1ac;     /* Taupe 800 */
-    --highlight: rgba(224, 175, 160, 0.06);
-    --textHighlight: #f4f3ee55;
-    --accent: #e0afa0;       /* Melon */
-  }
-
-  .main-navigation {
-    background-color: var(--lightgray);
-    border-bottom-color: var(--gray);
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-link {
-    color: var(--darkgray);
-  }
-
-  .nav-link:hover {
-    color: var(--accent);
-  }
-
-  .nav-logo img {
-    filter: brightness(1.2);
-  }
-}
-
+// === Responsive Navbar ===
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -158,7 +124,7 @@ body {
 
 // === Buttons ===
 .button {
-  background-color: var(--darkgray);
+  background-color: var(--accent);
   color: var(--light);
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -168,7 +134,7 @@ body {
 }
 
 .button:hover {
-  background-color: var(--gray);
+  background-color: var(--darkgray);
   color: var(--lightgray);
 }
 
@@ -215,22 +181,6 @@ footer a {
 
 footer a:hover {
   color: var(--secondary);
-}
-
-@media (prefers-color-scheme: dark) {
-  footer {
-    background-color: var(--lightgray);
-    color: var(--tertiary);
-    border-top-color: var(--gray);
-  }
-
-  footer a {
-    color: var(--darkgray);
-  }
-
-  footer a:hover {
-    color: var(--tertiary);
-  }
 }
 
 // === Table of Contents ===
@@ -280,4 +230,51 @@ footer a:hover {
 
 .graph-link {
   stroke: var(--gray);
+}
+
+// === Dark Mode ===
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light: #212529;      /* Eerie Black */
+    --lightgray: #343a40;  /* Onyx */
+    --gray: #6c757d;       /* Slate Gray */
+    --darkgray: #dee2e6;   /* Platinum */
+    --dark: #f8f9fa;       /* Seasalt */
+    --secondary: #A187B8;  /* African Violet */
+    --tertiary: #adb5bd;   /* French gray */
+    --accent: #A187B8;
+    --highlight: rgba(161, 135, 184, 0.06);
+    --textHighlight: #A187B855;
+  }
+
+  .main-navigation {
+    background-color: var(--lightgray);
+    border-bottom-color: var(--gray);
+  }
+
+  .nav-link {
+    color: var(--darkgray);
+  }
+
+  .nav-link:hover {
+    color: var(--accent);
+  }
+
+  .nav-logo img {
+    filter: brightness(1.2);
+  }
+
+  footer {
+    background-color: var(--lightgray);
+    color: var(--tertiary);
+    border-top-color: var(--gray);
+  }
+
+  footer a {
+    color: var(--darkgray);
+  }
+
+  footer a:hover {
+    color: var(--secondary);
+  }
 }
