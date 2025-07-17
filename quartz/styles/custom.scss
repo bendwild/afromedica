@@ -3,22 +3,17 @@
 // === Color Token Overrides ===
 :root {
   --light: #fdfaf6;
-  --lightgray: #f2f0ed;
-  --gray: #b0a99f;
-  --darkgray: #4e4742;
-  --dark: #2e2a26;
-  --secondary: #6b9ba5;
-  --tertiary: #bbada1;
-  --accent: #dfa375;
+  --lightgray: #f6f2ec;
+  --gray: #b3a89c;
+  --darkgray: #3e3a35;
+  --dark: #1e1c1a;
+  --secondary: #d6a57c;
+  --tertiary: #e4cfc3;
+  --accent: #c96f3d;
 }
 
 // === Navbar ===
 .main-navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
   background-color: var(--lightgray);
   border-bottom: 1px solid var(--gray);
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
@@ -26,28 +21,6 @@
   font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
   transition: background-color 0.3s ease;
 }
-
-.nav-container {
-  max-width: 1200px;
-  padding: 0 1.5rem;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-logo img {
-  height: 44px;
-  display: block;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  flex-wrap: wrap;
-}
-
 .nav-link {
   color: var(--dark);
   font-weight: 600;
@@ -56,6 +29,10 @@
 }
 .nav-link:hover {
   color: var(--accent);
+}
+.nav-logo img {
+  height: 44px;
+  filter: brightness(1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -85,27 +62,25 @@
 .card:hover {
   transform: translateY(-5px);
   background-color: var(--secondary);
+  border-color: var(--accent);
   color: var(--light);
 }
-.card h3,
-.card p {
+.card h3, .card p {
   transition: color 0.3s;
 }
-.card:hover h3,
-.card:hover p {
+.card:hover h3, .card:hover p {
   color: var(--light);
 }
 
 // === Buttons ===
 .button {
-  display: inline-block;
   background-color: var(--secondary);
   color: var(--light);
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 .button:hover {
   background-color: var(--accent);
@@ -118,12 +93,16 @@
   border: 1px solid var(--gray);
   border-radius: 1rem;
   padding: 1rem;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 .recent-notes h3,
 .recent-notes p,
 .recent-notes a {
   color: var(--dark);
   transition: color 0.3s;
+}
+.recent-notes:hover {
+  background-color: var(--secondary);
 }
 .recent-notes:hover h3,
 .recent-notes:hover p,
@@ -147,7 +126,6 @@ footer a {
 footer a:hover {
   color: var(--accent);
 }
-
 @media (prefers-color-scheme: dark) {
   footer {
     background-color: var(--darkgray);
@@ -175,6 +153,7 @@ footer a:hover {
 .toc a {
   color: var(--dark);
   text-decoration: none;
+  transition: color 0.3s;
 }
 .toc a:hover {
   color: var(--accent);
@@ -186,17 +165,18 @@ footer a:hover {
   border: 1px solid var(--gray);
   border-radius: 1rem;
 }
-.graph-container .graph-controls {
+.graph-controls {
   background-color: var(--lightgray);
   border-bottom: 1px solid var(--gray);
 }
-.graph-container .graph-node {
+.graph-node {
   stroke: var(--accent);
-  fill: var(--secondary);
+  fill: var(--tertiary);
+  transition: fill 0.3s;
 }
-.graph-container .graph-node:hover {
+.graph-node:hover {
   fill: var(--accent);
 }
-.graph-container .graph-link {
+.graph-link {
   stroke: var(--gray);
 }
