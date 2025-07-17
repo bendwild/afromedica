@@ -20,36 +20,35 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
+      fontOrigin: "googleFonts",
+      cdnCaching: true,
       typography: {
-        headerFont: {
-          name: "Clash Display",
-          provider: "google",
-        },
-        bodyFont: {
-          name: "Inter",
-          provider: "google",
-        },
-        codeFont: {
-          name: "JetBrains Mono",
-          provider: "google",
-        },
+        header: "Merriweather",
+        body: "Cabin",
+        code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
-          background: "#f8f9fa",       // Seasalt
-          secondaryBackground: "#e9ecef", // Anti-flash white
-          text: "#212529",             // Eerie Black
-          gray: "#adb5bd",             // French Gray 2
-          highlight: "rgba(161, 135, 184, 0.08)", // African Violet soft
-          link: "#A187B8",             // African Violet
+          light: "#fcfbf1",      // --color-base-00
+          lightgray: "#f5f3e0",  // --color-base-05
+          gray: "#e2e4cc",       // --color-base-20
+          darkgray: "#989988",   // --color-base-30
+          dark: "#46473f",       // --color-base-40
+          secondary: "hsl(79, 25%, 67%)",    // --color-accent
+          tertiary: "hsl(76, 25%, 57%)",     // --color-accent-1
+          highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#fff23688",
         },
         darkMode: {
-          background: "#212529",       // Eerie Black
-          secondaryBackground: "#343a40", // Onyx
-          text: "#f8f9fa",             // Seasalt
-          gray: "#6c757d",             // Slate Gray
-          highlight: "rgba(161, 135, 184, 0.06)",
-          link: "#A187B8",
+          light: "#1c1a15",       // --color-base-00
+          lightgray: "#352e23",   // --color-base-05
+          gray: "#4b4638",        // --color-base-30
+          darkgray: "#8e7d58",    // --color-base-60
+          dark: "#d9cfb3",        // --color-base-100
+          secondary: "hsl(79, 20%, 45%)",    // --color-accent
+          tertiary: "hsl(79, 20%, 35%)",     // --color-accent-1
+          highlight: "rgba(110, 140, 130, 0.15)",
+          textHighlight: "#b7ad4e88",
         },
       },
     },
