@@ -25,7 +25,7 @@ const config: QuartzConfig = {
       headerFont: "'Clash Display', sans-serif",
     },
     colors: {
-      light: {
+      lightMode: {
         background: "#f8f9fa",       // Seasalt
         secondaryBackground: "#e9ecef", // Anti-flash white
         text: "#212529",             // Eerie Black
@@ -33,7 +33,7 @@ const config: QuartzConfig = {
         highlight: "rgba(161, 135, 184, 0.08)", // African Violet soft
         link: "#A187B8",             // African Violet accent
       },
-      dark: {
+      darkMode: {
         background: "#212529",       // Eerie Black
         secondaryBackground: "#343a40", // Onyx
         text: "#f8f9fa",             // Seasalt
