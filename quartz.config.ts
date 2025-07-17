@@ -20,26 +20,32 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-    typography: {
-      bodyFont: "'Inter', sans-serif",
-      headerFont: "'Clash Display', sans-serif",
-    },
-    colors: {
-      lightMode: {
-        background: "#f8f9fa",       // Seasalt
-        secondaryBackground: "#e9ecef", // Anti-flash white
-        text: "#212529",             // Eerie Black
-        gray: "#adb5bd",             // French gray
-        highlight: "rgba(161, 135, 184, 0.08)", // African Violet soft
-        link: "#A187B8",             // African Violet accent
+      typography: {
+        bodyFont: "'Inter', sans-serif",
+        headerFont: "'Clash Display', sans-serif",
       },
-      darkMode: {
-        background: "#212529",       // Eerie Black
-        secondaryBackground: "#343a40", // Onyx
-        text: "#f8f9fa",             // Seasalt
-        gray: "#6c757d",             // Slate gray
-        highlight: "rgba(161, 135, 184, 0.06)",
-        link: "#A187B8",
+      colors: {
+        lightMode: {
+          light: "#f8f9fa",              // Background
+          lightgray: "#e9ecef",          // Card background
+          gray: "#adb5bd",               // Subtle text
+          darkgray: "#495057",           // Secondary headings
+          dark: "#212529",               // Main text
+          secondary: "#A187B8",          // Accent
+          tertiary: "#dee2e6",           // Borders
+          highlight: "rgba(161, 135, 184, 0.08)",
+          textHighlight: "#a187b855",
+        },
+        darkMode: {
+          light: "#212529",              // Background
+          lightgray: "#343a40",          // Card background
+          gray: "#6c757d",               // Subtle text
+          darkgray: "#ced4da",           // Secondary headings
+          dark: "#f8f9fa",               // Main text
+          secondary: "#A187B8",          // Accent
+          tertiary: "#495057",           // Borders
+          highlight: "rgba(161, 135, 184, 0.06)",
+          textHighlight: "#f8f9fa55",
         },
       },
     },
