@@ -34,8 +34,8 @@ const config: QuartzConfig = {
           gray: "#d4d4d8",            // muted borders/text
           darkgray: "#52525b",        // subheadings
           dark: "#1a1a1a",            // main text
-          secondary: "#a76d52",       // muted clay accent
-          tertiary: "#c2b5ac",        // beige hover/focus
+          secondary: "#b49a7a",       // muted clay accent
+          tertiary: "#c9bdae",        // beige hover/focus
           highlight: "rgba(167, 109, 82, 0.06)", // soft clay bg
           textHighlight: "#f1e9e088", // paper yellow highlight
         },
