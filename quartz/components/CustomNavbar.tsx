@@ -15,13 +15,13 @@ const CustomNavbar: QuartzComponent = () => {
           </a>
         </div>
         <ul className="nav-menu">
-          <li><a href={`${BASE_PATH}/About/about`} className="nav-link">About Us</a></li>
-          <li><a href={`${BASE_PATH}/Afromedica academy/afroacademy`} className="nav-link">AfroAcademy</a></li>
-          <li><a href={`${BASE_PATH}/Afromedica talks`} className="nav-link">Afromedica Talks</a></li>
-          <li><a href={`${BASE_PATH}/Afromedica connects`} className="nav-link">Afromedica Connects</a></li>
-          <li><a href={`${BASE_PATH}/Policy`} className="nav-link">Policy</a></li>
-          <li><a href={`${BASE_PATH}/About/team`} className="nav-link">Team</a></li>
-          <li><a href={`${BASE_PATH}/contact`} className="nav-link">Contact</a></li>
+          <li><a href={`${BASE_PATH}/About us/about`} className="nav-link">About Us</a></li>
+          <li><a href={`${BASE_PATH}/Afromedica Academy/afromedica academy`} className="nav-link">AfroAcademy</a></li>
+          <li><a href={`${BASE_PATH}/Afromedica Talks/afromedica talks`} className="nav-link">Afromedica Talks</a></li>
+          <li><a href={`${BASE_PATH}/Afromedica Connects/afromedica connects`} className="nav-link">Afromedica Connects</a></li>
+          <li><a href={`${BASE_PATH}/Policy/policy`} className="nav-link">Policy</a></li>
+          <li><a href={`${BASE_PATH}/Team/team`} className="nav-link">Team</a></li>
+          <li><a href={`${BASE_PATH}/Contact/contact`} className="nav-link">Contact</a></li>
         </ul>
       </div>
     </nav>
