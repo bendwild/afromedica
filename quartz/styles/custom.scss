@@ -7,8 +7,8 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #ffffff;
-  border-bottom: 1px solid var(--gray-3);
+  background-color: var(--light);
+  border-bottom: 1px solid var(--lightgray);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   padding: 0.9rem 0; // increased height for better logo spacing
   font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
@@ -71,7 +71,7 @@
 
 .nav-link {
   text-decoration: none;
-  color: var(--gray-9);
+  color: var(--dark);
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.2;
@@ -80,7 +80,7 @@
 }
 
 .nav-link:hover {
-  color: var(--accent);
+  color: var(--secondary);
 }
 
 // === Remove Excess White Space Below Navbar ===
@@ -133,8 +133,8 @@ main, .page {
 }
 
 .card {
-  background-color: #fdf6fa;
-  border: 1px solid var(--gray-2);
+  background-color: var(--light);
+  border: 1px solid var(--lightgray);
   border-radius: 1rem;
   padding: 1.2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -151,14 +151,14 @@ main, .page {
 }
 .card p {
   margin: 0.5rem 0 0;
-  color: var(--gray-9);
+  color: var(--darkgray);
 }
 
 // === Button Styling ===
 .button {
   display: inline-block;
   background-color: var(--secondary);
-  color: #fff;
+  color: var(--light);
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   text-decoration: none;
