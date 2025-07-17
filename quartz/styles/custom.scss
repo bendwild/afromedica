@@ -8,9 +8,9 @@
   width: 100%;
   z-index: 1000;
 
-  background-color: var(--light);      // broken pastel white background
-  border-bottom: 1px solid var(--lightgray);  // subtle border
-  box-shadow: 0 1px 6px rgba(167, 154, 122, 0.1); // soft muted clay shadow
+  background-color: #e6e1d8; /* slightly darker pastel white */
+  border-bottom: 1px solid #c1bba9; /* darker muted clay border */
+  box-shadow: 0 1px 8px rgba(150, 135, 110, 0.15); /* warmer, stronger shadow */
 
   padding: 0.9rem 0; // increased height for better logo spacing
   font-family: 'Schibsted Grotesk', var(--font-header), sans-serif;
@@ -44,12 +44,14 @@
   display: flex;
   align-items: center;
 }
+
 .nav-logo img {
-  height: 44px; // bigger for better visibility
-  /* Optional subtle tint to blend with clay accent if logo is grayscale */
-  filter: brightness(0) saturate(100%) invert(13%) sepia(15%) saturate(258%) hue-rotate(4deg) brightness(95%) contrast(91%);
+  height: 44px;
+  filter: none;      // remove all filters causing artifacts
+  opacity: 0.9;      // subtle transparency for softness
   display: block;
 }
+
 
 // === Nav Menu ===
 .nav-menu {
