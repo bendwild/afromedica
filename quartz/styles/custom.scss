@@ -1,18 +1,18 @@
 @use "./base.scss";
 
-// === Color Token Overrides ===
+// === Color Tokens ===
 :root {
-  --light: #FFF8EA;
-  --lightgray: #9E7676;
-  --gray: #815B5B;
-  --darkgray: #594545;
-  --dark: #594545;
-  --secondary: #815B5B;
-  --tertiary: #9E7676;
-  --accent: #594545;
+  --light: #f2e9e4;
+  --lightgray: #c9ada7;
+  --gray: #9a8c98;
+  --darkgray: #4a4e69;
+  --dark: #22223b;
+  --secondary: #423f3b;
+  --tertiary: #d0d1ce;
+  --accent: #4a4e69;
 }
 
-// === Fixed Edge-to-Edge Navbar ===
+// === Fixed, Full-Width Navbar ===
 .main-navigation {
   position: fixed;
   top: 0;
@@ -20,10 +20,9 @@
   width: 100%;
   background-color: var(--light);
   border-bottom: 1px solid var(--gray);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
-  padding: 0.9rem 0;
-  font-family: 'Clash Display', var(--font-header), sans-serif;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+  font-family: 'Clash Display', sans-serif;
   z-index: 1000;
 }
 
@@ -63,7 +62,7 @@
 }
 
 .nav-link:hover {
-  color: var(--secondary);
+  color: var(--accent);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -72,7 +71,7 @@
   }
 
   .nav-link {
-    color: var(--light);
+    color: var(--darkgray);
   }
 
   .nav-link:hover {
@@ -97,10 +96,6 @@
     margin-top: 1rem;
   }
 
-  .nav-menu li {
-    width: 100%;
-  }
-
   .nav-link {
     width: 100%;
     display: block;
@@ -108,10 +103,11 @@
 }
 
 body {
-  padding-top: 70px;
+  padding-top: 80px;
   background-color: var(--light);
   color: var(--dark);
   font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 // === Cards ===
@@ -120,8 +116,8 @@ body {
   border: 1px solid var(--gray);
   border-radius: 1rem;
   padding: 1.2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s, background-color 0.3s, color 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, background-color 0.3s, border-color 0.3s;
 }
 
 .card:hover {
@@ -133,7 +129,7 @@ body {
 
 .card h3,
 .card p {
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .card:hover h3,
@@ -149,7 +145,7 @@ body {
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .button:hover {
@@ -205,11 +201,11 @@ footer a:hover {
 @media (prefers-color-scheme: dark) {
   footer {
     background-color: var(--lightgray);
-    color: var(--gray);
+    color: var(--tertiary);
   }
 
   footer a {
-    color: var(--light);
+    color: var(--darkgray);
   }
 
   footer a:hover {
@@ -237,7 +233,7 @@ footer a:hover {
 }
 
 .toc a:hover {
-  color: var(--secondary);
+  color: var(--accent);
 }
 
 // === Graph View ===
