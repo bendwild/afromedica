@@ -21,29 +21,39 @@ const config: QuartzConfig = {
     defaultDateType: "modified",
     theme: {
       typography: {
-        bodyFont: "'Inter', sans-serif",
-        headerFont: "'Clash Display', sans-serif",
+        headerFont: {
+          name: "Clash Display",
+          provider: "google",
+        },
+        bodyFont: {
+          name: "Inter",
+          provider: "google",
+        },
+        codeFont: {
+          name: "JetBrains Mono",
+          provider: "google",
+        },
       },
       colors: {
         lightMode: {
-          light: "#f8f9fa",              // Background
-          lightgray: "#e9ecef",          // Card background
-          gray: "#adb5bd",               // Subtle text
-          darkgray: "#495057",           // Secondary headings
-          dark: "#212529",               // Main text
-          secondary: "#A187B8",          // Accent
-          tertiary: "#dee2e6",           // Borders
+          light: "#f8f9fa",               // Seasalt
+          lightgray: "#e9ecef",           // Anti-flash white
+          gray: "#adb5bd",                // French gray
+          darkgray: "#495057",            // Outer space
+          dark: "#212529",                // Eerie black
+          secondary: "#A187B8",           // African Violet (accent)
+          tertiary: "#dee2e6",            // Platinum
           highlight: "rgba(161, 135, 184, 0.08)",
           textHighlight: "#a187b855",
         },
         darkMode: {
-          light: "#212529",              // Background
-          lightgray: "#343a40",          // Card background
-          gray: "#6c757d",               // Subtle text
-          darkgray: "#ced4da",           // Secondary headings
-          dark: "#f8f9fa",               // Main text
-          secondary: "#A187B8",          // Accent
-          tertiary: "#495057",           // Borders
+          light: "#212529",               // Eerie black
+          lightgray: "#343a40",           // Onyx
+          gray: "#6c757d",                // Slate gray
+          darkgray: "#ced4da",            // French gray
+          dark: "#f8f9fa",                // Seasalt
+          secondary: "#A187B8",           // African Violet (accent)
+          tertiary: "#495057",            // Outer space
           highlight: "rgba(161, 135, 184, 0.06)",
           textHighlight: "#f8f9fa55",
         },
