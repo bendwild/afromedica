@@ -29,29 +29,29 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#FFFFFF",           // White background
-          lightgray: "#F5F5F4",       // Warm light gray
-          gray: "#D6D3D1",            // Neutral stone gray
-          darkgray: "#4B4B4B",        // Dark muted gray
-          dark: "#1C3A3E",            // Deep AfroMedica teal
-          secondary: "#F8B133",       // Gold accent
-          tertiary: "#DDAF94",        // Clay pink
-          highlight: "rgba(248, 177, 51, 0.1)",   // Gold-tinted callout bg
-          textHighlight: "#fff3b088", // Banana yellow translucent
+          light: "#fdfaf6",           // broken pastel white
+          lightgray: "#f4f4f5",       // subtle gray containers
+          gray: "#d4d4d8",            // muted borders/text
+          darkgray: "#52525b",        // subheadings
+          dark: "#1a1a1a",            // main text
+          secondary: "#a76d52",       // muted clay accent
+          tertiary: "#c2b5ac",        // beige hover/focus
+          highlight: "rgba(167, 109, 82, 0.06)", // soft clay bg
+          textHighlight: "#f1e9e088", // paper yellow highlight
         },
         darkMode: {
-          light: "#1F1F1F",           // Dark base
-          lightgray: "#2A2A2A",       // Subtle container contrast
-          gray: "#5A5A5A",            // Medium gray
-          darkgray: "#D4D4D8",        // Pale gray text
-          dark: "#F8F8F8",            // Lightest text
-          secondary: "#F8B133",       // Gold accent
-          tertiary: "#DDAF94",        // Clay pink
-          highlight: "rgba(248, 177, 51, 0.1)",   // Warm glow
-          textHighlight: "#fde68a88", // Gentle amber
+          light: "#18181b",           // dark base background
+          lightgray: "#232326",       // containers
+          gray: "#4b4b50",            // dimmed text
+          darkgray: "#d4d4d8",        // heading contrast
+          dark: "#f4f4f5",            // text on dark
+          secondary: "#d59b83",       // lighter clay
+          tertiary: "#a78f85",        // hover/focus
+          highlight: "rgba(213, 155, 131, 0.08)", // clay glow
+          textHighlight: "#f4f1ec88", // soft paper highlight
         },
       },
-    }
+    },
   },
   plugins: {
     transformers: [
