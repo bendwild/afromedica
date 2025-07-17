@@ -9,10 +9,26 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      LinkedIn: "https://www.linkedin.com/company/afromedica/?viewAsMember=true",
-      Facebook: "https://www.facebook.com/AfroMedica",
-      Instagram: "https://www.instagram.com/_afromedica_/?hl=nl",
-      "Discord Community": "https://discord.gg/qUcCAHassB",
+      linkedin: {
+        url: "https://www.linkedin.com/company/afromedica/?viewAsMember=true",
+        icon: <FaLinkedin />,
+        label: "LinkedIn",
+      },
+      facebook: {
+        url: "https://www.facebook.com/AfroMedica",
+        icon: <FaFacebook />,
+        label: "Facebook",
+      },
+      instagram: {
+        url: "https://www.instagram.com/_afromedica_/?hl=nl",
+        icon: <FaInstagram />,
+        label: "Instagram",
+      },
+      discord: {
+        url: "https://discord.gg/qUcCAHassB",
+        icon: <FaDiscord />,
+        label: "Discord Community",
+      },
     },
   }),
 }
