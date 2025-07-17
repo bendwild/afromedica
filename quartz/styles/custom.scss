@@ -21,7 +21,6 @@
   }
 }
 
-// === Navbar Layout ===
 .nav-container {
   display: flex;
   align-items: center;
@@ -38,16 +37,14 @@
   }
 }
 
-// === Logo ===
 .nav-logo {
   display: flex;
   align-items: center;
 }
 .nav-logo img {
   height: 44px;
-  filter: none;
-  opacity: 0.9;
   display: block;
+  filter: brightness(1); // default brightness
 }
 
 // === Nav Menu ===
@@ -87,6 +84,26 @@
   color: var(--secondary);
 }
 
+// === Dark mode navbar fix ===
+@media (prefers-color-scheme: dark) {
+  .main-navigation {
+    background-color: var(--darkgray);
+    border-bottom: 1px solid var(--gray);
+  }
+
+  .nav-link {
+    color: var(--light);
+  }
+
+  .nav-link:hover {
+    color: var(--secondary);
+  }
+
+  .nav-logo img {
+    filter: brightness(1.2); // make logo more visible
+  }
+}
+
 // === Remove Excess White Space Below Navbar ===
 main, .page {
   padding-top: 4.2rem !important;
@@ -108,17 +125,13 @@ main, .page {
   padding-top: 0 !important;
 }
 
-// === Align First Markdown Element ===
 .center > article > *:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
 // === Sidebar alignment ===
-.sidebar.left {
-  padding-top: 4.2rem !important;
-  margin-top: 0 !important;
-}
+.sidebar.left,
 .sidebar.right {
   padding-top: 4.2rem !important;
   margin-top: 0 !important;
@@ -142,7 +155,7 @@ main, .page {
   border-radius: 1rem;
   padding: 1.2rem;
   box-shadow: 0 2px 6px rgba(180, 154, 122, 0.12);
-  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   color: var(--dark);
 }
 
@@ -158,7 +171,6 @@ main, .page {
   color: var(--dark);
   transition: color 0.3s ease;
 }
-
 .card:hover h3, .card:hover p {
   color: var(--light);
 }
@@ -168,21 +180,17 @@ main, .page {
   display: inline-block;
   background-color: var(--lightgray);
   color: var(--dark);
-  border: 1.5px solid var(--gray);
   border-radius: 8px;
-  padding: 0.6rem 1.4rem;
-  text-decoration: none;
+  padding: 0.6rem 1.2rem;
   font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: none;
-  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:hover {
   background-color: var(--secondary);
   color: var(--light);
-  border-color: var(--secondary);
-  box-shadow: 0 4px 12px rgba(167, 154, 122, 0.5);
+  box-shadow: 0 4px 12px rgba(167, 154, 122, 0.3);
 }
 
 // === Recent Notes Section ===
@@ -201,7 +209,10 @@ main, .page {
   color: var(--light);
 }
 
-.recent-notes h3, .recent-notes p, .recent-notes a {
+.recent-notes h3,
+.recent-notes p,
+.recent-notes a {
+  color: var(--dark);
   transition: color 0.3s ease;
 }
 
