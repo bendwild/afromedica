@@ -117,3 +117,48 @@ This is a special note or announcement in AfroMedica's voice.
 ![Welcome](/content/Extra/Images/afromedica (6).png)
 
 > _“AfroMedica is a space for critical thinking, cultural care, and collective healing.”_
+
+<div class="card-grid">
+
+<div class="card">
+  <h3>📰 Latest News</h3>
+  <p>We just published our 2025 action plan! Discover how we're addressing systemic bias in healthcare through schools and community-led workshops.</p>
+  <a href="/news/action-plan-2025" class="button">Read More</a>
+</div>
+
+<div class="card">
+  <h3>🎓 Global Health Resources</h3>
+  <p>A curated collection of tools, articles, and guides for young health advocates working on decolonizing global health.</p>
+  <a href="/resources/global-health" class="button">Explore</a>
+</div>
+
+<div class="card">
+  <h3>🌍 Join AfroMedica</h3>
+  <p>Become part of a movement advocating for inclusive, anti-racist healthcare policy. We're always looking for collaborators, speakers, and dreamers.</p>
+  <a href="/get-involved" class="button">Join Us</a>
+</div>
+
+</div>
+
+<iframe src="https://calendar.google.com/calendar/embed?src=dewildebenjamin0@gmail.com&ctz=Europe%2FBrussels"
+  style="border: 1px solid var(--gray); border-radius: 1rem; width: 100%; height: 600px;"
+  frameborder="0"
+  scrolling="no">
+</iframe>
+
+<div class="recent-notes">
+  <h3>🗓️ Decolonizing Global Health Workshop</h3>
+  <p><strong>Date:</strong> August 18 | <strong>Location:</strong> Zoom</p>
+  <iframe src="https://tally.so/r/mYgXdJ" width="100%" height="350" frameborder="0"></iframe>
+</div>
+
+<div class="recent-notes">
+  <h3>🎥 Recap: Youth in Global Health Panel</h3>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/yourVideoID" frameborder="0"
+    allowfullscreen style="border-radius: 1rem;"></iframe>
+</div>
+
+<div id="graph-view" class="graph-container"></div>
+<div id="graph-view" class="graph-container"></div>
+<div id="graph-view" class="graph-container"></div>
+<div id="graph-view" class="graph-container"></div>
