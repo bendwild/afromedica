@@ -2,14 +2,14 @@
 
 // === Color Tokens ===
 :root {
-  --light: #f8f9fa;
-  --lightgray: #e9ecef;
-  --gray: #adb5bd;
-  --darkgray: #495057;
-  --dark: #212529;
-  --secondary: #A187B8;
-  --tertiary: #dee2e6;
-  --accent: #A187B8;
+  --light: #f8f9fa;          /* seasalt */
+  --lightgray: #e9ecef;      /* anti-flash-white */
+  --gray: #adb5bd;           /* french-gray */
+  --darkgray: #495057;       /* slate-gray */
+  --dark: #212529;           /* eerie-black */
+  --secondary: #A187B8;      /* african-violet */
+  --tertiary: #dee2e6;       /* platinum */
+  --accent: #A187B8;         /* african-violet */
   --highlight: rgba(161, 135, 184, 0.08);
   --textHighlight: #A187B855;
 }
@@ -27,12 +27,11 @@
   height: 64px;
   background-color: var(--light);
   border-bottom: 1px solid var(--gray);
-  box-shadow: none;
   font-family: 'Clash Display', sans-serif;
   z-index: 1000;
-  padding: 0;
   display: flex;
   align-items: center;
+  box-shadow: none;
 }
 
 .nav-container {
@@ -40,39 +39,28 @@
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   height: 100%;
-  width: 100%;
 }
 
 .nav-logo {
-  padding: 0;
-  margin-right: auto;
-  background: none;
   display: flex;
   align-items: center;
 }
 
 .nav-logo img {
-  height: 60px;
-  border-radius: 0;
-  background: none;
+  height: 48px;
+  margin-right: 1.5rem;
   filter: brightness(1);
-  display: block;
 }
 
 .nav-menu {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: auto;
-}
-
-.nav-menu li {
-  display: inline-block;
 }
 
 .nav-link {
@@ -80,15 +68,13 @@
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
-  padding: 0.5rem 0;
 }
 
 .nav-link:hover {
   color: var(--accent);
-  box-shadow: none;
-  transform: none;
 }
 
+// === Responsive Navbar ===
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -108,8 +94,8 @@
   }
 }
 
+// === Layout & Typography ===
 body {
-  padding-top: 64px;
   background-color: var(--light);
   color: var(--dark);
   font-family: 'Inter', sans-serif;
@@ -118,7 +104,7 @@ body {
 
 .page-body {
   display: flex;
-  padding-top: 0;
+  padding-top: 64px;
 }
 
 .page-left,
@@ -128,76 +114,58 @@ body {
   padding-top: 0;
 }
 
-.card {
+.page-columns {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+  min-height: 60vh;
+}
+
+.page-columns > .left,
+.page-columns > .center,
+.page-columns > .right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+// === Cards (Shared)
+.card,
+.recent-notes,
+.toc,
+.backlinks {
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 1rem;
   padding: 1.2rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  box-shadow: none;
+  transition: border 0.3s ease, color 0.3s ease;
 }
 
 .card h3,
 .card p,
-.card a {
-  transition: color 0.3s;
-  color: var(--dark);
+.recent-notes h3,
+.toc h3,
+.backlinks h3,
+.card a,
+.toc a,
+.backlinks a,
+.recent-notes a {
+  color: var(--darkgray);
+  transition: color 0.2s ease;
 }
 
-.card a:hover {
+.card a:hover,
+.recent-notes a:hover,
+.toc a:hover,
+.backlinks a:hover {
   color: var(--accent);
 }
 
-.button {
-  background-color: var(--accent);
-  color: var(--light);
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  border: none;
-}
-
-.button:hover {
-  background-color: var(--darkgray);
-  color: var(--lightgray);
-}
-
-img {
-  border-radius: 0.75rem;
-  max-width: 100%;
-  display: block;
-  margin: 1rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--dark);
-}
-
-h2 {
-  border-bottom: 2px solid var(--tertiary);
-  padding-bottom: 0.3rem;
-  margin-top: 2rem;
-  font-size: 1.8rem;
-  color: var(--secondary);
-}
-
-blockquote {
-  border-left: 4px solid var(--secondary);
-  padding-left: 1rem;
-  color: var(--darkgray);
-  font-style: italic;
-  background-color: var(--lightgray);
-  margin: 2rem 0;
-}
-
+// === Footer ===
 footer {
   background-color: var(--light);
   color: var(--darkgray);
@@ -220,37 +188,29 @@ footer a:hover {
   color: var(--secondary);
 }
 
-.toc,
-.recent-notes,
-.backlinks {
-  background-color: #f1f3f5;
-  border: 1px solid var(--gray);
-  border-radius: 1rem;
-  padding: 1rem;
-  transition: color 0.3s;
-  margin-bottom: 1.5rem;
+// === Headings ===
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark);
 }
 
-.toc a,
-.recent-notes a,
-.backlinks a {
-  color: var(--darkgray);
-  text-decoration: none;
-  transition: color 0.3s;
+h2 {
+  border-bottom: 2px solid var(--tertiary);
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: var(--secondary);
 }
 
-.toc a:hover,
-.recent-notes a:hover,
-.backlinks a:hover {
-  color: var(--accent);
-}
-
+// === Graph View ===
 .graph-container {
   background-color: var(--light);
   border: 1px solid var(--gray);
   border-radius: 1rem;
-  margin-top: 2rem;
   padding: 1rem;
+  margin-top: 1rem;
+  flex-grow: 1;
 }
 
 .graph-controls {
@@ -272,6 +232,7 @@ footer a:hover {
   stroke: var(--gray);
 }
 
+// === Dark Mode ===
 @media (prefers-color-scheme: dark) {
   :root {
     --light: #212529;
@@ -286,9 +247,14 @@ footer a:hover {
     --textHighlight: #A187B855;
   }
 
+  body {
+    background-color: var(--light);
+    color: var(--dark);
+  }
+
   .main-navigation {
     background-color: var(--lightgray);
-    border-bottom-color: var(--gray);
+    border-bottom: 1px solid var(--gray);
   }
 
   .nav-link {
@@ -317,58 +283,28 @@ footer a:hover {
     color: var(--secondary);
   }
 
-  .card-style,
-  .toc,
+  .card,
   .recent-notes,
+  .toc,
   .backlinks {
-    background-color: #2a2d31;
-    border: 1px solid var(--gray);
-    color: var(--darkgray);
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--dark);
   }
 
-  .card-style a,
-  .toc a,
+  .card a,
   .recent-notes a,
+  .toc a,
   .backlinks a {
     color: var(--darkgray);
   }
 
-  .card-style a:hover,
-  .toc a:hover,
+  .card a:hover,
   .recent-notes a:hover,
+  .toc a:hover,
   .backlinks a:hover {
     color: var(--accent);
   }
-
-  .card {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  }
-
-  .card h3,
-  .card p,
-  .card a {
-    color: var(--darkgray);
-  }
-
-  .card a:hover {
-    color: var(--accent);
-  }
-}
-
-.page-columns {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  min-height: 60vh;
-}
-
-.page-columns > .left,
-.page-columns > .center,
-.page-columns > .right {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
