@@ -375,3 +375,29 @@ footer a:hover {
 .graph-container {
   flex-grow: 1;
 }
+
+/* Add padding-right to graph container to avoid clipping with fixed navbar */
+.graph-container {
+  padding-right: 1.5rem; /* add some breathing room on the right */
+  margin-top: 1rem;      /* optional, for some vertical spacing */
+}
+
+/* Make logo bigger and remove circle or background */
+.nav-logo img {
+  height: 60px !important; /* bigger size */
+  border-radius: 0 !important; /* remove any rounding */
+  background: none !important; /* remove background */
+  filter: brightness(1) !important;
+  display: block;
+}
+
+/* Ensure nav-logo container has no extra padding or border */
+.nav-logo {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+}
+
