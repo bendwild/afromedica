@@ -14,6 +14,11 @@
   --textHighlight: #A187B855;
 }
 
+// === Smooth Transitions ===
+* {
+  transition: all 0.25s ease-in-out;
+}
+
 // === Navbar ===
 .main-navigation {
   position: fixed;
@@ -28,6 +33,7 @@
   z-index: 1000;
 }
 
+// === Navbar Container ===
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -97,10 +103,10 @@ body {
   line-height: 1.6;
 }
 
-// === Equal Top Spacing Under Navbar ===
+// === Top Spacing Fix ===
 .page-body {
   display: flex;
-  padding-top: 6rem; /* Equal spacing across all columns */
+  padding-top: 6rem;
 }
 
 .page-left,
@@ -112,11 +118,13 @@ body {
 
 // === Cards ===
 .card {
-  background-color: var(--lightgray);
-  border: 1px solid var(--gray);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 1rem;
   padding: 1.2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, background-color 0.3s, border-color 0.3s;
 }
 
@@ -137,6 +145,13 @@ body {
   color: var(--light);
 }
 
+// === Hover Scaling for Buttons and Links ===
+.button:hover,
+.nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
 // === Buttons ===
 .button {
   background-color: var(--accent);
@@ -151,9 +166,43 @@ body {
   border: none;
 }
 
+// === Images ===
+img {
+  border-radius: 0.75rem;
+  max-width: 100%;
+  display: block;
+  margin: 1rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
 .button:hover {
   background-color: var(--darkgray);
   color: var(--lightgray);
+}
+
+// === Headings ===
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+h2 {
+  border-bottom: 2px solid var(--tertiary);
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: var(--secondary);
+}
+
+// === Blockquotes ===
+blockquote {
+  border-left: 4px solid var(--secondary);
+  padding-left: 1rem;
+  color: var(--darkgray);
+  font-style: italic;
+  background-color: var(--lightgray);
+  margin: 2rem 0;
 }
 
 // === Recent Notes ===
@@ -190,6 +239,9 @@ footer {
   padding: 2rem 1rem;
   text-align: center;
   font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 footer a {
@@ -208,6 +260,8 @@ footer a:hover {
   border: 1px solid var(--gray);
   border-radius: 1rem;
   padding: 1rem;
+  position: sticky;
+  top: 6rem;
 }
 
 .toc ul {
@@ -254,13 +308,13 @@ footer a:hover {
 // === Dark Mode ===
 @media (prefers-color-scheme: dark) {
   :root {
-    --light: #212529;      /* eerie-black */
-    --lightgray: #343a40;  /* onyx */
-    --gray: #6c757d;       /* slate-gray */
-    --darkgray: #dee2e6;   /* platinum */
-    --dark: #f8f9fa;       /* seasalt */
-    --secondary: #A187B8;  /* african-violet */
-    --tertiary: #adb5bd;   /* french-gray-2 */
+    --light: #212529;
+    --lightgray: #343a40;
+    --gray: #6c757d;
+    --darkgray: #dee2e6;
+    --dark: #f8f9fa;
+    --secondary: #A187B8;
+    --tertiary: #adb5bd;
     --accent: #A187B8;
     --highlight: rgba(161, 135, 184, 0.06);
     --textHighlight: #A187B855;
@@ -297,15 +351,15 @@ footer a:hover {
     color: var(--secondary);
   }
 }
-// === Layout Fixes ===
 
+// === Layout Fixes ===
 .page-columns {
   display: flex;
   align-items: stretch;
   gap: 1.5rem;
   margin-top: 2rem;
   align-items: flex-start;
-  min-height: 60vh; // Adjust as needed for vertical stretch
+  min-height: 60vh;
 }
 
 .page-columns > .left,
@@ -316,7 +370,6 @@ footer a:hover {
   height: 100%;
 }
 
-// Allow child components to expand as needed
 .card,
 .recent-notes,
 .graph-container {
