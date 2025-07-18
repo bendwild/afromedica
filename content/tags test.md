@@ -1,4 +1,5 @@
 ---
-created: 18-07-2025
+title: Tags
+layout: tag
 modified: 18-07-2025
 ---

@@ -2,6 +2,7 @@
 publish: true
 title: Contact
 created: 18-07-2025
+modified: 18-07-2025
 ---
 If you have any questions for AfroMedica, want to collaborate, or would like to highlight your project, please do not hesitate to contact us via our social media channels, email, or the contact form below.
 

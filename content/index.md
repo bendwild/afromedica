@@ -2,6 +2,7 @@
 title: Welcome!
 publish: true
 created: 18-07-2025
+modified: 18-07-2025
 ---
 
 <div class="feature-grid">
@@ -85,3 +86,34 @@ Our work spans journal clubs, podcast discussions, policy advocacy, and the deve
 > [!tip]+ 🌍 Join the Movement  
 > Become a member, attend a journal club, or collaborate with us on impactful change.  
 > [→ Get involved](/join)
+
+
+<details>
+<summary>Bloopiediepoop</summary>
+
+reazraffe
+
+</details>
+
+> “I’m not interested in power for power’s sake, but I’m interested in power that is moral, that is right and that is good.”  
+> — Dr. Martin Luther King Jr.
+
+<blockquote style="border-left: 4px solid var(--secondary); padding-left: 1rem;">
+This is a special note or announcement in AfroMedica's voice.
+</blockquote>
+<hr style="border: 1px solid var(--tertiary); margin: 2rem 0;" />
+{% recent 5 %}
+{% backlinks %}
+
+
+{% graph %}
+
+
+## 🧭 Explore
+- [Global Health Notes](/global-health) {.button}
+- [Projects & Campaigns](/campaigns) {.button}
+- [Research Work](/research) {.button}
+
+![Welcome](/content/Extra/Images/afromedica (6).png)
+
+> _“AfroMedica is a space for critical thinking, cultural care, and collective healing.”_
