@@ -309,4 +309,84 @@ footer a:hover {
 .graph-node {
   stroke: var(--accent);
   fill: var(--tertiary);
-  trans
+  transition: fill 0.3s;
+}
+
+.graph-node:hover {
+  fill: var(--accent);
+}
+
+.graph-link {
+  stroke: var(--gray);
+}
+
+// === Dark Mode ===
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light: #212529;
+    --lightgray: #343a40;
+    --gray: #6c757d;
+    --darkgray: #dee2e6;
+    --dark: #f8f9fa;
+    --secondary: #A187B8;
+    --tertiary: #adb5bd;
+    --accent: #A187B8;
+    --highlight: rgba(161, 135, 184, 0.06);
+    --textHighlight: #A187B855;
+  }
+
+  .main-navigation {
+    background-color: var(--lightgray);
+    border-bottom-color: var(--gray);
+  }
+
+  .nav-link {
+    color: var(--darkgray);
+  }
+
+  .nav-link:hover {
+    color: var(--accent);
+  }
+
+  .nav-logo img {
+    filter: brightness(1.2);
+  }
+
+  footer {
+    background-color: var(--lightgray);
+    color: var(--tertiary);
+    border-top-color: var(--gray);
+  }
+
+  footer a {
+    color: var(--darkgray);
+  }
+
+  footer a:hover {
+    color: var(--secondary);
+  }
+}
+
+// === Layout Fixes ===
+.page-columns {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+  min-height: 60vh;
+}
+
+.page-columns > .left,
+.page-columns > .center,
+.page-columns > .right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card,
+.recent-notes,
+.graph-container {
+  flex-grow: 1;
+}
