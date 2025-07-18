@@ -401,3 +401,16 @@ footer a:hover {
   align-items: center;
 }
 
+.graph-container {
+  margin-top: 6rem;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 50;
+}
+
+.main-navigation {
+  z-index: 10;
+}
+
+
