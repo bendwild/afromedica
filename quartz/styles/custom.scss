@@ -169,7 +169,7 @@ body {
   color: var(--lightgray);
 }
 
-// === Card Styles (Shared Light + Dark) ===
+// === Default Card Layout (Structure Only) ===
 .card,
 .toc,
 .recent-notes,
@@ -178,16 +178,22 @@ body {
   padding: 1.2rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-  border: 1px solid var(--lightgray);
-  background-color: #fcfcfd; // ✅ fixed: lighter than --light
   backdrop-filter: blur(6px);
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
-.card {
+// === Light Mode Explicit Override ===
+body:not([data-theme="dark"]) .card,
+body:not([data-theme="dark"]) .toc,
+body:not([data-theme="dark"]) .recent-notes,
+body:not([data-theme="dark"]) .backlinks {
+  background-color: #fcfcfd !important;
+  border: 1px solid var(--lightgray) !important;
+  color: var(--darkgray) !important;
   border-left: 4px solid var(--accent);
 }
 
+// === Universal Card Styling ===
 .card h3,
 .card p,
 .card a,
