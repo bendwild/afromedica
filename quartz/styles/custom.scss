@@ -25,12 +25,15 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 64px; /* match logo */
   background-color: var(--light);
   border-bottom: 1px solid var(--gray);
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
-  padding: 1rem 0;
   font-family: 'Clash Display', sans-serif;
   z-index: 1000;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 // === Navbar Container ===
@@ -41,12 +44,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  height: 100%;
+}
+
+.nav-logo {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo img {
-  height: 44px;
-  filter: brightness(1);
+  height: 60px !important;
+  border-radius: 0 !important;
+  background: none !important;
+  filter: brightness(1) !important;
+  display: block;
 }
 
 .nav-menu {
@@ -106,7 +121,7 @@ body {
 // === Top Spacing Fix ===
 .page-body {
   display: flex;
-  padding-top: 6rem;
+  padding-top: 64px; /* match .main-navigation height */
 }
 
 .page-left,
@@ -166,6 +181,11 @@ body {
   border: none;
 }
 
+.button:hover {
+  background-color: var(--darkgray);
+  color: var(--lightgray);
+}
+
 // === Images ===
 img {
   border-radius: 0.75rem;
@@ -173,11 +193,6 @@ img {
   display: block;
   margin: 1rem auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.button:hover {
-  background-color: var(--darkgray);
-  color: var(--lightgray);
 }
 
 // === Headings ===
@@ -294,123 +309,4 @@ footer a:hover {
 .graph-node {
   stroke: var(--accent);
   fill: var(--tertiary);
-  transition: fill 0.3s;
-}
-
-.graph-node:hover {
-  fill: var(--accent);
-}
-
-.graph-link {
-  stroke: var(--gray);
-}
-
-// === Dark Mode ===
-@media (prefers-color-scheme: dark) {
-  :root {
-    --light: #212529;
-    --lightgray: #343a40;
-    --gray: #6c757d;
-    --darkgray: #dee2e6;
-    --dark: #f8f9fa;
-    --secondary: #A187B8;
-    --tertiary: #adb5bd;
-    --accent: #A187B8;
-    --highlight: rgba(161, 135, 184, 0.06);
-    --textHighlight: #A187B855;
-  }
-
-  .main-navigation {
-    background-color: var(--lightgray);
-    border-bottom-color: var(--gray);
-  }
-
-  .nav-link {
-    color: var(--darkgray);
-  }
-
-  .nav-link:hover {
-    color: var(--accent);
-  }
-
-  .nav-logo img {
-    filter: brightness(1.2);
-  }
-
-  footer {
-    background-color: var(--lightgray);
-    color: var(--tertiary);
-    border-top-color: var(--gray);
-  }
-
-  footer a {
-    color: var(--darkgray);
-  }
-
-  footer a:hover {
-    color: var(--secondary);
-  }
-}
-
-// === Layout Fixes ===
-.page-columns {
-  display: flex;
-  align-items: stretch;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  align-items: flex-start;
-  min-height: 60vh;
-}
-
-.page-columns > .left,
-.page-columns > .center,
-.page-columns > .right {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.card,
-.recent-notes,
-.graph-container {
-  flex-grow: 1;
-}
-
-/* Add padding-right to graph container to avoid clipping with fixed navbar */
-.graph-container {
-  padding-right: 1.5rem; /* add some breathing room on the right */
-  margin-top: 1rem;      /* optional, for some vertical spacing */
-}
-
-/* Make logo bigger and remove circle or background */
-.nav-logo img {
-  height: 60px !important; /* bigger size */
-  border-radius: 0 !important; /* remove any rounding */
-  background: none !important; /* remove background */
-  filter: brightness(1) !important;
-  display: block;
-}
-
-/* Ensure nav-logo container has no extra padding or border */
-.nav-logo {
-  padding: 0;
-  margin: 0;
-  background: none;
-  border-radius: 0;
-  display: flex;
-  align-items: center;
-}
-
-.graph-container {
-  margin-top: 6rem;
-  padding: 1rem 1.5rem 1.5rem 1.5rem;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 50;
-}
-
-.main-navigation {
-  z-index: 10;
-}
-
-
+  trans
