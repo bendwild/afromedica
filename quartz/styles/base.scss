@@ -24,39 +24,54 @@ body {
   padding: 0 0.1rem;
   border-radius: 5px;
 }
+
 ::selection {
   background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
   color: var(--darkgray);
 }
 
+// === Typography ===
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headerFont);
+  color: var(--dark);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  border-bottom: 2px solid var(--tertiary);
+  padding-bottom: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+strong {
+  font-weight: $semiBoldWeight;
+}
+
+// === Global Text Elements ===
 p,
 ul,
-text,
+ol,
+li,
 a,
 tr,
 td,
-li,
-ol,
-ul,
 .katex,
-.math {
+.math,
+text {
   color: var(--darkgray);
   fill: var(--darkgray);
   hyphens: auto;
-}
-
-p,
-ul,
-text,
-a,
-li,
-ol,
-ul,
-.katex,
-.math {
   overflow-wrap: anywhere;
 }
 
+// === Math Styling ===
 .math {
   &.math-display {
     text-align: center;
@@ -76,12 +91,45 @@ article {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+
+  blockquote {
+    border-left: 4px solid var(--secondary);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    background-color: var(--highlight);
+    font-style: italic;
+    color: var(--darkgray);
+  }
 }
 
-strong {
-  font-weight: $semiBoldWeight;
+// === Images ===
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border-radius: 8px;
 }
 
+// === Tables ===
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  border: 1px solid var(--gray);
+}
+
+th, td {
+  border: 1px solid var(--gray);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--lightgray);
+  color: var(--dark);
+}
+
+// === Links ===
 a {
   font-weight: $semiBoldWeight;
   text-decoration: none;
@@ -89,7 +137,7 @@ a {
   color: var(--secondary);
 
   &:hover {
-    color: var(--tertiary);
+    color: var(--accent);
   }
 
   &.internal {
@@ -113,6 +161,7 @@ a {
       border-radius: 0;
       padding: 0;
     }
+
     &.tag-link {
       &::before {
         content: "#";
@@ -129,6 +178,12 @@ a {
   }
 }
 
+// === Callouts ===
+.callout {
+  margin: 1.5rem 0;
+}
+
+// === Responsive Utilities ===
 .flex-component {
   display: flex;
 }
@@ -138,6 +193,7 @@ a {
   &.flex-component {
     display: flex;
   }
+
   @media all and ($mobile) {
     &.flex-component {
       display: none;
@@ -151,6 +207,7 @@ a {
   &.flex-component {
     display: none;
   }
+
   @media all and ($mobile) {
     &.flex-component {
       display: flex;
@@ -159,6 +216,7 @@ a {
   }
 }
 
+// === Quartz Grid ===
 .page {
   width: 100%;
   max-width: 100%;
@@ -237,6 +295,7 @@ a {
       z-index: 1;
       grid-area: grid-sidebar-left;
       flex-direction: column;
+
       @media all and ($mobile) {
         gap: 0;
         align-items: center;
@@ -253,20 +312,24 @@ a {
       grid-area: grid-sidebar-right;
       margin-right: 0;
       flex-direction: column;
+
       @media all and ($mobile) {
         margin-left: inherit;
         margin-right: inherit;
       }
+
       @media all and not ($desktop) {
         position: initial;
         height: unset;
         width: 100%;
         flex-direction: row;
         padding: 0;
+
         & > * {
           flex: 1;
           max-height: 24rem;
         }
+
         & > .toc {
           display: none;
         }
@@ -281,6 +344,7 @@ a {
     & .page-header {
       grid-area: grid-header;
       margin: $topSpacing 0 0 0;
+
       @media all and ($mobile) {
         margin-top: 0;
         padding: 0;
@@ -301,9 +365,11 @@ a {
       min-width: 100%;
       margin-left: auto;
       margin-right: auto;
+
       @media all and ($tablet) {
         margin-right: 0;
       }
+
       @media all and ($mobile) {
         margin-right: 0;
         margin-left: 0;
@@ -315,5 +381,3 @@ a {
     }
   }
 }
-
-/* The rest of your file remains unchanged. */
