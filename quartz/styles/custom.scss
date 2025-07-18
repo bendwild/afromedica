@@ -169,7 +169,7 @@ body {
   color: var(--lightgray);
 }
 
-// === Card Structure (no theming)
+// === Card Structure (neutral) ===
 .card,
 .toc,
 .recent-notes,
@@ -181,84 +181,43 @@ body {
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
-// === Light Mode ===
-@media (prefers-color-scheme: light) {
-  .card,
-  .toc,
-  .recent-notes,
-  .backlinks {
-    background-color: #fcfcfd;
-    border: 1px solid var(--lightgray);
-    color: var(--darkgray);
-    border-left: 4px solid var(--accent);
-    border-right: 4px solid var(--accent);
-  }
+// === Light Mode Cards ===
+html:not([data-theme]),
+html[data-theme="light"] {
+  --card-bg: #fcfcfd;
+  --card-border: var(--lightgray);
+  --card-color: var(--darkgray);
+  --card-border-accent: var(--accent);
 }
 
-// === Dark Mode ===
-@media (prefers-color-scheme: dark) {
-  :root {
-    --light: #212529;
-    --lightgray: #343a40;
-    --gray: #6c757d;
-    --darkgray: #dee2e6;
-    --dark: #f8f9fa;
-    --secondary: #A187B8;
-    --tertiary: #adb5bd;
-    --accent: #A187B8;
-    --highlight: rgba(161, 135, 184, 0.06);
-    --textHighlight: #A187B855;
-  }
-
-  body {
-    background-color: var(--light);
-    color: var(--dark);
-  }
-
-  .main-navigation {
-    background-color: var(--lightgray);
-    border-bottom-color: var(--gray);
-  }
-
-  .nav-link {
-    color: var(--darkgray);
-  }
-
-  .nav-link:hover {
-    color: var(--accent);
-  }
-
-  .nav-logo img {
-    filter: brightness(1.2);
-  }
-
-  footer {
-    background-color: var(--lightgray);
-    color: var(--tertiary);
-    border-top-color: var(--gray);
-  }
-
-  footer a {
-    color: var(--darkgray);
-  }
-
-  footer a:hover {
-    color: var(--secondary);
-  }
-
-  .card,
-  .toc,
-  .recent-notes,
-  .backlinks {
-    background-color: #2a2d31;
-    border: 1px solid var(--gray);
-    color: var(--darkgray);
-    border-left: 4px solid var(--accent);
-    border-right: 4px solid var(--accent);
-  }
+html:not([data-theme]) .card,
+html:not([data-theme]) .toc,
+html:not([data-theme]) .recent-notes,
+html:not([data-theme]) .backlinks,
+html[data-theme="light"] .card,
+html[data-theme="light"] .toc,
+html[data-theme="light"] .recent-notes,
+html[data-theme="light"] .backlinks {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--card-color);
+  border-left: 4px solid var(--card-border-accent);
+  border-right: 4px solid var(--card-border-accent);
 }
 
-// === Card Content Styling
+// === Dark Mode Cards ===
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .toc,
+html[data-theme="dark"] .recent-notes,
+html[data-theme="dark"] .backlinks {
+  background-color: #2a2d31;
+  border: 1px solid var(--gray);
+  color: var(--darkgray);
+  border-left: 4px solid var(--accent);
+  border-right: 4px solid var(--accent);
+}
+
+// === Card Content Styling ===
 .card h3,
 .card p,
 .card a,
