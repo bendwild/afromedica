@@ -13,6 +13,7 @@ export const sharedPageComponents: SharedLayout = {
       Facebook: "https://www.facebook.com/AfroMedica",
       Instagram: "https://www.instagram.com/_afromedica_/?hl=nl",
       "Discord Community": "https://discord.gg/qUcCAHassB",
+      Mail: "mailto:info@afromedica.com",
     },
   }),
 }
