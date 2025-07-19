@@ -12,7 +12,7 @@ const ICONS: Record<string, string> = {
   Facebook: "facebook",
   Instagram: "instagram",
   "Discord Community": "discord",
-  Contact: "mail",
+  Mail: "mail",
 }
 
 export default ((opts?: Options) => {
@@ -21,15 +21,15 @@ export default ((opts?: Options) => {
     const links = opts?.links ?? []
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <p>Follow us on social media / <a href={links["Contact"]}>Contact us</a></p>
+        <p>Follow us on social media</p>
         <ul>
-          {Object.entries(links).map(([text, link]) => {
-            const icon = ICONS[text] ?? "link"
+          {Object.entries(links).map(([label, url]) => {
+            const iconId = ICONS[label] ?? "link"
             return (
               <li>
-                <a href={link} target="_blank" rel="noopener noreferrer" aria-label={text}>
+                <a href={url} target="_blank" rel="noopener noreferrer" aria-label={label}>
                   <svg class="icon" width="20" height="20">
-                    <use href={`/static/icons.svg#${icon}`} />
+                    <use href={`/static/icons.svg#${iconId}`} />
                   </svg>
                 </a>
               </li>
