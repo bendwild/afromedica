@@ -19,36 +19,37 @@ const config: QuartzConfig = {
     baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
+    generateSocialImages: true,
     theme: {
-      fontOrigin: "googleFonts",
       cdnCaching: true,
+      fontOrigin: "googleFonts", // changed from "local" to "googleFonts"
       typography: {
-        header: "Merriweather",
-        body: "Cabin",
-        code: "IBM Plex Mono",
+        header: "IBM Plex Serif",  // modern serif similar to Parclo
+        body: "IBM Plex Serif",
+        code: "Fira Code",         // similar to Berkeley Mono
       },
       colors: {
         lightMode: {
-          light: "#f8f9fa",      // seasalt
-          lightgray: "#e9ecef",  // anti-flash-white
-          gray: "#adb5bd",       // french-gray
-          darkgray: "#495057",   // slate-gray
-          dark: "#212529",       // eerie-black
-          secondary: "#A187B8",  // african-violet
-          tertiary: "#dee2e6",   // platinum
-          highlight: "rgba(161, 135, 184, 0.08)",
-          textHighlight: "#A187B855",
+          light: "#fffaf3",
+          lightgray: "#f2e9e1",
+          gray: "#9893a5",
+          darkgray: "#797593",
+          dark: "#575279",
+          secondary: "#d7827e",
+          tertiary: "#b4637a",
+          highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "rgba(246, 193, 119, 0.28)",
         },
         darkMode: {
-          light: "#212529",      // eerie-black
-          lightgray: "#343a40",  // onyx
-          gray: "#6c757d",       // slate-gray
-          darkgray: "#dee2e6",   // platinum
-          dark: "#f8f9fa",       // seasalt
-          secondary: "#A187B8",  // african-violet
-          tertiary: "#adb5bd",   // french-gray-2
-          highlight: "rgba(161, 135, 184, 0.06)",
-          textHighlight: "#A187B855",
+          light: "#1f1d30",
+          lightgray: "#26233a",
+          gray: "#6e6a86",
+          darkgray: "#908caa",
+          dark: "#e0def4",
+          secondary: "#ebbcba",
+          tertiary: "#eb6f92",
+          highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#b3aa0288",
         },
       },
     },
