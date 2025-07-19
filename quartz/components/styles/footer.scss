@@ -23,10 +23,10 @@ footer {
   }
 
   ul.social-icons {
-    list-style: none;
+    list-style: none;    /* Remove bullet points */
     padding: 0;
     margin: 0;
-    display: flex;
+    display: flex;       /* Horizontal layout */
     flex-direction: row;
     gap: 1.5rem;
     align-items: center;
