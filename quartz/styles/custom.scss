@@ -1,16 +1,15 @@
 @use "./base.scss";
 
-// === Color Tokens ===
 :root {
-  --light: #fafafa;
-  --lightgray: #f0f0f3;
-  --gray: #ced4da;
-  --darkgray: #4a4a4a;
-  --dark: #1f1f1f;
-  --secondary: #6c63ff;
-  --tertiary: #e0e0e0;
+  --light: #fcfcfc;
+  --lightgray: #f5f5f5;
+  --gray: #dedede;
+  --darkgray: #333333;
+  --dark: #111111;
+  --secondary: #A187B8;
+  --tertiary: #e8e8e8;
   --accent: #A187B8;
-  --highlight: rgba(161, 135, 184, 0.08);
+  --highlight: rgba(161, 135, 184, 0.1);
   --textHighlight: #A187B855;
 }
 
@@ -19,275 +18,112 @@
   box-sizing: border-box;
 }
 
-// === Navbar ===
+// Navbar
 .main-navigation {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 64px;
+  top: 0; left: 0;
+  width: 100%; height: 64px;
   background-color: var(--light);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
   font-family: 'Clash Display', sans-serif;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  border-bottom: none;
+  display: flex; align-items: center; z-index: 1000;
 }
+.nav-link { color: var(--dark); font-weight: 600; }
+.nav-link:hover { color: var(--accent); }
 
-html[data-theme="dark"] .main-navigation {
-  background-color: var(--light);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-}
-
-.nav-logo img {
-  height: 60px;
-  margin-right: 1rem;
-  border-radius: 0;
-  display: block;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin-left: auto;
-  padding: 0;
-}
-
-.nav-link {
-  color: var(--dark);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: var(--accent);
-}
-
-// === Layout ===
+// Layout
 body {
   padding-top: 64px;
   background-color: var(--light);
-  color: var(--dark);
+  color: var(--darkgray);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
 }
 
-.page-body {
-  display: flex;
-  padding-top: 0;
-}
-
-.page-left,
-.page-main,
-.page-right {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.page-columns {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  min-height: 60vh;
-}
-
-.page-columns > .left,
-.page-columns > .center,
-.page-columns > .right {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-// === Graph View ===
+// Graph view
 .graph-container {
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  margin-top: 2rem;
-  padding: 0;
-  box-shadow: none;
   position: relative;
-  z-index: 10;
+  margin-top: 2rem;
   pointer-events: auto !important;
+  z-index: 10;
 }
 
-.graph-container button,
-.graph-container .button,
-.graph-container a {
-  pointer-events: auto;
-  opacity: 1;
-  cursor: pointer;
-}
-
-.graph-controls {
-  background-color: transparent;
-  border: none;
-}
-
-.graph-node {
-  stroke: var(--accent);
-  fill: var(--tertiary);
-  transition: fill 0.3s;
-}
-
-.graph-node:hover {
-  fill: var(--accent);
-}
-
-.graph-link {
-  stroke: var(--gray);
-}
-
-// === Buttons ===
+// Buttons
 .button {
   background-color: var(--accent);
   color: var(--light);
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
 }
-
 .button:hover {
   background-color: var(--darkgray);
-  color: var(--lightgray);
 }
 
-// === Cards, TOC, Recent Notes, Backlinks ===
-.card,
-.toc,
-.recent-notes,
-.backlinks {
+// Cards, TOC, Backlinks
+.card, .toc, .recent-notes, .backlinks {
   background-color: var(--lightgray);
   border: 1px solid var(--gray);
   border-left: 4px solid var(--accent);
-  color: var(--darkgray);
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   padding: 1.2rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-  backdrop-filter: blur(6px);
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
-
 .card h3 {
-  font-size: 1.25rem;
-  margin-top: 0;
   color: var(--dark);
   border-bottom: 1px solid var(--highlight);
-  padding-bottom: 0.25rem;
 }
-
-.card p,
-.card li {
-  line-height: 1.6;
-}
-
-.card a,
-.toc a,
-.recent-notes a,
-.backlinks a {
-  font-weight: 500;
+.card a, .toc a, .recent-notes a, .backlinks a {
   color: var(--accent);
-  text-decoration: none;
   border-bottom: 1px dotted var(--accent);
 }
-
-.card a:hover,
-.toc a:hover,
-.recent-notes a:hover,
-.backlinks a:hover {
+.card a:hover, .toc a:hover, .recent-notes a:hover, .backlinks a:hover {
   color: var(--dark);
   border-bottom: 1px solid var(--accent);
 }
-
-.card:hover,
-.toc:hover,
-.recent-notes:hover,
-.backlinks:hover {
-  box-shadow: 0 4px 12px rgba(161, 135, 184, 0.1);
-  border-color: var(--accent);
+.card:hover, .toc:hover, .recent-notes:hover, .backlinks:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-// === Footer ===
+// Footer
 footer {
   background-color: var(--light);
   color: var(--darkgray);
   box-shadow: inset 0 1px 0 var(--gray);
   padding: 2rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
-
 footer a {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   color: var(--accent);
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
   transition: color 0.2s;
 }
+footer a:hover { color: var(--dark); }
 
-footer a:hover {
-  color: var(--dark);
-}
-
-// === Misc ===
+// Misc
 img {
   border-radius: 0.75rem;
   max-width: 100%;
-  display: block;
   margin: 1rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--dark);
-}
-
+h1 { color: var(--dark); }
 h2 {
+  color: var(--dark);
   border-bottom: 2px solid var(--tertiary);
   padding-bottom: 0.3rem;
   margin-top: 2rem;
-  font-size: 1.8rem;
-  color: var(--secondary);
 }
-
 blockquote {
-  border-left: 4px solid var(--secondary);
+  border-left: 4px solid var(--accent);
   padding-left: 1rem;
-  color: var(--darkgray);
-  font-style: italic;
   background-color: var(--lightgray);
-  margin: 2rem 0;
 }
