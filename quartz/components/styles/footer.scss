@@ -22,38 +22,35 @@ footer {
     }
   }
 
-  .social-links-scroll {
-    max-height: 6rem; /* Adjust vertical height */
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding-right: 0.5rem; /* scrollbar spacing */
-    margin-top: 0.5rem;
+  ul.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+  }
 
-    /* Smooth scrolling for touch devices */
-    -webkit-overflow-scrolling: touch;
+  ul.social-icons li {
+    display: inline-block;
+  }
 
-    p {
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--darkgray);
-    }
+  ul.social-icons a {
+    display: flex;
+    color: var(--accent);
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+  }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
+  ul.social-icons a:hover,
+  ul.social-icons a:focus {
+    color: var(--dark);
+  }
 
-    li {
-      /* no special styles needed */
-    }
-
-    a {
-      display: inline-block;
-      white-space: nowrap;
-    }
+  ul.social-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
   }
 }
