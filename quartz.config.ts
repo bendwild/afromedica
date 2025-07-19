@@ -23,37 +23,37 @@ const config: QuartzConfig = {
     fontOrigin: "googleFonts",
     cdnCaching: true,
     typography: {
-    header: "Merriweather",
-    body: "Cabin",
-    code: "IBM Plex Mono",
+      header: "IBM Plex Serif",      // similar to aarnphm
+      body: "Inter",                 // clean and modern
+      code: "Fira Code",
     },
     colors: {
     lightMode: {
-      light: "#fcfcfc",        // ultra-light background
-      lightgray: "#f5f5f5",    // panel cards
-      gray: "#dedede",         // borders/shadows
-      darkgray: "#333333",     // main text
-      dark: "#111111",         // headings, nav
-      secondary: "#A187B8",    // your accent color
-      tertiary: "#e8e8e8",     // subtle lines
+      light: "#fafafa",            // near-white background
+      lightgray: "#f0f0f0",        // soft cards
+      gray: "#cccccc",             // border gray
+      darkgray: "#333333",         // text
+      dark: "#111111",             // strong black
+      secondary: "#A187B8",        // your accent stays
+      tertiary: "#e0e0e0",         // subtle lines
       accent: "#A187B8",
       highlight: "rgba(161, 135, 184, 0.1)",
       textHighlight: "#A187B855",
     },
     darkMode: {
-      light: "#1a1a1a",        // dark background
-      lightgray: "#2a2a2a",    // panel cards
-      gray: "#444444",         // borders
-      darkgray: "#dddddd",     // body text
-      dark: "#ffffff",         // headings
-      secondary: "#A187B8",    // accent remains
-      tertiary: "#3c3c3c",     // separator lines
+      light: "#121212",            // main background
+      lightgray: "#1f1f1f",        // card color
+      gray: "#2e2e2e",
+      darkgray: "#cccccc",
+      dark: "#fafafa",
+      secondary: "#A187B8",
+      tertiary: "#3a3a3a",
       accent: "#A187B8",
       highlight: "rgba(161, 135, 184, 0.06)",
       textHighlight: "#A187B855",
         },
       },
-    },
+    }
   },
   plugins: {
     transformers: [
