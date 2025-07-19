@@ -19,13 +19,14 @@ const config: QuartzConfig = {
     baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
+    generateSocialImages: true,
     theme: {
-    cdnCaching: true,
-    fontOrigin: "local",
-    typography: {
-      header: "Parclo Serif",
-      body: "Parclo Serif",
-      code: "Berkeley Mono",
+      cdnCaching: true,
+      fontOrigin: "local",
+      typography: {
+        header: "Parclo Serif",
+        body: "Parclo Serif",
+        code: "Berkeley Mono",
     },
     colors: {
       lightMode: {
