@@ -1,6 +1,6 @@
 @use "./base.scss";
 
-// === Sync with config.ts ===
+// === Color Tokens ===
 :root {
   --light: #fffaf3;
   --lightgray: #f2e9e1;
@@ -9,22 +9,9 @@
   --dark: #575279;
   --secondary: #d7827e;
   --tertiary: #b4637a;
-  --accent: #b4637a;
+  --accent: #A187B8;
   --highlight: rgba(143, 159, 169, 0.15);
   --textHighlight: rgba(246, 193, 119, 0.28);
-}
-
-html[data-theme="dark"] {
-  --light: #1f1d30;
-  --lightgray: #26233a;
-  --gray: #6e6a86;
-  --darkgray: #908caa;
-  --dark: #e0def4;
-  --secondary: #ebbcba;
-  --tertiary: #eb6f92;
-  --accent: #eb6f92;
-  --highlight: rgba(143, 159, 169, 0.15);
-  --textHighlight: #b3aa0288;
 }
 
 * {
@@ -45,6 +32,7 @@ html[data-theme="dark"] {
   z-index: 1000;
   display: flex;
   align-items: center;
+  border-bottom: none;
 }
 
 .nav-container {
@@ -100,6 +88,13 @@ body {
 
 .page-body {
   display: flex;
+  padding-top: 0;
+}
+
+.page-left,
+.page-main,
+.page-right {
+  margin-top: 0;
   padding-top: 0;
 }
 
@@ -169,7 +164,6 @@ body {
   text-decoration: none;
   cursor: pointer;
   border: none;
-  font-family: 'IBM Plex Serif', serif;
 }
 
 .button:hover {
@@ -185,7 +179,7 @@ body {
   background-color: var(--lightgray);
   border: 1px solid var(--gray);
   border-left: 4px solid var(--accent);
-  color: var(--darkgray);
+  color: var(--dark);
   border-radius: 1rem;
   padding: 1.2rem;
   margin-bottom: 1.5rem;
@@ -203,8 +197,10 @@ body {
 }
 
 .card p,
-.card li {
-  line-height: 1.6;
+.card li,
+.card span,
+.card h4 {
+  color: var(--dark);
 }
 
 .card a,
@@ -229,8 +225,17 @@ body {
 .toc:hover,
 .recent-notes:hover,
 .backlinks:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 12px rgba(161, 135, 184, 0.1);
   border-color: var(--accent);
+  color: var(--accent);
+}
+
+.card:hover p,
+.card:hover li,
+.card:hover span,
+.card:hover h3,
+.card:hover h4 {
+  color: var(--accent);
 }
 
 // === Footer ===
