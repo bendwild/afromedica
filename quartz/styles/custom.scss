@@ -3,34 +3,41 @@
 // === Color Tokens ===
 :root {
   --light: #fafafa;
-  --lightgray: #f0f0f0;
-  --gray: #cccccc;
-  --darkgray: #333333;
-  --dark: #111111;
-  --secondary: #A187B8;
+  --lightgray: #f0f0f3;
+  --gray: #ced4da;
+  --darkgray: #4a4a4a;
+  --dark: #1f1f1f;
+  --secondary: #6c63ff;
   --tertiary: #e0e0e0;
   --accent: #A187B8;
-  --highlight: rgba(161, 135, 184, 0.1);
+  --highlight: rgba(161, 135, 184, 0.08);
   --textHighlight: #A187B855;
 }
 
 * {
-  box-sizing: border-box;
   transition: all 0.25s ease-in-out;
+  box-sizing: border-box;
 }
 
 // === Navbar ===
 .main-navigation {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 64px;
   background-color: var(--light);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  font-family: 'IBM Plex Serif', serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  font-family: 'Clash Display', sans-serif;
   z-index: 1000;
   display: flex;
   align-items: center;
+  border-bottom: none;
+}
+
+html[data-theme="dark"] .main-navigation {
+  background-color: var(--light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .nav-container {
@@ -40,28 +47,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
   width: 100%;
 }
 
 .nav-logo {
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--dark);
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.nav-logo img {
+  height: 60px;
+  margin-right: 1rem;
+  border-radius: 0;
+  display: block;
 }
 
 .nav-menu {
   display: flex;
   gap: 2rem;
   list-style: none;
-  margin: 0;
+  margin-left: auto;
   padding: 0;
 }
 
 .nav-link {
   color: var(--dark);
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .nav-link:hover {
@@ -70,11 +84,23 @@
 
 // === Layout ===
 body {
+  padding-top: 64px;
   background-color: var(--light);
-  color: var(--darkgray);
+  color: var(--dark);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  padding-top: 64px;
+}
+
+.page-body {
+  display: flex;
+  padding-top: 0;
+}
+
+.page-left,
+.page-main,
+.page-right {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .page-columns {
@@ -82,77 +108,55 @@ body {
   align-items: flex-start;
   gap: 1.5rem;
   margin-top: 2rem;
+  min-height: 60vh;
 }
 
-// === Cards / TOC / Notes ===
-.card,
-.toc,
-.recent-notes,
-.backlinks {
-  background-color: var(--lightgray);
-  border: 1px solid var(--gray);
-  border-left: 4px solid var(--accent);
-  border-radius: 1rem;
-  padding: 1.2rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-  color: var(--darkgray);
+.page-columns > .left,
+.page-columns > .center,
+.page-columns > .right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.card h3 {
-  font-size: 1.25rem;
-  color: var(--dark);
-  border-bottom: 1px solid var(--highlight);
-  font-family: 'IBM Plex Serif', serif;
-  margin-top: 0;
-}
-
-.card a,
-.toc a,
-.recent-notes a,
-.backlinks a {
-  color: var(--accent);
-  font-weight: 500;
-  border-bottom: 1px dotted var(--accent);
-  text-decoration: none;
-}
-
-.card a:hover {
-  border-bottom: 1px solid var(--accent);
-  color: var(--dark);
-}
-
-.card:hover {
-  box-shadow: 0 4px 12px rgba(161, 135, 184, 0.1);
-}
-
-// === Typography ===
-h1, h2, h3, h4 {
-  font-family: 'IBM Plex Serif', serif;
-  color: var(--dark);
-}
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 1.8rem;
+// === Graph View ===
+.graph-container {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
   margin-top: 2rem;
-  border-bottom: 2px solid var(--tertiary);
-  padding-bottom: 0.3rem;
-  color: var(--secondary);
+  padding: 0;
+  box-shadow: none;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto !important;
 }
 
-// === Blockquotes ===
-blockquote {
-  border-left: 4px solid var(--secondary);
-  background-color: var(--lightgray);
-  color: var(--darkgray);
-  font-style: italic;
-  padding-left: 1rem;
-  margin: 2rem 0;
+.graph-container button,
+.graph-container .button,
+.graph-container a {
+  pointer-events: auto;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.graph-controls {
+  background-color: transparent;
+  border: none;
+}
+
+.graph-node {
+  stroke: var(--accent);
+  fill: var(--tertiary);
+  transition: fill 0.3s;
+}
+
+.graph-node:hover {
+  fill: var(--accent);
+}
+
+.graph-link {
+  stroke: var(--gray);
 }
 
 // === Buttons ===
@@ -163,9 +167,8 @@ blockquote {
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
-  border: none;
   cursor: pointer;
+  border: none;
 }
 
 .button:hover {
@@ -173,46 +176,118 @@ blockquote {
   color: var(--lightgray);
 }
 
+// === Cards, TOC, Recent Notes, Backlinks ===
+.card,
+.toc,
+.recent-notes,
+.backlinks {
+  background-color: var(--lightgray);
+  border: 1px solid var(--gray);
+  border-left: 4px solid var(--accent);
+  color: var(--darkgray);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(6px);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  color: var(--dark);
+  border-bottom: 1px solid var(--highlight);
+  padding-bottom: 0.25rem;
+}
+
+.card p,
+.card li {
+  line-height: 1.6;
+}
+
+.card a,
+.toc a,
+.recent-notes a,
+.backlinks a {
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+}
+
+.card a:hover,
+.toc a:hover,
+.recent-notes a:hover,
+.backlinks a:hover {
+  color: var(--dark);
+  border-bottom: 1px solid var(--accent);
+}
+
+.card:hover,
+.toc:hover,
+.recent-notes:hover,
+.backlinks:hover {
+  box-shadow: 0 4px 12px rgba(161, 135, 184, 0.1);
+  border-color: var(--accent);
+}
+
 // === Footer ===
 footer {
   background-color: var(--light);
   color: var(--darkgray);
-  border-top: 1px solid var(--gray);
+  box-shadow: inset 0 1px 0 var(--gray);
   padding: 2rem 1rem;
   text-align: center;
   font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   color: var(--accent);
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
 footer a:hover {
   color: var(--dark);
 }
 
-// === Images ===
+// === Misc ===
 img {
   border-radius: 0.75rem;
   max-width: 100%;
-  margin: 1rem auto;
   display: block;
+  margin: 1rem auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-// === Graph View Cleanup ===
-.graph-container {
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark);
 }
 
-.graph-node {
-  fill: var(--tertiary);
-  stroke: var(--accent);
+h2 {
+  border-bottom: 2px solid var(--tertiary);
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: var(--secondary);
 }
 
-.graph-node:hover {
-  fill: var(--accent);
+blockquote {
+  border-left: 4px solid var(--secondary);
+  padding-left: 1rem;
+  color: var(--darkgray);
+  font-style: italic;
+  background-color: var(--lightgray);
+  margin: 2rem 0;
 }
