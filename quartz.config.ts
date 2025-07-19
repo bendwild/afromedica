@@ -20,40 +20,38 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-    fontOrigin: "googleFonts",
     cdnCaching: true,
+    fontOrigin: "local",
     typography: {
-      header: "IBM Plex Serif",      // similar to aarnphm
-      body: "Inter",                 // clean and modern
-      code: "Fira Code",
+      header: "Parclo Serif",
+      body: "Parclo Serif",
+      code: "Berkeley Mono",
     },
     colors: {
-    lightMode: {
-      light: "#fafafa",            // near-white background
-      lightgray: "#f0f0f0",        // soft cards
-      gray: "#cccccc",             // border gray
-      darkgray: "#333333",         // text
-      dark: "#111111",             // strong black
-      secondary: "#A187B8",        // your accent stays
-      tertiary: "#e0e0e0",         // subtle lines
-      accent: "#A187B8",
-      highlight: "rgba(161, 135, 184, 0.1)",
-      textHighlight: "#A187B855",
-    },
-    darkMode: {
-      light: "#121212",            // main background
-      lightgray: "#1f1f1f",        // card color
-      gray: "#2e2e2e",
-      darkgray: "#cccccc",
-      dark: "#fafafa",
-      secondary: "#A187B8",
-      tertiary: "#3a3a3a",
-      accent: "#A187B8",
-      highlight: "rgba(161, 135, 184, 0.06)",
-      textHighlight: "#A187B855",
+      lightMode: {
+        light: "#fffaf3",
+        lightgray: "#f2e9e1",
+        gray: "#9893a5",
+        darkgray: "#797593",
+        dark: "#575279",
+        secondary: "#d7827e",
+        tertiary: "#b4637a",
+        highlight: "rgba(143, 159, 169, 0.15)",
+        textHighlight: "rgba(246, 193, 119, 0.28)",
+      },
+      darkMode: {
+        light: "#1f1d30",
+        lightgray: "#26233a",
+        gray: "#6e6a86",
+        darkgray: "#908caa",
+        dark: "#e0def4",
+        secondary: "#ebbcba",
+        tertiary: "#eb6f92",
+        highlight: "rgba(143, 159, 169, 0.15)",
+        textHighlight: "#b3aa0288",
         },
       },
-    }
+    },
   },
   plugins: {
     transformers: [
