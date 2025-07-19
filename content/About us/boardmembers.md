@@ -1,7 +1,8 @@
 ---
 publish: true
 created: 18-07-2025
-modified: 18-07-2025
+modified: 19-07-2025
+title: Boardmembers
 ---
 So you're interested in joining the board of AfroMedica? Great!
 

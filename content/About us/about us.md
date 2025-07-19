@@ -8,7 +8,7 @@ modified: 19-07-2025
 
 AfroMedica was founded in 2020 in the wake of the Black Lives Matter movement and the COVID-19 pandemic; two pivotal moments that exposed the deep-rooted health inequities within our society. What began as an initiative by a group of medical students has since grown into a collective of students and professionals committed to tackling the impact of racism on health and healthcare in Belgium.
 
-Today, AfroMedica is an interdisciplinary organization active in the broader healthcare and medical field. We unite expertise from medicine, sociology, psychology, public policy, and activism to advocate for equitable, accessible, and racially conscious healthcare. At the intersection of care, education, activism, and [policy]([[Policy]]), we build bridges between grassroots movements, institutions, and policymakers, always grounded in scientific knowledge.
+Today, AfroMedica is an interdisciplinary organization active in the broader healthcare and medical field. We unite expertise from medicine, sociology, psychology, public policy, and activism to advocate for equitable, accessible, and racially conscious healthcare. At the intersection of care, education, activism, and [policy]([[policy]]), we build bridges between grassroots movements, institutions, and policymakers, always grounded in scientific knowledge.
 
 ---
 ## Our Mission
@@ -58,11 +58,11 @@ Working groups are the backbone of AfroMedica. Each group focuses on a specific 
 
 Our current working groups include:
 
-- [[President]] & [[Vice-president]]: Coordinate strategy, partnerships, and internal operations.
+- [[president]] & [[vice-president]]: Coordinate strategy, partnerships, and internal operations.
     
 - [[PR]]: Ensure visibility and consistent branding via social media and design.
     
-- [[Finance]]: Manage budgeting, reimbursements, sponsorships, and compliance.
+- [[finance]]: Manage budgeting, reimbursements, sponsorships, and compliance.
     
 - [[Afromedica Connects]]: Foster community by welcoming new members and maintaining internal engagement.
     
@@ -70,7 +70,7 @@ Our current working groups include:
     
 - [[Afromedica Academy]]: Develop educational modules and manage our knowledge base.
     
-- [[Internal Administration]]: Support internal workflows, contact management, and shared resources.
+- [[internal administration]]: Support internal workflows, contact management, and shared resources.
     
 - [[Policy]]: Monitor political developments, build networks, and develop evidence-based recommendations.
 
