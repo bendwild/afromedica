@@ -426,3 +426,62 @@ footer a:hover {
     border-color: var(--accent);
   }
 }
+
+/* === Quartz-compatible Light Mode Styles === */
+html[data-theme="light"] .card,
+html[data-theme="light"] .toc,
+html[data-theme="light"] .recent-notes,
+html[data-theme="light"] .backlinks {
+  background-color: var(--lightgray);
+  border: 1px solid var(--lightgray);
+  color: var(--darkgray);
+  border-left: 4px solid var(--accent);
+}
+
+html[data-theme="light"] .card h3,
+html[data-theme="light"] .toc h3,
+html[data-theme="light"] .recent-notes h3,
+html[data-theme="light"] .backlinks h3 {
+  color: var(--dark);
+}
+
+html[data-theme="light"] .card a,
+html[data-theme="light"] .toc a,
+html[data-theme="light"] .recent-notes a,
+html[data-theme="light"] .backlinks a {
+  color: var(--accent);
+}
+
+html[data-theme="light"] .card a:hover,
+html[data-theme="light"] .toc a:hover,
+html[data-theme="light"] .recent-notes a:hover,
+html[data-theme="light"] .backlinks a:hover {
+  color: var(--dark);
+  border-bottom: 1px solid var(--accent);
+}
+
+/* === Quartz-compatible Dark Mode Styles === */
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .toc,
+html[data-theme="dark"] .recent-notes,
+html[data-theme="dark"] .backlinks {
+  background-color: #2a2d31;
+  border: 1px solid var(--gray);
+  color: var(--darkgray);
+  border-left: 4px solid var(--accent);
+}
+
+html[data-theme="dark"] .card a,
+html[data-theme="dark"] .toc a,
+html[data-theme="dark"] .recent-notes a,
+html[data-theme="dark"] .backlinks a {
+  color: var(--darkgray);
+}
+
+html[data-theme="dark"] .card a:hover,
+html[data-theme="dark"] .toc a:hover,
+html[data-theme="dark"] .recent-notes a:hover,
+html[data-theme="dark"] .backlinks a:hover {
+  color: var(--accent);
+}
+
