@@ -144,17 +144,21 @@ body {
 .button {
   background-color: var(--accent);
   color: var(--light);
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 600;
   font-family: 'IBM Plex Serif', serif;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.75rem;
   border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:hover {
   background-color: var(--darkgray);
   color: var(--lightgray);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 // === Cards, TOC, Recent Notes, Backlinks, Explorer ===
