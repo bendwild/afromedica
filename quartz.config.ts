@@ -20,35 +20,37 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-      fontOrigin: "googleFonts",
-      cdnCaching: true,
-      typography: {
-        header: "Merriweather",
-        body: "Cabin",
-        code: "IBM Plex Mono",
-      },
-      colors: {
-        lightMode: {
-          light: "#f8f9fa",      // seasalt
-          lightgray: "#e9ecef",  // anti-flash-white
-          gray: "#adb5bd",       // french-gray
-          darkgray: "#495057",   // slate-gray
-          dark: "#212529",       // eerie-black
-          secondary: "#A187B8",  // african-violet
-          tertiary: "#dee2e6",   // platinum
-          highlight: "rgba(161, 135, 184, 0.08)",
-          textHighlight: "#A187B855",
-        },
-        darkMode: {
-          light: "#212529",      // eerie-black
-          lightgray: "#343a40",  // onyx
-          gray: "#6c757d",       // slate-gray
-          darkgray: "#dee2e6",   // platinum
-          dark: "#f8f9fa",       // seasalt
-          secondary: "#A187B8",  // african-violet
-          tertiary: "#adb5bd",   // french-gray-2
-          highlight: "rgba(161, 135, 184, 0.06)",
-          textHighlight: "#A187B855",
+    fontOrigin: "googleFonts",
+    cdnCaching: true,
+    typography: {
+      header: "Merriweather",
+      body: "Cabin",
+      code: "IBM Plex Mono",
+    },
+    colors: {
+    lightMode: {
+      light: "#fafafa",         // page background
+      lightgray: "#f0f0f3",     // card background
+      gray: "#ced4da",          // subtle borders
+      darkgray: "#4a4a4a",      // body text
+      dark: "#1f1f1f",          // headings/nav
+      secondary: "#6c63ff",     // optional highlight
+      tertiary: "#e0e0e0",      // border accents
+      accent: "#A187B8",        // signature purple
+      highlight: "rgba(161, 135, 184, 0.08)",
+      textHighlight: "#A187B855",
+    },
+    darkMode: {
+      light: "#1f1f1f",         // background
+      lightgray: "#2a2d31",     // card bg
+      gray: "#495057",          // borders
+      darkgray: "#dee2e6",      // text
+      dark: "#fafafa",          // headings
+      secondary: "#b197fc",     // soft violet
+      tertiary: "#6c757d",      // muted elements
+      accent: "#A187B8",
+      highlight: "rgba(161, 135, 184, 0.06)",
+      textHighlight: "#A187B855",
         },
       },
     },
