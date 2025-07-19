@@ -1,6 +1,6 @@
 @use "./base.scss";
 
-// === Color Tokens (sync with config.ts) ===
+// === Color Tokens ===
 :root {
   --light: #fffaf3;
   --lightgray: #f2e9e1;
@@ -59,9 +59,10 @@ html[data-theme="dark"] {
 }
 
 .nav-logo img {
-  height: 60px;
+  height: 40px;
   margin-right: 1rem;
   display: block;
+  border-radius: 0;
 }
 
 .nav-menu {
@@ -100,7 +101,7 @@ body {
 }
 
 .page-columns > .left {
-  border-top: none !important; /* Removes the line under navbar in sidebar */
+  border-top: none !important;
 }
 
 .page-columns > .left,
@@ -143,17 +144,21 @@ body {
 .button {
   background-color: var(--accent);
   color: var(--light);
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 600;
   font-family: 'IBM Plex Serif', serif;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.75rem;
   border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:hover {
   background-color: var(--darkgray);
   color: var(--lightgray);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 // === Cards, TOC, Recent Notes, Backlinks, Explorer ===
@@ -165,13 +170,13 @@ body {
   background-color: var(--lightgray);
   border: 1px solid var(--gray);
   border-left: 4px solid var(--accent);
-  color: var(--darkgray);
   border-radius: 1rem;
   padding: 1.2rem;
   margin-bottom: 1.5rem;
+  color: var(--darkgray);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
   backdrop-filter: blur(6px);
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .card:hover,
@@ -180,7 +185,7 @@ body {
 .backlinks:hover,
 .explorer:hover {
   border-color: var(--accent);
-  color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .card h3 {
@@ -201,16 +206,7 @@ body {
   line-height: 1.6;
 }
 
-.card:hover p,
-.card:hover li,
-.toc:hover p,
-.backlinks:hover p,
-.explorer:hover p,
-.recent-notes:hover p {
-  color: var(--accent);
-}
-
-// === Links and Tags inside Cards ===
+// === Uniform Link & Tag Styling ===
 .card a,
 .toc a,
 .recent-notes a,
@@ -222,9 +218,10 @@ body {
 .recent-notes .tag,
 .explorer .tag {
   font-weight: 500;
-  color: var(--accent);
+  color: var(--darkgray);
   text-decoration: none;
-  border-bottom: 1px dotted var(--accent);
+  border-bottom: 1px dotted var(--darkgray);
+  transition: color 0.2s, border-bottom 0.2s;
 }
 
 .card a:hover,
@@ -237,8 +234,8 @@ body {
 .backlinks .tag:hover,
 .recent-notes .tag:hover,
 .explorer .tag:hover {
-  color: var(--dark);
-  border-bottom: 1px solid var(--accent);
+  color: var(--tertiary);
+  border-bottom: 1px solid var(--tertiary);
 }
 
 // === Footer ===
