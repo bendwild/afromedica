@@ -22,34 +22,34 @@ const config: QuartzConfig = {
     generateSocialImages: true,
     theme: {
       cdnCaching: true,
-      fontOrigin: "local",
+      fontOrigin: "googleFonts", // changed from "local" to "googleFonts"
       typography: {
-        header: "Parclo Serif",
-        body: "Parclo Serif",
-        code: "Berkeley Mono",
-    },
-    colors: {
-      lightMode: {
-        light: "#fffaf3",
-        lightgray: "#f2e9e1",
-        gray: "#9893a5",
-        darkgray: "#797593",
-        dark: "#575279",
-        secondary: "#d7827e",
-        tertiary: "#b4637a",
-        highlight: "rgba(143, 159, 169, 0.15)",
-        textHighlight: "rgba(246, 193, 119, 0.28)",
+        header: "IBM Plex Serif",  // modern serif similar to Parclo
+        body: "IBM Plex Serif",
+        code: "Fira Code",         // similar to Berkeley Mono
       },
-      darkMode: {
-        light: "#1f1d30",
-        lightgray: "#26233a",
-        gray: "#6e6a86",
-        darkgray: "#908caa",
-        dark: "#e0def4",
-        secondary: "#ebbcba",
-        tertiary: "#eb6f92",
-        highlight: "rgba(143, 159, 169, 0.15)",
-        textHighlight: "#b3aa0288",
+      colors: {
+        lightMode: {
+          light: "#fffaf3",
+          lightgray: "#f2e9e1",
+          gray: "#9893a5",
+          darkgray: "#797593",
+          dark: "#575279",
+          secondary: "#d7827e",
+          tertiary: "#b4637a",
+          highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "rgba(246, 193, 119, 0.28)",
+        },
+        darkMode: {
+          light: "#1f1d30",
+          lightgray: "#26233a",
+          gray: "#6e6a86",
+          darkgray: "#908caa",
+          dark: "#e0def4",
+          secondary: "#ebbcba",
+          tertiary: "#eb6f92",
+          highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#b3aa0288",
         },
       },
     },
