@@ -62,7 +62,7 @@ html[data-theme="dark"] {
   height: 40px;
   margin-right: 1rem;
   display: block;
-  border-radius: 0; /* Remove circular clipping */
+  border-radius: 0;
 }
 
 .nav-menu {
@@ -101,7 +101,7 @@ body {
 }
 
 .page-columns > .left {
-  border-top: none !important; /* Remove line under navbar in sidebar */
+  border-top: none !important;
 }
 
 .page-columns > .left,
@@ -172,7 +172,16 @@ body {
   color: var(--darkgray);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
   backdrop-filter: blur(6px);
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover,
+.toc:hover,
+.recent-notes:hover,
+.backlinks:hover,
+.explorer:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .card h3 {
@@ -193,16 +202,7 @@ body {
   line-height: 1.6;
 }
 
-.card:hover p,
-.card:hover li,
-.toc:hover p,
-.backlinks:hover p,
-.explorer:hover p,
-.recent-notes:hover p {
-  color: var(--tertiary);
-}
-
-// === Uniform Links & Tags Styling in Cards ===
+// === Uniform Link & Tag Styling ===
 .card a,
 .toc a,
 .recent-notes a,
@@ -220,16 +220,16 @@ body {
   transition: color 0.2s, border-bottom 0.2s;
 }
 
-.card:hover a,
-.toc:hover a,
-.recent-notes:hover a,
-.backlinks:hover a,
-.explorer:hover a,
-.card:hover .tag,
-.toc:hover .tag,
-.backlinks:hover .tag,
-.recent-notes:hover .tag,
-.explorer:hover .tag {
+.card a:hover,
+.toc a:hover,
+.recent-notes a:hover,
+.backlinks a:hover,
+.explorer a:hover,
+.card .tag:hover,
+.toc .tag:hover,
+.backlinks .tag:hover,
+.recent-notes .tag:hover,
+.explorer .tag:hover {
   color: var(--tertiary);
   border-bottom: 1px solid var(--tertiary);
 }
