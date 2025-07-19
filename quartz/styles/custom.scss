@@ -1,6 +1,6 @@
 @use "./base.scss";
 
-// === Sync with config.ts ===
+// === Color Tokens (sync with config.ts) ===
 :root {
   --light: #fffaf3;
   --lightgray: #f2e9e1;
@@ -58,16 +58,9 @@ html[data-theme="dark"] {
   width: 100%;
 }
 
-.nav-logo {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-}
-
 .nav-logo img {
   height: 60px;
   margin-right: 1rem;
-  border-radius: 0;
   display: block;
 }
 
@@ -98,17 +91,16 @@ body {
   line-height: 1.6;
 }
 
-.page-body {
-  display: flex;
-  padding-top: 0;
-}
-
 .page-columns {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
   margin-top: 2rem;
   min-height: 60vh;
+}
+
+.page-columns > .left {
+  border-top: none !important; /* Removes the line under navbar in sidebar */
 }
 
 .page-columns > .left,
@@ -121,28 +113,16 @@ body {
 
 // === Graph View ===
 .graph-container {
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
   margin-top: 2rem;
-  padding: 0;
-  box-shadow: none;
-  position: relative;
-  z-index: 10;
-  pointer-events: auto !important;
-}
-
-.graph-container button,
-.graph-container .button,
-.graph-container a {
-  pointer-events: auto;
-  opacity: 1;
-  cursor: pointer;
-}
-
-.graph-controls {
-  background-color: transparent;
+  background: transparent;
   border: none;
+  pointer-events: auto !important;
+  z-index: 10;
+}
+
+.graph-container * {
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .graph-node {
@@ -166,10 +146,9 @@ body {
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
   font-family: 'IBM Plex Serif', serif;
+  border: none;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -195,36 +174,53 @@ body {
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
-.card h3,
-.card p,
-.card li,
-.card span,
-.card h4,
-.toc *,
-.recent-notes *,
-.backlinks *,
-.explorer * {
-  color: var(--darkgray);
-  transition: color 0.3s ease;
-}
-
-.card:hover h3,
-.card:hover p,
-.card:hover li,
-.card:hover span,
-.card:hover h4,
-.toc:hover *,
-.recent-notes:hover *,
-.backlinks:hover *,
-.explorer:hover * {
+.card:hover,
+.toc:hover,
+.recent-notes:hover,
+.backlinks:hover,
+.explorer:hover {
+  border-color: var(--accent);
   color: var(--accent);
 }
 
+.card h3 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  color: var(--dark);
+  border-bottom: 1px solid var(--highlight);
+  padding-bottom: 0.25rem;
+}
+
+.card p,
+.card li,
+.toc p,
+.backlinks p,
+.explorer p,
+.recent-notes p {
+  color: var(--darkgray);
+  line-height: 1.6;
+}
+
+.card:hover p,
+.card:hover li,
+.toc:hover p,
+.backlinks:hover p,
+.explorer:hover p,
+.recent-notes:hover p {
+  color: var(--accent);
+}
+
+// === Links and Tags inside Cards ===
 .card a,
 .toc a,
 .recent-notes a,
 .backlinks a,
-.explorer a {
+.explorer a,
+.card .tag,
+.toc .tag,
+.backlinks .tag,
+.recent-notes .tag,
+.explorer .tag {
   font-weight: 500;
   color: var(--accent);
   text-decoration: none;
@@ -235,44 +231,59 @@ body {
 .toc a:hover,
 .recent-notes a:hover,
 .backlinks a:hover,
-.explorer a:hover {
+.explorer a:hover,
+.card .tag:hover,
+.toc .tag:hover,
+.backlinks .tag:hover,
+.recent-notes .tag:hover,
+.explorer .tag:hover {
   color: var(--dark);
   border-bottom: 1px solid var(--accent);
-}
-
-.card:hover,
-.toc:hover,
-.recent-notes:hover,
-.backlinks:hover,
-.explorer:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  border-color: var(--accent);
 }
 
 // === Footer ===
 footer {
   background-color: var(--light);
   color: var(--darkgray);
-  border-top: 1px solid var(--lightgray);
-  padding: 1.5rem 1rem;
-  font-size: 0.85rem;
+  border-top: none;
+  padding: 2rem 1rem;
   text-align: center;
+  font-size: 0.9rem;
   display: flex;
   justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
-  gap: 1.25rem;
-  font-family: 'IBM Plex Serif', serif;
 }
 
 footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   color: var(--accent);
   text-decoration: none;
-  transition: color 0.2s ease;
   font-weight: 500;
+  transition: color 0.2s;
 }
 
 footer a:hover {
   color: var(--dark);
+}
+
+// === Headings ===
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark);
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--tertiary);
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-top: 2rem;
+  border-bottom: none;
 }
 
 // === Misc ===
@@ -282,20 +293,6 @@ img {
   display: block;
   margin: 1rem auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--dark);
-}
-
-h2 {
-  border-bottom: 2px solid var(--tertiary);
-  padding-bottom: 0.3rem;
-  margin-top: 2rem;
-  font-size: 1.8rem;
-  color: var(--secondary);
 }
 
 blockquote {
