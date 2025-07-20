@@ -2,7 +2,7 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import style from "./styles/footer.scss"
 
 interface Options {
-  links: Record<string, JSX.Element>
+  links: Record<string, string> // key = URL, value = icon id (e.g. "linkedin")
 }
 
 export default ((opts?: Options) => {
@@ -12,10 +12,12 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <ul class="social-icons">
-          {Object.entries(links).map(([key, icon]) => (
-            <li key={key}>
-              <a href={key} target="_blank" rel="noopener noreferrer" aria-label={key}>
-                {icon}
+          {Object.entries(links).map(([url, iconId]) => (
+            <li key={url}>
+              <a href={url} target="_blank" rel="noopener noreferrer" aria-label={iconId}>
+                <svg>
+                  <use href={`/icons.svg#${iconId}`} />
+                </svg>
               </a>
             </li>
           ))}
