@@ -1,39 +1,52 @@
 footer {
-  text-align: left;
-  margin-bottom: 4rem;
-  opacity: 0.7;
+  text-align: center;
+  margin: 2rem auto 2rem;  /* reduced top margin for seamless transition */
   font-family: 'IBM Plex Serif', serif;
   color: var(--darkgray);
 
-  ul.social-icons {
-    list-style: none;
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    align-items: center;
+    list-style: none;
   }
 
-  ul.social-icons li {
-    display: inline-block;
-  }
-
-  ul.social-icons a {
-    display: flex;
-    color: var(--accent);
-    font-size: 1.8rem;
-    transition: color 0.3s ease;
-  }
-
-  ul.social-icons a:hover,
-  ul.social-icons a:focus {
-    color: var(--dark);
-  }
-
-  ul.social-icons svg {
-    width: 24px;
-    height: 24px;
+  .social-icons svg {
+    width: 32px;       /* all icons same size */
+    height: 32px;
     fill: currentColor;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .social-icons a {
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-icons a:hover,
+  .social-icons a:focus {
+    color: var(--dark);
+    transform: scale(1.2);  /* subtle scale on hover */
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin-top: 0.5rem;
   }
 }
