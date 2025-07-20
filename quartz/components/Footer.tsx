@@ -16,7 +16,7 @@ export default ((opts?: Options) => {
             <li key={url}>
               <a href={url} target="_blank" rel="noopener noreferrer" aria-label={iconId}>
                 <svg>
-                  <use href={`/icons.svg#${iconId}`} />
+                  <use href={`./icons.svg#${iconId}`} />
                 </svg>
               </a>
             </li>
