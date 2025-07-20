@@ -1,8 +1,7 @@
 ---
 title: About us
 publish: true
-created: 18-07-2025
-modified: 20-07-2025
+modified: 2025-07-21
 ---
 ## Our origin
 

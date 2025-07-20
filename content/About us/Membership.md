@@ -1,8 +1,7 @@
 ---
 publish: true
-created: 18-07-2025
-modified: 19-07-2025
 title: Membership
+modified: 2025-07-21
 ---
 # Why become a member?
   

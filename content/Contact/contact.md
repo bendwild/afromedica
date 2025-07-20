@@ -1,8 +1,7 @@
 ---
 publish: true
 title: Contact
-created: 18-07-2025
-modified: 19-07-2025
+modified: 2025-07-21
 ---
 AfroMedica welcomes those who share our vision of an equitable healthcare system. If you are an institution, policymaker, educator, or professional looking to partner with us, reach out—we’d love to hear from you.
 
