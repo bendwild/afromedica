@@ -1,3 +1,6 @@
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
+import style from "./styles/footer.scss"
+
 const sprite = `
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="linkedin" viewBox="0 0 24 24">
@@ -41,3 +44,37 @@ const sprite = `
   </symbol>
 </svg>
 `
+
+interface Options {
+  links: Record<string, string>
+}
+
+export default ((opts?: Options) => {
+  const Footer: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
+    const links = opts?.links ?? {}
+
+    return (
+      <footer class={`${displayClass ?? ""}`}>
+        <div dangerouslySetInnerHTML={{ __html: sprite }} />
+        <div class="footer-inner">
+          <p>Stay up to date!</p>
+          <ul class="social-icons">
+            {Object.entries(links).map(([url, iconId]) => (
+              <li key={url}>
+                <a href={url} target="_blank" rel="noopener noreferrer" aria-label={iconId}>
+                  <svg>
+                    <use href={`#${iconId}`} />
+                  </svg>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p class="copyright">Created with Quartz v4.5.1 © 2025</p>
+        </div>
+      </footer>
+    )
+  }
+
+  Footer.css = style
+  return Footer
+}) satisfies QuartzComponentConstructor
