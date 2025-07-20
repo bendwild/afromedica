@@ -1,16 +1,12 @@
 ---
 title: Team
 publish: true
+tags: 
+description: 
 modified: 2025-07-21
 ---
 AfroMedica is made up of a group of dedicated students who have a passion for making a difference in their community. Our team is composed of bright and talented individuals who are committed to improving healthcare and supporting people in need. Get to know our team further by reading below.
 
-<div style="position: relative; text-align: center; margin: 40px 0;">
-  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/Group pic.jpeg" alt="AfroMedica Group" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 12px;">
-  <div style="position: absolute; bottom: 10px; left: 0; right: 0; color: white; font-size: 1.2em; text-shadow: 0 0 5px black;">
-    2025 group picture!
-  </div>
-</div>
 
 ## Who are we?
 
