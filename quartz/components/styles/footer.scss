@@ -1,6 +1,6 @@
 footer {
   text-align: center;
-  margin: 4rem auto 2rem;
+  margin: 2rem auto 2rem;  /* reduced top margin for seamless transition */
   font-family: 'IBM Plex Serif', serif;
   color: var(--darkgray);
 
@@ -8,32 +8,40 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1rem;
+  }
+
+  p {
+    margin: 0;
   }
 
   .social-icons {
     display: flex;
     justify-content: center;
-    gap: 1.8rem;
+    gap: 2rem;
     padding: 0;
     margin: 0;
     list-style: none;
   }
 
   .social-icons svg {
-    width: 32px;
+    width: 32px;       /* all icons same size */
     height: 32px;
     fill: currentColor;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
   }
 
   .social-icons a {
     color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .social-icons a:hover,
   .social-icons a:focus {
     color: var(--dark);
+    transform: scale(1.2);  /* subtle scale on hover */
   }
 
   .copyright {
