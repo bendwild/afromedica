@@ -1,17 +1,53 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/footer.scss"
 
-// Copy your icons.svg content here
 const sprite = `
-  <symbol id="linkedin" viewBox="0 0 24 24">...</symbol>
-  <symbol id="facebook" viewBox="0 0 24 24">...</symbol>
-  <symbol id="instagram" viewBox="0 0 24 24">...</symbol>
-  <symbol id="discord" viewBox="0 0 24 24">...</symbol>
-  <symbol id="mail" viewBox="0 0 24 24">...</symbol>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="linkedin" viewBox="0 0 24 24"><path d="M19 0h-14c-2.8 0-5 2.2-5 5v14c0 2.8 2.2 5 5 5h14c2.8 
+    0 5-2.2 5-5v-14c0-2.8-2.2-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.2c-1 
+    0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.9 1.8-1.8 
+    1.8zm13.5 11.2h-3v-5.5c0-1.3-.5-2-1.5-2s-1.5.7-1.5 
+    2v5.5h-3v-10h3v1.3c.6-.9 1.4-1.3 2.5-1.3 2 0 3 1.3 
+    3 3.8v6.2z"/></symbol>
+
+  <symbol id="facebook" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10-10s-10 4.5-10 10c0 
+    5 3.7 9.1 8.5 9.9v-7h-2.5v-2.9h2.5v-2.2c0-2.5 
+    1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 
+    0-1.7.8-1.7 1.6v1.9h2.8l-.4 2.9h-2.4v7c4.8-.8 
+    8.5-4.9 8.5-9.9z"/></symbol>
+
+  <symbol id="instagram" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.6.2 
+    1.1.6 1.5 1.1.4.4.8.9 1.1 1.5.2.4.3 1.1.4 2.3.1 
+    1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 
+    2.3-.2.6-.6 1.1-1.1 1.5-.4.4-.9.8-1.5 
+    1.1-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 
+    0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1.1-.6-1.5-1.1-.4-.4-.8-.9-1.1-1.5-.2-.4-.3-1.1-.4-2.3-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.2-.6.6-1.1 
+    1.1-1.5.4-.4.9-.8 1.5-1.1.4-.2 1.1-.3 2.3-.4 1.3-.1 
+    1.7-.1 4.9-.1zm0-2.2c-3.3 0-3.7 0-5 .1-1.3.1-2.2.3-3 
+    .6-.9.3-1.6.7-2.3 1.4-.7.7-1.1 1.4-1.4 
+    2.3-.3.8-.5 1.7-.6 3-.1 1.3-.1 1.7-.1 5s0 3.7.1 
+    5c.1 1.3.3 2.2.6 3 .3.9.7 1.6 1.4 2.3.7.7 1.4 1.1 
+    2.3 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 
+    .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.9-.3 1.6-.7 
+    2.3-1.4.7-.7 1.1-1.4 1.4-2.3.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.9-.7-1.6-1.4-2.3-.7-.7-1.4-1.1-2.3-1.4-.8-.3-1.7-.5-3-.6-1.3-.1-1.7-.1-5-.1zm0 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 
+    4-4 4 1.8 4 4-1.8 4-4 4zm6.4-11.6c-.8 0-1.4.6-1.4 
+    1.4s.6 1.4 1.4 1.4 1.4-.6 1.4-1.4-.6-1.4-1.4-1.4z"/></symbol>
+
+  <symbol id="discord" viewBox="0 0 24 24"><path d="M20 0H4C1.8 0 0 1.8 0 4v16c0 2.2 1.8 4 4 4h13l-1.1-3.4 
+    2.6 2.4 2.5-2.4-1.2 3.4h1.2c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zm-6.6 
+    17.6c-2.5 0-4.5-2.1-4.5-4.6 0-.3 0-.5.1-.8 1.2 1 2.6 1.6 4.4 
+    1.6s3.2-.6 4.4-1.6c.1.3.1.5.1.8 0 2.5-2 4.6-4.5 4.6zm-5.4-5.9c-.8 
+    0-1.4-.7-1.4-1.5s.6-1.5 1.4-1.5c.7 0 1.3.7 1.3 1.5s-.6 1.5-1.3 
+    1.5zm10.8 0c-.8 0-1.4-.7-1.4-1.5s.6-1.5 1.4-1.5c.7 0 1.3.7 1.3 
+    1.5s-.6 1.5-1.3 1.5z"/></symbol>
+
+  <symbol id="mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 
+    2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" /></symbol>
+</svg>
 `
 
 interface Options {
-  links: Record<string, string> // key = URL, value = icon id
+  links: Record<string, string>
 }
 
 export default ((opts?: Options) => {
@@ -20,9 +56,7 @@ export default ((opts?: Options) => {
 
     return (
       <footer class={`${displayClass ?? ""}`}>
-        {/* Inject symbols once, hidden */}
-        <svg style="display: none;" dangerouslySetInnerHTML={{ __html: sprite }} />
-
+        <div dangerouslySetInnerHTML={{ __html: sprite }} />
         <ul class="social-icons">
           {Object.entries(links).map(([url, iconId]) => (
             <li key={url}>
