@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 18-07-2025
-modified: 19-07-2025
+modified: 20-07-2025
 title: Boardmembers
 ---
 So you're interested in joining the board of AfroMedica? Great!
@@ -54,5 +54,172 @@ If you feel at home in one of the taskforces you can press join which will take 
     - provide meeting rooms
     - publish the annual report</p>
   </div>
+
+</div>
+
+<div style="
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 24px; 
+  padding: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+">
+
+  <div style="
+    background-color: var(--lightgray, #f6f6f6); 
+    border: 1px solid var(--gray, #ccc); 
+    border-radius: 16px; 
+    padding: 1.5rem; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.2s ease;
+  " onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+    <h3 style="margin-top: 0;">Education</h3>
+    <ul style="padding-left: 1.2rem;">
+      <li>Improving and correcting curricula</li>
+      <li>Engaging with educational institutions</li>
+      <li>Supporting (future) healthcare students</li>
+      <li>Creating tools to diversify education</li>
+    </ul>
+  </div>
+
+  <div style="
+    background-color: var(--lightgray, #f6f6f6); 
+    border: 1px solid var(--gray, #ccc); 
+    border-radius: 16px; 
+    padding: 1.5rem; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.2s ease;
+  " onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+    <h3 style="margin-top: 0;">Events</h3>
+    <ul style="padding-left: 1.2rem;">
+      <li>Organizing and coordinating events</li>
+      <li>Advertising (with PR)</li>
+      <li>Maintaining post-event contact</li>
+      <li>Creating safe spaces and tackling taboos</li>
+    </ul>
+  </div>
+
+  <div style="
+    background-color: var(--lightgray, #f6f6f6); 
+    border: 1px solid var(--gray, #ccc); 
+    border-radius: 16px; 
+    padding: 1.5rem; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.2s ease;
+  " onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+    <h3 style="margin-top: 0;">PR</h3>
+    <ul style="padding-left: 1.2rem;">
+      <li>Managing public communication</li>
+      <li>Posting on social media</li>
+      <li>Maintaining and updating the website</li>
+      <li>Advertising events</li>
+    </ul>
+  </div>
+
+  <div style="
+    background-color: var(--lightgray, #f6f6f6); 
+    border: 1px solid var(--gray, #ccc); 
+    border-radius: 16px; 
+    padding: 1.5rem; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.2s ease;
+  " onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+    <h3 style="margin-top: 0;">Finances</h3>
+    <ul style="padding-left: 1.2rem;">
+      <li>Balancing the books</li>
+      <li>Working with sponsors</li>
+      <li>Applying for grants</li>
+      <li>Opening bank accounts</li>
+      <li>Providing resources (e.g., meeting rooms)</li>
+      <li>Publishing the annual report</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="card-grid">
+
+  <div class="card">
+    <h3>📚 Education</h3>
+    <p>This taskforce focuses on making healthcare education more diversity-sensitive by:</p>
+    <ul>
+      <li>Improving and correcting curricula</li>
+      <li>Engaging with educational institutions</li>
+      <li>Supporting (future) healthcare students</li>
+      <li>Creating tools that diversify healthcare education</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🎉 Events</h3>
+    <p>This group organizes and coordinates events while:</p>
+    <ul>
+      <li>Collaborating with PR for promotion</li>
+      <li>Maintaining post-event connections</li>
+      <li>Creating safe, inclusive spaces</li>
+      <li>Addressing taboos through dialogue</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>📢 PR</h3>
+    <p>This taskforce keeps the public informed and engaged by:</p>
+    <ul>
+      <li>Managing social media</li>
+      <li>Updating the website</li>
+      <li>Promoting events</li>
+      <li>Ensuring clear, inclusive messaging</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>💰 Finances</h3>
+    <p>This team ensures financial health and sustainability through:</p>
+    <ul>
+      <li>Managing budgets and expenses</li>
+      <li>Building sponsor relationships</li>
+      <li>Applying for grants</li>
+      <li>Providing infrastructure and publishing reports</li>
+    </ul>
+  </div>
+
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 2rem auto;">
+
+<div style="background-color: #f8f9fa; border: 1px solid #ccc; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 14px rgba(0,0,0,0.05);">
+  <h3>📚 Education</h3>
+  <p>This taskforce focuses on making healthcare education more diversity-sensitive by:</p>
+  <ul>
+    <li>Improving and correcting curricula</li>
+    <li>Engaging with educational institutions</li>
+    <li>Supporting (future) healthcare students</li>
+    <li>Creating tools that diversify healthcare education</li>
+  </ul>
+</div>
+
+<div style="background-color: #f8f9fa; border: 1px solid #ccc; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 14px rgba(0,0,0,0.05);">
+  <h3>🎉 Events</h3>
+  <p>This group organizes and coordinates events while:</p>
+  <ul>
+    <li>Collaborating with PR for promotion</li>
+    <li>Maintaining post-event connections</li>
+    <li>Creating safe, inclusive spaces</li>
+    <li>Addressing taboos through dialogue</li>
+  </ul>
+</div>
+
+<div style="background-color: #f8f9fa; border: 1px solid #ccc; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 14px rgba(0,0,0,0.05);">
+  <h3>📢 PR</h3>
+  <p>This taskforce keeps the public informed and engaged by:</p>
+  <ul>
+    <li>Managing social media</li>
+    <li>Updating the website</li>
+    <li>Promoting events</li>
+    <li>Ensuring clear, inclusive messaging</li>
+  </ul>
+</div>
 
 </div>

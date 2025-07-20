@@ -2,7 +2,7 @@
 title: About us
 publish: true
 created: 18-07-2025
-modified: 19-07-2025
+modified: 20-07-2025
 ---
 ## Our origin
 
@@ -52,17 +52,17 @@ We maintain a high level of academic and structural engagement. While we deeply 
 
 AfroMedica operates as a horizontal, collective organization led by a dedicated board. We practice shared leadership; each [boardmember]([[boardmembers]]) actively helps shape the organization’s direction. The chair and vice-chair provide overall coordination and are responsible for maintaining strategic alignment.
 
-### Working Groups
+### [Taskforces](Taskforces)
 
-Working groups are the backbone of AfroMedica. Each group focuses on a specific domain, contributes to long-term goals, and is reviewed annually. 
+Taskforces are the backbone of AfroMedica. Each group focuses on a specific domain, contributes to long-term goals, and is reviewed annually. 
 
-Our current working groups include:
+Our current taskforces include:
 
-- [[president]] & [[vice-president]]: Coordinate strategy, partnerships, and internal operations.
+- [President](president) & [[vice-president]]: Coordinate strategy, partnerships, and internal operations.
     
 - [[PR]]: Ensure visibility and consistent branding via social media and design.
     
-- [[finance]]: Manage budgeting, reimbursements, sponsorships, and compliance.
+- [Finance](finance): Manage budgeting, reimbursements, sponsorships, and compliance.
     
 - [[Afromedica Connects]]: Foster community by welcoming new members and maintaining internal engagement.
     
@@ -70,7 +70,7 @@ Our current working groups include:
     
 - [[Afromedica Academy]]: Develop educational modules and manage our knowledge base.
     
-- [[internal administration]]: Support internal workflows, contact management, and shared resources.
+- [Internal admin](internal administration): Support internal workflows, contact management, and shared resources.
     
 - [[Policy]]: Monitor political developments, build networks, and develop evidence-based recommendations.
 
