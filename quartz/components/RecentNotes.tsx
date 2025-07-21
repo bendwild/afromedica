@@ -19,7 +19,7 @@ interface Options {
 
 const defaultOptions = (cfg: GlobalConfiguration): Options => ({
   limit: 5,
-  linkToMore: "updates",
+  linkToMore: "content/updates",
   showTags: true,
   filter: () => true,
   sort: byDateAndAlphabetical(cfg),
