@@ -1,8 +1,6 @@
 ---
-title: Recent updates!
-publish: true
-tags: 
-description: 
+layout: updates
+title: Updates
 modified: 2025-07-21
 ---
 
