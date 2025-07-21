@@ -1,6 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
-import updates from "./quartz/components/layouts/updates" // ✅ Import the layout
+import updates from "./quartz/layouts/updates" // ✅ Import from layouts
 
 const config: QuartzConfig = {
   configuration: {
@@ -80,7 +80,7 @@ const config: QuartzConfig = {
       Plugin.ComponentResources(),
       Plugin.ContentPage({
         layoutMap: {
-          updates: "updates", // ✅ Register custom layout
+          updates: "updates", // ✅ Use layout for /updates
         },
       }),
       Plugin.FolderPage(),
@@ -97,7 +97,7 @@ const config: QuartzConfig = {
     ],
   },
   components: {
-    updates, // ✅ Add layout to components
+    updates, // ✅ Register layout
   },
 }
 
