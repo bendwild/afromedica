@@ -10,34 +10,42 @@ AfroMedica is made up of a group of dedicated students who have a passion for ma
 ## Who are we?
 
 
-## Meet the Team
-
-<div class="team-grid">
-
-### ![](../images/team/benjamin.jpg)
-**Benjamin De Wilde**  
-*Founder & PR Coordinator*  
-Passionate about global health equity and youth empowerment.  
-
-[LinkedIn](https://www.linkedin.com/in/benjamindewilde) · [Email](mailto:benjamin@example.com)
-
----
-
-### ![](../images/team/amina.jpg)
-**Amina Sarr**  
-*Education & Outreach Lead*  
-Committed to inclusive healthcare education and policy reform.  
-
-[LinkedIn](https://www.linkedin.com/in/aminasarr)
-
-</div>
-
-
-
 ---
 title: Our Team
 description: Meet the people behind AfroMedica
 ---
+
+# Meet the AfroMedica Team
+
+We are a passionate collective of medical students, researchers, and activists working toward a more inclusive and equitable healthcare system.
+
+<div class="team-grid">
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin (1).jpg" alt="Benjamin De Wilde" />
+  <h3>Benjamin De Wilde</h3>
+  <p><em>Founder & PR Coordinator</em></p>
+  <p>Benjamin is a final-year medical student and global health advocate. He co-founded AfroMedica to address racial inequities in healthcare through education, research, and youth-led activism.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/afromedica%20(7).png" alt="Amina Sarr" />
+  <h3>Amina Sarr</h3>
+  <p><em>Education & Outreach Lead</em></p>
+  <p>Amina brings her experience in public health communication and community organizing. She leads school engagement and educational events.</p>
+  <a href="https://www.linkedin.com/in/aminasarr" target="_blank">LinkedIn</a>
+</div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/afromedica%20(8).png" alt="Samuel Okoye" />
+  <h3>Samuel Okoye</h3>
+  <p><em>Policy & Advocacy Coordinator</em></p>
+  <p>Samuel focuses on health systems reform and representation of marginalized groups in health policy discussions across Belgium and Europe.</p>
+  <a href="https://www.linkedin.com/in/samuelokoye" target="_blank">LinkedIn</a>
+</div>
+
+</div>
 
 # Meet the AfroMedica Team
 
