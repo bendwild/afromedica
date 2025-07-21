@@ -30,7 +30,7 @@ We are a passionate collective of medical students, researchers, and activists w
 </div>
 
 <div class="team-card">
-  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/afromedica%20(7).png" alt="Amina Sarr" />
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin (1).jpg" alt="Benjamin De Wilde" />
   <h3>Amina Sarr</h3>
   <p><em>Education & Outreach Lead</em></p>
   <p>Amina brings her experience in public health communication and community organizing. She leads school engagement and educational events.</p>
