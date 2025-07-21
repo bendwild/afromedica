@@ -376,3 +376,34 @@ h5 > a.anchor,
 h6 > a.anchor {
   display: none !important;
 }
+
+.team-banner {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  object-fit: cover;
+  aspect-ratio: 3 / 1; // Adjust this depending on your photo’s shape
+  border: 1px solid var(--lightgray); // Optional subtle border
+}
+
+figure.team-banner {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+figure.team-banner img {
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+}
+
+figure.team-banner figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
