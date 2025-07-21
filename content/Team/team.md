@@ -13,26 +13,106 @@ AfroMedica is made up of a group of dedicated students who have a passion for ma
 
 <div class="team-card">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
-  <h3>Benjamin De Wilde</h3>
-  <p><em>Founder & PR Coordinator</em></p>
-  <p>Benjamin is a final-year medical student and global health advocate. He co-founded AfroMedica to address racial inequities in healthcare through education, research, and youth-led activism.</p>
+  <h3>Bella Manirambona</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
   <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
 </div>
 
 <div class="team-card">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
-  <h3>Amina Sarr</h3>
-  <p><em>Education & Outreach Lead</em></p>
-  <p>Amina brings her experience in public health communication and community organizing. She leads school engagement and educational events.</p>
-  <a href="https://www.linkedin.com/in/aminasarr" target="_blank">LinkedIn</a>
+  <h3>Hanane El Kaddouri</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
 </div>
 
 <div class="team-card">
-  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/afromedica%20(8).png" alt="Samuel Okoye" />
-  <h3>Samuel Okoye</h3>
-  <p><em>Policy & Advocacy Coordinator</em></p>
-  <p>Samuel focuses on health systems reform and representation of marginalized groups in health policy discussions across Belgium and Europe.</p>
-  <a href="https://www.linkedin.com/in/samuelokoye" target="_blank">LinkedIn</a>
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <h3>Janne Van De Voorde</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <h3>Judith Gbesse</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <h3>Lidvine Ngonseu Harpi</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <h3>Lucy Osh</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <h3>Yasmine Abchaoui</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <h3>Alessio Capobianco</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <h3>Sarah Derveeuw</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <h3>Nour Mazari</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <h3>Stephnie Peter</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <h3>Rosalien Van Der Vorst</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <h3>Benjamin De Wilde</h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
 </div>
 
 </div>
