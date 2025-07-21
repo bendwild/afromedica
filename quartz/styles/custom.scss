@@ -368,3 +368,13 @@ h1, h2, h3, p {
   border-bottom: 1px solid var(--tertiary);
 }
 
+/* Hide all anchor/permalink icons next to headings */
+h1 .anchor,
+h2 .anchor,
+h3 .anchor,
+h4 .anchor,
+h5 .anchor,
+h6 .anchor {
+  display: none !important;
+}
+
