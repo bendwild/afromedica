@@ -5,7 +5,14 @@ tags:
 description: 
 modified: 2025-07-21
 ---
-AfroMedica is made up of a group of dedicated students who have a passion for making a difference in their community. Our team is composed of bright and talented individuals who are committed to improving healthcare and supporting people in need. Get to know our team further by reading below.
+<img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/Group.jpeg" alt="Group Picture" />
+
+AfroMedica is made up of a group of dedicated professionals students who have a passion for making a difference in their community. Our team is composed of bright and talented individuals who are committed to improving healthcare and supporting people in need. Get to know our team further by reading below.
+
+<figure class="team-banner">
+  <img src="../assets/team-photo.jpg" alt="AfroMedica Team" />
+  <figcaption>Celebrating our journey at AfroMedica</figcaption>
+</figure>
 
 ## Meet the AfroMedica Team
 
@@ -125,4 +132,6 @@ AfroMedica is made up of a group of dedicated students who have a passion for ma
 
 </div>
 
-
+> [!attention]+ Want to learn more about how we work?
+> From policy suggestions to [[Afromedica Talks]] and our very own knowledge platform [[Afromedica Academy]]; our team makes meaningful impact!
+> [→ Explore our taskforces](taskforces)

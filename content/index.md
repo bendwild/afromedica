@@ -8,3 +8,7 @@ modified: 2025-07-21
 ## wh
 
 ### d
+
+![[Path to file]]
+
+![[Path to file ### Projects]]
