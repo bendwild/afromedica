@@ -1,1 +1,28 @@
+import { QuartzComponentConstructor, QuartzComponentProps } from "../../components/types"
+import { classNames } from "../../util/lang"
+import RecentNotes from "../../components/RecentNotes"
 
+const UpdatesLayout: QuartzComponentConstructor = () => {
+  const Component = ({ allFiles, fileData, cfg, displayClass }: QuartzComponentProps) => {
+    return (
+      <div class={classNames(displayClass, "updates-page")}>
+        <article class="popover-hint">
+          <h1>Updates</h1>
+          <p>Stay up to date with our most recent additions, posts, and news.</p>
+        </article>
+
+        {RecentNotes({
+          title: "Latest Additions",
+          limit: 10,
+          linkToMore: false,
+          showTags: true,
+        })({ allFiles, fileData, cfg, displayClass })}
+      </div>
+    )
+  }
+
+  Component.css = []
+  return Component
+}
+
+export default UpdatesLayout
