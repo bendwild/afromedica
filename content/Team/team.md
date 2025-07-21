@@ -116,3 +116,14 @@ AfroMedica is made up of a group of dedicated students who have a passion for ma
 </div>
 
 </div>
+
+<div class="team-card">
+  <img src="https://raw.githubusercontent.com/..." alt="Benjamin De Wilde" />
+  
+  <!-- This line uses markdown, so internal wiki links work -->
+  ### [[Benjamin De Wilde]]
+
+  <p><em>Founder & PR Coordinator</em></p>
+  <p>Bio text...</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
