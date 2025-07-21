@@ -310,3 +310,60 @@ h1, h2, h3, p {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.team-card {
+  background-color: var(--lightgray);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+  border-left: 4px solid var(--accent);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+}
+
+.team-card img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.team-card h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.25rem;
+  color: var(--dark);
+}
+
+.team-card p {
+  color: var(--darkgray);
+  margin-bottom: 0.5rem;
+}
+
+.team-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+}
+
+.team-card a:hover {
+  color: var(--tertiary);
+  border-bottom: 1px solid var(--tertiary);
+}
+
