@@ -115,15 +115,14 @@ AfroMedica is made up of a group of dedicated students who have a passion for ma
   <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
 </div>
 
-</div>
-
 <div class="team-card">
-  <img src="https://raw.githubusercontent.com/..." alt="Benjamin De Wilde" />
-  
-  <!-- This line uses markdown, so internal wiki links work -->
-  ### [[Benjamin De Wilde]]
-
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <h3><a href="https://www.linkedin.com/in/benjamindewilde" target="_blank" rel="noopener noreferrer">Benjamin De Wilde</a></h3>
   <p><em>Founder & PR Coordinator</em></p>
-  <p>Bio text...</p>
-  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+  <p>Benjamin is a final-year medical student and global health advocate. He co-founded AfroMedica to address racial inequities in healthcare through education, research, and youth-led activism.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 </div>
+
+</div>
+
+
