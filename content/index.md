@@ -2,27 +2,28 @@
 title: Welcome!
 publish: true
 modified: 2025-07-21
+tags: 
 ---
 <div class="hero">
   <h1>Welcome to AfroMedica</h1>
   <p>Championing racial equity in healthcare through education, advocacy, and community action.</p>
-  <a class="button" href="about">→ Learn More</a>
+  <a class="button" href="About-us">→ Learn More</a>
 </div>
 
 
 <div class="card-grid">
   <div class="homepage-card">
-    ### [[Taskforces]]
+    [[Taskforces]]
     Focused groups tackling policy, outreach, and education.
   </div>
 
   <div class="homepage-card">
-    ### [[Afromedica Talks]]
+    [[Afromedica Talks]]
     Our platform amplifying POC voices in healthcare.
   </div>
 
   <div class="homepage-card">
-    ### [[Afromedica Academy]]
+    [[Afromedica Academy]]
     Explore our knowledge platform made by and for future health leaders.
   </div>
 </div>
