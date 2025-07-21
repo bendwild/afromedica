@@ -200,8 +200,8 @@ main {
   padding-bottom: 0.25rem;
 }
 
-.card p,
-.card li,
+. p,
+. li,
 .toc p,
 .backlinks p,
 .explorer p,
@@ -211,12 +211,12 @@ main {
 }
 
 // === Uniform Link & Tag Styling ===
-.card a,
+. a,
 .toc a,
 .recent-notes a,
 .backlinks a,
 .explorer a,
-.card .tag,
+. .tag,
 .toc .tag,
 .backlinks .tag,
 .recent-notes .tag,
@@ -228,12 +228,12 @@ main {
   transition: color 0.2s, border-bottom 0.2s;
 }
 
-.card a:hover,
+. a:hover,
 .toc a:hover,
 .recent-notes a:hover,
 .backlinks a:hover,
 .explorer a:hover,
-.card .tag:hover,
+. .tag:hover,
 .toc .tag:hover,
 .backlinks .tag:hover,
 .recent-notes .tag:hover,
@@ -319,7 +319,7 @@ h1, h2, h3, p {
   align-items: start;
 }
 
-.team-card {
+.team- {
   background-color: var(--lightgray);
   padding: 1.5rem;
   border-radius: 1rem;
@@ -328,11 +328,11 @@ h1, h2, h3, p {
   transition: transform 0.2s ease;
 }
 
-.team-card:hover {
+.team-:hover {
   transform: translateY(-4px);
 }
 
-.team-card img {
+.team- img {
   width: 100%;
   max-width: 180px;
   aspect-ratio: 1 / 1;
@@ -342,13 +342,13 @@ h1, h2, h3, p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
-.team-card h3 {
+.team- h3 {
   margin: 0.5rem 0 0.25rem;
   font-size: 1.25rem;
   color: var(--dark);
 }
 
-.team-card p {
+.team- p {
   color: var(--darkgray);
   margin-bottom: 0.5rem;
 }
@@ -405,5 +405,81 @@ figure.team-banner figcaption {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: var(--gray);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--lightgray);
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--darkgray);
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .button {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.homepage-card {
+  background-color: var(--lightgray);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  border-left: 4px solid var(--accent);
+  transition: transform 0.2s ease;
+}
+
+.homepage-card:hover {
+  transform: translateY(-4px);
+}
+
+.homepage-card h3 {
+  margin-top: 0;
+  color: var(--dark);
+}
+
+.cta {
+  background-color: var(--highlight);
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  margin-top: 4rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.cta h2 {
+  font-size: 1.8rem;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+.cta p {
+  color: var(--darkgray);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
