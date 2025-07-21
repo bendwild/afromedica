@@ -18,8 +18,8 @@ interface Options {
 }
 
 const defaultOptions = (cfg: GlobalConfiguration): Options => ({
-  limit: 5
-  linkToMore: true,
+  limit: 5,
+  linkToMore: "updates",
   showTags: true,
   filter: () => true,
   sort: byDateAndAlphabetical(cfg),
@@ -35,6 +35,7 @@ export default ((userOpts?: Partial<Options>) => {
     const opts = { ...defaultOptions(cfg), ...userOpts }
     const pages = allFiles.filter(opts.filter).sort(opts.sort)
     const remaining = Math.max(0, pages.length - opts.limit)
+
     return (
       <div class={classNames(displayClass, "recent-notes")}>
         <h3>{opts.title ?? i18n(cfg.locale).components.recentNotes.title}</h3>
