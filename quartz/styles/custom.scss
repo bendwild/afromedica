@@ -326,7 +326,6 @@ h1, h2, h3, p {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
   transition: transform 0.2s ease;
-  border-left: 4px solid var(--accent);
 }
 
 .team-card:hover {
@@ -366,5 +365,45 @@ h1, h2, h3, p {
 .team-card a:hover {
   color: var(--tertiary);
   border-bottom: 1px solid var(--tertiary);
+}
+
+/* Hide anchor icons in heading elements */
+h1 > a.anchor,
+h2 > a.anchor,
+h3 > a.anchor,
+h4 > a.anchor,
+h5 > a.anchor,
+h6 > a.anchor {
+  display: none !important;
+}
+
+.team-banner {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  object-fit: cover;
+  aspect-ratio: 3 / 1; // Adjust this depending on your photo’s shape
+  border: 1px solid var(--lightgray); // Optional subtle border
+}
+
+figure.team-banner {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+figure.team-banner img {
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+}
+
+figure.team-banner figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--gray);
 }
 
