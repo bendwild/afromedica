@@ -96,7 +96,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
-  margin-top: 0.5rem; // tightened spacing from navbar
+  margin-top: 0.5rem;
   min-height: 60vh;
 }
 
@@ -113,7 +113,7 @@ body {
 }
 
 main {
-  margin-bottom: 1rem; // tightened spacing above footer
+  margin-bottom: 1rem;
 }
 
 // === Graph View ===
@@ -176,7 +176,7 @@ main {
   border-left: 4px solid var(--accent);
   border-radius: 1rem;
   padding: 1.2rem;
-  margin-bottom: 1rem; // reduced from 1.5rem
+  margin-bottom: 1rem;
   color: var(--darkgray);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
   backdrop-filter: blur(6px);
@@ -200,8 +200,8 @@ main {
   padding-bottom: 0.25rem;
 }
 
-. p,
-. li,
+.card p,
+.card li,
 .toc p,
 .backlinks p,
 .explorer p,
@@ -210,13 +210,12 @@ main {
   line-height: 1.6;
 }
 
-// === Uniform Link & Tag Styling ===
-. a,
+.card a,
 .toc a,
 .recent-notes a,
 .backlinks a,
 .explorer a,
-. .tag,
+.card .tag,
 .toc .tag,
 .backlinks .tag,
 .recent-notes .tag,
@@ -228,12 +227,12 @@ main {
   transition: color 0.2s, border-bottom 0.2s;
 }
 
-. a:hover,
+.card a:hover,
 .toc a:hover,
 .recent-notes a:hover,
 .backlinks a:hover,
 .explorer a:hover,
-. .tag:hover,
+.card .tag:hover,
 .toc .tag:hover,
 .backlinks .tag:hover,
 .recent-notes .tag:hover,
@@ -247,7 +246,7 @@ footer {
   background-color: var(--light);
   color: var(--darkgray);
   border-top: none;
-  padding: 1rem 1rem; // reduced from 2rem
+  padding: 1rem 1rem;
   text-align: center;
   font-size: 0.9rem;
   display: flex;
@@ -305,12 +304,12 @@ blockquote {
   margin: 2rem 0;
 }
 
-// === Tighter global vertical spacing ===
 h1, h2, h3, p {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
+// === Team Page ===
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -319,7 +318,7 @@ h1, h2, h3, p {
   align-items: start;
 }
 
-.team- {
+.team-card {
   background-color: var(--lightgray);
   padding: 1.5rem;
   border-radius: 1rem;
@@ -328,27 +327,27 @@ h1, h2, h3, p {
   transition: transform 0.2s ease;
 }
 
-.team-:hover {
+.team-card:hover {
   transform: translateY(-4px);
 }
 
-.team- img {
+.team-card img {
   width: 100%;
   max-width: 180px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 1rem; // ✅ Rounded square
+  border-radius: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
-.team- h3 {
+.team-card h3 {
   margin: 0.5rem 0 0.25rem;
   font-size: 1.25rem;
   color: var(--dark);
 }
 
-.team- p {
+.team-card p {
   color: var(--darkgray);
   margin-bottom: 0.5rem;
 }
@@ -367,16 +366,7 @@ h1, h2, h3, p {
   border-bottom: 1px solid var(--tertiary);
 }
 
-/* Hide anchor icons in heading elements */
-h1 > a.anchor,
-h2 > a.anchor,
-h3 > a.anchor,
-h4 > a.anchor,
-h5 > a.anchor,
-h6 > a.anchor {
-  display: none !important;
-}
-
+// === Banner Image on Team Page ===
 .team-banner {
   display: block;
   margin: 2rem auto;
@@ -384,8 +374,8 @@ h6 > a.anchor {
   border-radius: 1rem;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
   object-fit: cover;
-  aspect-ratio: 3 / 1; // Adjust this depending on your photo’s shape
-  border: 1px solid var(--lightgray); // Optional subtle border
+  aspect-ratio: 3 / 1;
+  border: 1px solid var(--lightgray);
 }
 
 figure.team-banner {
@@ -407,6 +397,7 @@ figure.team-banner figcaption {
   color: var(--gray);
 }
 
+// === Hero Section ===
 .hero {
   text-align: center;
   padding: 4rem 2rem;
@@ -436,6 +427,7 @@ figure.team-banner figcaption {
   padding: 0.75rem 1.5rem;
 }
 
+// === Home Page Grid Cards ===
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -462,6 +454,7 @@ figure.team-banner figcaption {
   color: var(--dark);
 }
 
+// === CTA Section ===
 .cta {
   background-color: var(--highlight);
   text-align: center;
@@ -483,3 +476,12 @@ figure.team-banner figcaption {
   margin-bottom: 1.5rem;
 }
 
+// === Hide anchor icons ===
+h1 > a.anchor,
+h2 > a.anchor,
+h3 > a.anchor,
+h4 > a.anchor,
+h5 > a.anchor,
+h6 > a.anchor {
+  display: none !important;
+}
