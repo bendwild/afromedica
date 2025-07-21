@@ -1,6 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
-import updates from "./quartz/layouts/updates" // ✅ Import the layout
+import updates from "./quartz/components/layouts/updates" // ✅ Import the layout
 
 const config: QuartzConfig = {
   configuration: {
