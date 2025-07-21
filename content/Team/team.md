@@ -134,4 +134,6 @@ AfroMedica is made up of a group of dedicated professionals students who have a 
 
 > [!attention]+ Want to learn more about how we work?
 > From policy suggestions to [[Afromedica Talks]] and our very own knowledge platform [[Afromedica Academy]]; our team makes meaningful impact!
+> 
 > [→ Explore our taskforces](taskforces)
+
