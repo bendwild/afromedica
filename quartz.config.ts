@@ -1,11 +1,7 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import updates from "./quartz/layouts/updates" // ✅ Import the layout
 
-/**
- * Quartz 4 Configuration
- *
- * See https://quartz.jzhao.xyz/configuration for more information.
- */
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "",
@@ -22,11 +18,11 @@ const config: QuartzConfig = {
     generateSocialImages: true,
     theme: {
       cdnCaching: true,
-      fontOrigin: "googleFonts", // changed from "local" to "googleFonts"
+      fontOrigin: "googleFonts",
       typography: {
-        header: "IBM Plex Serif",  // modern serif similar to Parclo
+        header: "IBM Plex Serif",
         body: "IBM Plex Serif",
-        code: "Fira Code",         // similar to Berkeley Mono
+        code: "Fira Code",
       },
       colors: {
         lightMode: {
@@ -67,8 +63,8 @@ const config: QuartzConfig = {
         },
         keepBackground: false,
       }),
-      Plugin.ObsidianFlavoredMarkdown({ 
-        enableInHtmlEmbed: true, 
+      Plugin.ObsidianFlavoredMarkdown({
+        enableInHtmlEmbed: true,
         enableCheckbox: true,
       }),
       Plugin.GitHubFlavoredMarkdown(),
@@ -82,7 +78,11 @@ const config: QuartzConfig = {
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
-      Plugin.ContentPage(),
+      Plugin.ContentPage({
+        layoutMap: {
+          updates: "updates", // ✅ Register custom layout
+        },
+      }),
       Plugin.FolderPage(),
       Plugin.TagPage(),
       Plugin.ContentIndex({
@@ -95,6 +95,9 @@ const config: QuartzConfig = {
       Plugin.NotFoundPage(),
       Plugin.CustomOgImages(),
     ],
+  },
+  components: {
+    updates, // ✅ Add layout to components
   },
 }
 
