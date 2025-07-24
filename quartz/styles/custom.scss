@@ -485,3 +485,41 @@ h5 > a.anchor,
 h6 > a.anchor {
   display: none !important;
 }
+
+.afrocademy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.afrocademy-card {
+  background-color: var(--lightgray);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: var(--dark);
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+
+.afrocademy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.afrocademy-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+
+.afrocademy-card p {
+  color: var(--darkgray);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
