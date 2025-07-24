@@ -13,62 +13,63 @@ Welcome to **Afrocademy** — a curated space exploring Black thought, media, an
 
 ---
 
-## 🎥 Media Library
-
-:::afro-card-grid
-- 📚 [[Books]]  
-  _Essential readings from Black authors, decolonial scholars, and public health leaders._
-
-- 🎬 [[Films & Documentaries]]  
-  _Visual storytelling of resistance, joy, and diasporic identity._
-
-- 📄 [[Research]]  
-  _Key studies and reports on health equity, systemic racism, and decolonized science._
-:::
-
----
-
-## 🌍 Core Topics
-
-:::afro-card-grid
-- ⚕️ [[Health Equity]]  
-  _Access, inequality, and racialized medicine._
-
-- 🧠 [[Decolonization]]  
-  _Reframing systems and knowledge beyond colonial legacies._
-
-- 🌍 [[Diaspora & Identity]]  
-  _Migration, memory, belonging, and global Blackness._
-
-- 🚀 [[Afrofuturism]]  
-  _Radical imagination and speculative Black futures._
-
-- ♀️ [[Intersectionality]]  
-  _Power, privilege, gender, and structural oppression._
-:::
 
 ## Afrocademy Library
 
-<div class="afrocademy-grid">
+# 🧠 AfroMedica Academy
 
-<a class="afrocademy-card" href="/AfroAcademy/Books">
-  <h3>📚 Books</h3>
-  <p>Curated list of Black authors, decolonial thinkers, and community health voices.</p>
-</a>
+Welcome to **AfroMedica Academy**, our growing knowledge hub. We curate books, research papers, podcasts, and more — all relevant to global health equity, intersectionality, and Afro-centered thought.
 
-<a class="afrocademy-card" href="/AfroAcademy/Films">
-  <h3>🎬 Films & Documentaries</h3>
-  <p>Stories of resistance, joy, and identity from across the globe.</p>
-</a>
 
-<a class="afrocademy-card" href="/AfroAcademy/Research">
-  <h3>📄 Research</h3>
-  <p>Academic and grassroots research focused on racial and global health justice.</p>
-</a>
 
-<a class="afrocademy-card" href="/AfroAcademy/Topics">
-  <h3>🧠 Topics</h3>
-  <p>Explore key themes like colonial medicine, disability justice, or Black feminism.</p>
-</a>
-
+<div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px;">
+    ## 🔎 Browse by Media Type
+    - *Medical Apartheid*
+    - *The Wretched of the Earth*
+  </div>
+  <div style="flex: 1; min-width: 250px;">
+    ### 🎧 Podcasts
+    - *In Those Genes*
+    - *AfroQueer*
+  </div>
+  <div style="flex: 1; min-width: 250px;">
+    ### 📄 Research Papers
+    - *NTDs and Colonialism*
+    - *Gender Bias in Healthcare*
+  </div>
 </div>
+
+## 🔎 Browse by Media Type
+Explore our top picks, categorized by format:
+
+- 📚 [[Academy/Media/Books|Books]]
+- 📄 [[Academy/Media/Research Papers|Research Papers]]
+- 🎧 [[Academy/Media/Podcasts|Podcasts]]
+- 🎬 [[Academy/Media/Documentaries|Documentaries]]
+
+---
+
+## 🌍 Browse by Subject
+Find content by area of interest:
+
+- 🧠 [[Academy/Subjects/Mental Health|Mental Health]]
+- 🧬 [[Academy/Subjects/Infectious Diseases|Infectious Diseases]]
+- 🚺 [[Academy/Subjects/Gender Equity|Gender Equity]]
+- 🏥 [[Academy/Subjects/Health Systems|Health Systems]]
+- 🌍 [[Academy/Subjects/Afrocentrism|Afrocentrism & Decolonization]]
+
+---
+
+## Our Picks
+
+> “A reader lives a thousand lives before he dies.” — George R.R. Martin
+
+- **Book:** _Medical Apartheid_ — [[Academy/Media/Books/Medical Apartheid]]
+- **Podcast:** _In Those Genes_ — [[Academy/Media/Podcasts/In Those Genes]]
+- **Paper:** _Neglected Tropical Diseases and Colonialism_ — [[Academy/Media/Research Papers/NTDs and Colonialism]]
+
+---
+
+## 🧩 How You Can Contribute
+Have a suggestion? [[Academy/Suggest a Resource|Submit a resource]]

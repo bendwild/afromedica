@@ -1,11 +1,11 @@
 ---
-title: Welcome!
+title: Welcome to AfroMedica!
 publish: true
-modified: 2025-07-21
+modified: 2025-07-24
 tags: 
 ---
 <div class="hero">
-  <h1>Welcome to AfroMedica</h1>
+  <h2>Discover who we are!</h2>
   <p>Championing racial equity in healthcare through education, advocacy, and community action.</p>
   <a class="button" href="About-us">→ Learn More</a>
 </div>
