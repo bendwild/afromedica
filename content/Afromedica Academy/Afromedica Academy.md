@@ -59,6 +59,34 @@ Find content by area of interest:
 - 🏥 [[Academy/Subjects/Health Systems|Health Systems]]
 - 🌍 [[Academy/Subjects/Afrocentrism|Afrocentrism & Decolonization]]
 
+
+## 🌍 Explore Resources
+
+<div class="card-grid">
+
+  <a class="card" href="/Academy/Media/Books/Medical Apartheid">
+    <h3>📚 Medical Apartheid</h3>
+    <p>Harriet A. Washington</p>
+    <p>Exposes the dark history of medical experimentation on Black Americans.</p>
+  </a>
+
+  <a class="card" href="/Academy/Media/Podcasts/In Those Genes">
+    <h3>🎧 In Those Genes</h3>
+    <p>A podcast decoding the genetic code of Blackness through accessible storytelling.</p>
+  </a>
+
+  <a class="card" href="/Academy/Media/Research/NTDs and Colonialism">
+    <h3>📄 NTDs & Colonialism</h3>
+    <p>Research on how tropical diseases were shaped by colonial health systems.</p>
+  </a>
+
+  <a class="card" href="/Academy/Media/Documentaries/The Waiting Room">
+    <h3>🎬 The Waiting Room</h3>
+    <p>A powerful documentary about inequality in American public hospitals.</p>
+  </a>
+
+</div>
+
 ---
 
 ## Our Picks
