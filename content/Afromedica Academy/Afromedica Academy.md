@@ -73,12 +73,12 @@ Welcome to the **AfroMedica Academy** — your curated hub of resources at the i
 
 ---
 
-## 🌍 Explore Resources
+## 🌍 Explore by Media
 
 <div class="card-grid">
 
   <div class="card">
-    <h3>📚 <a href="/Academy/Media/Books/Medical Apartheid">Medical Apartheid</a></h3>
+    <h3>📚 <a href="/Afromedica-Academy/Media/Books/Medical Apartheid">Medical Apartheid</a></h3>
     <p><strong>Harriet A. Washington</strong></p>
     <p>Exposes the dark history of medical experimentation on Black Americans.</p>
   </div>
