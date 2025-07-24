@@ -523,3 +523,46 @@ h6 > a.anchor {
   margin: 0;
 }
 
+.afro-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.afro-card-grid li {
+  background-color: var(--lightgray);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  list-style: none;
+}
+
+.afro-card-grid li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.afro-card-grid a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.afro-card-grid a:hover {
+  color: var(--tertiary);
+}
+
+.afro-card-grid em {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--darkgray);
+  font-style: italic;
+}
