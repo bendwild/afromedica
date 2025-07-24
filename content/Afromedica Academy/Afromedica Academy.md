@@ -3,55 +3,46 @@ title: Afromedica Academy
 publish: true
 modified: 2025-07-24
 ---
-Welcome to Afromedica Academy, where we provide our followers with a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry.
+Welcome to Afromedica Academy, where we provide our followers with a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Navigate through our sections to explore impactful media and critical topics.
 
-Followers of Afromedica Academy can trust us to provide them with accurate information and a strong foundation in the medical field. With our diverse sources of information, you can be sure you are getting the most reliable and up-to-date information available.
-
-# Afrocademy
-
-Welcome to Afrocademy — a curated knowledge space centered on Black thought, global health equity, history, and community resilience. Navigate through our sections to explore impactful media and critical topics.
-
-# Afrocademy
-
-Welcome to Afrocademy — a curated space exploring Black thought, media, and global justice. Dive into our library of impactful resources and critical topics.
 
 ---
 # Afrocademy
 
-Welcome to Afrocademy — a curated space exploring Black thought, media, and global justice. Dive into our library of impactful resources and critical topics.
+Welcome to **Afrocademy** — a curated space exploring Black thought, media, and global justice. Dive into our library of impactful resources and critical topics.
 
 ---
 
 ## 🎥 Media Library
 
-:::card-grid
-[[Books]]
-> 📚 Curated reading list of Black authors, decolonial thinkers, and community health voices.
+:::afro-card-grid
+- 📚 [[Books]]  
+  _Essential readings from Black authors, decolonial scholars, and public health leaders._
 
-[[Films & Documentaries]]
-> 🎬 Visual stories of resistance, identity, and Black joy from around the globe.
+- 🎬 [[Films & Documentaries]]  
+  _Visual storytelling of resistance, joy, and diasporic identity._
 
-[[Research]]
-> 📄 Key papers and reports on global health equity, race, and systemic injustice.
+- 📄 [[Research]]  
+  _Key studies and reports on health equity, systemic racism, and decolonized science._
 :::
 
 ---
 
 ## 🌍 Core Topics
 
-:::card-grid
-[[Health Equity]]
-> ⚕️ Structural inequalities, race-based medicine, and access to care.
+:::afro-card-grid
+- ⚕️ [[Health Equity]]  
+  _Access, inequality, and racialized medicine._
 
-[[Decolonization]]
-> 🧠 From public health to education — dismantling colonial legacies.
+- 🧠 [[Decolonization]]  
+  _Reframing systems and knowledge beyond colonial legacies._
 
-[[Diaspora]]
-> 🌍 Migration, culture, memory, and the African diasporic experience.
+- 🌍 [[Diaspora & Identity]]  
+  _Migration, memory, belonging, and global Blackness._
 
-[[Afrofuturism]]
-> 🚀 Imaginative worlds where Black futures thrive.
+- 🚀 [[Afrofuturism]]  
+  _Radical imagination and speculative Black futures._
 
-[[Intersectionality]]
-> ♀️ Gender, sexuality, race, and overlapping systems of oppression.
+- ♀️ [[Intersectionality]]  
+  _Power, privilege, gender, and structural oppression._
 :::
