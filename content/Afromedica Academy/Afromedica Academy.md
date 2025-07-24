@@ -46,3 +46,29 @@ Welcome to **Afrocademy** — a curated space exploring Black thought, media, an
 - ♀️ [[Intersectionality]]  
   _Power, privilege, gender, and structural oppression._
 :::
+
+## Afrocademy Library
+
+<div class="afrocademy-grid">
+
+<a class="afrocademy-card" href="/AfroAcademy/Books">
+  <h3>📚 Books</h3>
+  <p>Curated list of Black authors, decolonial thinkers, and community health voices.</p>
+</a>
+
+<a class="afrocademy-card" href="/AfroAcademy/Films">
+  <h3>🎬 Films & Documentaries</h3>
+  <p>Stories of resistance, joy, and identity from across the globe.</p>
+</a>
+
+<a class="afrocademy-card" href="/AfroAcademy/Research">
+  <h3>📄 Research</h3>
+  <p>Academic and grassroots research focused on racial and global health justice.</p>
+</a>
+
+<a class="afrocademy-card" href="/AfroAcademy/Topics">
+  <h3>🧠 Topics</h3>
+  <p>Explore key themes like colonial medicine, disability justice, or Black feminism.</p>
+</a>
+
+</div>
