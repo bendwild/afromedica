@@ -62,30 +62,44 @@ Find content by area of interest:
 
 ## 🌍 Explore Resources
 
+---
+title: AfroMedica Academy
+description: Curated resources for global health equity
+---
+
+# 🧠 AfroMedica Academy
+
+Welcome to the **AfroMedica Academy** — your curated hub of resources at the intersection of race, equity, and global health. Discover hand-picked books, papers, podcasts, and more.
+
+---
+
+## 🌍 Explore Resources
+
 <div class="card-grid">
 
-  <a class="card" href="/Academy/Media/Books/Medical Apartheid">
-    <h3>📚 Medical Apartheid</h3>
-    <p>Harriet A. Washington</p>
+  <div class="card">
+    <h3>📚 <a href="/Academy/Media/Books/Medical Apartheid">Medical Apartheid</a></h3>
+    <p><strong>Harriet A. Washington</strong></p>
     <p>Exposes the dark history of medical experimentation on Black Americans.</p>
-  </a>
+  </div>
 
-  <a class="card" href="/Academy/Media/Podcasts/In Those Genes">
-    <h3>🎧 In Those Genes</h3>
+  <div class="card">
+    <h3>🎧 <a href="/Academy/Media/Podcasts/In Those Genes">In Those Genes</a></h3>
     <p>A podcast decoding the genetic code of Blackness through accessible storytelling.</p>
-  </a>
+  </div>
 
-  <a class="card" href="/Academy/Media/Research/NTDs and Colonialism">
-    <h3>📄 NTDs & Colonialism</h3>
+  <div class="card">
+    <h3>📄 <a href="/Academy/Media/Research/NTDs and Colonialism">NTDs & Colonialism</a></h3>
     <p>Research on how tropical diseases were shaped by colonial health systems.</p>
-  </a>
+  </div>
 
-  <a class="card" href="/Academy/Media/Documentaries/The Waiting Room">
-    <h3>🎬 The Waiting Room</h3>
+  <div class="card">
+    <h3>🎬 <a href="/Academy/Media/Documentaries/The Waiting Room">The Waiting Room</a></h3>
     <p>A powerful documentary about inequality in American public hospitals.</p>
-  </a>
+  </div>
 
 </div>
+
 
 ---
 
