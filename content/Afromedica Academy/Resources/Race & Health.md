@@ -7,9 +7,9 @@ modified: 2025-07-27
 
 **Subject**: #racism-and-health 
 
-**Language**: #english 
+**Language**: #english
 
-**Creator**: #Mita-Huk #Delan-Devakumar
+**Creator**: #Race-and-Health
 
 ## Cover
 ![[Pasted image 20250727211924.png]]

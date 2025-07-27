@@ -9,7 +9,7 @@ modified: 2025-07-27
 
 **Language**: #dutch 
 
-**Author**: #Ldivine-Ngonseu-Harpi
+**Author**: #Lidvine-Ngonseu-Harpi 
 
 **From us to you**: #from-us-to-you
 
