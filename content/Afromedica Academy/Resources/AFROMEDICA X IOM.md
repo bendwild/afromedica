@@ -15,10 +15,6 @@ modified: 2025-07-27
 
 **From us to you**: #from-us-to-you
 
-
-## Description
-{{description}}
-
 ## Link
 ["On the importance of culturally sensitive healthcare" by AfroMedica & IOM](https://belgium.iom.int/resources/afromedica-interview)
 

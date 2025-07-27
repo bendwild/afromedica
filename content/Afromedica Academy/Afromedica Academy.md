@@ -30,7 +30,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 
 <div class="tag-scroll">
   <a href="/tags/intersectionality" class="tag">#intersectionality</a>
-  <a href="/tags/colonialism" class="tag">#colonialism-</a>
+  <a href="/tags/colonialism" class="tag">#colonialism</a>
   <a href="/tags/global-health" class="tag">#global-health</a>
   <a href="/tags/racism-and-health" class="tag">#racism-and-health</a>
   <a href="/tags/culturally-sensitive-healthcare" class="tag">#culturally-sensitive-healthcare</a>
@@ -49,18 +49,19 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 ## Explore by People
 
 <div class="tag-scroll">
-  <a href="/tags/Angela-Saini" class="tag">#Angela-Saini</a>
-  <a href="/tags/Nour-El-Houda-Mazari" class="tag">#Nour-El-Houda-Mazari</a>
-  <a href="/tags/Lidvine-Ngonseu-Harpi" class="tag">#Lidvine-Ngonseu-Harpi</a>
-  <a href="/tags/Geordan-Shannon" class="tag">#Geordan-Shannon</a>
-  <a href="/tags/Hanane-El-Kaddouri" class="tag">#Hanane-El-Kaddouri</a>
-  <a href="/tags/Deborah-Pemu" class="tag">#Deborah-Pemu</a>
-  <a href="/tags/Layal-Liverpool" class="tag">#Layal-Liverpool</a>
-  <a href="/tags/Jenny-Slatman" class="tag">#Jenny-Slatman</a>
-  <a href="/tags/Maria-Saldi" class="tag">#Maria-Saldi</a>
-  <a href="/tags/Hanane-El-Kaddouri" class="tag">#Hanane-El-Kaddouri</a>
-  <a href="/tags/Elke-Van-De-Moortel" class="tag">#Elke-Van-De-Moortel</a>
+  <a href="/tags/Angela-Saini" class="tag">#Angela Saini</a>
+  <a href="/tags/Nour-El-Houda-Mazari" class="tag">#Nour El Houda Mazari</a>
+  <a href="/tags/Lidvine-Ngonseu-Harpi" class="tag">#Lidvine Ngonseu Harpi</a>
+  <a href="/tags/Geordan-Shannon" class="tag">#Geordan Shannon</a>
+  <a href="/tags/Hanane-El-Kaddouri" class="tag">#Hanane El-Kaddouri</a>
+  <a href="/tags/Deborah-Pemu" class="tag">#Deborah Pemu</a>
+  <a href="/tags/Layal-Liverpool" class="tag">#Layal Liverpool</a>
+  <a href="/tags/Jenny-Slatman" class="tag">#Jenny Slatman</a>
+  <a href="/tags/Maria-Saldi" class="tag">#Maria Saldi</a>
+  <a href="/tags/Hanane-El-Kaddouri" class="tag">#Hanane El-Kaddouri</a>
+  <a href="/tags/Elke-Van-De-Moortel" class="tag">#Elke Van De Moortel</a>
   <a href="/tags/Fatou-Touré" class="tag">#Fatou Touré</a>
+  <a href="/tags/Tinne-Claes" class="tag">#Tinne Claes</a>
 </div>
 
 
@@ -68,9 +69,9 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 
 <div class="tag-scroll">
   <a href="/tags/BRUZZ" class="tag">#BRUZZ</a>
-  <a href="/tags/Op-Den-Duur" class="tag">#Op-Den-Duur</a>
-  <a href="/tags/woman-is-present" class="tag">#woman-is-present</a>
-  <a href="/tags/Race-and-Health" class="tag">#Race-and-Health</a>
+  <a href="/tags/Op-Den-Duur" class="tag">#Op Den Duur</a>
+  <a href="/tags/woman-is-present" class="tag">#Woman is present</a>
+  <a href="/tags/Race-and-Health" class="tag">#Race and Health</a>
   <a href="/tags/IOM" class="tag">#IOM</a>
 </div>
 
