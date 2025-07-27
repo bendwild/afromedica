@@ -14,6 +14,6 @@ _Superior_ tells the disturbing story of the persistent thread of belief in bio
 Whether you think of racist science as bad science, evil science, alt-right science, or pseudoscience, why would any contemporary scientist imagine that gross inequality is a fact of nature, rather than of political history? Angela Saini's Superior connects the dots, laying bare the history, continuity, and connections of modern racist science, some more subtle than you might think.
 
 ## Link
-[Superior by Angela Saini](https://www.angelasaini.co.uk/superior)
+["Superior" by Angela Saini](https://www.angelasaini.co.uk/superior)
 
 
