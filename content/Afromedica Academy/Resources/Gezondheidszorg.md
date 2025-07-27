@@ -1,7 +1,7 @@
 ---
 title: "Woman is present: Gezondheidszorg"
 publish: true
-modified: 2025-07-27
+modified: 2025-07-28
 ---
 **Media**: #podcasts 
 
@@ -13,7 +13,37 @@ modified: 2025-07-27
 
 **Guests**: #Hanane-El-Kaddouri #Deborah-Pemu
 
-**From us to you**: #from-us-to-you
+**From us to you**: #from-us-to-you 
+
+<div class="tag-scroll">
+  <strong>Media:</strong>
+  <a href="/tags/podcasts" class="tag">#podcasts</a>
+
+  <strong>Subject:</strong>
+  <a href="/tags/intersectionality" class="tag">#intersectionality</a>
+  <a href="/tags/racism-and-health" class="tag">#racism-and-health</a>
+
+  <strong>Language:</strong>
+  <a href="/tags/dutch" class="tag">#dutch</a>
+
+  <strong>Podcast:</strong>
+  <a href="/tags/woman-is-present" class="tag">#woman-is-present</a>
+
+  <strong>Guests:</strong>
+  <a href="/tags/hanane-el-kaddouri" class="tag">#Hanane El-Kaddouri</a>
+  <a href="/tags/deborah-pemu" class="tag">#Deborah Pemu</a>
+
+  <strong>From us to you:</strong>
+  <a href="/tags/from-us-to-you" class="tag">#from-us-to-you</a>
+
+  <strong>Categories:</strong>
+  <a href="/tags/articles" class="tag">#articles</a>
+  <a href="/tags/books" class="tag">#books</a>
+  <a href="/tags/interviews" class="tag">#interviews</a>
+  <a href="/tags/research" class="tag">#research</a>
+  <a href="/tags/videos" class="tag">#videos</a>
+</div>
+
 
 ## Cover
 ![[Pasted image 20250727214833.png]]
