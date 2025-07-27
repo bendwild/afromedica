@@ -3,7 +3,7 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import { classNames } from "../util/lang"
 
 const TagList: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
-  const tags = fileData.frontmatter?.tags
+  const tags = fileData.frontmatter?.tags?.slice().sort((a, b) => a.localeCompare(b))  // ✅ Alphabetical sort
   if (tags && tags.length > 0) {
     return (
       <ul class={classNames(displayClass, "tags")}>
