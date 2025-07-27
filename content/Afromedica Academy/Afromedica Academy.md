@@ -5,10 +5,10 @@ tags:
 description: 
 modified: 2025-07-27
 ---
-
-Welcome to Afromedica Academy, a curated space where we provide our followers with a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
+Welcome to **Afromedica Academy**, a curated space where we provide our followers with a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
 
 ---
+
 ## Explore by Media
 
 #books #podcasts #research #videos #articles 

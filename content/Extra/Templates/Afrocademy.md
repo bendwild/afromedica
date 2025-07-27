@@ -3,7 +3,7 @@ title:
 publish: true
 modified: 2025-07-27
 ---
-**Type**: #{{type}}  
+**Media**: #{{media}}  
 **Subject**: #{{subject}}  
 **Language**: #{{language}}
 

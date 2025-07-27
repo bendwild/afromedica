@@ -3,7 +3,7 @@ title:
 publish: true
 modified: 2025-07-27
 ---
-**Type**: #research 
+**Media**: #research 
 **Subject**: #racism-and-health 
 **Language**: #english
 
