@@ -6,9 +6,10 @@ tags:
 description: 
 modified: 2025-07-27
 ---
-<div class="profile-header">
+<div class="inline-profile">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
-</div>
+  <div class="intro-text">
+  
 ## Hey there!
 
 Introductory text. Talk about who you are and why you joined AfroMedica. 
