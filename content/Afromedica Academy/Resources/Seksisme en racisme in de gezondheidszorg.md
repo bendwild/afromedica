@@ -1,6 +1,6 @@
 ---
 title: "Rebelle Openhartig Live: Seksisme en racisme in de gezondheidszorg"
-publish: false
+publish: true
 modified: 2025-07-27
 ---
 **Media**: #podcasts  
