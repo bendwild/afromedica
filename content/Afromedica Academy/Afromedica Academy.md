@@ -27,6 +27,9 @@ Welcome to **Afromedica Academy**, a curated space where we provide our follower
 
 #dutch #english #french
 
+## Explore by author
+
+#Angela-Saini #Delan-Devakumar #Mita-Huk #Geordan-Shannon 
 ## From us to you
 
 #from-us-to-you 
