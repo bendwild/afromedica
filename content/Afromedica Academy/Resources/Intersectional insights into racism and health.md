@@ -1,5 +1,5 @@
 ---
-title: 
+title: "Intersectional insights into racism and health: not just a question of identity"
 publish: true
 modified: 2025-07-27
 ---

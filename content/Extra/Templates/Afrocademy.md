@@ -6,6 +6,7 @@ modified: 2025-07-27
 **Media**: #{{media}}  
 **Subject**: #{{subject}}  
 **Language**: #{{language}}
+**Author**: #{{author}}
 
 ## Description
 {{description}}
