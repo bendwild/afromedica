@@ -337,3 +337,73 @@ h5 > a.anchor,
 h6 > a.anchor {
   display: none !important;
 }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  align-items: stretch; /* Ensures vertical alignment */
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--lightgray);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s;
+  height: 100%;
+}
+
+.team-card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.team-card img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 1rem;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+
+.team-card h3 a {
+  color: var(--dark);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.team-card h3 a:hover {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+.team-card p {
+  color: var(--darkgray);
+  flex-grow: 1;
+}
+
+.team-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.team-card a:hover {
+  color: var(--tertiary);
+}
