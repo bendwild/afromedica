@@ -5,9 +5,9 @@ tags:
 description: 
 modified: 2025-07-27
 ---
-Welcome to **Afromedica Academy**, a curated space where we provide our followers with a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
+Welcome to **Afromedica Academy**, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
 
-> [!info] Tip!
+> [!info]+ Tip!
 > We use **# tags** to add a subject and media type to all of our resources. You can click on a tag to find other resources that have the same tags or use the searchbar to search by tag. 
 
 ---
@@ -24,6 +24,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide our follower
 
 ---
 
+
 ## Explore by Subject
 
 <div class="tag-scroll">
@@ -33,6 +34,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide our follower
   <a href="/tags/racism-and-health" class="tag">#racism-and-health</a>
 </div>
 
+
 ## Explore by language
 
 <div class="tag-scroll">
@@ -40,6 +42,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide our follower
   <a href="/tags/english" class="tag">#english</a>
   <a href="/tags/french" class="tag">#french</a>
 </div>
+
 
 ## Explore by author
 
@@ -50,6 +53,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide our follower
   <a href="/tags/Geordan-Shannon" class="tag">#Geordan-Shannon</a>
 </div>
 
+
 ## From us to you
 
 <div class="tag-scroll">
@@ -59,6 +63,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide our follower
 "From us to you” entails the diverse inputs and works of AfroMedica team (board)members concerning our own specific interests and specialities, but also lived experiences as students and workers within healthcare in Belgium.
 
 ---
+
 
 ## How You Can Contribute
 
