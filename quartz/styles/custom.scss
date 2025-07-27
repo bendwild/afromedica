@@ -410,12 +410,11 @@ h6 > a.anchor {
 
 .tag-scroll {
   display: flex;
-  overflow-x: auto;
+  flex-wrap: wrap; /* allows natural stacking */
   gap: 0.5rem;
   padding: 0.5rem 0;
-  flex-wrap: nowrap;
-  scrollbar-width: thin;
-  scrollbar-color: var(--gray) transparent;
+  justify-content: flex-start;
+  overflow: visible; /* removes scroll behavior */
 }
 
 .tag-scroll::-webkit-scrollbar {
@@ -424,24 +423,6 @@ h6 > a.anchor {
 .tag-scroll::-webkit-scrollbar-thumb {
   background-color: var(--gray);
   border-radius: 6px;
-}
-
-.tag-scroll .tag {
-  display: inline-block;
-  white-space: nowrap;
-  background-color: var(--lightgray);
-  color: var(--darkgray);
-  padding: 0.4rem 0.75rem;
-  font-size: 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--gray);
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-
-.tag-scroll .tag:hover {
-  background-color: var(--accent);
-  color: var(--light);
 }
 
 .page-tags,
