@@ -3,7 +3,7 @@ title:
 publish: true
 tags: 
 description: 
-modified: 2025-07-27
+modified: 2025-07-28
 ---
 Welcome to **Afromedica Academy**, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
 
@@ -30,12 +30,12 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 
 <div class="tag-scroll">
   <a href="/tags/colonialism" class="tag">#colonialism</a>
+  <a href="/tags/clinical-medicine" class="tag">#clinical medicine</a>
   <a href="/tags/culturally-sensitive-healthcare" class="tag">#culturally-sensitive-healthcare</a>
   <a href="/tags/global-health" class="tag">#global-health</a>
+  <a href="/tags/health-equity" class="tag">#health equity</a>
   <a href="/tags/intersectionality" class="tag">#intersectionality</a>
   <a href="/tags/racism-and-health" class="tag">#racism-and-health</a>
-  <a href="/tags/clinical-medicine" class="tag">#clinical medicine</a>
-  <a href="/tags/health-equity" class="tag">#health equity</a>
 </div>
 
 
@@ -51,6 +51,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 ## Explore by People
 
 <div class="tag-scroll">
+  <a href="/tags/Alicia-Williams" class="tag">#Alicia Williams</a>
   <a href="/tags/Angela-Saini" class="tag">#Angela Saini</a>
   <a href="/tags/Deborah-Pemu" class="tag">#Deborah Pemu</a>
   <a href="/tags/Elke-Van-De-Moortel" class="tag">#Elke Van De Moortel</a>
@@ -60,8 +61,11 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
   <a href="/tags/Jenny-Slatman" class="tag">#Jenny Slatman</a>
   <a href="/tags/Layal-Liverpool" class="tag">#Layal Liverpool</a>
   <a href="/tags/Lidvine-Ngonseu-Harpi" class="tag">#Lidvine Ngonseu Harpi</a>
+  <a href="/tags/Malone-Mukwende" class="tag">#Malone Mukwende</a>
+  <a href="/tags/Margot-Turner" class="tag">#Margot Turner</a>
   <a href="/tags/Maria-Saldi" class="tag">#Maria Saldi</a>
   <a href="/tags/Nour-El-Houda-Mazari" class="tag">#Nour El Houda Mazari</a>
+  <a href="/tags/Peter-Tamony" class="tag">#Peter Tamony</a>
   <a href="/tags/Tinne-Claes" class="tag">#Tinne Claes</a>
 </div>
 
