@@ -12,7 +12,7 @@ modified: 2025-07-27
   
 ## Hey there!
 
-Introductory text. Talk about who you are and why you joined AfroMedica. 
+My name is Benjamin and I'm a medical doctor with a passion for global health. I joined AfroMedica because I believe in the power of community-led initiatives to challenge structural racism and create a more inclusive healthcare system. Through education, advocacy, and collaboration, I hope to contribute to a future where everyone receives the care they deserve.
 
 ## [Taskforces](taskforces) I'm involved in!
 
@@ -22,6 +22,4 @@ Introductory text. Talk about who you are and why you joined AfroMedica.
 ## Follow me!
 
 If you are interested in connecting, you can find me on these platforms: 
-- [Instagram](...)
-- [Linkedin](...)
-- ...
+- [LinkedIn](https://www.linkedin.com/in/benjamindewilde)
