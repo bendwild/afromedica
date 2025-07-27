@@ -1,12 +1,18 @@
 ---
 publish: true
 title: Contact
-modified: 2025-07-21
+modified: 2025-07-27
 ---
-AfroMedica welcomes those who share our vision of an equitable healthcare system. If you are an institution, policymaker, educator, or professional looking to partner with us, reach out—we’d love to hear from you.
+AfroMedica welcomes those who share our vision of an equitable healthcare system. 
 
-If you have any questions for AfroMedica, want to collaborate, or would like to highlight your project, please do not hesitate to contact us via our social media channels, email, or the contact form below.
+- If you are an **institution, policymaker, educator, or professional looking to partner with us**, reach out! We’d love to hear from you. You can best contact us via our email (info.afromedica@gmail.com). We will discuss your mail at our general assembly and send an answer afterwards (this can take up to 4 weeks)
+- If you have any questions regarding **[[membership]] or [boardmembership]([[boardmembers]])**, you can send your message to [[Afromedica Connects]] via xxx
+- If you want to **suggest a resource** for the [[Afromedica Academy]], please fill in this form. If you have further questions for [[Afromedica Academy]], you can reach them via xxx
+- If you have a question for [[Afromedica Talks]], you can contact them via xxx
+- If you have a question meant for our [policy taskforce]([[Policy]]), you can send a message via xxx
+- If you have a question for our [president]() or [vice-president]() specifically, you can send them a message via xxx
 
-We are here to listen and appreciate your feedback. Thank you for your interest in our organization and for supporting the implementation of inclusive healthcare.
+> [!attention] Is it unclear who to contact for your specific query?
+> Send your message to our general e-mail adress: info.afromedica@gmail.com
 
-Additionally, we are active on social media and invite you to follow us on Facebook, LinkedIn, and Instagram for updates on our latest programs and initiatives. Thank you for your support of AfroMedica!
+Thank you for your support of AfroMedica! 

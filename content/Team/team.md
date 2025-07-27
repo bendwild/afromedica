@@ -3,7 +3,7 @@ title: Team
 publish: true
 tags: 
 description: 
-modified: 2025-07-21
+modified: 2025-07-27
 ---
 <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/Group.jpeg" alt="Group Picture" />
 
@@ -137,3 +137,11 @@ AfroMedica is made up of a group of dedicated professionals students who have a 
 > 
 > [→ Explore our taskforces](taskforces)
 
+
+<div class="team-card">
+  <img src="..." alt="Benjamin De Wilde" />
+  <h3><a href="/Benjamin-De-Wilde">Benjamin De Wilde</a></h3>
+  <p><em>Vice-president / ...</em></p>
+  <p>Lorem ipsum etc.</p>
+  <a href="https://www.linkedin.com/in/benjamindewilde" target="_blank">LinkedIn</a>
+</div>
