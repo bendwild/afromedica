@@ -343,7 +343,7 @@ h6 > a.anchor {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
-  align-items: stretch; /* Ensures vertical alignment */
+  align-items: stretch;
 }
 
 .team-card {
@@ -408,21 +408,32 @@ h6 > a.anchor {
   color: var(--tertiary);
 }
 
+/* === TAGS UPDATED HERE === */
 .tag-scroll {
   display: flex;
-  flex-wrap: wrap; /* allows natural stacking */
+  flex-wrap: wrap;
   gap: 0.5rem;
   padding: 0.5rem 0;
   justify-content: flex-start;
-  overflow: visible; /* removes scroll behavior */
+  overflow: visible;
 }
 
-.tag-scroll::-webkit-scrollbar {
-  height: 6px;
+.tag-scroll .tag {
+  display: inline-block;
+  white-space: nowrap;
+  background-color: var(--lightgray);
+  color: var(--darkgray);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--gray);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
 }
-.tag-scroll::-webkit-scrollbar-thumb {
-  background-color: var(--gray);
-  border-radius: 6px;
+
+.tag-scroll .tag:hover {
+  background-color: var(--accent);
+  color: var(--light);
 }
 
 .page-tags,
@@ -475,7 +486,7 @@ h6 > a.anchor {
   height: auto;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin: 0; /* Removes any default bottom spacing */
+  margin: 0;
 }
 
 .team-banner figcaption {
@@ -513,4 +524,3 @@ h5 a.anchor,
 h6 a.anchor {
   display: none !important;
 }
-
