@@ -22,7 +22,7 @@ export default {
       quote: "Quote",
     },
     backlinks: {
-      title: "Backlinks",
+      title: "Related pages",
       noBacklinksFound: "No backlinks found",
     },
     themeToggle: {
@@ -71,15 +71,15 @@ export default {
       home: "Return to Homepage",
     },
     folderContent: {
-      folder: "Folder",
+      folder: "Subject",
       itemsUnderFolder: ({ count }) =>
-        count === 1 ? "1 item under this folder." : `${count} items under this folder.`,
+        count === 1 ? "1 page related to this subject." : `${count} pages related to this subject.`,
     },
     tagContent: {
       tag: "Tag",
       tagIndex: "Tag Index",
       itemsUnderTag: ({ count }) =>
-        count === 1 ? "1 item with this tag." : `${count} items with this tag.`,
+        count === 1 ? "1 page with this tag." : `${count} pages with this tag.`,
       showingFirst: ({ count }) => `Showing first ${count} tags.`,
       totalTags: ({ count }) => `Found ${count} total tags.`,
     },

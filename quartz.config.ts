@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "https://bendwild.github.io/afromedica",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     generateSocialImages: true,
