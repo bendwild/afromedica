@@ -407,3 +407,43 @@ h6 > a.anchor {
 .team-card a:hover {
   color: var(--tertiary);
 }
+
+.tag-scroll {
+  display: flex;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray) transparent;
+}
+
+.tag-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tag-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--gray);
+  border-radius: 8px;
+}
+
+.tag-scroll a.tag,
+.tag-scroll .tag {
+  display: inline-block;
+  background-color: var(--lightgray);
+  color: var(--darkgray);
+  padding: 0.4rem 0.7rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--gray);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tag-scroll .tag:hover {
+  background-color: var(--accent);
+  color: var(--light);
+  border-color: var(--accent);
+}
+
