@@ -7,6 +7,9 @@ modified: 2025-07-27
 ---
 Welcome to **Afromedica Academy**, a curated space where we provide our followers with a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
 
+> [!info] Tip!
+> We use **# tags** to add a subject and media type to all of our resources. You can click on a tag to find other resources that have the same tags or use the searchbar to search by tag. 
+
 ---
 
 ## Explore by Media
@@ -29,9 +32,6 @@ Welcome to **Afromedica Academy**, a curated space where we provide our follower
   <a href="/tags/global-health" class="tag">#global-health</a>
   <a href="/tags/racism-and-health" class="tag">#racism-and-health</a>
 </div>
-
-> [!info] Tip!
-> You can use **tags** to add a subject and media type to all of our resources. You can click on a tag to find other resources that have the same tags or use the searchbar to search by tag. 
 
 ## Explore by language
 
