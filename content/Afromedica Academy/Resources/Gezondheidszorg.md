@@ -25,6 +25,31 @@ modified: 2025-07-28
   <!-- add more tags as needed -->
 </div>
 
+<div class="tag-scroll">
+  <span class="tag-scroll-title">Tags:</span>
+  <a href="/tags/articles" class="tag">#articles</a>
+  <a href="/tags/articles" class="tag">#articles</a>
+  <a href="/tags/articles" class="tag">#articles</a>
+  <!-- add more tags as needed -->
+</div>
+
+<div class="tag-scroll">
+  <span class="tag-scroll-title">Tags:</span>
+  <a href="/tags/articles" class="tag">#articles</a>
+  <a href="/tags/articles" class="tag">#articles</a>
+  <a href="/tags/articles" class="tag">#articles</a>
+  <!-- add more tags as needed -->
+</div>
+
+<div class="tag-scroll">
+  <span class="tag-scroll-title">Tags:</span>
+  <a href="/tags/articles" class="tag">#articles</a>
+  <a href="/tags/articles" class="tag">#articles</a>
+  <a href="/tags/articles" class="tag">#articles</a>
+  <!-- add more tags as needed -->
+</div>
+
+---
 ## Cover
 ![[Pasted image 20250727214833.png]]
 
