@@ -25,14 +25,6 @@ modified: 2025-07-28
   <!-- add more tags as needed -->
 </div>
 
-
-
-**Media**: <div class="tag-scroll"> <a href="/tags/articles" class="tag">#articles</a> </div>
-
-| Media                                                                                      | Subject                                                                                                                                            | Language                                                                                   | Podcast                                                                                    | Guests                                                                                     | From us to you                                                                             |
-| ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| <div class="tag-scroll"><br>  <a href="/tags/articles" class="tag">#articles</a><br></div> | <div class="tag-scroll"><br>  <a href="/tags/articles" class="tag">#articles</a><br>  <a href="/tags/articles" class="tag">#articles</a><br></div> | <div class="tag-scroll"><br>  <a href="/tags/articles" class="tag">#articles</a><br></div> | <div class="tag-scroll"><br>  <a href="/tags/articles" class="tag">#articles</a><br></div> | <div class="tag-scroll"><br>  <a href="/tags/articles" class="tag">#articles</a><br></div> | <div class="tag-scroll"><br>  <a href="/tags/articles" class="tag">#articles</a><br></div> |
-
 ## Cover
 ![[Pasted image 20250727214833.png]]
 
