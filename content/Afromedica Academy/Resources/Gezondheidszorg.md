@@ -25,28 +25,23 @@ modified: 2025-07-28
   <!-- add more tags as needed -->
 </div>
 
-<div class="tag-scroll">
+
+<div class="tags-group">
   <span class="tag-scroll-title">Tags:</span>
   <a href="/tags/articles" class="tag">#articles</a>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <!-- add more tags as needed -->
+  <a href="/tags/news" class="tag">#news</a>
 </div>
 
-<div class="tag-scroll">
-  <span class="tag-scroll-title">Tags:</span>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <!-- add more tags as needed -->
+<div class="tags-group">
+  <span class="tag-scroll-title">Categories:</span>
+  <a href="/tags/health" class="tag">#health</a>
+  <a href="/tags/science" class="tag">#science</a>
 </div>
 
-<div class="tag-scroll">
-  <span class="tag-scroll-title">Tags:</span>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <!-- add more tags as needed -->
+<div class="tags-group">
+  <span class="tag-scroll-title">Authors:</span>
+  <a href="/tags/john" class="tag">#John</a>
+  <a href="/tags/mary" class="tag">#Mary</a>
 </div>
 
 ---
