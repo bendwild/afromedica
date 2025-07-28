@@ -15,28 +15,29 @@ modified: 2025-07-28
 
 **From us to you**: #from-us-to-you 
 
+
 <div class="tag-scroll">
-  <strong>Media:</strong>
-  <a href="/tags/podcasts" class="tag">#podcasts</a>
+  <span class="tag-label">Media:</span><br>
+  <a href="/tags/podcasts" class="tag">#podcasts</a><br>
 
-  <strong>Subject:</strong>
+  <span class="tag-label">Subject:</span><br>
   <a href="/tags/intersectionality" class="tag">#intersectionality</a>
-  <a href="/tags/racism-and-health" class="tag">#racism-and-health</a>
+  <a href="/tags/racism-and-health" class="tag">#racism-and-health</a><br>
 
-  <strong>Language:</strong>
-  <a href="/tags/dutch" class="tag">#dutch</a>
+  <span class="tag-label">Language:</span><br>
+  <a href="/tags/dutch" class="tag">#dutch</a><br>
 
-  <strong>Podcast:</strong>
-  <a href="/tags/woman-is-present" class="tag">#woman-is-present</a>
+  <span class="tag-label">Podcast:</span><br>
+  <a href="/tags/woman-is-present" class="tag">#woman-is-present</a><br>
 
-  <strong>Guests:</strong>
+  <span class="tag-label">Guests:</span><br>
   <a href="/tags/hanane-el-kaddouri" class="tag">#Hanane El-Kaddouri</a>
-  <a href="/tags/deborah-pemu" class="tag">#Deborah Pemu</a>
+  <a href="/tags/deborah-pemu" class="tag">#Deborah Pemu</a><br>
 
-  <strong>From us to you:</strong>
-  <a href="/tags/from-us-to-you" class="tag">#from-us-to-you</a>
+  <span class="tag-label">From us to you:</span><br>
+  <a href="/tags/from-us-to-you" class="tag">#from-us-to-you</a><br>
 
-  <strong>Categories:</strong>
+  <span class="tag-label">Categories:</span><br>
   <a href="/tags/articles" class="tag">#articles</a>
   <a href="/tags/books" class="tag">#books</a>
   <a href="/tags/interviews" class="tag">#interviews</a>
@@ -44,38 +45,6 @@ modified: 2025-07-28
   <a href="/tags/videos" class="tag">#videos</a>
 </div>
 
-<div class="tag-scroll">
-  <div><strong>Media:</strong> <a href="/tags/podcasts" class="tag">#podcasts</a></div>
-  <div><strong>Subject:</strong> <a href="/tags/intersectionality" class="tag">#intersectionality</a> <a href="/tags/racism-and-health" class="tag">#racism-and-health</a></div>
-  <div><strong>Language:</strong> <a href="/tags/dutch" class="tag">#dutch</a></div>
-  <div><strong>Podcast:</strong> <a href="/tags/woman-is-present" class="tag">#woman-is-present</a></div>
-  <div><strong>Guests:</strong> <a href="/tags/hanane-el-kaddouri" class="tag">#Hanane El-Kaddouri</a> <a href="/tags/deborah-pemu" class="tag">#Deborah Pemu</a></div>
-  <div><strong>From us to you:</strong> <a href="/tags/from-us-to-you" class="tag">#from-us-to-you</a></div>
-  <div><strong>Categories:</strong> 
-    <a href="/tags/articles" class="tag">#articles</a>
-    <a href="/tags/books" class="tag">#books</a>
-    <a href="/tags/interviews" class="tag">#interviews</a>
-    <a href="/tags/research" class="tag">#research</a>
-    <a href="/tags/videos" class="tag">#videos</a>
-  </div>
-</div>
-
-
-<div class="tag-scroll">
-  <div><strong>Media:</strong> <a href="/tags/podcasts" class="tag">#podcasts</a></div>
-  <div><strong>Subject:</strong> <a href="/tags/intersectionality" class="tag">#intersectionality</a> <a href="/tags/racism-and-health" class="tag">#racism-and-health</a></div>
-  <div><strong>Language:</strong> <a href="/tags/dutch" class="tag">#dutch</a></div>
-  <div><strong>Podcast:</strong> <a href="/tags/woman-is-present" class="tag">#woman-is-present</a></div>
-  <div><strong>Guests:</strong> <a href="/tags/hanane-el-kaddouri" class="tag">#Hanane El-Kaddouri</a> <a href="/tags/deborah-pemu" class="tag">#Deborah Pemu</a></div>
-  <div><strong>From us to you:</strong> <a href="/tags/from-us-to-you" class="tag">#from-us-to-you</a></div>
-  <div><strong>Categories:</strong> 
-    <a href="/tags/articles" class="tag">#articles</a>
-    <a href="/tags/books" class="tag">#books</a>
-    <a href="/tags/interviews" class="tag">#interviews</a>
-    <a href="/tags/research" class="tag">#research</a>
-    <a href="/tags/videos" class="tag">#videos</a>
-  </div>
-</div>
 
 ## Cover
 ![[Pasted image 20250727214833.png]]
