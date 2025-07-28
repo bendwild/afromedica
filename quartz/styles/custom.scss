@@ -418,6 +418,16 @@ h6 > a.anchor {
   overflow: visible;
 }
 
+.tag-scroll-title {
+  font-weight: 600;
+  color: var(--darkgray);
+  font-size: 0.9rem;
+  align-self: center;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+  user-select: none;
+}
+
 .tag-scroll .tag {
   display: inline-block;
   white-space: nowrap;
