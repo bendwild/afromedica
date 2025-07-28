@@ -408,27 +408,29 @@ h6 > a.anchor {
   color: var(--tertiary);
 }
 
-/* === TAGS UPDATED HERE === */
-.tag-scroll {
+/* === Tags Groups with multiple titles === */
+.tags-group {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   padding: 0.5rem 0;
   justify-content: flex-start;
+  align-items: center;
   overflow: visible;
+  margin-bottom: 1rem; /* spacing between groups */
 }
 
 .tag-scroll-title {
   font-weight: 600;
   color: var(--darkgray);
   font-size: 0.9rem;
-  align-self: center;
   margin-right: 0.5rem;
   white-space: nowrap;
   user-select: none;
+  flex-shrink: 0;
 }
 
-.tag-scroll .tag {
+.tags-group .tag {
   display: inline-block;
   white-space: nowrap;
   background-color: var(--lightgray);
@@ -441,7 +443,7 @@ h6 > a.anchor {
   transition: background 0.2s, color 0.2s;
 }
 
-.tag-scroll .tag:hover {
+.tags-group .tag:hover {
   background-color: var(--accent);
   color: var(--light);
 }
