@@ -536,3 +536,21 @@ h5 a.anchor,
 h6 a.anchor {
   display: none !important;
 }
+
+body {
+  padding-top: 64px;
+  margin: 0;
+}
+
+main,
+.page-columns {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+main > *:first-child,
+.page-columns > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
