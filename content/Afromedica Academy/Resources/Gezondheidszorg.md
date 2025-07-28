@@ -17,15 +17,6 @@ modified: 2025-07-28
 
 
 
-<div class="tag-scroll">
-  <span class="tag-scroll-title">Tags:</span>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <!-- add more tags as needed -->
-</div>
-
-
 <div class="tags-group">
   <span class="tag-scroll-title">Tags:</span>
   <a href="/tags/articles" class="tag">#articles</a>
