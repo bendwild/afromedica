@@ -16,34 +16,6 @@ modified: 2025-07-28
 **From us to you**: #from-us-to-you 
 
 
-<div class="tag-scroll">
-  <span class="tag-label">Media:</span><br>
-  <a href="/tags/podcasts" class="tag">#podcasts</a><br>
-
-  <span class="tag-label">Subject:</span><br>
-  <a href="/tags/intersectionality" class="tag">#intersectionality</a>
-  <a href="/tags/racism-and-health" class="tag">#racism-and-health</a><br>
-
-  <span class="tag-label">Language:</span><br>
-  <a href="/tags/dutch" class="tag">#dutch</a><br>
-
-  <span class="tag-label">Podcast:</span><br>
-  <a href="/tags/woman-is-present" class="tag">#woman-is-present</a><br>
-
-  <span class="tag-label">Guests:</span><br>
-  <a href="/tags/hanane-el-kaddouri" class="tag">#Hanane El-Kaddouri</a>
-  <a href="/tags/deborah-pemu" class="tag">#Deborah Pemu</a><br>
-
-  <span class="tag-label">From us to you:</span><br>
-  <a href="/tags/from-us-to-you" class="tag">#from-us-to-you</a><br>
-
-  <span class="tag-label">Categories:</span><br>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <a href="/tags/books" class="tag">#books</a>
-  <a href="/tags/interviews" class="tag">#interviews</a>
-  <a href="/tags/research" class="tag">#research</a>
-  <a href="/tags/videos" class="tag">#videos</a>
-</div>
 
 <div class="tag-scroll">
   <span class="tag-scroll-title">Tags:</span>
@@ -56,32 +28,6 @@ modified: 2025-07-28
 
 
 **Media**: <div class="tag-scroll"> <a href="/tags/articles" class="tag">#articles</a> </div>
-
-**Subject**:
-<div class="tag-scroll">
-  <a href="/tags/articles" class="tag">#articles</a>
-</div>
-
-**Language**:
-<div class="tag-scroll">
-  <a href="/tags/articles" class="tag">#articles</a>
-</div>
-
-**Podcast**:
-<div class="tag-scroll">
-  <a href="/tags/articles" class="tag">#articles</a>
-</div>
-
-**Guests**: 
-<div class="tag-scroll">
-  <a href="/tags/articles" class="tag">#articles</a>
-</div>
-
-**From us to you**: 
-<div class="tag-scroll">
-  <a href="/tags/articles" class="tag">#articles</a>
-</div>
-
 
 | Media                                                                                      | Subject                                                                                                                                            | Language                                                                                   | Podcast                                                                                    | Guests                                                                                     | From us to you                                                                             |
 | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
