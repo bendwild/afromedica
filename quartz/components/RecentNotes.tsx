@@ -35,7 +35,9 @@ export default ((userOpts?: Partial<Options>) => {
     const opts = { ...defaultOptions(cfg), ...userOpts }
     const pages = allFiles.filter(opts.filter).sort(opts.sort)
     const remaining = Math.max(0, pages.length - opts.limit)
-    const baseUrl = cfg.configuration?.baseUrl ?? ""
+
+    // ✅ Use only path portion of baseUrl
+    const basePath = new URL(cfg.configuration?.baseUrl ?? "/", "https://dummy.com").pathname.replace(/\/$/, "")
 
     return (
       <div class={classNames(displayClass, "recent-notes")}>
@@ -50,7 +52,7 @@ export default ((userOpts?: Partial<Options>) => {
                 <div class="section">
                   <div class="desc">
                     <h3>
-                      <a href={`${baseUrl}/${page.slug}`} class="internal">
+                      <a href={`${basePath}/${page.slug}`} class="internal">
                         {title}
                       </a>
                     </h3>
@@ -64,7 +66,7 @@ export default ((userOpts?: Partial<Options>) => {
                     <ul class="tags">
                       {tags.map((tag) => (
                         <li key={tag}>
-                          <a class="internal tag-link" href={`${baseUrl}/tags/${tag}`}>
+                          <a class="internal tag-link" href={`${basePath}/tags/${tag}`}>
                             {tag}
                           </a>
                         </li>
@@ -78,7 +80,7 @@ export default ((userOpts?: Partial<Options>) => {
         </ul>
         {opts.linkToMore && remaining > 0 && (
           <p>
-            <a href={`${baseUrl}/${opts.linkToMore}`}>
+            <a href={`${basePath}/${opts.linkToMore}`}>
               {i18n(cfg.locale).components.recentNotes.seeRemainingMore({ remaining })}
             </a>
           </p>
