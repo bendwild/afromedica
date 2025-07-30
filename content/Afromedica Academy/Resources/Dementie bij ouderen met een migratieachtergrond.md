@@ -1,15 +1,28 @@
 ---
 title: 
 publish: true
-modified: 2025-07-27
+modified: 2025-07-30
 ---
-**Media**: #books 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Media:</strong></span>
+  <a href="/tags/articles" class="tag">#books</a>
+</div>
 
-**Subject**: #culturally-sensitive-healthcare 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Subject:</strong></span>
+  <a href="/tags/articles" class="tag">#culturally-sensitive-healthcare</a>
+</div>
 
-**Language**: #dutch 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Language:</strong></span>
+  <a href="/tags/articles" class="tag">#dutch</a>
+</div>
 
-**Author**: #Salou-Berdai-Chaouni #Ann-Claeys
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Author:</strong></span>
+  <a href="/tags/articles" class="tag">#Saloua-Berdai-Chaouni</a>
+  <a href="/tags/articles" class="tag">#Ann-Claeys</a>
+</div>
 
 ## Cover
 ![[Pasted image 20250727231150.png]]

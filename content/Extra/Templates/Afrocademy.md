@@ -1,17 +1,32 @@
 ---
 title: 
 publish: false
-modified: 2025-07-27
+modified: 2025-07-30
 ---
-**Media**: #{{media}}  
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Media:</strong></span>
+  <a href="/tags/articles" class="tag">#example</a>
+</div>
 
-**Subject**: #{{subject}}  
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Subject:</strong></span>
+  <a href="/tags/articles" class="tag">#example</a>
+</div>
 
-**Language**: #{{language}}
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Language:</strong></span>
+  <a href="/tags/articles" class="tag">#example</a>
+</div>
 
-**Author**: #{{author}}
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Author:</strong></span>
+  <a href="/tags/articles" class="tag">#example</a>
+</div>
 
-**From us to you**: #{{from-us-to-you}}
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>From us to you:</strong></span>
+  <a href="/tags/articles" class="tag">#example</a>
+</div>
 
 ## Cover
 

@@ -1,19 +1,39 @@
 ---
 title: "AfroMedica x IOM: on the importance of culturally sensitive healthcare"
 publish: true
-modified: 2025-07-27
+modified: 2025-07-30
 ---
-**Media**: #interviews
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Media:</strong></span>
+  <a href="/tags/articles" class="tag">#interviews</a>
+</div>
 
-**Subject**: #culturally-sensitive-healthcare
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Subject:</strong></span>
+  <a href="/tags/articles" class="tag">#culturally-sensitive-healthcare</a>
+</div>
 
-**Language**: #english 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Language:</strong></span>
+  <a href="/tags/articles" class="tag">#english</a>
+</div>
 
-**Organisation**: #IOM #AfroMedica
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Organisation:</strong></span>
+  <a href="/tags/articles" class="tag">#IOM</a>
+  <a href="/tags/articles" class="tag">#AfroMedica</a>
+</div>
 
-**Guests**: #Hanane-El-Kaddouri #Nour-El-Houda-Mazari
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Guests:</strong></span>
+  <a href="/tags/articles" class="tag">#Hanane-El-Kaddouri</a>
+  <a href="/tags/articles" class="tag">#Nour-El-Houda-Mazari</a>
+</div>
 
-**From us to you**: #from-us-to-you
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>From us to you:</strong></span>
+  <a href="/tags/articles" class="tag">#from-us-to-you</a>
+</div>
 
 ## Link
 ["On the importance of culturally sensitive healthcare" by AfroMedica & IOM](https://belgium.iom.int/resources/afromedica-interview)

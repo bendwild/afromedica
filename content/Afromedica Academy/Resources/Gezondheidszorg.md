@@ -1,7 +1,7 @@
 ---
 title: "Woman is present: Gezondheidszorg"
 publish: true
-modified: 2025-07-28
+modified: 2025-07-30
 ---
 **Media**: #podcasts 
 
@@ -16,24 +16,17 @@ modified: 2025-07-28
 **From us to you**: #from-us-to-you 
 
 
-
 <div class="tags-group">
-  <span class="tag-scroll-title">Tags:</span>
+  <span class="tag-scroll-title"><strong>Tags:</strong></span>
   <a href="/tags/articles" class="tag">#articles</a>
   <a href="/tags/news" class="tag">#news</a>
 </div>
 
-<div class="tags-group">
-  <span class="tag-scroll-title">Categories:</span>
-  <a href="/tags/health" class="tag">#health</a>
-  <a href="/tags/science" class="tag">#science</a>
-</div>
 
-<div class="tags-group">
-  <span class="tag-scroll-title">Authors:</span>
-  <a href="/tags/john" class="tag">#John</a>
-  <a href="/tags/mary" class="tag">#Mary</a>
-</div>
+
+
+
+
 
 ---
 ## Cover
