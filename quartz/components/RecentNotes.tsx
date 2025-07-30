@@ -1,5 +1,5 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import { FullSlug, SimpleSlug /*, resolveRelative */ } from "../util/path"
+import { SimpleSlug } from "../util/path"
 import { QuartzPluginData } from "../plugins/vfile"
 import { byDateAndAlphabetical } from "./PageList"
 import style from "./styles/recentNotes.scss"
@@ -35,6 +35,7 @@ export default ((userOpts?: Partial<Options>) => {
     const opts = { ...defaultOptions(cfg), ...userOpts }
     const pages = allFiles.filter(opts.filter).sort(opts.sort)
     const remaining = Math.max(0, pages.length - opts.limit)
+    const baseUrl = cfg.configuration?.baseUrl ?? ""
 
     return (
       <div class={classNames(displayClass, "recent-notes")}>
@@ -49,7 +50,7 @@ export default ((userOpts?: Partial<Options>) => {
                 <div class="section">
                   <div class="desc">
                     <h3>
-                      <a href={`/${page.slug}`} class="internal">
+                      <a href={`${baseUrl}/${page.slug}`} class="internal">
                         {title}
                       </a>
                     </h3>
@@ -63,10 +64,7 @@ export default ((userOpts?: Partial<Options>) => {
                     <ul class="tags">
                       {tags.map((tag) => (
                         <li key={tag}>
-                          <a
-                            class="internal tag-link"
-                            href={`/tags/${tag}`}
-                          >
+                          <a class="internal tag-link" href={`${baseUrl}/tags/${tag}`}>
                             {tag}
                           </a>
                         </li>
@@ -80,7 +78,7 @@ export default ((userOpts?: Partial<Options>) => {
         </ul>
         {opts.linkToMore && remaining > 0 && (
           <p>
-            <a href={`/${opts.linkToMore}`}>
+            <a href={`${baseUrl}/${opts.linkToMore}`}>
               {i18n(cfg.locale).components.recentNotes.seeRemainingMore({ remaining })}
             </a>
           </p>
