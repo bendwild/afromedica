@@ -1,17 +1,30 @@
 ---
 title: 
 publish: true
-modified: 2025-07-28
+modified: 2025-07-30
 ---
-**Media**: #books
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Media:</strong></span>
+  <a href="/tags/books" class="tag">#Books</a>
+</div>
 
-**Subject**: #clinical-medicine #health-equity
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Subject:</strong></span>
+  <a href="/tags/clinical-medicine" class="tag">#Clinical medicine</a>
+  <a href="/tags/health-equity" class="tag">#Health equity</a>
+</div>
 
-**Language**: #english 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Language:</strong></span>
+  <a href="/tags/english" class="tag">#English</a>
+</div>
 
-**Author**: #Malone-Mukwende  #Peter-Tamony #Margot-Turner
-
-**From us to you**: #{{from-us-to-you}}
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Author:</strong></span>
+  <a href="/tags/Malone-Mukwende" class="tag">#Malone Mukwende</a>
+  <a href="/tags/Peter-Tamony" class="tag">#Peter Tamony</a>
+  <a href="/tags/Margot-Turner" class="tag">#Margot Turner</a>
+</div>
 
 ## Cover
 ![[Pasted image 20250727232007.png]]

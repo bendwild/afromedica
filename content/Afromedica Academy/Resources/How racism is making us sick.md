@@ -1,15 +1,28 @@
 ---
 title: "Systemic: How racism is making us sick"
 publish: true
-modified: 2025-07-27
+modified: 2025-07-30
 ---
-**Media**: #books 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Media:</strong></span>
+  <a href="/tags/books" class="tag">#Books</a>
+</div>
 
-**Subject**: #racism-and-health 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Subject:</strong></span>
+  <a href="/tags/racism-and-health" class="tag">#Racism & health</a>
+</div>
 
-**Language**: #english #dutch 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Language:</strong></span>
+  <a href="/tags/dutch" class="tag">#Dutch</a>
+  <a href="/tags/english" class="tag">#English</a>
+</div>
 
-**Author**: #Layal-Liverpool
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Author:</strong></span>
+  <a href="/tags/Layal-Liverpool" class="tag">#Layal Liverpool</a>
+</div>
 
 ## Cover
 ![[Pasted image 20250727212001.png]]

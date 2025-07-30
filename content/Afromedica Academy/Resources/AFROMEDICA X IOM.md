@@ -5,7 +5,7 @@ modified: 2025-07-30
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
-  <a href="/tags/interviews" class="tag">#interviews</a>
+  <a href="/tags/interviews" class="tag">#Interviews</a>
 </div>
 
 <div class="tags-group">
@@ -15,7 +15,7 @@ modified: 2025-07-30
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Language:</strong></span>
-  <a href="/tags/english" class="tag">#english</a>
+  <a href="/tags/english" class="tag">#English</a>
 </div>
 
 <div class="tags-group">

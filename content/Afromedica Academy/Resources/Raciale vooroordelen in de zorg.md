@@ -1,22 +1,43 @@
 ---
 title: "Raciale vooroordelen in de zorg: 'Omdat ik zwart ben, denkt mijn arts dat ik sterk ben'"
 publish: true
-modified: 2025-07-27
+modified: 2025-07-30
 ---
-**Media**: #articles
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Media:</strong></span>
+  <a href="/tags/articles" class="tag">#Articles</a>
+</div>
 
-**Subject**: #racism-and-health 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Subject:</strong></span>
+  <a href="/tags/racism-and-health" class="tag">#Racism & health</a>
+</div>
 
-**Language**: #dutch 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Language:</strong></span>
+  <a href="/tags/dutch" class="tag">#Dutch</a>
+</div>
 
-**Organisation**: #BRUZZ
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Organisation:</strong></span>
+  <a href="/tags/BRUZZ" class="tag">#BRUZZ</a>
+</div>
 
-**Author**: #Maria-Saldi 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Author:</strong></span>
+  <a href="/tags/Maria-Saldi" class="tag">#Maria Saldi</a>
+</div>
 
-**Guests**: #Hanane-El-Kaddouri #Fatou-Touré
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Guests:</strong></span>
+  <a href="/tags/Hanane-El-Kaddouri" class="tag">#Hanane El-Kaddouri</a>
+  <a href="/tags/Fatou-Touré" class="tag">#Fatou Touré</a>
+</div>
 
-**From us to you**: #from-us-to-you
-
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>From us to you:</strong></span>
+  <a href="/tags/from-us-to-you" class="tag">#From us to you</a>
+</div>
 ## Cover
 
 ## Description

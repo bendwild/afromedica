@@ -1,15 +1,28 @@
 ---
 title: 
 publish: true
-modified: 2025-07-27
+modified: 2025-07-30
 ---
-**Media**: #videos
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Media:</strong></span>
+  <a href="/tags/books" class="tag">#Books</a>
+</div>
 
-**Subject**: #intersectionality 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Subject:</strong></span>
+  <a href="/tags/intersectionality" class="tag">#Intersectionality</a>
+  <a href="/tags/racism-and-health" class="tag">#Racism & health</a>
+</div>
 
-**Language**: #dutch
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Language:</strong></span>
+  <a href="/tags/dutch" class="tag">#Dutch</a>
+</div>
 
-**Author**: #Jenny-Slatman
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Author:</strong></span>
+  <a href="/tags/Jenny-Slatman" class="tag">#Jenny Slatman</a>
+</div>
 
 ## Cover
 ![[Pasted image 20250727215213.png]]

@@ -1,15 +1,27 @@
 ---
 title: "Intersectional insights into racism and health: not just a question of identity"
 publish: true
-modified: 2025-07-27
+modified: 2025-07-30
 ---
-**Media**: #research 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Media:</strong></span>
+  <a href="/tags/research" class="tag">#Research</a>
+</div>
 
-**Subject**: #racism-and-health 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Subject:</strong></span>
+  <a href="/tags/racism-and-health" class="tag">#Racism & health</a>
+</div>
 
-**Language**: #english
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Language:</strong></span>
+  <a href="/tags/english" class="tag">#English</a>
+</div>
 
-**Author**: #Geordan-Shannon et al.
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Author:</strong></span>
+  <a href="/tags/Geordan-Shannon" class="tag">#Geordan Shannon et al</a>
+</div>
 
 ## Description
 Intersectionality is a useful tool to address health inequalities, by helping us understand and respond to the individual and group effects of converging systems of power. Intersectionality rejects the notion of inequalities being the result of single, distinct factors, and instead focuses on the relationships between overlapping processes that create inequities. In this Series paper, we use an intersectional approach to highlight the intersections of racism, xenophobia, and discrimination with other systems of oppression, how this affects health, and what can be done about it. We present five case studies from different global locations that outline different dimensions of discrimination based on caste, ethnicity and migration status, Indigeneity, religion, and skin colour. Although experiences are diverse, the case studies show commonalities in how discrimination operates to affect health and wellbeing: how historical factors and coloniality shape contemporary experiences of race and racism; how racism leads to separation and hierarchies across shifting lines of identity and privilege; how racism and discrimination are institutionalised at a systems level and are embedded in laws, regulations, practices, and health systems; how discrimination, minoritisation, and exclusion are racialised processes, influenced by visible factors and tacit knowledge; and how racism is a form of structural violence. These insights allow us to begin to articulate starting points for justice-based action that addresses root causes, engages beyond the health sector, and encourages transnational solidarity.

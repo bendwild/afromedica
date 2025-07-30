@@ -1,17 +1,33 @@
 ---
 title: 
 publish: true
-modified: 2025-07-27
+modified: 2025-07-30
 ---
-**Media**: #article
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Media:</strong></span>
+  <a href="/tags/articles" class="tag">#Articles</a>
+</div>
 
-**Subject**: #racism-and-health 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Subject:</strong></span>
+  <a href="/tags/intersectionality" class="tag">#Intersectionality</a>
+  <a href="/tags/racism-and-health" class="tag">#Racism & health</a>
+</div>
 
-**Language**: #dutch 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Language:</strong></span>
+  <a href="/tags/dutch" class="tag">#Dutch</a>
+</div>
 
-**Author**: #Lidvine-Ngonseu-Harpi 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Author:</strong></span>
+  <a href="/tags/Lidvine-Ngonseu-Harpi" class="tag">#Lidvine Ngonseu Harpi</a>
+</div>
 
-**From us to you**: #from-us-to-you
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>From us to you:</strong></span>
+  <a href="/tags/from-us-to-you" class="tag">#From us to you</a>
+</div>
 
 ## Description
 [[Lidvine Ngonseu Harpi]], een van onze oprichters en laatstejaars studente geneeskunde, schreef na haar tijd in het RECoRD-onderzoeksteam (Race and Ethnic Conscious Research and Data) bij het Tropisch Instituut van Geneeskunde haar belangrijke bevindingen en reflecties neer.  

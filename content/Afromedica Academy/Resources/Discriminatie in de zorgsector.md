@@ -5,33 +5,33 @@ modified: 2025-07-30
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
-  <a href="/tags/articles" class="tag">#podcasts</a>
+  <a href="/tags/podcasts" class="tag">#Podcasts</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Subject:</strong></span>
-  <a href="/tags/articles" class="tag">#racism-and-health</a>
+  <a href="/tags/racism-and-health" class="tag">#Racism & health</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Language:</strong></span>
-  <a href="/tags/articles" class="tag">#dutch</a>
+  <a href="/tags/dutch" class="tag">#Dutch</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Podcast:</strong></span>
-  <a href="/tags/articles" class="tag">#Op-Den-Duur</a>
+  <a href="/tags/Op-Den-Duur" class="tag">#Op Den Duur</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Guests:</strong></span>
-  <a href="/tags/articles" class="tag">#Lidvine-Ngonseu-Harpi</a>
-  <a href="/tags/articles" class="tag">#Elke-Van-De-Moortel</a>
+  <a href="/tags/Lidvine-Ngonseu-Harpi" class="tag">#Lidvine Ngonseu Harpi</a>
+  <a href="/tags/Elke-Van-De-Moortel" class="tag">#Elke Van De Moortel</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>From us to you:</strong></span>
-  <a href="/tags/articles" class="tag">#from-us-to-you</a>
+  <a href="/tags/from-us-to-you" class="tag">#From us to you</a>
 </div>
 
 ## Cover

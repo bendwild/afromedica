@@ -3,32 +3,38 @@ title: "Woman is present: Gezondheidszorg"
 publish: true
 modified: 2025-07-30
 ---
-**Media**: #podcasts 
-
-**Subject**: #intersectionality #racism-and-health 
-
-**Language**: #dutch 
-
-**Podcast**: #woman-is-present 
-
-**Guests**: #Hanane-El-Kaddouri #Deborah-Pemu
-
-**From us to you**: #from-us-to-you 
-
-
 <div class="tags-group">
-  <span class="tag-scroll-title"><strong>Tags:</strong></span>
-  <a href="/tags/articles" class="tag">#articles</a>
-  <a href="/tags/news" class="tag">#news</a>
+  <span class="tag-scroll-title"><strong>Media:</strong></span>
+  <a href="/tags/podcasts" class="tag">#Podcasts</a>
 </div>
 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Subject:</strong></span>
+  <a href="/tags/racism-and-health" class="tag">#Racism & health</a>
+  <a href="/tags/intersectionality" class="tag">#Intersectionality</a>
+</div>
 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Language:</strong></span>
+  <a href="/tags/dutch" class="tag">#Dutch</a>
+</div>
 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Podcast:</strong></span>
+  <a href="/tags/Woman-is-present" class="tag">#Woman is present</a>
+</div>
 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Guests:</strong></span>
+  <a href="/tags/Hanane-El-Kaddouri" class="tag">#Hanane El-Kaddouri</a>
+  <a href="/tags/Deborah-Pemu" class="tag">#Deborah Pemu</a>
+</div>
 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>From us to you:</strong></span>
+  <a href="/tags/from-us-to-you" class="tag">#From us to you</a>
+</div>
 
-
----
 ## Cover
 ![[Pasted image 20250727214833.png]]
 

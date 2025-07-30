@@ -1,19 +1,39 @@
 ---
 title: "Rebelle Openhartig Live: Seksisme en racisme in de gezondheidszorg"
 publish: true
-modified: 2025-07-27
+modified: 2025-07-30
 ---
-**Media**: #podcasts  
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Media:</strong></span>
+  <a href="/tags/podcasts" class="tag">#Podcasts</a>
+</div>
 
-**Subject**: #intersectionality #racism-and-health 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Subject:</strong></span>
+  <a href="/tags/intersectionality" class="tag">#Intersectionality</a>
+  <a href="/tags/racism-and-health" class="tag">#Racism & health</a>
+</div>
 
-**Language**: #dutch 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Language:</strong></span>
+  <a href="/tags/dutch" class="tag">#Dutch</a>
+</div>
 
-**Organisation**: #rebelle
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Organisation:</strong></span>
+  <a href="/tags/rebelle" class="tag">#Rebelle</a>
+</div>
 
-**Guests**: #Hanane-El-Kaddouri #Tinne-Claes
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Guests:</strong></span>
+  <a href="/tags/Hanane-El-Kaddouri" class="tag">#Hanane El-Kaddouri</a>
+  <a href="/tags/Tinne-Claes" class="tag">#Tinne Claes</a>
+</div>
 
-**From us to you**: #from-us-to-you 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>From us to you:</strong></span>
+  <a href="/tags/from-us-to-you" class="tag">#From us to you</a>
+</div>
 
 ## Cover
 ![[Pasted image 20250727214330.png]]

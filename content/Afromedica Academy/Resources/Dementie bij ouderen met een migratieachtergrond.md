@@ -5,23 +5,23 @@ modified: 2025-07-30
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
-  <a href="/tags/articles" class="tag">#books</a>
+  <a href="/tags/books" class="tag">#Books</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Subject:</strong></span>
-  <a href="/tags/articles" class="tag">#culturally-sensitive-healthcare</a>
+  <a href="/tags/culturally-sensitive-healthcare" class="tag">#Culturally sensitive healthcare</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Language:</strong></span>
-  <a href="/tags/articles" class="tag">#dutch</a>
+  <a href="/tags/dutch" class="tag">#Dutch</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Author:</strong></span>
-  <a href="/tags/articles" class="tag">#Saloua-Berdai-Chaouni</a>
-  <a href="/tags/articles" class="tag">#Ann-Claeys</a>
+  <a href="/tags/Saloua-Berdai-Chaouni" class="tag">#Saloua Berdai Chaouni</a>
+  <a href="/tags/Ann-Claeys" class="tag">#Ann Claeys</a>
 </div>
 
 ## Cover
