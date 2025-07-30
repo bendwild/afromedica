@@ -25,12 +25,12 @@ export default ((opts?: Partial<BacklinksOptions>) => {
   }: QuartzComponentProps) => {
     const slug = simplifySlug(fileData.slug!)
     const backlinkFiles = allFiles.filter((file) => file.links?.includes(slug))
-    if (options.hideWhenEmpty && backlinkFiles.length == 0) {
+    if (options.hideWhenEmpty && backlinkFiles.length === 0) {
       return null
     }
 
-    // Ensure baseUrl doesn't end with trailing slash
-    const baseUrl = cfg.configuration.baseUrl.replace(/\/$/, "")
+    // Safely access baseUrl and strip trailing slash
+    const baseUrl = (cfg.baseUrl ?? "").replace(/\/$/, "")
 
     return (
       <div class={classNames(displayClass, "backlinks")}>
