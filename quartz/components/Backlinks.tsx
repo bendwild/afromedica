@@ -28,6 +28,10 @@ export default ((opts?: Partial<BacklinksOptions>) => {
     if (options.hideWhenEmpty && backlinkFiles.length == 0) {
       return null
     }
+
+    // Ensure baseUrl doesn't end with trailing slash
+    const baseUrl = cfg.configuration.baseUrl.replace(/\/$/, "")
+
     return (
       <div class={classNames(displayClass, "backlinks")}>
         <h3>{i18n(cfg.locale).components.backlinks.title}</h3>
@@ -35,7 +39,7 @@ export default ((opts?: Partial<BacklinksOptions>) => {
           {backlinkFiles.length > 0 ? (
             backlinkFiles.map((f) => (
               <li>
-                <a href={resolveRelative(fileData.slug!, f.slug!)} class="internal">
+                <a href={`${baseUrl}/${resolveRelative(fileData.slug!, f.slug!)}`} class="internal">
                   {f.frontmatter?.title}
                 </a>
               </li>
