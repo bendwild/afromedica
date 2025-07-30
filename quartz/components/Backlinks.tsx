@@ -1,6 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/backlinks.scss"
-import { resolveRelative, simplifySlug } from "../util/path"
+import { simplifySlug } from "../util/path"
 import { i18n } from "../i18n"
 import { classNames } from "../util/lang"
 import OverflowListFactory from "./OverflowList"
@@ -29,7 +29,7 @@ export default ((opts?: Partial<BacklinksOptions>) => {
       return null
     }
 
-    // Access baseUrl correctly from cfg.configuration and get the path part like "/afromedica"
+    // Extract "/afromedica" from baseUrl like "https://bendwild.github.io/afromedica"
     const basePath = new URL(cfg.configuration?.baseUrl ?? "/", "https://dummy.com").pathname.replace(/\/$/, "")
 
     return (
@@ -38,9 +38,8 @@ export default ((opts?: Partial<BacklinksOptions>) => {
         <OverflowList>
           {backlinkFiles.length > 0 ? (
             backlinkFiles.map((f) => {
-              const relativePath = resolveRelative(fileData.slug!, f.slug!)
-              // Build href by combining basePath + relativePath and normalize slashes
-              const href = `${basePath}/${relativePath}`.replace(/\/{2,}/g, "/")
+              const targetSlug = f.slug!.replace(/^\//, "") // remove leading slash if present
+              const href = `${basePath}/${targetSlug}`
               return (
                 <li>
                   <a href={href} class="internal">
