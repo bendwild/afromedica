@@ -25,21 +25,29 @@ export default ((opts?: Partial<BacklinksOptions>) => {
   }: QuartzComponentProps) => {
     const slug = simplifySlug(fileData.slug!)
     const backlinkFiles = allFiles.filter((file) => file.links?.includes(slug))
-    if (options.hideWhenEmpty && backlinkFiles.length == 0) {
+    if (options.hideWhenEmpty && backlinkFiles.length === 0) {
       return null
     }
+
+    // Use only the path portion of baseUrl (e.g. "/afromedica")
+    const basePath = new URL(cfg.baseUrl ?? "/", "https://dummy.com").pathname.replace(/\/$/, "")
+
     return (
       <div class={classNames(displayClass, "backlinks")}>
         <h3>{i18n(cfg.locale).components.backlinks.title}</h3>
         <OverflowList>
           {backlinkFiles.length > 0 ? (
-            backlinkFiles.map((f) => (
-              <li>
-                <a href={resolveRelative(fileData.slug!, f.slug!)} class="internal">
-                  {f.frontmatter?.title}
-                </a>
-              </li>
-            ))
+            backlinkFiles.map((f) => {
+              const relativePath = resolveRelative(fileData.slug!, f.slug!)
+              const href = `${basePath}/${relativePath}`.replace(/\/{2,}/g, "/") // avoid double slashes
+              return (
+                <li>
+                  <a href={href} class="internal">
+                    {f.frontmatter?.title}
+                  </a>
+                </li>
+              )
+            })
           ) : (
             <li>{i18n(cfg.locale).components.backlinks.noBacklinksFound}</li>
           )}

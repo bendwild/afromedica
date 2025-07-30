@@ -536,3 +536,92 @@ h5 a.anchor,
 h6 a.anchor {
   display: none !important;
 }
+
+body {
+  padding-top: 64px;
+  margin: 0;
+}
+
+main,
+.page-columns {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+main > *:first-child,
+.page-columns > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* === Tags === */
+
+/* Original tag-scroll (no title) */
+.tag-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: visible;
+  margin-bottom: 1rem;
+}
+
+.tag-scroll .tag {
+  display: inline-block;
+  white-space: nowrap;
+  background-color: var(--lightgray);
+  color: var(--darkgray);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--gray);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tag-scroll .tag:hover {
+  background-color: var(--accent);
+  color: var(--light);
+}
+
+/* New grouped tag sections with titles */
+.tags-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: visible;
+  margin-bottom: 1rem;
+}
+
+.tag-scroll-title {
+  font-weight: 600;
+  color: var(--darkgray);
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.tags-group .tag {
+  display: inline-block;
+  white-space: nowrap;
+  background-color: var(--lightgray);
+  color: var(--darkgray);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--gray);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tags-group .tag:hover {
+  background-color: var(--accent);
+  color: var(--light);
+}
