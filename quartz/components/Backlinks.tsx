@@ -29,21 +29,25 @@ export default ((opts?: Partial<BacklinksOptions>) => {
       return null
     }
 
-    // Safely access baseUrl and strip trailing slash
-    const baseUrl = (cfg.baseUrl ?? "").replace(/\/$/, "")
+    // Use only the path portion of baseUrl (e.g. "/afromedica")
+    const basePath = new URL(cfg.baseUrl ?? "/", "https://dummy.com").pathname.replace(/\/$/, "")
 
     return (
       <div class={classNames(displayClass, "backlinks")}>
         <h3>{i18n(cfg.locale).components.backlinks.title}</h3>
         <OverflowList>
           {backlinkFiles.length > 0 ? (
-            backlinkFiles.map((f) => (
-              <li>
-                <a href={`${baseUrl}/${resolveRelative(fileData.slug!, f.slug!)}`} class="internal">
-                  {f.frontmatter?.title}
-                </a>
-              </li>
-            ))
+            backlinkFiles.map((f) => {
+              const relativePath = resolveRelative(fileData.slug!, f.slug!)
+              const href = `${basePath}/${relativePath}`.replace(/\/{2,}/g, "/") // avoid double slashes
+              return (
+                <li>
+                  <a href={href} class="internal">
+                    {f.frontmatter?.title}
+                  </a>
+                </li>
+              )
+            })
           ) : (
             <li>{i18n(cfg.locale).components.backlinks.noBacklinksFound}</li>
           )}
