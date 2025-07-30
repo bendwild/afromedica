@@ -29,8 +29,8 @@ export default ((opts?: Partial<BacklinksOptions>) => {
       return null
     }
 
-    // Use only the path portion of baseUrl (e.g. "/afromedica")
-    const basePath = new URL(cfg.baseUrl ?? "/", "https://dummy.com").pathname.replace(/\/$/, "")
+    // Access baseUrl correctly from cfg.configuration and get the path part like "/afromedica"
+    const basePath = new URL(cfg.configuration?.baseUrl ?? "/", "https://dummy.com").pathname.replace(/\/$/, "")
 
     return (
       <div class={classNames(displayClass, "backlinks")}>
@@ -39,7 +39,8 @@ export default ((opts?: Partial<BacklinksOptions>) => {
           {backlinkFiles.length > 0 ? (
             backlinkFiles.map((f) => {
               const relativePath = resolveRelative(fileData.slug!, f.slug!)
-              const href = `${basePath}/${relativePath}`.replace(/\/{2,}/g, "/") // avoid double slashes
+              // Build href by combining basePath + relativePath and normalize slashes
+              const href = `${basePath}/${relativePath}`.replace(/\/{2,}/g, "/")
               return (
                 <li>
                   <a href={href} class="internal">
