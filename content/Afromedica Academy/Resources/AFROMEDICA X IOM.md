@@ -5,38 +5,38 @@ modified: 2025-07-30
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
-  <a href="/tags/articles" class="tag">#interviews</a>
+  <a href="/tags/interviews" class="tag">#interviews</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Subject:</strong></span>
-  <a href="/tags/articles" class="tag">#culturally-sensitive-healthcare</a>
+  <a href="/tags/culturally-sensitive-healthcare" class="tag">#Culturally sensitive healthcare</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Language:</strong></span>
-  <a href="/tags/articles" class="tag">#english</a>
+  <a href="/tags/english" class="tag">#english</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Organisation:</strong></span>
-  <a href="/tags/articles" class="tag">#IOM</a>
-  <a href="/tags/articles" class="tag">#AfroMedica</a>
+  <a href="/tags/IOM" class="tag">#IOM</a>
+  <a href="/tags/afromedica" class="tag">#AfroMedica</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Guests:</strong></span>
-  <a href="/tags/articles" class="tag">#Hanane-El-Kaddouri</a>
-  <a href="/tags/articles" class="tag">#Nour-El-Houda-Mazari</a>
+  <a href="/tags/Hanane-El-Kaddouri" class="tag">#Hanane El-Kaddouri</a>
+  <a href="/tags/Nour-El-Houda-Mazari" class="tag">#Nour El-Houda Mazari</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>From us to you:</strong></span>
-  <a href="/tags/articles" class="tag">#from-us-to-you</a>
+  <a href="/tags/from-us-to-you" class="tag">#From us to you</a>
 </div>
 
 ## Link
-["On the importance of culturally sensitive healthcare" by AfroMedica & IOM](https://belgium.iom.int/resources/afromedica-interview)
+["On the importance culturally sensitive healthcare" by AfroMedica & IOM](https://belgium.iom.int/resources/afromedica-interview)
 
 ## Resource
 

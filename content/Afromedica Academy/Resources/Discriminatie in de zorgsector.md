@@ -3,17 +3,36 @@ title:
 publish: true
 modified: 2025-07-30
 ---
-**Media**: #podcasts 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Media:</strong></span>
+  <a href="/tags/articles" class="tag">#podcasts</a>
+</div>
 
-**Subject**: #racism-and-health 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Subject:</strong></span>
+  <a href="/tags/articles" class="tag">#racism-and-health</a>
+</div>
 
-**Language**: #dutch 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Language:</strong></span>
+  <a href="/tags/articles" class="tag">#dutch</a>
+</div>
 
-**Podcast**: #Op-Den-Duur
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Podcast:</strong></span>
+  <a href="/tags/articles" class="tag">#Op-Den-Duur</a>
+</div>
 
-**Creator**:  #Lidvine-Ngonseu-Harpi #Elke-Van-De-Moortel
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Guests:</strong></span>
+  <a href="/tags/articles" class="tag">#Lidvine-Ngonseu-Harpi</a>
+  <a href="/tags/articles" class="tag">#Elke-Van-De-Moortel</a>
+</div>
 
-**From us to you**: #from-us-to-you 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>From us to you:</strong></span>
+  <a href="/tags/articles" class="tag">#from-us-to-you</a>
+</div>
 
 ## Cover
 ![[Pasted image 20250727213346.png]]
