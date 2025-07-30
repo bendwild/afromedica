@@ -29,8 +29,8 @@ export default ((opts?: Partial<BacklinksOptions>) => {
       return null
     }
 
-    // Extract "/afromedica" from baseUrl like "https://bendwild.github.io/afromedica"
-    const basePath = new URL(cfg.configuration?.baseUrl ?? "/", "https://dummy.com").pathname.replace(/\/$/, "")
+    // Use full baseUrl from configuration (e.g., "https://bendwild.github.io/afromedica")
+    const baseUrl = cfg.configuration?.baseUrl ?? ""
 
     return (
       <div class={classNames(displayClass, "backlinks")}>
@@ -38,8 +38,8 @@ export default ((opts?: Partial<BacklinksOptions>) => {
         <OverflowList>
           {backlinkFiles.length > 0 ? (
             backlinkFiles.map((f) => {
-              const targetSlug = f.slug!.replace(/^\//, "") // remove leading slash if present
-              const href = `${basePath}/${targetSlug}`
+              const targetSlug = f.slug!.replace(/^\//, "") // remove leading slash
+              const href = `${baseUrl}/${targetSlug}`.replace(/([^:]\/)\/+/g, "$1") // remove double slashes
               return (
                 <li>
                   <a href={href} class="internal">
