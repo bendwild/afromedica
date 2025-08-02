@@ -1,7 +1,7 @@
 ---
 title: Welcome to AfroMedica!
 publish: true
-modified: 2025-07-24
+modified: 2025-08-02
 tags: 
 ---
 <div class="hero">
@@ -10,6 +10,34 @@ tags:
   <a class="button" href="About-us">→ Learn More</a>
 </div>
 
+
+<div class="pathways-grid">
+
+## 🎓 I’m a Student
+- Learn about diversity in medical education
+- Discover POC-specific diseases
+- Join our AfroMedica Academy
+👉 [Explore Student Resources](/Academy)
+
+## 🩺 I’m a Healthcare Worker
+- Understand diagnostic bias
+- Improve your cultural competence
+- Access our quick guides
+👉 [Visit Clinician Tools](/Clinician-Resources)
+
+## 🏛 I’m a Policymaker / Advocate
+- Read our policy briefs
+- Explore AfroMedica’s advocacy work
+- Partner with us on health equity initiatives
+👉 [See Our Advocacy Work](/Advocacy)
+
+## 🤝 I’m an Ally / Curious Visitor
+- Understand racial disparities in health
+- Learn how to support AfroMedica’s mission
+- Join our events or donate
+👉 [Support the Movement](/Get-Involved)
+
+</div>
 
 <div class="card-grid">
   <div class="homepage-card">
