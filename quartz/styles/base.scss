@@ -381,3 +381,25 @@ a {
     }
   }
 }
+
+/* === Fix excess space under navbar === */
+
+/* Match body padding to navbar height */
+body {
+  padding-top: 64px; /* Make sure this matches your .main-navigation height */
+}
+
+/* Remove top margin from page header */
+.page-header {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Ensure margin is not re-added on mobile */
+@media all and (max-width: 768px) {
+  .page-header {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+

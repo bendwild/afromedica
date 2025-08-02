@@ -23,7 +23,7 @@ export default {
     },
     backlinks: {
       title: "Related pages",
-      noBacklinksFound: "No backlinks found",
+      noBacklinksFound: "No related pages found",
     },
     themeToggle: {
       lightMode: "Light mode",
@@ -39,7 +39,7 @@ export default {
       createdWith: "Created with",
     },
     graph: {
-      title: "Graph View",
+      title: "Knowledge graph",
     },
     recentNotes: {
       title: "What's new?",

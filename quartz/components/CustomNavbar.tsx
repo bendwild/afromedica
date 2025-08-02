@@ -14,7 +14,7 @@ const CustomNavbar: QuartzComponent = () => {
         </div>
         <ul className="nav-menu">
           <li><a href="/About-us/about-us" className="nav-link">About Us</a></li>
-          <li><a href="/Afromedica-Academy/Afromedica-Academy" className="nav-link">AfroAcademy</a></li>
+          <li><a href="/Afromedica-Academy/Afromedica-Academy" className="nav-link">Afromedica Academy</a></li>
           <li><a href="/Afromedica-Talks/Afromedica-Talks" className="nav-link">Afromedica Talks</a></li>
           <li><a href="/Afromedica-Connects/Afromedica-Connects" className="nav-link">Afromedica Connects</a></li>
           <li><a href="/Policy/policy" className="nav-link">Policy</a></li>
