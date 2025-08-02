@@ -38,7 +38,7 @@ html[data-theme="dark"] {
   top: 0;
   left: 0;
   width: 100%;
-  height: 64px; /* increased height */
+  height: 64px;
   background-color: var(--light);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   font-family: 'IBM Plex Serif', serif;
@@ -59,7 +59,7 @@ html[data-theme="dark"] {
 }
 
 .nav-logo img {
-  height: 40px; /* increased logo size */
+  height: 40px;
   margin-right: 1rem;
   display: block;
   border-radius: 0;
@@ -85,23 +85,21 @@ html[data-theme="dark"] {
 
 // === Layout ===
 body {
-  padding-top: 64px; /* adjusted to match navbar height */
+  padding-top: 64px;
   background-color: var(--light);
   color: var(--dark);
   font-family: 'IBM Plex Serif', serif;
   line-height: 1.6;
+  margin: 0;
 }
 
 .page-columns {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
-  margin-top: 0rem;
+  padding-top: 1rem;
+  margin-top: 0 !important;
   min-height: 60vh;
-}
-
-.page-columns > .left {
-  border-top: none !important;
 }
 
 .page-columns > .left,
@@ -110,6 +108,15 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.sidebar.left,
+.sidebar.right {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  align-self: flex-start;
 }
 
 main {
@@ -165,7 +172,7 @@ main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-// === Cards, TOC, Recent Notes, Backlinks, Explorer ===
+// === Cards, TOC, Notes, Explorer ===
 .card,
 .toc,
 .recent-notes,
@@ -303,359 +310,4 @@ img {
   max-width: 100%;
   display: block;
   margin: 1rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-blockquote {
-  border-left: 4px solid var(--secondary);
-  padding-left: 1rem;
-  color: var(--darkgray);
-  font-style: italic;
-  background-color: var(--lightgray);
-  margin: 2rem 0;
-}
-
-h1, h2, h3, p {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-// === Home Page Grid Cards ===
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-}
-
-// === Hide anchor icons ===
-h1 > a.anchor,
-h2 > a.anchor,
-h3 > a.anchor,
-h4 > a.anchor,
-h5 > a.anchor,
-h6 > a.anchor {
-  display: none !important;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-  align-items: stretch;
-}
-
-.team-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--lightgray);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  transition: transform 0.2s;
-  height: 100%;
-}
-
-.team-card:hover {
-  transform: translateY(-4px) scale(1.02);
-}
-
-.team-card img {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  border-radius: 1rem;
-  margin: 0 auto 1rem;
-  object-fit: cover;
-}
-
-.team-card h3 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--dark);
-  font-size: 1.2rem;
-}
-
-.team-card h3 a {
-  color: var(--dark);
-  text-decoration: none;
-  border-bottom: 1px dotted var(--accent);
-  transition: color 0.2s, border-bottom 0.2s;
-}
-
-.team-card h3 a:hover {
-  color: var(--accent);
-  border-bottom: 1px solid var(--accent);
-}
-
-.team-card p {
-  color: var(--darkgray);
-  flex-grow: 1;
-}
-
-.team-card a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: var(--accent);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.team-card a:hover {
-  color: var(--tertiary);
-}
-
-/* === Tags Groups with multiple titles === */
-.tags-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0.5rem 0;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: visible;
-  margin-bottom: 1rem; /* spacing between groups */
-}
-
-.tag-scroll-title {
-  font-weight: 600;
-  color: var(--darkgray);
-  font-size: 0.9rem;
-  margin-right: 0.5rem;
-  white-space: nowrap;
-  user-select: none;
-  flex-shrink: 0;
-}
-
-.tags-group .tag {
-  display: inline-block;
-  white-space: nowrap;
-  background-color: var(--lightgray);
-  color: var(--darkgray);
-  padding: 0.4rem 0.75rem;
-  font-size: 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--gray);
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-
-.tags-group .tag:hover {
-  background-color: var(--accent);
-  color: var(--light);
-}
-
-.page-tags,
-.tags {
-  display: none !important;
-}
-
-/* === Hero Section === */
-.hero {
-  background-color: var(--lightgray);
-  border-radius: 1rem;
-  padding: 3rem 2rem;
-  text-align: center;
-  margin: 2rem 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  color: var(--dark);
-  margin-bottom: 0.75rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: var(--darkgray);
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.6;
-}
-
-.hero .button {
-  font-size: 1rem;
-  padding: 0.6rem 1.4rem;
-  border-radius: 0.75rem;
-}
-
-/* === Team Banner Section === */
-.team-banner {
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.team-banner img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin: 0;
-}
-
-.team-banner figcaption {
-  margin-top: 0;
-  padding-top: 0.75rem;
-  font-size: 0.95rem;
-  color: var(--gray);
-}
-
-.inline-profile {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.inline-profile img {
-  width: 80px;
-  height: 80px;
-  border-radius: 0.75rem;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  flex-shrink: 0;
-}
-
-.inline-profile .intro-text {
-  flex: 1;
-}
-
-h1 a.anchor,
-h2 a.anchor,
-h3 a.anchor,
-h4 a.anchor,
-h5 a.anchor,
-h6 a.anchor {
-  display: none !important;
-}
-
-body {
-  padding-top: 64px;
-  margin: 0;
-}
-
-main,
-.page-columns {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-main > *:first-child,
-.page-columns > *:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* === Tags === */
-
-/* Original tag-scroll (no title) */
-.tag-scroll {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0.5rem 0;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: visible;
-  margin-bottom: 1rem;
-}
-
-.tag-scroll .tag {
-  display: inline-block;
-  white-space: nowrap;
-  background-color: var(--lightgray);
-  color: var(--darkgray);
-  padding: 0.4rem 0.75rem;
-  font-size: 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--gray);
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-
-.tag-scroll .tag:hover {
-  background-color: var(--accent);
-  color: var(--light);
-}
-
-/* New grouped tag sections with titles */
-.tags-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0.5rem 0;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: visible;
-  margin-bottom: 1rem;
-}
-
-.tag-scroll-title {
-  font-weight: 600;
-  color: var(--darkgray);
-  font-size: 0.9rem;
-  margin-right: 0.5rem;
-  white-space: nowrap;
-  user-select: none;
-  flex-shrink: 0;
-}
-
-.tags-group .tag {
-  display: inline-block;
-  white-space: nowrap;
-  background-color: var(--lightgray);
-  color: var(--darkgray);
-  padding: 0.4rem 0.75rem;
-  font-size: 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--gray);
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-
-.tags-group .tag:hover {
-  background-color: var(--accent);
-  color: var(--light);
-}
-
-// === Fix excess space under navbar ===
-.page-header,
-#quartz-body > .center,
-main,
-main > *:first-child,
-.page-columns,
-.page-columns > *:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-// Also eliminate any outer spacing on article content
-.center > article {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-// === Align sidebars with main content ===
-.sidebar.left {
-  padding-top: 1.5rem !important;
-  margin-top: 0 !important;
-}
-.sidebar.right {
-  padding-top: 3rem !important;
-  margin-top: 0 !important;
-}
-
-#quartz-body .sidebar.left,
-#quartz-body .sidebar.right {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  align-self: flex-start;
-}
+  box-shadow: 0 4px 12px
