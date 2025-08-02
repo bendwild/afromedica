@@ -1,159 +1,15 @@
 @use "./base.scss";
 
-// === Color Tokens ===
-:root {
-  --light: #fffaf3;
-  --lightgray: #f2e9e1;
-  --gray: #9893a5;
-  --darkgray: #797593;
-  --dark: #575279;
-  --secondary: #d7827e;
-  --tertiary: #b4637a;
-  --accent: #b4637a;
-  --highlight: rgba(143, 159, 169, 0.15);
-  --textHighlight: rgba(246, 193, 119, 0.28);
-}
-
-html[data-theme="dark"] {
-  --light: #1f1d30;
-  --lightgray: #26233a;
-  --gray: #6e6a86;
-  --darkgray: #908caa;
-  --dark: #e0def4;
-  --secondary: #ebbcba;
-  --tertiary: #eb6f92;
-  --accent: #eb6f92;
-  --highlight: rgba(143, 159, 169, 0.15);
-  --textHighlight: #b3aa0288;
-}
-
-* {
-  transition: all 0.25s ease-in-out;
-  box-sizing: border-box;
-}
-
-// === Navbar ===
-.main-navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 64px; /* increased height */
-  background-color: var(--light);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  font-family: 'IBM Plex Serif', serif;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-.nav-logo img {
-  height: 40px; /* increased logo size */
-  margin-right: 1rem;
-  display: block;
-  border-radius: 0;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin-left: auto;
-  padding: 0;
-}
-
-.nav-link {
-  color: var(--dark);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: var(--accent);
-}
-
-// === Layout ===
-body {
-  padding-top: 64px; /* adjusted to match navbar height */
-  background-color: var(--light);
-  color: var(--dark);
-  font-family: 'IBM Plex Serif', serif;
-  line-height: 1.6;
-}
-
-.page-columns {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  margin-top: 0rem;
-  min-height: 60vh;
-}
-
-.page-columns > .left {
-  border-top: none !important;
-}
-
-.page-columns > .left,
-.page-columns > .center,
-.page-columns > .right {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-main {
-  margin-bottom: 1rem;
-}
-
-// === Graph View ===
-.graph-container {
-  margin-top: 2rem;
-  background: transparent;
-  border: none;
-  pointer-events: auto !important;
-  z-index: 10;
-}
-
-.graph-container * {
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-.graph-node {
-  stroke: var(--accent);
-  fill: var(--tertiary);
-  transition: fill 0.3s;
-}
-
-.graph-node:hover {
-  fill: var(--accent);
-}
-
-.graph-link {
-  stroke: var(--gray);
-}
-
-// === Buttons ===
+// === Button background color stronger ===
 .button {
-  background-color: var(--accent);
+  background-color: var(--tertiary);  // stronger, richer pinkish color
   color: var(--light);
   font-family: 'IBM Plex Serif', serif;
   font-weight: 600;
   padding: 0.6rem 1.2rem;
   border-radius: 0.75rem;
   border: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(180, 99, 122, 0.3); // stronger subtle shadow
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -162,607 +18,65 @@ main {
 .button:hover {
   background-color: var(--darkgray);
   color: var(--lightgray);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-// === Cards, TOC, Recent Notes, Backlinks, Explorer ===
-.card,
-.toc,
-.recent-notes,
-.backlinks,
-.explorer {
-  background-color: var(--lightgray);
-  border: 1px solid var(--gray);
-  border-radius: 1rem;
-  padding: 1.2rem;
-  margin-bottom: 1rem;
-  color: var(--darkgray);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-  backdrop-filter: blur(6px);
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover,
-.toc:hover,
-.recent-notes:hover,
-.backlinks:hover,
-.explorer:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-}
-
-.card h3 {
-  font-size: 1.25rem;
-  margin-top: 0;
-  color: var(--dark);
-  border-bottom: 1px solid var(--highlight);
-  padding-bottom: 0.25rem;
-}
-
-.card h3 a {
-  color: var(--dark);
-  text-decoration: none;
-  border-bottom: 1px dotted var(--accent);
-  transition: color 0.2s, border-bottom 0.2s;
-}
-
-.card h3 a:hover {
-  color: var(--accent);
-  border-bottom: 1px solid var(--accent);
-}
-
-.card p,
-.card li,
-.toc p,
-.backlinks p,
-.explorer p,
-.recent-notes p {
-  color: var(--darkgray);
-  line-height: 1.6;
-}
-
-.card a,
-.toc a,
-.recent-notes a,
-.backlinks a,
-.explorer a,
-.card .tag,
-.toc .tag,
-.backlinks .tag,
-.recent-notes .tag,
-.explorer .tag {
-  font-weight: 500;
-  color: var(--darkgray);
-  text-decoration: none;
-  border-bottom: 1px dotted var(--darkgray);
-  transition: color 0.2s, border-bottom 0.2s;
-}
-
-.card a:hover,
-.toc a:hover,
-.recent-notes a:hover,
-.backlinks a:hover,
-.explorer a:hover,
-.card .tag:hover,
-.toc .tag:hover,
-.backlinks .tag:hover,
-.recent-notes .tag:hover,
-.explorer .tag:hover {
-  color: var(--tertiary);
-  border-bottom: 1px solid var(--tertiary);
-}
-
-// === Footer ===
-footer {
-  background-color: var(--light);
-  color: var(--darkgray);
-  border-top: none;
-  padding: 1rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-footer a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-footer a:hover {
-  color: var(--dark);
-}
-
-// === Headings ===
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--dark);
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid var(--tertiary);
-}
-
-h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--dark);
-  margin-top: 2rem;
-  border-bottom: none;
-}
-
-// === Misc ===
-img {
-  border-radius: 0.75rem;
-  max-width: 100%;
-  display: block;
-  margin: 1rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-blockquote {
-  border-left: 4px solid var(--secondary);
-  padding-left: 1rem;
-  color: var(--darkgray);
-  font-style: italic;
-  background-color: var(--lightgray);
-  margin: 2rem 0;
-}
-
-h1, h2, h3, p {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-// === Home Page Grid Cards ===
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-}
-
-// === Hide anchor icons ===
-h1 > a.anchor,
-h2 > a.anchor,
-h3 > a.anchor,
-h4 > a.anchor,
-h5 > a.anchor,
-h6 > a.anchor {
-  display: none !important;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-  align-items: stretch;
-}
-
-.team-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--lightgray);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  transition: transform 0.2s;
-  height: 100%;
-}
-
-.team-card:hover {
-  transform: translateY(-4px) scale(1.02);
-}
-
-.team-card img {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  border-radius: 1rem;
-  margin: 0 auto 1rem;
-  object-fit: cover;
-}
-
-.team-card h3 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--dark);
-  font-size: 1.2rem;
-}
-
-.team-card h3 a {
-  color: var(--dark);
-  text-decoration: none;
-  border-bottom: 1px dotted var(--accent);
-  transition: color 0.2s, border-bottom 0.2s;
-}
-
-.team-card h3 a:hover {
-  color: var(--accent);
-  border-bottom: 1px solid var(--accent);
-}
-
-.team-card p {
-  color: var(--darkgray);
-  flex-grow: 1;
-}
-
-.team-card a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: var(--accent);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.team-card a:hover {
-  color: var(--tertiary);
-}
-
-/* === Tags Groups with multiple titles === */
-.tags-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0.5rem 0;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: visible;
-  margin-bottom: 1rem; /* spacing between groups */
-}
-
-.tag-scroll-title {
-  font-weight: 600;
-  color: var(--darkgray);
-  font-size: 0.9rem;
-  margin-right: 0.5rem;
-  white-space: nowrap;
-  user-select: none;
-  flex-shrink: 0;
-}
-
-.tags-group .tag {
-  display: inline-block;
-  white-space: nowrap;
-  background-color: var(--lightgray);
-  color: var(--darkgray);
-  padding: 0.4rem 0.75rem;
-  font-size: 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--gray);
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-
-.tags-group .tag:hover {
-  background-color: var(--accent);
-  color: var(--light);
-}
-
-.page-tags,
-.tags {
-  display: none !important;
-}
-
-/* === Hero Section === */
-.hero {
-  background-color: var(--lightgray);
-  border-radius: 1rem;
-  padding: 3rem 2rem;
-  text-align: center;
-  margin: 2rem 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  color: var(--dark);
-  margin-bottom: 0.75rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: var(--darkgray);
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.6;
-}
-
-.hero .button {
-  font-size: 1rem;
-  padding: 0.6rem 1.4rem;
-  border-radius: 0.75rem;
-}
-
-/* === Team Banner Section === */
-.team-banner {
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.team-banner img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin: 0;
-}
-
-.team-banner figcaption {
-  margin-top: 0;
-  padding-top: 0.75rem;
-  font-size: 0.95rem;
-  color: var(--gray);
-}
-
-.inline-profile {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.inline-profile img {
-  width: 80px;
-  height: 80px;
-  border-radius: 0.75rem;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  flex-shrink: 0;
-}
-
-.inline-profile .intro-text {
-  flex: 1;
-}
-
-h1 a.anchor,
-h2 a.anchor,
-h3 a.anchor,
-h4 a.anchor,
-h5 a.anchor,
-h6 a.anchor {
-  display: none !important;
-}
-
-body {
-  padding-top: 64px;
-  margin: 0;
-}
-
-main,
-.page-columns {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-main > *:first-child,
-.page-columns > *:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* === Tags === */
-
-/* Original tag-scroll (no title) */
-.tag-scroll {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0.5rem 0;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: visible;
-  margin-bottom: 1rem;
-}
-
-.tag-scroll .tag {
-  display: inline-block;
-  white-space: nowrap;
-  background-color: var(--lightgray);
-  color: var(--darkgray);
-  padding: 0.4rem 0.75rem;
-  font-size: 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--gray);
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-
-.tag-scroll .tag:hover {
-  background-color: var(--accent);
-  color: var(--light);
-}
-
-/* New grouped tag sections with titles */
-.tags-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0.5rem 0;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: visible;
-  margin-bottom: 1rem;
-}
-
-.tag-scroll-title {
-  font-weight: 600;
-  color: var(--darkgray);
-  font-size: 0.9rem;
-  margin-right: 0.5rem;
-  white-space: nowrap;
-  user-select: none;
-  flex-shrink: 0;
-}
-
-.tags-group .tag {
-  display: inline-block;
-  white-space: nowrap;
-  background-color: var(--lightgray);
-  color: var(--darkgray);
-  padding: 0.4rem 0.75rem;
-  font-size: 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--gray);
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-
-.tags-group .tag:hover {
-  background-color: var(--accent);
-  color: var(--light);
-}
-
-// === Fix excess space under navbar ===
-.page-header,
-#quartz-body > .center,
-main,
-main > *:first-child,
-.page-columns,
-.page-columns > *:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-// Also eliminate any outer spacing on article content
-.center > article {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-// === Align sidebars with main content ===
-.sidebar.left,
-.sidebar.right,
-#quartz-body .sidebar.left,
-#quartz-body .sidebar.right {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  align-self: flex-start;
-}
-
-.pathways-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.pathway-card {
-  background-color: var(--light);
-  border-left: 6px solid var(--tertiary);
-  border-radius: 1.5rem;
-  padding: 1.5rem 1.75rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.3s ease;
-}
-
-.pathway-card:hover {
-  transform: translateY(-4px);
-  background-color: var(--lightgray); /* subtle warm hover background */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-}
-
-.pathway-card h3 {
-  margin-top: 0;
-  font-size: 1.25rem;
-  color: var(--dark);
-  margin-bottom: 0.75rem;
-}
-
-.pathway-card ul {
-  margin: 0;
-  padding-left: 1.25rem;
-  font-size: 0.95rem;
-  color: var(--darkgray);
-  line-height: 1.5;
-}
-
+// === CTA styling: make it stand out more ===
 .cta-link {
   display: inline-block;
   margin-top: 1rem;
-  font-weight: 600;
-  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--tertiary);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 3px solid var(--tertiary);
+  padding-bottom: 2px;
   transition: color 0.2s ease, border-bottom 0.2s ease;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .cta-link:hover {
-  color: var(--tertiary);
-  border-bottom: 1px solid var(--tertiary);
+  color: var(--accent);
+  border-bottom: 3px solid var(--accent);
+  text-decoration: none;
 }
 
-.timeline {
-  position: relative;
-  margin: 2rem 0;
-  padding-left: 40px;
-  border-left: 3px solid var(--tertiary);
-}
-
-.timeline-item {
-  margin-bottom: 2rem;
-  position: relative;
-}
-
+// === Timeline year (timeline-date) fix so it doesn't overlap vertical line ===
 .timeline-date {
   position: absolute;
-  left: -90px;
+  left: -105px;      // moved further left from vertical line
   top: 0;
-  width: 70px;
+  width: 80px;       // slightly wider for better spacing
   color: var(--tertiary);
-  font-weight: bold;
-  font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 1rem;   // slightly larger for readability
   text-align: right;
   user-select: none;
+  background-color: var(--light);  // add subtle background to stand out
+  padding: 0 6px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(180, 99, 122, 0.15);
+  pointer-events: none;  // avoid interaction
+  z-index: 2;  // ensure it floats above timeline line
 }
 
-.timeline-content {
-  background: var(--lightgray);
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-  transition: transform 0.3s ease;
-}
-
-.timeline-item:hover .timeline-content {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgb(0 0 0 / 0.15);
-}
-
-.embed-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(180, 99, 122, 0.2); /* subtle AfroMedica tertiary color shadow */
-  margin: 1.5rem 0;
+// === Callouts: remove overly playful animation and align with theme ===
+// Assuming callouts use a class `.callout` and have some animation you want to remove
+.callout {
+  animation: none !important;       // disable any animations
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   background-color: var(--lightgray);
+  border-left: 6px solid var(--tertiary);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 3px 10px rgba(180, 99, 122, 0.1);
+  color: var(--dark);
+  font-family: 'IBM Plex Serif', serif;
 }
 
-.embed-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-  border: none;
-  border-radius: 12px;
+.callout:hover {
+  background-color: var(--light);
+  box-shadow: 0 6px 20px rgba(180, 99, 122, 0.15);
+  transform: none !important;  // remove any scale or bounce effects
 }
