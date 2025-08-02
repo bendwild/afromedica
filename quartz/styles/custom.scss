@@ -494,24 +494,35 @@ h6 > a.anchor {
 
 /* === Team Banner Section === */
 .team-banner {
+  position: relative;
   margin: 2rem 0;
-  text-align: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .team-banner img {
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin: 0;
 }
 
 .team-banner figcaption {
-  margin-top: 0;
-  padding-top: 0.75rem;
-  font-size: 0.95rem;
-  color: var(--gray);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--light);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  text-align: left;
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 
 .inline-profile {
