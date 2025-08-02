@@ -745,3 +745,24 @@ main > *:first-child,
   box-shadow: 0 6px 12px rgb(0 0 0 / 0.15);
 }
 
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(180, 99, 122, 0.2); /* subtle AfroMedica tertiary color shadow */
+  margin: 1.5rem 0;
+  background-color: var(--lightgray);
+}
+
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
+  border-radius: 12px;
+}
