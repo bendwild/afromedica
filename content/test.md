@@ -1,6 +1,6 @@
 ---
 publish: true
-modified: 2025-07-21
+modified: 2025-08-02
 ---
 
 <div class="feature-grid">
@@ -219,3 +219,9 @@ Timeline
 
 Quote
 > “We do not live single-issue lives.” — Audre Lorde
+
+
+
+<iframe src="<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/6LjCvMC1baRiDA9iIU6Tmi?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>" width="100%" height="152" frameborder="0" allow="encrypted-media" style="border-radius:12px;"></iframe>
+
+<iframe src="https://forms.gle/YS5btXTYvdPFweG86" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
