@@ -649,3 +649,10 @@ main > *:first-child,
   padding-top: 0 !important;
   margin-top: 0 !important;
 }
+
+#quartz-body .sidebar.left,
+#quartz-body .sidebar.right {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  align-self: flex-start;
+}
