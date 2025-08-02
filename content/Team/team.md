@@ -1,9 +1,10 @@
 ---
 title: Team
 publish: true
-tags: 
+tags:
+  - team
 description: 
-modified: 2025-08-02
+modified: 2025-08-03
 ---
 <figure class="team-banner">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/Group.jpeg" alt="AfroMedica Team" />
@@ -113,6 +114,6 @@ modified: 2025-08-02
 </div>
 
 > [!attention]+ Want to learn more about how we work?
-> From policy suggestions to [[Afromedica Talks]] and our very own knowledge platform [[Afromedica Academy]]; our team makes meaningful impact!
+> From [[policy]] suggestions to our very own knowledge platform [[Afromedica Academy]]; our team makes meaningful impact!
 > 
-> [→ Explore our taskforces](taskforces)
+> **[→ Explore our taskforces](taskforces)**
