@@ -1,9 +1,10 @@
 ---
 title: Becoming a boardmember!
 publish: true
-tags: 
+tags:
+  - team
 description: 
-modified: 2025-07-27
+modified: 2025-08-02
 ---
 So you're interested in joining the board of AfroMedica? Great!
 

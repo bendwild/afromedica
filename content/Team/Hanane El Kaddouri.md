@@ -4,10 +4,10 @@ publish: false
 tags:
   - team
 description: 
-modified: 2025-07-27
+modified: 2025-08-02
 ---
 <div class="inline-profile">
-  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Hanane El Kaddouri" />
   <div class="intro-text">
   
 ## Hey there!

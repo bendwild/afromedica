@@ -1,7 +1,9 @@
 ---
 title: About us
 publish: true
-modified: 2025-07-27
+modified: 2025-08-02
+tags:
+  - about-us
 ---
 ## Our origin
 
@@ -9,12 +11,17 @@ AfroMedica was founded in 2020 in the wake of the Black Lives Matter movement an
 
 Today, AfroMedica is an interdisciplinary organization active in the broader healthcare and medical field. We unite expertise from medicine, sociology, psychology, public policy, and activism to advocate for equitable, accessible, and racially conscious healthcare. At the intersection of care, education, activism, and [[policy]], we build bridges between grassroots movements, institutions, and policymakers, **always grounded in scientific knowledge**.
 
+
 ---
+
+
 ## Our Mission
 
 AfroMedica aims to **advance inclusive healthcare** by identifying, discussing, and challenging structural inequities. Through education, policy advocacy, and evidence-based knowledge sharing, we empower healthcare professionals and institutions to reflect critically and act intentionally. Our focus lies in achieving **long-term structural change** through collaboration, community-building, and activism.
 
+
 ---
+
 
 ## Our Vision
 
@@ -26,7 +33,10 @@ By 2035 we hope to have achieved these goals in the following core topics:
 - **[Policy](policy)**: We co-develop clinical guidelines and recommendations and collaborate with organizations like Domus Medica, KCE, Unia, and academic institutions.
 - **Visibility & Sustainability**: We have a strong internal structure, professional branding, and clear presence in the healthcare landscape. We operate primarily on a volunteer basis, with partial paid roles and student assistants. Eventually, we hope to establish our own space; a community hub or library for continued learning and exchange.
 
+
+
 ---
+
 
 ## Our identity
 
@@ -34,7 +44,9 @@ By 2035 we hope to have achieved these goals in the following core topics:
 
 We are committed to naming and addressing systemic injustice and bringing decolonization into practice; without compromise. We enter thoughtful, intentional partnerships that uphold our independence. For this reason, we do not collaborate with political parties or serve as racism consultants for individuals or institutions. Instead, we focus on knowledge dissemination and systemic impact.
 
+
 ---
+
 
 ## Our Community
 
@@ -50,7 +62,10 @@ We maintain a high level of academic and structural engagement. While we deeply 
 > Become a member, attend a journal club, or collaborate with us on impactful change.  
 > [→ Get involved](/content/membership)
 
+
 ---
+
+
 ## Our Work
 
 AfroMedica operates as a horizontal, collective organization led by a dedicated board. We practice shared leadership; each [boardmember](boardmembers) actively helps shape the organization’s direction. The president and vice-president provide overall coordination and are responsible for maintaining strategic alignment.
@@ -62,14 +77,3 @@ AfroMedica operates as a horizontal, collective organization led by a dedicated 
 ### Projects
 
 We also launch short-term project groups to realize specific actions or events, such as workshops or opinion pieces. These are cross-functional and report back to the board.
-
-### Financial Ethics
-
-To sustain our work, we generate funds through:
-
-- Paid lectures and workshops (€150/hr for smaller orgs, €300/hr for larger ones)
-- Voluntary contributions for community events like journal clubs
-- Donations (which never influence our content or independence)
-- Occasional targeted grants for specific events or projects
-
-We avoid long-term subsidies to maintain independence, though we remain open to ethical partnerships.

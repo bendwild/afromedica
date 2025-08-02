@@ -49,10 +49,14 @@ modified: 2025-08-02
 ---
 Welcome to **Afromedica Academy**, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
 
-> [!info]+ Tip!
-> We use **# tags** to add a subject and media type to all of our resources. You can click on a tag to find other resources that have the same tags or use the searchbar to search by tag. 
+> [!info]+ How to navigate Afromedica Academy?
+> 1. We use **# tags** to add a subject and media type to all of our resources. You can click on a tag to find other resources that have the same tags or use the searchbar to search by tag. 
+> 2. You can search for various pages by typing the tag **(#example)** in the searchbar
+> 3. By utilizing **"AND"** & **"OR"** functions in the search bar you can easily find pages that fullfill multiple requirements. For example: #books AND #dutch AND #racism-and-health 
+
 
 ---
+
 
 ## Explore by Media
 
@@ -64,6 +68,8 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
   <a href="/tags/research" class="tag">#research</a>
   <a href="/tags/videos" class="tag">#videos</a>
 </div>
+
+
 
 ---
 
@@ -82,6 +88,9 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 </div>
 
 
+---
+
+
 ## Explore by Language
 
 <div class="tag-scroll">
@@ -89,6 +98,12 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
   <a href="/tags/english" class="tag">#english</a>
   <a href="/tags/french" class="tag">#french</a>
 </div>
+
+
+---
+
+
+---
 
 
 ## Explore by People
@@ -115,6 +130,9 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 </div>
 
 
+---
+
+
 ## Explore by Organisation
 
 <div class="tag-scroll">
@@ -127,6 +145,9 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 </div>
 
 
+---
+
+
 ## From us to you
 
 <div class="tag-scroll">
@@ -134,6 +155,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 </div>
 
 "From us to you” entails the diverse inputs and works of AfroMedica team (board)members concerning our own specific interests and specialities, but also lived experiences as students and workers within healthcare in Belgium.
+
 
 ---
 
