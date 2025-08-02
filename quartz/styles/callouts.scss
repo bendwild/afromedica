@@ -4,11 +4,12 @@
 .callout {
   border: 1px solid var(--gray);
   background-color: var(--lightgray);
+  border-left: 6px solid var(--tertiary);
   border-radius: 1rem;
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 
   & > .callout-content {
     display: grid;
@@ -22,47 +23,46 @@
     }
   }
 
-  // Base color and icon fallback
   &[data-callout] {
-    --color: var(--secondary);
+    --color: var(--tertiary);
     --border: var(--accent);
-    --bg: var(--highlight);
+    --bg: var(--lightgray);
     --callout-icon: var(--callout-icon-note);
   }
 
-  // === Custom Types ===
+  // === Custom Types (theme-aligned colors) ===
   &[data-callout="info"] {
-    --color: #5bc0de;
-    --border: #5bc0de55;
-    --bg: #e3f5fc;
+    --color: #88b8e3;
+    --border: #d2e8f6;
+    --bg: #f3faff;
     --callout-icon: var(--callout-icon-info);
   }
 
   &[data-callout="tip"] {
-    --color: #51d88a;
-    --border: #51d88a55;
-    --bg: #e6f4ec;
+    --color: #7ec8aa;
+    --border: #d8f4e5;
+    --bg: #f0fbf7;
     --callout-icon: var(--callout-icon-tip);
   }
 
   &[data-callout="warning"] {
-    --color: #f0ad4e;
-    --border: #f0ad4e55;
-    --bg: #fff3cd;
+    --color: #e1b971;
+    --border: #fff3d5;
+    --bg: #fffaf1;
     --callout-icon: var(--callout-icon-warning);
   }
 
   &[data-callout="danger"] {
-    --color: #d9534f;
-    --border: #d9534f55;
-    --bg: #f8d7da;
+    --color: #d66767;
+    --border: #fcd7d7;
+    --bg: #fff0f0;
     --callout-icon: var(--callout-icon-danger);
   }
 
   &[data-callout="success"] {
-    --color: #28a745;
-    --border: #28a74555;
-    --bg: #d4edda;
+    --color: #7fbf8d;
+    --border: #daf3de;
+    --bg: #f2fbf4;
     --callout-icon: var(--callout-icon-success);
   }
 
@@ -76,6 +76,8 @@
   &:hover {
     background-color: var(--bg);
     border-color: var(--color);
+    transform: scale(1.015);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -86,8 +88,9 @@
   gap: 0.75rem;
   color: var(--color);
   font-weight: 600;
-  font-family: 'Merriweather', serif;
+  font-family: 'IBM Plex Serif', serif;
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 
   --icon-size: 18px;
 
@@ -102,11 +105,12 @@
     mask-repeat: no-repeat;
     mask-position: center;
     transition: transform 0.2s ease;
+    border-radius: 4px;
   }
 
   .fold-callout-icon {
     cursor: pointer;
-    opacity: 0.75;
+    opacity: 0.8;
 
     .is-collapsed & {
       transform: rotateZ(-90deg);
@@ -125,4 +129,5 @@
   font-family: 'Cabin', sans-serif;
   font-size: 0.95rem;
   color: var(--dark);
+  line-height: 1.6;
 }
