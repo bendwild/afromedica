@@ -83,6 +83,11 @@ html[data-theme="dark"] {
   color: var(--accent);
 }
 
+.nav-link.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 // === Layout ===
 body {
   padding-top: 64px; /* adjusted to match navbar height */
@@ -146,7 +151,7 @@ main {
 
 // === Buttons ===
 .button {
-  background-color: var(--tertiary);  /* more vibrant */
+  background-color: var(--accent);  /* more vibrant */
   color: var(--light);
   font-family: 'IBM Plex Serif', serif;
   font-weight: 600;
@@ -662,16 +667,13 @@ main > *:first-child,
 }
 
 .pathway-card {
-  background-color: var(--light);
-  border-left: 6px solid var(--tertiary);
-  border-radius: 1.5rem;
-  padding: 1.5rem 1.75rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.3s ease;
+  border-left: none;
+  background-color: var(--lightgray);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 .pathway-card:hover {
   transform: translateY(-4px);
@@ -727,16 +729,15 @@ main > *:first-child,
 
 .timeline-date {
   position: absolute;
-  left: -105px;
+  left: -80px;
   top: 0;
-  width: 80px;
+  width: 50px;
   color: var(--tertiary);
   font-weight: 700;
   font-size: 1rem;
   text-align: right;
   background-color: var(--light);
   padding: 0.3rem 0.5rem;
-  border-radius: 6px;
   box-shadow: 0 0 8px rgba(180, 99, 122, 0.15);
   pointer-events: none;
   z-index: 2;
@@ -775,4 +776,57 @@ main > *:first-child,
   height: 100% !important;
   border: none;
   border-radius: 12px;
+}
+
+.sidebar.left,
+.sidebar.right {
+  padding-top: 2rem !important;
+}
+
+.contact-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.contact-card {
+  background-color: var(--lightgray);
+  border: 1px solid var(--gray);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Cabin', sans-serif;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: var(--dark);
+}
+
+.contact-card p {
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+  color: var(--darkgray);
+  line-height: 1.5;
+}
+
+.contact-card a {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--tertiary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.contact-card a:hover {
+  color: var(--accent);
 }
