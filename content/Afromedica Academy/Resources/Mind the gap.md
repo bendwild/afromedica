@@ -1,7 +1,16 @@
 ---
 title: 
 publish: true
-modified: 2025-07-30
+modified: 2025-08-02
+tags:
+  - books
+  - clinical-medicine
+  - health-equity
+  - dermatology
+  - english
+  - Malone-Mukwende
+  - Peter-Tamony
+  - Margot-Turner
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -12,6 +21,7 @@ modified: 2025-07-30
   <span class="tag-scroll-title"><strong>Subject:</strong></span>
   <a href="/tags/clinical-medicine" class="tag">#Clinical medicine</a>
   <a href="/tags/health-equity" class="tag">#Health equity</a>
+  <a href="/tags/dermatology" class="tag">#Dermatology</a>
 </div>
 
 <div class="tags-group">

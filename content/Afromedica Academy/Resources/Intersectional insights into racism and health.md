@@ -1,7 +1,12 @@
 ---
 title: "Intersectional insights into racism and health: not just a question of identity"
 publish: true
-modified: 2025-07-30
+modified: 2025-08-02
+tags:
+  - research
+  - racism-and-health
+  - english
+  - Geordan-Shannon
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>

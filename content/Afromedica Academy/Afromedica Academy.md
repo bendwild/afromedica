@@ -40,6 +40,10 @@ tags:
   - english
   - dutch
   - french
+  - Saloua-Berdai-Chaouni
+  - Ann-Claeys
+  - dermatology
+  - Rebelle
 description: 
 modified: 2025-08-02
 ---
@@ -70,6 +74,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
   <a href="/tags/colonialism" class="tag">#colonialism</a>
   <a href="/tags/clinical-medicine" class="tag">#clinical medicine</a>
   <a href="/tags/culturally-sensitive-healthcare" class="tag">#culturally-sensitive-healthcare</a>
+  <a href="/tags/dermatology" class="tag">#dermatology</a>
   <a href="/tags/global-health" class="tag">#global-health</a>
   <a href="/tags/health-equity" class="tag">#health equity</a>
   <a href="/tags/intersectionality" class="tag">#intersectionality</a>
@@ -91,6 +96,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 <div class="tag-scroll">
   <a href="/tags/Alicia-Williams" class="tag">#Alicia Williams</a>
   <a href="/tags/Angela-Saini" class="tag">#Angela Saini</a>
+  <a href="/tags/Ann-Claeys" class="tag">#Ann Claeys</a>
   <a href="/tags/Deborah-Pemu" class="tag">#Deborah Pemu</a>
   <a href="/tags/Elke-Van-De-Moortel" class="tag">#Elke Van De Moortel</a>
   <a href="/tags/Fatou-Touré" class="tag">#Fatou Touré</a>
@@ -104,6 +110,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
   <a href="/tags/Maria-Saldi" class="tag">#Maria Saldi</a>
   <a href="/tags/Nour-El-Houda-Mazari" class="tag">#Nour El Houda Mazari</a>
   <a href="/tags/Peter-Tamony" class="tag">#Peter Tamony</a>
+  <a href="/tags/Saloua-Berdai-Chaouni" class="tag">#Saloua Berdai Chaouni</a>
   <a href="/tags/Tinne-Claes" class="tag">#Tinne Claes</a>
 </div>
 
@@ -115,6 +122,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
   <a href="/tags/IOM" class="tag">#IOM</a>
   <a href="/tags/Op-Den-Duur" class="tag">#Op Den Duur</a>
   <a href="/tags/Race-and-Health" class="tag">#Race and Health</a>
+  <a href="/tags/Rebelle" class="tag">#Rebelle</a>
   <a href="/tags/woman-is-present" class="tag">#Woman is present</a>
 </div>
 

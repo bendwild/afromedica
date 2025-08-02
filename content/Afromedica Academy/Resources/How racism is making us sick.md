@@ -1,7 +1,13 @@
 ---
 title: "Systemic: How racism is making us sick"
 publish: true
-modified: 2025-07-30
+modified: 2025-08-02
+tags:
+  - books
+  - racism-and-health
+  - dutch
+  - english
+  - Layal-Liverpool
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>

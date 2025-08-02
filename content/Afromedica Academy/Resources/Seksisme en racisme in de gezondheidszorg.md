@@ -1,7 +1,16 @@
 ---
 title: "Rebelle Openhartig Live: Seksisme en racisme in de gezondheidszorg"
 publish: true
-modified: 2025-07-30
+modified: 2025-08-02
+tags:
+  - podcasts
+  - intersectionality
+  - racism-and-health
+  - dutch
+  - Rebelle
+  - Hanane-El-Kaddouri
+  - Tinne-Claes
+  - from-us-to-you
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>

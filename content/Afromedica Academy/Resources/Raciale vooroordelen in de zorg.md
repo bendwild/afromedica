@@ -1,7 +1,16 @@
 ---
 title: "Raciale vooroordelen in de zorg: 'Omdat ik zwart ben, denkt mijn arts dat ik sterk ben'"
 publish: true
-modified: 2025-07-30
+modified: 2025-08-02
+tags:
+  - articles
+  - racism-and-health
+  - dutch
+  - BRUZZ
+  - Maria-Saldi
+  - Hanane-El-Kaddouri
+  - Fatou-Touré
+  - from-us-to-you
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
