@@ -707,3 +707,41 @@ main > *:first-child,
   color: var(--tertiary);
   border-bottom: 1px solid var(--tertiary);
 }
+
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 40px;
+  border-left: 3px solid var(--tertiary);
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-date {
+  position: absolute;
+  left: -90px;
+  top: 0;
+  width: 70px;
+  color: var(--tertiary);
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: right;
+  user-select: none;
+}
+
+.timeline-content {
+  background: var(--lightgray);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 0.15);
+}
+
