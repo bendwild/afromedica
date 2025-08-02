@@ -97,9 +97,9 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
-  padding-top: 1rem;
-  margin-top: 0 !important;
   min-height: 60vh;
+  margin-top: 0 !important;
+  padding-top: 1rem !important;
 }
 
 .page-columns > .left,
@@ -108,15 +108,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-.sidebar.left,
-.sidebar.right {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  align-self: flex-start;
 }
 
 main {
@@ -172,7 +163,7 @@ main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-// === Cards, TOC, Notes, Explorer ===
+// === Cards, TOC, Recent Notes, Backlinks, Explorer ===
 .card,
 .toc,
 .recent-notes,
@@ -304,10 +295,33 @@ h2 {
   border-bottom: none;
 }
 
-// === Misc ===
-img {
-  border-radius: 0.75rem;
-  max-width: 100%;
-  display: block;
-  margin: 1rem auto;
-  box-shadow: 0 4px 12px
+h1 a.anchor,
+h2 a.anchor,
+h3 a.anchor,
+h4 a.anchor,
+h5 a.anchor,
+h6 a.anchor {
+  display: none !important;
+}
+
+// === Fix spacing issues under navbar ===
+.page-header,
+#quartz-body > .center,
+main,
+main > *:first-child,
+.page-columns,
+.page-columns > *:first-child,
+.center > article {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+// === Align sidebars and main content ===
+.sidebar.left,
+.sidebar.right,
+#quartz-body .sidebar.left,
+#quartz-body .sidebar.right {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  align-self: flex-start;
+}
