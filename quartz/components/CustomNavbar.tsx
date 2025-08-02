@@ -1,8 +1,7 @@
 import { QuartzComponent, QuartzComponentConstructor } from "../types"
 
 const CustomNavbar: QuartzComponent = () => {
-  const BASE_PATH = "/afromedica"
-
+  
   return (
     <nav className="main-navigation">
       <div className="nav-container">
