@@ -11,33 +11,59 @@ tags:
 </div>
 
 
-<div class="pathways-grid">
+---
+title: Start Here
+tags: navigation
+---
 
-## 🎓 I’m a Student
-- Learn about diversity in medical education
-- Discover POC-specific diseases
-- Join our AfroMedica Academy
-👉 [Explore Student Resources](/Academy)
+# 👋🏾 Start Here
 
-## 🩺 I’m a Healthcare Worker
-- Understand diagnostic bias
-- Improve your cultural competence
-- Access our quick guides
-👉 [Visit Clinician Tools](/Clinician-Resources)
+AfroMedica is a grassroots initiative working toward racial health equity, education, and systemic change. Select the path that reflects your journey:
 
-## 🏛 I’m a Policymaker / Advocate
-- Read our policy briefs
-- Explore AfroMedica’s advocacy work
-- Partner with us on health equity initiatives
-👉 [See Our Advocacy Work](/Advocacy)
+<div class="pathways-wrapper">
 
-## 🤝 I’m an Ally / Curious Visitor
-- Understand racial disparities in health
-- Learn how to support AfroMedica’s mission
-- Join our events or donate
-👉 [Support the Movement](/Get-Involved)
+<div class="pathway-card">
+<h3>🎓 I’m a Student</h3>
+<ul>
+  <li>Dive into diversity in med ed</li>
+  <li>Explore POC-specific diseases</li>
+  <li>Join the AfroMedica Academy</li>
+</ul>
+<a href="/Academy" class="cta-link">Explore Student Resources →</a>
+</div>
+
+<div class="pathway-card">
+<h3>🩺 I’m a Healthcare Worker</h3>
+<ul>
+  <li>Unpack diagnostic biases</li>
+  <li>Access inclusive clinical tools</li>
+  <li>Improve cultural competence</li>
+</ul>
+<a href="/Clinician-Resources" class="cta-link">Visit Clinician Tools →</a>
+</div>
+
+<div class="pathway-card">
+<h3>🏛 I’m a Policymaker / Advocate</h3>
+<ul>
+  <li>Review our equity recommendations</li>
+  <li>Explore AfroMedica’s advocacy work</li>
+  <li>Find policy collaboration options</li>
+</ul>
+<a href="/Advocacy" class="cta-link">See Our Advocacy Work →</a>
+</div>
+
+<div class="pathway-card">
+<h3>🤝 I’m an Ally / Curious Visitor</h3>
+<ul>
+  <li>Understand health disparities</li>
+  <li>Support racial health justice</li>
+  <li>Join our events or donate</li>
+</ul>
+<a href="/Get-Involved" class="cta-link">Support the Movement →</a>
+</div>
 
 </div>
+
 
 <div class="card-grid">
   <div class="homepage-card">
