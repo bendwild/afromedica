@@ -782,3 +782,51 @@ main > *:first-child,
 .sidebar.right {
   padding-top: 2rem !important;
 }
+
+.contact-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.contact-card {
+  background-color: var(--lightgray);
+  border: 1px solid var(--gray);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Cabin', sans-serif;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: var(--dark);
+}
+
+.contact-card p {
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+  color: var(--darkgray);
+  line-height: 1.5;
+}
+
+.contact-card a {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--tertiary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.contact-card a:hover {
+  color: var(--accent);
+}
