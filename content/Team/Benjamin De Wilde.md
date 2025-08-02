@@ -4,7 +4,7 @@ publish: true
 tags:
   - team
 description: 
-modified: 2025-07-27
+modified: 2025-08-02
 ---
 <div class="inline-profile">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
@@ -14,10 +14,18 @@ modified: 2025-07-27
 
 My name is Benjamin and I'm a medical doctor with a passion for global health. I joined AfroMedica because I believe in the power of community-led initiatives to challenge structural racism and create a more inclusive healthcare system. Through education, advocacy, and collaboration, I hope to contribute to a future where everyone receives the care they deserve.
 
+
+---
+
+
 ## [Taskforces](taskforces) I'm involved in!
 
-- internal administration
 - [[Afromedica Academy]]
+- internal administration
+
+
+---
+
 
 ## Follow me!
 

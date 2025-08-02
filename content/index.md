@@ -12,13 +12,6 @@ tags:
 
 
 ---
-title: Start Here
-tags: navigation
----
-
-# 👋🏾 Start Here
-
-AfroMedica is a grassroots initiative working toward racial health equity, education, and systemic change. Select the path that reflects your journey:
 
 <div class="pathways-wrapper">
 
@@ -64,23 +57,6 @@ AfroMedica is a grassroots initiative working toward racial health equity, educa
 
 </div>
 
-
-<div class="card-grid">
-  <div class="homepage-card">
-    [[Taskforces]]
-    Focused groups tackling policy, outreach, and education.
-  </div>
-
-  <div class="homepage-card">
-    [[Afromedica Talks]]
-    Our platform amplifying POC voices in healthcare.
-  </div>
-
-  <div class="homepage-card">
-    [[Afromedica Academy]]
-    Explore our knowledge platform made by and for future health leaders.
-  </div>
-</div>
 
 <div class="cta">
   <h2>Stay up to date with our mission</h2>
