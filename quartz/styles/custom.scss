@@ -625,3 +625,21 @@ main > *:first-child,
   background-color: var(--accent);
   color: var(--light);
 }
+
+// === Fix excess space under navbar ===
+.page-header,
+#quartz-body > .center,
+main,
+main > *:first-child,
+.page-columns,
+.page-columns > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+// Also eliminate any outer spacing on article content
+.center > article {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
