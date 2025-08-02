@@ -1,7 +1,7 @@
 ---
 publish: true
 title: Get in touch!
-modified: 2025-07-27
+modified: 2025-08-03
 ---
 AfroMedica welcomes anyone who shares our vision of an equitable, inclusive healthcare system. Below you'll find the best ways to connect with us depending on your query or background.
 
@@ -55,3 +55,42 @@ For messages specifically directed to our president or vice-president, email:
 ---
 
 Thank you for supporting AfroMedica and [our mission](about us).
+
+<div class="contact-card-grid">
+  <div class="contact-card">
+    <h3>General </h3>
+    <p>For partnerships or project invitations.</p>
+    <a href="mailto:info.afromedica@gmail.com">📧 info.afromedica@gmail.com</a>
+  </div>
+
+  <div class="contact-card">
+    <h3>🧑🏽‍🤝‍🧑🏾 Membership & Board involvement</h3>
+    <p>Join us or apply for the board. See <a href="/membership">membership</a>.</p>
+    <a href="mailto:connect@afromedica.be">📧 connect@afromedica.be</a>
+  </div>
+
+  <div class="contact-card">
+    <h3>🎓 Afromedica Academy</h3>
+    <p>Share educational resources or ask questions.</p>
+    <a href="mailto:academy@afromedica.be">📧 academy@afromedica.be</a>
+  </div>
+
+  <div class="contact-card">
+    <h3>🎙 Afromedica Talks</h3>
+    <p>Suggest speakers or topics.</p>
+    <a href="mailto:talks@afromedica.be">📧 talks@afromedica.be</a>
+  </div>
+
+  <div class="contact-card">
+    <h3>📝 Policy</h3>
+    <p>For policy & advocacy collaboration.</p>
+    <a href="mailto:policy@afromedica.be">📧 policy@afromedica.be</a>
+  </div>
+
+  <div class="contact-card">
+    <h3>🧭 Leadership</h3>
+    <p>Reach our president or vice-president.</p>
+    <a href="mailto:president@afromedica.be">📧 president@afromedica.be</a><br />
+    <a href="mailto:vice@afromedica.be">📧 vice@afromedica.be</a>
+  </div>
+</div>

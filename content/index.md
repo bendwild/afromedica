@@ -1,7 +1,7 @@
 ---
 title: Welcome to AfroMedica!
 publish: true
-modified: 2025-08-02
+modified: 2025-08-03
 tags: 
 ---
 <div class="hero">
@@ -16,7 +16,7 @@ tags:
 <div class="pathways-wrapper">
 
 <div class="pathway-card">
-<h3>🎓 I’m a Student</h3>
+<h3>I’m a Student</h3>
 <ul>
   <li>Dive into diversity in med ed</li>
   <li>Explore POC-specific diseases</li>

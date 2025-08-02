@@ -2,7 +2,7 @@
 title: Updates
 slug: updates
 layout: updates
-modified: 2025-08-02
+modified: 2025-08-03
 publish: true
 description: Stay up to date with AfroMedica’s latest news, articles, and achievements.
 ---
@@ -13,18 +13,9 @@ description: Stay up to date with AfroMedica’s latest news, articles, and achi
 
 ---
 
-## Highlights & Milestones
+## Recent highlights
+## Milestones
 
-### September 2025
-- 📖 Published article on **racial bias in pain management**
-- 📰 AfroMedica featured in *De Standaard*
-- 👥 Welcomed new board members: [[Amina]] & [[Kwame]]
-
-### 🗓️ October 2025
-- 🚀 Launched the new **Education Hub**
-- 🗣️ Organized a roundtable on SRHR with CHanGE
-
-*More updates coming soon...*
 
 <div class="timeline">
   <div class="timeline-item">
@@ -51,3 +42,4 @@ description: Stay up to date with AfroMedica’s latest news, articles, and achi
     </div>
   </div>
 </div>
+*More updates coming soon...*
