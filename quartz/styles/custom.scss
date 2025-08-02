@@ -652,3 +652,30 @@ main > *:first-child,
   margin-top: 0 !important;
   align-self: flex-start;
 }
+
+.pathways-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.pathways-grid > div {
+  background-color: var(--lightgray);
+  border-left: 6px solid var(--tertiary);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.pathways-grid > div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.pathways-grid a {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+}
