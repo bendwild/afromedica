@@ -1,6 +1,18 @@
 import { QuartzComponent, QuartzComponentConstructor } from "../types"
 
 const CustomNavbar: QuartzComponent = () => {
+  const currentPath = typeof window !== "undefined" ? window.location.pathname : ""
+
+  const links = [
+    { href: "/About-us/about-us", label: "About Us" },
+    { href: "/Afromedica-Academy/Afromedica-Academy", label: "Afromedica Academy" },
+    { href: "/Afromedica-Talks/Afromedica-Talks", label: "Afromedica Talks" },
+    { href: "/Afromedica-Connects/Afromedica-Connects", label: "Afromedica Connects" },
+    { href: "/Policy/policy", label: "Policy" },
+    { href: "/Team/team", label: "Team" },
+    { href: "/Contact/contact", label: "Contact" },
+  ]
+
   return (
     <nav className="main-navigation">
       <div className="nav-container">
@@ -13,13 +25,19 @@ const CustomNavbar: QuartzComponent = () => {
           </a>
         </div>
         <ul className="nav-menu">
-          <li><a href="/About-us/about-us" className="nav-link">About Us</a></li>
-          <li><a href="/Afromedica-Academy/Afromedica-Academy" className="nav-link">Afromedica Academy</a></li>
-          <li><a href="/Afromedica-Talks/Afromedica-Talks" className="nav-link">Afromedica Talks</a></li>
-          <li><a href="/Afromedica-Connects/Afromedica-Connects" className="nav-link">Afromedica Connects</a></li>
-          <li><a href="/Policy/policy" className="nav-link">Policy</a></li>
-          <li><a href="/Team/team" className="nav-link">Team</a></li>
-          <li><a href="/Contact/contact" className="nav-link">Contact</a></li>
+          {links.map((link) => {
+            const isActive = currentPath === link.href
+            return (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className={`nav-link${isActive ? " active" : ""}`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </nav>
