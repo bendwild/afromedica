@@ -643,3 +643,9 @@ main > *:first-child,
   padding-top: 0 !important;
 }
 
+// === Align sidebars with main content ===
+.sidebar.left,
+.sidebar.right {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
