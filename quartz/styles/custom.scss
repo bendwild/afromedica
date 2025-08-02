@@ -146,8 +146,8 @@ main {
 
 // === Buttons ===
 .button {
-  background-color: var(--tertiary);  /* more vibrant */
-  color: var(--accent);
+  background-color: var(--accent);  /* more vibrant */
+  color: var(--light);
   font-family: 'IBM Plex Serif', serif;
   font-weight: 600;
   padding: 0.6rem 1.2rem;
@@ -724,16 +724,15 @@ main > *:first-child,
 
 .timeline-date {
   position: absolute;
-  left: -90px;
+  left: -80px;
   top: 0;
-  width: 70px;
+  width: 50px;
   color: var(--tertiary);
   font-weight: 700;
   font-size: 1rem;
   text-align: right;
   background-color: var(--light);
   padding: 0.3rem 0.5rem;
-  border-radius: 6px;
   box-shadow: 0 0 8px rgba(180, 99, 122, 0.15);
   pointer-events: none;
   z-index: 2;
