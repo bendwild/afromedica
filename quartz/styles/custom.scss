@@ -83,6 +83,11 @@ html[data-theme="dark"] {
   color: var(--accent);
 }
 
+.nav-link.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 // === Layout ===
 body {
   padding-top: 64px; /* adjusted to match navbar height */
