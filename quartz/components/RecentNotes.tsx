@@ -18,8 +18,8 @@ interface Options {
 }
 
 const defaultOptions = (cfg: GlobalConfiguration): Options => ({
-  limit: 5,
-  linkToMore: "afromedica/Updates",
+  limit: 3,
+  linkToMore: "/Updates",
   showTags: true,
   filter: () => true,
   sort: byDateAndAlphabetical(cfg),
