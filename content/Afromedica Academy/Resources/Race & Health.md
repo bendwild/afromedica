@@ -6,7 +6,7 @@ tags:
   - podcasts
   - racism-and-health
   - english
-  - race-and-health
+  - Race-and-Health
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -25,7 +25,7 @@ tags:
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Creator:</strong></span>
-  <a href="/tags/race-and-health" class="tag">#Race & Health</a>
+  <a href="/tags/Race-and-Health" class="tag">#Race & Health</a>
 </div>
 
 

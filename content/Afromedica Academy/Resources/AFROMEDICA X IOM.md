@@ -1,7 +1,16 @@
 ---
 title: "AfroMedica x IOM: on the importance of culturally sensitive healthcare"
 publish: true
-modified: 2025-07-30
+modified: 2025-08-02
+tags:
+  - interviews
+  - culturally-sensitive-healthcare
+  - english
+  - afromedica
+  - Hanane-El-Kaddouri
+  - Nour-El-Houda-Mazari
+  - from-us-to-you
+  - IOM
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>

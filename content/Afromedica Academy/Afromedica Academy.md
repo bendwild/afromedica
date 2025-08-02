@@ -1,9 +1,47 @@
 ---
 title: 
 publish: true
-tags: 
+tags:
+  - articles
+  - books
+  - interviews
+  - podcasts
+  - research
+  - videos
+  - colonialism
+  - clinical-medicine
+  - culturally-sensitive-healthcare
+  - global-health
+  - health-equity
+  - intersectionality
+  - racism-and-health
+  - Alicia-Williams
+  - Angela-Saini
+  - Deborah-Pemu
+  - Elke-Van-De-Moortel
+  - Fatou-Touré
+  - Geordan-Shannon
+  - Hanane-El-Kaddouri
+  - Jenny-Slatman
+  - Layal-Liverpool
+  - Lidvine-Ngonseu-Harpi
+  - Malone-Mukwende
+  - Margot-Turner
+  - Maria-Saldi
+  - Nour-El-Houda-Mazari
+  - Peter-Tamony
+  - Tinne-Claes
+  - BRUZZ
+  - IOM
+  - Op-Den-Duur
+  - Race-and-Health
+  - Woman-is-present
+  - from-us-to-you
+  - english
+  - dutch
+  - french
 description: 
-modified: 2025-07-28
+modified: 2025-08-02
 ---
 Welcome to **Afromedica Academy**, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
 
