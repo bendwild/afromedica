@@ -653,29 +653,57 @@ main > *:first-child,
   align-self: flex-start;
 }
 
-.pathways-grid {
+.pathways-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.pathways-grid > div {
-  background-color: var(--lightgray);
+.pathway-card {
+  background-color: var(--light);
   border-left: 6px solid var(--tertiary);
-  padding: 1rem 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+  border-radius: 1.5rem;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.3s ease;
 }
 
-.pathways-grid > div:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+.pathway-card:hover {
+  transform: translateY(-4px);
+  background-color: var(--lightgray); /* subtle warm hover background */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-.pathways-grid a {
+.pathway-card h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+
+.pathway-card ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--darkgray);
+  line-height: 1.5;
+}
+
+.cta-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
   color: var(--accent);
-  font-weight: bold;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+.cta-link:hover {
+  color: var(--tertiary);
+  border-bottom: 1px solid var(--tertiary);
 }
