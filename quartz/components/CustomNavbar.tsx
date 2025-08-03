@@ -4,7 +4,7 @@ const CustomNavbar: QuartzComponent = () => {
   const currentPath = typeof window !== "undefined" ? window.location.pathname : ""
 
   const links = [
-    { href: "/About-us/about-us", label: "About Us" },
+    { href: "/About-us/about", label: "About Us" },
     { href: "/Afromedica-Academy/Afromedica-Academy", label: "Afromedica Academy" },
     { href: "/Afromedica-Talks/Afromedica-Talks", label: "Afromedica Talks" },
     { href: "/Afromedica-Connects/Afromedica-Connects", label: "Afromedica Connects" },
@@ -26,7 +26,8 @@ const CustomNavbar: QuartzComponent = () => {
         </div>
         <ul className="nav-menu">
           {links.map((link) => {
-            const isActive = currentPath === link.href
+            const isActive =
+              currentPath === link.href || currentPath.startsWith(link.href + "/")
             return (
               <li key={link.href}>
                 <a
