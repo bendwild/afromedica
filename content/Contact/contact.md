@@ -5,18 +5,17 @@ modified: 2025-08-03
 ---
 AfroMedica welcomes anyone who shares our vision of an equitable, inclusive healthcare system. Below you'll find the best ways to connect with us depending on your query or background.
 
----
 
 <div class="contact-card-grid">
   <div class="contact-card">
     <h3>General queries</h3>
-    <p>Are you looking to collaborate, partner, or invite us for a project? Send us a mail and your message will be reviewed at our general assembly — responses may take up to **4 weeks**.</p>
+    <p>Are you looking to collaborate, partner, or invite us for a project? Send us a mail and your message will be reviewed at our general assembly — responses may take up to 4 weeks.</p>
     <a href="mailto:info.afromedica@gmail.com">📧 info.afromedica@gmail.com</a>
   </div>
 
   <div class="contact-card">
     <h3>Membership & Board involvement</h3>
-    <p>Interested in joining us as a member or applying for the board? Learn more via our <a href="/about-us/membership">membership</a>. page or <a href="/about-us/boardmembers">boardmembers</a> overview and reach out to us!</p>
+    <p>Interested in joining us as a member or applying for the board? Learn more via our <a href="/about/membership">membership</a> page or <a href="/about/boardmembers">boardmembers</a> overview and reach out to us!</p>
     <a href="mailto:connect@afromedica.be">📧 connect@afromedica.be</a>
   </div>
 
@@ -45,13 +44,13 @@ AfroMedica welcomes anyone who shares our vision of an equitable, inclusive heal
     <a href="mailto:vice@afromedica.be">📧 vice@afromedica.be</a>
   </div>
 </div>
----
 
 > [!info]+ Not sure who to contact?
 > No worries — send your question to our general inbox: info.afromedica@gmail.com. We'll direct your message to the right team.
 
+
 ---
 
-Thank you for supporting AfroMedica and [our mission](about)!
+**Thank you for supporting AfroMedica and [our mission](about)!**
 
 
