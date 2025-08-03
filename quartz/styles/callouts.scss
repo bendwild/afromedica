@@ -11,6 +11,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   cursor: pointer;
 
+  // === Default collapsed ===
   &.is-collapsed .callout-content-inner {
     display: none;
   }
@@ -27,6 +28,7 @@
     }
   }
 
+  // === Default theme ===
   &[data-callout] {
     --color: var(--tertiary);
     --border: var(--accent);
@@ -85,7 +87,7 @@
   }
 }
 
-// === Callout Title Bar ===
+// === Callout Title ===
 .callout-title {
   display: flex;
   align-items: center;
@@ -108,14 +110,12 @@
     mask-size: cover;
     mask-repeat: no-repeat;
     mask-position: center;
-    transition: transform 0.2s ease;
     border-radius: 4px;
+    transition: transform 0.2s ease;
   }
 
   .fold-callout-icon {
     opacity: 0.8;
-    transform: rotate(0deg);
-    transition: transform 0.2s ease;
 
     .is-collapsed & {
       transform: rotate(-90deg);
