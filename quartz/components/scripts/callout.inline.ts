@@ -1,26 +1,25 @@
 function toggleCallout(this: HTMLElement) {
-  const outerBlock = this.parentElement!
-  outerBlock.classList.toggle("is-collapsed")
-  const content = outerBlock.getElementsByClassName("callout-content")[0] as HTMLElement
-  if (!content) return
-  const collapsed = outerBlock.classList.contains("is-collapsed")
-  content.style.gridTemplateRows = collapsed ? "0fr" : "1fr"
+  const callout = this.closest(".callout")
+  if (!callout) return
+  callout.classList.toggle("is-collapsed")
 }
 
 function setupCallout() {
-  const collapsible = document.getElementsByClassName(
-    `callout is-collapsible`,
-  ) as HTMLCollectionOf<HTMLElement>
-  for (const div of collapsible) {
-    const title = div.getElementsByClassName("callout-title")[0] as HTMLElement
-    const content = div.getElementsByClassName("callout-content")[0] as HTMLElement
-    if (!title || !content) continue
+  const callouts = document.querySelectorAll<HTMLElement>(".callout.is-collapsible")
 
-    title.addEventListener("click", toggleCallout)
-    window.addCleanup(() => title.removeEventListener("click", toggleCallout))
+  for (const callout of callouts) {
+    // Ensure all callouts start collapsed
+    callout.classList.add("is-collapsed")
 
-    const collapsed = div.classList.contains("is-collapsed")
-    content.style.gridTemplateRows = collapsed ? "0fr" : "1fr"
+    callout.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement
+      // Prevent toggle if a link or its child was clicked
+      if (target.closest("a")) return
+      toggleCallout.call(callout)
+    })
+
+    // Register cleanup if supported
+    window.addCleanup?.(() => callout.removeEventListener("click", toggleCallout))
   }
 }
 
