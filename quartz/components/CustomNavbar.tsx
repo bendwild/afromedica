@@ -26,7 +26,8 @@ const CustomNavbar: QuartzComponent = () => {
         </div>
         <ul className="nav-menu">
           {links.map((link) => {
-            const isActive = currentPath === link.href
+            const isActive =
+              currentPath === link.href || currentPath.startsWith(link.href + "/")
             return (
               <li key={link.href}>
                 <a
