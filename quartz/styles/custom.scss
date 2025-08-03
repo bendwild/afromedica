@@ -86,6 +86,7 @@ html[data-theme="dark"] {
 .nav-link.active {
   color: var(--accent);
   font-weight: 700;
+  border-bottom: 2px solid var(--accent); /* optional */
 }
 
 // === Layout ===
