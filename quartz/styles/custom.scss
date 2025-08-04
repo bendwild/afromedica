@@ -891,4 +891,39 @@ main {
   width: 100% !important;
 }
 
+/* Remove right sidebar entirely */
+.page-columns > .right,
+.sidebar.right {
+  display: none !important;
+}
+
+/* Restructure layout: 1 column for left sidebar, rest for center */
+.page-columns {
+  display: grid !important;
+  grid-template-columns: 1fr minmax(0, 1fr) !important;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Force center to take full space */
+.page-columns > .center {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex-grow: 1 !important;
+  grid-column: 2 / 3 !important;
+  display: block !important;
+}
+
+/* Override nested content containers inside center */
+.center > *,
+.center > article,
+.center main,
+main {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 
