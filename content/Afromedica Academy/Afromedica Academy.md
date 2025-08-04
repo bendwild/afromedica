@@ -59,6 +59,7 @@ tags:
   - _2023_
   - _2024_
   - _2025_
+  - jacqueline-nwando-olayiwola
 description: Welcome to Afromedica Academy, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
 modified: 2025-08-04
 ---
@@ -121,6 +122,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
   <a href="/tags/Fatou-Touré" class="tag">#Fatou Touré</a>
   <a href="/tags/Geordan-Shannon" class="tag">#Geordan Shannon</a>
   <a href="/tags/Hanane-El-Kaddouri" class="tag">#Hanane El-Kaddouri</a>
+  <a href="/tags/jacqueline-nwando-olayiwola" class="tag">#Jacqueline Nwando Olawiyola</a>
   <a href="/tags/Jenny-Slatman" class="tag">#Jenny Slatman</a>
   <a href="/tags/Layal-Liverpool" class="tag">#Layal Liverpool</a>
   <a href="/tags/Lidvine-Ngonseu-Harpi" class="tag">#Lidvine Ngonseu Harpi</a>
@@ -140,10 +142,13 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 <div class="tag-scroll">
   <a href="/tags/afromedica" class="tag">#AfroMedica</a>
   <a href="/tags/BRUZZ" class="tag">#BRUZZ</a>
+  <a href="/tags/instituut-voor-tropische-geneeskunde" class="tag">#Instituut voor tropische geneeskunde</a>
   <a href="/tags/IOM" class="tag">#IOM</a>
+  <a href="/tags/kif-kif" class="tag">#Kif Kif</a>
   <a href="/tags/Op-Den-Duur" class="tag">#Op Den Duur</a>
   <a href="/tags/Race-and-Health" class="tag">#Race and Health</a>
   <a href="/tags/Rebelle" class="tag">#Rebelle</a>
+  <a href="/tags/tedx" class="tag">#TedX</a>
   <a href="/tags/woman-is-present" class="tag">#Woman is present</a>
 </div>
 
@@ -173,6 +178,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
   <a href="/tags/_2025_" class="tag">#2025</a>
 </div>
 
+---
 ## How You Can Contribute
 
 Do you have a suggestion to add to the library? Click below to suggest a resource! 
