@@ -7,7 +7,7 @@ description:
 modified: 2025-08-04
 ---
 <div class="inline-profile">
-  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Nour El-Houda Mazari" />
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
   <div class="intro-text">
   
 ## Hey there!
@@ -15,12 +15,11 @@ modified: 2025-08-04
 Introductory text. Talk about who you are and why you joined AfroMedica. 
 
 ## [Taskforces](taskforces) I'm involved in!
-
-- Finances
+- Internal administration
 
 
 ## Contact me!
-- 📧 [nourelhouda.mazari@afromedica.be](mailto:nourelhouda.mazari@afromedica.be)
+- 📧 [sarah.derveeuw@afromedica.be](mailto:sarah.derveeuw@afromedica.be)
 
 
 ## Follow me!

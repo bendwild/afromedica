@@ -46,7 +46,6 @@ tags:
 
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/5Drm1ktIYPXvaYyHMjZm5D?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-## Description
 Op Den Duur is een podcast door PXL Green Office. Hierin praten studenten met diverse gastsprekers, of met elkaar, over thema's rond duurzaamheid. Ons doel is om mensen, niet alleen studenten, te informeren, motiveren en activeren tot het nemen van stappen richting een duurzamere wereld.
 
 In deze aflevering spreken Aaron en Sinan met [[Lidvine Ngonseu Harpi]] en Elke Van de Moortel over discriminatie in de zorgsector. Er wordt gesproken over hoe discriminatie optreed en hoe dit probleem verholpen kan worden.

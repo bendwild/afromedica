@@ -1,7 +1,7 @@
 ---
 title: 
 publish: true
-modified: 2025-08-02
+modified: 2025-08-04
 tags:
   - podcasts
   - racism-and-health
@@ -28,11 +28,6 @@ tags:
   <a href="/tags/Alicia-Williams" class="tag">#Alicia Williams</a>
 </div>
 
-## Cover
-![[Pasted image 20250728011358.png]]
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/6Zd4fIZZjhK5ld4zT7fCJO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-## Description
 Welcome to Medicine In Color, a platform that uplifts the voices of women and men of color in medicine through honest dialog, inspiring stories and full transparency about who we are and what it takes to get it!
-
-## Link
-["Medicine in color" by Alicia M. Williams](https://open.spotify.com/show/6Zd4fIZZjhK5ld4zT7fCJO?si=9079f8c2c0154f91)

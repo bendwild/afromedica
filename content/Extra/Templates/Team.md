@@ -21,7 +21,7 @@ Introductory text. Talk about who you are and why you joined AfroMedica.
 
 
 ## Contact me!
-- 📧
+- 📧 [voornaamnaam.achternaam@afromedica.be](mailto:voornaam.achternaam@afromedica.be)
 
 
 ## Follow me!

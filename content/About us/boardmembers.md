@@ -17,6 +17,4 @@ If you feel at home in one of the taskforces you can press join which will take 
 ---
 
 > [!attention]+ Are you politically involved?
-> We have historically tried to keep our distance from any type of political involvement. However, this does not exclude you from becoming a board member. Fill in the [form](application) and we will discuss how we can make this work!
-
----
+> We have historically tried to keep our distance from any type of political involvement. However, **this does not exclude you** from becoming a board member. Fill in the [form](application) and we will discuss how we can make this work!

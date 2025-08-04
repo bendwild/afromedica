@@ -21,14 +21,14 @@ My name is Benjamin and I'm a medical doctor with a passion for global health. I
 ## [Taskforces](taskforces) I'm involved in!
 
 - [[Afromedica Academy]]
-- internal administration
+- Internal administration
 
 
 ---
 
 
 ## Contact me! 
-- 📧 [benjamin.dewilde@afromedica.be](mailto:benjamin.dewilde@gmail.com)
+- 📧 [benjamin.dewilde@afromedica.be](mailto:benjamin.dewilde@afromedica.be)
 
 
 ---

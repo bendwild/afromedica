@@ -46,7 +46,6 @@ tags:
 
 ---
 
-https://open.spotify.com/episode/26U8PgWZn9QwvJQ7LAXdXV?si=0dc1541b73654689
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/26U8PgWZn9QwvJQ7LAXdXV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-## Description
 Doctor in de psychologie Ama Kissi, huisarts in opleiding [[Hanane El Kaddouri]] (Afromedica), en verpleegkundige in de cardiologie Deborah Pemu (Afromedica) spreken over hoe seksisme en racisme leiden tot structurele ongelijkheid in de gezondheidszorg. We belichten hoe de gezondheidszorg is gebaseerd op koloniale principes, en hoe die vandaag nog doorwerken. We delen cijfers en onderzoeken, maar ook persoonlijke pijnen en ervaringen. En we staan stil bij de vraag naar heling: _can you selfcare your way out of an oppresive system?_
