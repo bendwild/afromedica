@@ -1,5 +1,5 @@
 ---
-title: Apply to become a boardmember
+title: Boardmember application
 publish: true
 tags: 
 description: 

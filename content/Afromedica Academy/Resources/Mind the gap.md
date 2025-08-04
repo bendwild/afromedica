@@ -1,7 +1,7 @@
 ---
 title: 
 publish: true
-modified: 2025-08-02
+modified: 2025-08-04
 tags:
   - books
   - clinical-medicine
@@ -11,6 +11,8 @@ tags:
   - Malone-Mukwende
   - Peter-Tamony
   - Margot-Turner
+  - professionals
+  - students
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -36,6 +38,11 @@ tags:
   <a href="/tags/Margot-Turner" class="tag">#Margot Turner</a>
 </div>
 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Target group:</strong></span>
+  <a href="/tags/professionals" class="tag">#Professionals</a>
+  <a href="/tags/students" class="tag">#Students</a>
+</div>
 ## Cover
 ![[Pasted image 20250727232007.png]]
 

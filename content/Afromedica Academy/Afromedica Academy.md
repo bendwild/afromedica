@@ -44,8 +44,14 @@ tags:
   - Ann-Claeys
   - dermatology
   - Rebelle
-description: 
-modified: 2025-08-03
+  - kif-kif
+  - afromedica
+  - instituut-voor-tropische-geneeskunde
+  - students
+  - professionals
+  - patients
+description: Welcome to Afromedica Academy, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
+modified: 2025-08-04
 ---
 Welcome to **Afromedica Academy**, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
 
@@ -123,6 +129,7 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 ## Explore by Organisation
 
 <div class="tag-scroll">
+  <a href="/tags/afromedica" class="tag">#AfroMedica</a>
   <a href="/tags/BRUZZ" class="tag">#BRUZZ</a>
   <a href="/tags/IOM" class="tag">#IOM</a>
   <a href="/tags/Op-Den-Duur" class="tag">#Op Den Duur</a>
@@ -133,13 +140,14 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 
 ---
 
-## From us to you
-
+## Explore by target group
 <div class="tag-scroll">
-  <a href="/tags/from-us-to-you" class="tag">#from-us-to-you</a>
+  <a href="/tags/students" class="tag">#Students</a>
+  <a href="/tags/professionals" class="tag">#Professionals</a>
+  <a href="/tags/patients" class="tag">#Patients</a>
 </div>
 
-"From us to you” entails the diverse inputs and works of AfroMedica team (board)members concerning our own specific interests and specialities, but also lived experiences as students and workers within healthcare in Belgium.
+*we only add a target group tag if we believe the resource is only useful for this group*
 
 ---
 

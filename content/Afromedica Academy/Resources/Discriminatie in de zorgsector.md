@@ -9,7 +9,7 @@ tags:
   - Op-Den-Duur
   - Lidvine-Ngonseu-Harpi
   - Elke-Van-De-Moortel
-  - from-us-to-you
+  - afromedica
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -27,8 +27,9 @@ tags:
 </div>
 
 <div class="tags-group">
-  <span class="tag-scroll-title"><strong>Podcast:</strong></span>
+  <span class="tag-scroll-title"><strong>Organisation:</strong></span>
   <a href="/tags/Op-Den-Duur" class="tag">#Op Den Duur</a>
+  <a href="/tags/afromedica" class="tag">#AfroMedica</a>
 </div>
 
 <div class="tags-group">
@@ -37,10 +38,6 @@ tags:
   <a href="/tags/Elke-Van-De-Moortel" class="tag">#Elke Van De Moortel</a>
 </div>
 
-<div class="tags-group">
-  <span class="tag-scroll-title"><strong>From us to you:</strong></span>
-  <a href="/tags/from-us-to-you" class="tag">#From us to you</a>
-</div>
 
 ---
 

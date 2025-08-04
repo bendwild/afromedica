@@ -1,5 +1,5 @@
 ---
-title: Register to become a member!
+title: Membership registration
 publish: true
 tags: 
 description: 

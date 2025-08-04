@@ -10,7 +10,7 @@ tags:
   - Rebelle
   - Hanane-El-Kaddouri
   - Tinne-Claes
-  - from-us-to-you
+  - afromedica
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -31,17 +31,13 @@ tags:
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Organisation:</strong></span>
   <a href="/tags/rebelle" class="tag">#Rebelle</a>
+  <a href="/tags/afromedica" class="tag">#AfroMedica</a>
 </div>
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Guests:</strong></span>
   <a href="/tags/Hanane-El-Kaddouri" class="tag">#Hanane El-Kaddouri</a>
   <a href="/tags/Tinne-Claes" class="tag">#Tinne Claes</a>
-</div>
-
-<div class="tags-group">
-  <span class="tag-scroll-title"><strong>From us to you:</strong></span>
-  <a href="/tags/from-us-to-you" class="tag">#From us to you</a>
 </div>
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Raciale vooroordelen in de zorg: 'Omdat ik zwart ben, denkt mijn arts dat ik sterk ben'"
 publish: true
-modified: 2025-08-02
+modified: 2025-08-04
 tags:
   - articles
   - racism-and-health
@@ -10,7 +10,7 @@ tags:
   - Maria-Saldi
   - Hanane-El-Kaddouri
   - Fatou-Touré
-  - from-us-to-you
+  - afromedica
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -30,6 +30,7 @@ tags:
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Organisation:</strong></span>
   <a href="/tags/BRUZZ" class="tag">#BRUZZ</a>
+  <a href="/tags/afromedica" class="tag">#AfroMedica</a>
 </div>
 
 <div class="tags-group">
@@ -43,10 +44,6 @@ tags:
   <a href="/tags/Fatou-Touré" class="tag">#Fatou Touré</a>
 </div>
 
-<div class="tags-group">
-  <span class="tag-scroll-title"><strong>From us to you:</strong></span>
-  <a href="/tags/from-us-to-you" class="tag">#From us to you</a>
-</div>
 ## Cover
 
 ## Description

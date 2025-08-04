@@ -1,13 +1,14 @@
 ---
 title: 
 publish: true
-modified: 2025-08-02
+modified: 2025-08-04
 tags:
   - culturally-sensitive-healthcare
   - dutch
   - books
   - Saloua-Berdai-Chaouni
   - Ann-Claeys
+  - professionals
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -30,6 +31,10 @@ tags:
   <a href="/tags/Ann-Claeys" class="tag">#Ann Claeys</a>
 </div>
 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Target group:</strong></span>
+  <a href="/tags/professionals" class="tag">#Professionals</a>
+</div>
 ## Cover
 ![[Pasted image 20250727231150.png]]
 

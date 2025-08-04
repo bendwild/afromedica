@@ -1,14 +1,17 @@
 ---
 title: 
 publish: true
-modified: 2025-08-02
+modified: 2025-08-04
 tags:
   - articles
   - intersectionality
   - racism-and-health
   - dutch
   - Lidvine-Ngonseu-Harpi
-  - from-us-to-you
+  - afromedica
+  - instituut-voor-tropische-geneeskunde
+  - professionals
+  - students
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -32,10 +35,16 @@ tags:
 </div>
 
 <div class="tags-group">
-  <span class="tag-scroll-title"><strong>From us to you:</strong></span>
-  <a href="/tags/from-us-to-you" class="tag">#From us to you</a>
+  <span class="tag-scroll-title"><strong>Organisation:</strong></span>
+  <a href="/tags/afromedica" class="tag">#AfroMedica</a>
+  <a href="/tags/instituut-voor-tropische-geneeskunde" class="tag">#Instituut voor tropische geneeskunde</a>
 </div>
 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Target group:</strong></span>
+  <a href="/tags/professionals" class="tag">#Professionals</a>
+  <a href="/tags/students" class="tag">#Students</a>
+</div>
 ## Description
 [[Lidvine Ngonseu Harpi]], een van onze oprichters en laatstejaars studente geneeskunde, schreef na haar tijd in het RECoRD-onderzoeksteam (Race and Ethnic Conscious Research and Data) bij het Tropisch Instituut van Geneeskunde haar belangrijke bevindingen en reflecties neer.  
   
