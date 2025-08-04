@@ -848,3 +848,16 @@ hr {
   border: none;
   border-top: 1px solid var(--gray); /* Or your preferred color */
 }
+
+/* === Align center, left and right columns === */
+#quartz-body .center,
+#quartz-body .sidebar.left,
+#quartz-body .sidebar.right {
+  max-width: 1200px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+}
+
