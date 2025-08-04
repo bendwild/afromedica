@@ -28,7 +28,7 @@ tags:
 
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Guest speaker:</strong></span>
-  <a href="/tags/#jacqueline-nwando-olayiwola" class="tag"># Jacqueline Nwando Olayiwola</a>
+  <a href="/tags/jacqueline-nwando-olayiwola" class="tag">#Jacqueline Nwando Olayiwola</a>
 </div>
 
 <div class="tags-group">
@@ -48,8 +48,4 @@ tags:
 
 ---
 
-<div class="recent-notes">
-  <h3># Combating Racism and Place-ism in Medicine | J. Nwando Olayiwola | TEDxKingLincolnBronzeville</h3>
-  <iframe width="100%" height="315" src="https://www.youtube.com/watch?v=0bnm__UPTRM" frameborder="0"
-    allowfullscreen style="border-radius: 1rem;"></iframe>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0bnm__UPTRM?si=ZSy0ToMvg_IZOlhE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -63,7 +63,10 @@ tags:
 description: Welcome to Afromedica Academy, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
 modified: 2025-08-04
 ---
-Welcome to **Afromedica Academy**, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
+<div class="hero">
+  <h2>Welcome to Afromedica Academy!</h2>
+  <p>This is a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.</p>
+</div>
 
 > [!info]+ How to navigate Afromedica Academy?
 > 1. We use **#tags** to add a subject and media type to all of our resources. You can click on a tag to find other resources that have the same tags!
