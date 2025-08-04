@@ -956,8 +956,9 @@ main {
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  grid-column: 2 / 3 !important;
+  grid-column: 2 / -1 !important;
 }
+
 
 /* === Force center content to fill width === */
 .center,
