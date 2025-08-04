@@ -883,6 +883,12 @@ hr {
   flex-grow: 1 !important;
 }
 
-
+.center > *,
+.center > article,
+.center main,
+main {
+  max-width: 100% !important;
+  width: 100% !important;
+}
 
 
