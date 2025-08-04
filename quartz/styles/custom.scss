@@ -869,3 +869,21 @@ hr {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
+/* DEBUG: Add outline to each main area */
+#quartz-body {
+  outline: 4px solid red;
+}
+
+#quartz-body .sidebar.left {
+  outline: 4px solid blue;
+}
+
+#quartz-body .center {
+  outline: 4px solid green;
+}
+
+#quartz-body .sidebar.right {
+  outline: 4px solid orange;
+}
+
