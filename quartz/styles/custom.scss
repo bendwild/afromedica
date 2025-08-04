@@ -850,13 +850,17 @@ hr {
 }
 
 /* === Align center, left and right columns === */
-
-/* === FINAL FIX: Align left, center, and right columns under navbar === */
-
-/* === Align left, center, and right columns under navbar === */
 #quartz-body .sidebar.left,
-#quartz-body .center,
-#quartz-body .sidebar.right {
-  margin-top: 1rem !important;
+#quartz-body .sidebar.right,
+#quartz-body .center {
+  padding-top: 1rem !important;
+  margin-top: 0 !important;
+}
+
+/* Remove inherited spacing from inner children */
+#quartz-body .sidebar.left > *,
+#quartz-body .sidebar.right > *,
+#quartz-body .center > * {
+  margin-top: 0 !important;
   padding-top: 0 !important;
 }
