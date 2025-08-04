@@ -1,7 +1,7 @@
 ---
 title: "Rebelle Openhartig Live: Seksisme en racisme in de gezondheidszorg"
 publish: true
-modified: 2025-08-02
+modified: 2025-08-04
 tags:
   - podcasts
   - intersectionality
@@ -44,12 +44,10 @@ tags:
   <a href="/tags/from-us-to-you" class="tag">#From us to you</a>
 </div>
 
-## Cover
-![[Pasted image 20250727214330.png]]
+---
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/5fJZ2OXCHFUmI4yak2fon4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ## Description
-Deze aflevering werd live met publiek opgenomen, op 10 maart 2025 in het Muntpunt in Brussel. [**Lady Blaxx**](https://ladyblaxx.com/) bracht een live akoestische versie van 'Rebellenhart', het lied van de podcast. **Kelia** knoopte het gesprek aan met gasten **Tinne Claes en Hanane El Kaddouri**. Waar komen de gender- en raciale bias vandaan? En wat kunnen we eraan doen? Hoe effenen we het pad naar een inclusieve gezondheidszorg? Beluister hun boeiende gesprek.
-
-## Link
-["Rebelle Openhartig Live: Seksisme en racisme in de gezondheidszorg" by Rebelle](https://open.spotify.com/episode/5fJZ2OXCHFUmI4yak2fon4?si=012352b4b2f6454a)
+Deze aflevering werd live met publiek opgenomen, op 10 maart 2025 in het Muntpunt in Brussel. [**Lady Blaxx**](https://ladyblaxx.com/) bracht een live akoestische versie van 'Rebellenhart', het lied van de podcast. **Kelia** knoopte het gesprek aan met gasten **Tinne Claes en [[Hanane El Kaddouri]]. Waar komen de gender- en raciale bias vandaan? En wat kunnen we eraan doen? Hoe effenen we het pad naar een inclusieve gezondheidszorg? Beluister hun boeiende gesprek.
 

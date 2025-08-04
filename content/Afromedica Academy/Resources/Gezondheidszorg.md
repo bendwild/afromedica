@@ -1,7 +1,7 @@
 ---
 title: "Woman is present: Gezondheidszorg"
 publish: true
-modified: 2025-08-02
+modified: 2025-08-04
 tags:
   - podcasts
   - racism-and-health
@@ -44,11 +44,9 @@ tags:
   <a href="/tags/from-us-to-you" class="tag">#From us to you</a>
 </div>
 
-## Cover
-![[Pasted image 20250727214833.png]]
+---
+
+https://open.spotify.com/episode/26U8PgWZn9QwvJQ7LAXdXV?si=0dc1541b73654689
 
 ## Description
 Doctor in de psychologie Ama Kissi, huisarts in opleiding [[Hanane El Kaddouri]] (Afromedica), en verpleegkundige in de cardiologie Deborah Pemu (Afromedica) spreken over hoe seksisme en racisme leiden tot structurele ongelijkheid in de gezondheidszorg. We belichten hoe de gezondheidszorg is gebaseerd op koloniale principes, en hoe die vandaag nog doorwerken. We delen cijfers en onderzoeken, maar ook persoonlijke pijnen en ervaringen. En we staan stil bij de vraag naar heling: _can you selfcare your way out of an oppresive system?_
-
-## Link
-["Gezondheidszorg" by Woman is present // Work in progress](https://www.podbean.com/media/share/pb-88tgf-15f7b46)
