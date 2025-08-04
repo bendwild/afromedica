@@ -863,3 +863,14 @@ hr {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
+/* Hide right sidebar completely */
+.sidebar.right {
+  display: none !important;
+}
+
+/* Adjust center column to fill remaining space */
+.page-columns {
+  grid-template-columns: 1fr 3fr !important; /* left : center ratio */
+}
+
