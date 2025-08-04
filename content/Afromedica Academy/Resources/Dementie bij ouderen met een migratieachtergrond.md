@@ -9,6 +9,7 @@ tags:
   - Saloua-Berdai-Chaouni
   - Ann-Claeys
   - professionals
+  - _2021_
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -34,6 +35,11 @@ tags:
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Target group:</strong></span>
   <a href="/tags/professionals" class="tag">#Professionals</a>
+</div>
+
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Year:</strong></span>
+  <a href="/tags/_2021_" class="tag">#2021</a>
 </div>
 ## Cover
 ![[Pasted image 20250727231150.png]]

@@ -11,6 +11,7 @@ tags:
   - Hanane-El-Kaddouri
   - Fatou-Touré
   - afromedica
+  - _2025_
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -42,6 +43,11 @@ tags:
   <span class="tag-scroll-title"><strong>Guests:</strong></span>
   <a href="/tags/Hanane-El-Kaddouri" class="tag">#Hanane El-Kaddouri</a>
   <a href="/tags/Fatou-Touré" class="tag">#Fatou Touré</a>
+</div>
+
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Year:</strong></span>
+  <a href="/tags/_2025_" class="tag">#2025</a>
 </div>
 
 ## Cover

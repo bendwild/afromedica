@@ -50,6 +50,15 @@ tags:
   - students
   - professionals
   - patients
+  - researchers
+  - _2018_
+  - _2019_
+  - _2020_
+  - _2021_
+  - _2022_
+  - _2023_
+  - _2024_
+  - _2025_
 description: Welcome to Afromedica Academy, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
 modified: 2025-08-04
 ---
@@ -141,18 +150,31 @@ Welcome to **Afromedica Academy**, a curated space where we provide a reliable s
 ---
 
 ## Explore by target group
+
 <div class="tag-scroll">
   <a href="/tags/students" class="tag">#Students</a>
   <a href="/tags/professionals" class="tag">#Professionals</a>
   <a href="/tags/patients" class="tag">#Patients</a>
+  <a href="/tags/researchers" class="tag">#Researchers</a>
 </div>
 
-*we only add a target group tag if we believe the resource is only useful for this group*
-
 ---
+
+## Explore by year
+
+<div class="tag-scroll">
+  <a href="/tags/_2018" class="tag">#2018</a>
+  <a href="/tags/_2019_" class="tag">#2019</a>
+  <a href="/tags/_2020_" class="tag">#2020</a>
+  <a href="/tags/_2021_" class="tag">#2021</a>
+  <a href="/tags/_2022_" class="tag">#2022</a>
+  <a href="/tags/_2023_" class="tag">#2023</a>
+  <a href="/tags/_2024_" class="tag">#2024</a>
+  <a href="/tags/_2025_" class="tag">#2025</a>
+</div>
 
 ## How You Can Contribute
 
 Do you have a suggestion to add to the library? Click below to suggest a resource! 
 
-<a class="button" href="/join">Suggest a resource →</a>
+<a class="button" href="/Afromedica Academy/Suggestions">Suggest a resource →</a>

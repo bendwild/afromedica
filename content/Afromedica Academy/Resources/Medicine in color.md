@@ -7,6 +7,7 @@ tags:
   - racism-and-health
   - english
   - Alicia-Williams
+  - _2018_
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -26,6 +27,11 @@ tags:
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Creator:</strong></span>
   <a href="/tags/Alicia-Williams" class="tag">#Alicia Williams</a>
+</div>
+
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Year:</strong></span>
+  <a href="/tags/_2018_" class="tag">#2018</a>
 </div>
 
 ---

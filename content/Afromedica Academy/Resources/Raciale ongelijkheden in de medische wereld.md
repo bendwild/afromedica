@@ -12,6 +12,7 @@ tags:
   - instituut-voor-tropische-geneeskunde
   - professionals
   - students
+  - _2023_
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -44,6 +45,11 @@ tags:
   <span class="tag-scroll-title"><strong>Target group:</strong></span>
   <a href="/tags/professionals" class="tag">#Professionals</a>
   <a href="/tags/students" class="tag">#Students</a>
+</div>
+
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Year:</strong></span>
+  <a href="/tags/_2023_" class="tag">#2023</a>
 </div>
 ## Description
 [[Lidvine Ngonseu Harpi]], een van onze oprichters en laatstejaars studente geneeskunde, schreef na haar tijd in het RECoRD-onderzoeksteam (Race and Ethnic Conscious Research and Data) bij het Tropisch Instituut van Geneeskunde haar belangrijke bevindingen en reflecties neer.  

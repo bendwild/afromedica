@@ -1,12 +1,13 @@
 ---
 title: "Superior: The Return of Race Science"
 publish: true
-modified: 2025-08-02
+modified: 2025-08-04
 tags:
   - books
   - racism-and-health
   - english
   - Angela-Saini
+  - _2019_
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -27,6 +28,12 @@ tags:
   <span class="tag-scroll-title"><strong>Author:</strong></span>
   <a href="/tags/Angela-Saini" class="tag">#Angela Saini</a>
 </div>
+
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Year:</strong></span>
+  <a href="/tags/_2019_" class="tag">#2019</a>
+</div>
+
 ## Cover
 ![[Pasted image 20250727211834.png]]
 

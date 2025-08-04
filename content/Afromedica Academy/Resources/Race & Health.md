@@ -7,6 +7,7 @@ tags:
   - racism-and-health
   - english
   - Race-and-Health
+  - _2021_
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -26,6 +27,11 @@ tags:
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Creator:</strong></span>
   <a href="/tags/Race-and-Health" class="tag">#Race & Health</a>
+</div>
+
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Year:</strong></span>
+  <a href="/tags/_2021_" class="tag">#2021</a>
 </div>
 
 ---

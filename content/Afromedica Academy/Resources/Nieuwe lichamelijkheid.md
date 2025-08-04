@@ -1,13 +1,14 @@
 ---
 title: 
 publish: true
-modified: 2025-08-02
+modified: 2025-08-04
 tags:
   - books
   - intersectionality
   - racism-and-health
   - dutch
   - Jenny-Slatman
+  - _2024_
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -30,6 +31,10 @@ tags:
   <a href="/tags/Jenny-Slatman" class="tag">#Jenny Slatman</a>
 </div>
 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Year:</strong></span>
+  <a href="/tags/_2024_" class="tag">#2024</a>
+</div>
 ## Cover
 ![[Pasted image 20250727215213.png]]
 

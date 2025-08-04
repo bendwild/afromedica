@@ -9,6 +9,7 @@ tags:
   - Geordan-Shannon
   - professionals
   - students
+  - _2022_
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -34,6 +35,11 @@ tags:
   <span class="tag-scroll-title"><strong>Target group:</strong></span>
   <a href="/tags/professionals" class="tag">#Professionals</a>
   <a href="/tags/students" class="tag">#Students</a>
+</div>
+
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Year:</strong></span>
+  <a href="/tags/_2022_" class="tag">#2022</a>
 </div>
 
 ## Description

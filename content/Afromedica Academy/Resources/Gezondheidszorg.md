@@ -11,6 +11,7 @@ tags:
   - Hanane-El-Kaddouri
   - Deborah-Pemu
   - afromedica
+  - _2024_
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -38,6 +39,11 @@ tags:
   <span class="tag-scroll-title"><strong>Guests:</strong></span>
   <a href="/tags/Hanane-El-Kaddouri" class="tag">#Hanane El-Kaddouri</a>
   <a href="/tags/Deborah-Pemu" class="tag">#Deborah Pemu</a>
+</div>
+
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Year:</strong></span>
+  <a href="/tags/_2024_" class="tag">#2024</a>
 </div>
 
 ---

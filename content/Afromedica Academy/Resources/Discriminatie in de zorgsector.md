@@ -10,6 +10,7 @@ tags:
   - Lidvine-Ngonseu-Harpi
   - Elke-Van-De-Moortel
   - afromedica
+  - _2023_
 ---
 <div class="tags-group">
   <span class="tag-scroll-title"><strong>Media:</strong></span>
@@ -38,6 +39,10 @@ tags:
   <a href="/tags/Elke-Van-De-Moortel" class="tag">#Elke Van De Moortel</a>
 </div>
 
+<div class="tags-group">
+  <span class="tag-scroll-title"><strong>Year:</strong></span>
+  <a href="/tags/_2023_" class="tag">#2023</a>
+</div>
 
 ---
 
