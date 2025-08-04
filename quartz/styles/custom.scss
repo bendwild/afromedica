@@ -851,32 +851,28 @@ hr {
 
 /* === Align center, left and right columns === */
 
+/* === FINAL FIX: Align left, center, and right columns under navbar === */
+
 #quartz-body {
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  width: 100%;
+  column-gap: 2rem !important;
+  padding-top: 0 !important;
+}
+
+#quartz-body .sidebar.left,
+#quartz-body .sidebar.right,
+#quartz-body .center {
+  padding-top: 1.5rem !important;
+  margin-top: 0 !important;
   box-sizing: border-box;
 }
 
 #quartz-body .sidebar.left,
-#quartz-body .center,
 #quartz-body .sidebar.right {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin: 0 !important;
-  box-sizing: border-box;
+  width: 260px;
 }
 
-.page-columns,
-.page-columns > .left,
-.page-columns > .center,
-.page-columns > .right {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  box-sizing: border-box;
-  width: 100%;
+#quartz-body .center {
+  max-width: 100%;
 }
