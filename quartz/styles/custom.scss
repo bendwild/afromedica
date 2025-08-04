@@ -863,31 +863,3 @@ hr {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
-
-/* Hide right sidebar completely */
-.sidebar.right {
-  display: none !important;
-}
-
-/* Expand center column now that right sidebar is gone */
-.page-columns {
-  display: grid !important;
-  grid-template-columns: 1fr 4fr !important; /* left : center */
-  gap: 2rem; /* or adjust spacing between left and center */
-}
-
-/* Optional: Ensure full width inside the center column */
-.page-columns > .center {
-  width: 100% !important;
-  max-width: 100% !important;
-  flex-grow: 1 !important;
-}
-
-.center > *,
-.center > article,
-.center main,
-main {
-  max-width: 100% !important;
-  width: 100% !important;
-}
-
