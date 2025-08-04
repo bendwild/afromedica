@@ -842,3 +842,9 @@ main > *:first-child,
 .contact-card a:hover {
   color: var(--accent);
 }
+
+hr {
+  margin: 2rem 0; /* Adds vertical space above and below */
+  border: none;
+  border-top: 1px solid var(--gray); /* Or your preferred color */
+}
