@@ -644,33 +644,6 @@ main > *:first-child,
   color: var(--light);
 }
 
-// === Fix excess space under navbar ===
-.page-header,
-#quartz-body > .center,
-main,
-main > *:first-child,
-.page-columns,
-.page-columns > *:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-// Also eliminate any outer spacing on article content
-.center > article {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-// === Align sidebars with main content ===
-.sidebar.left,
-.sidebar.right,
-#quartz-body .sidebar.left,
-#quartz-body .sidebar.right {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  align-self: flex-start;
-}
-
 .pathways-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -790,9 +763,6 @@ main > *:first-child,
   border-radius: 12px;
 }
 
-.sidebar.left,
-.sidebar.right {
-  padding-top: 2rem !important;
 }
 
 .contact-card-grid {
@@ -849,34 +819,35 @@ hr {
   border-top: 1px solid var(--gray); /* Or your preferred color */
 }
 
-/* === Fix inconsistent top spacing under navbar for all columns === */
-#quartz-body .center > main {
+/* Align left, center, and right columns under the navbar */
+.page-columns > .left,
+.page-columns > .center,
+.page-columns > .right {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* 🔧 Universal fix: eliminate all top margin/padding from nested children */
-#quartz-body .sidebar.left,
-#quartz-body .sidebar.right,
-#quartz-body .center {
+/* Reset top spacing for the first visible child in each column */
+.page-columns > .left > *:first-child,
+.page-columns > .center > *:first-child,
+.page-columns > .right > *:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* Remove spacing from nested content wrappers */
-#quartz-body .center > main,
-#quartz-body .center > main > .page,
-#quartz-body .center > main > .page > .content-page,
-#quartz-body .center > main > .page > .content-page > article,
-#quartz-body .center > main > *:first-child,
-#quartz-body .center > *:first-child {
+/* Recursively clear top spacing for inner wrappers */
+.page-columns > .center > *:first-child > *:first-child,
+.page-columns > .left > *:first-child > *:first-child,
+.page-columns > .right > *:first-child > *:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* Just to be safe, do the same for sidebars */
-#quartz-body .sidebar.left > *:first-child,
-#quartz-body .sidebar.right > *:first-child {
+/* Optional: force override cards, callouts, graphs, etc. */
+.card:first-child,
+.callout:first-child,
+.graph-container:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
