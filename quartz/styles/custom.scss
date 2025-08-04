@@ -850,14 +850,33 @@ hr {
 }
 
 /* === Align center, left and right columns === */
-#quartz-body .center,
-#quartz-body .sidebar.left,
-#quartz-body .sidebar.right {
+
+#quartz-body {
   max-width: 1200px;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin: 0 auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  width: 100%;
   box-sizing: border-box;
 }
 
+#quartz-body .sidebar.left,
+#quartz-body .center,
+#quartz-body .sidebar.right {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+.page-columns,
+.page-columns > .left,
+.page-columns > .center,
+.page-columns > .right {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+  width: 100%;
+}
