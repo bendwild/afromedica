@@ -853,26 +853,10 @@ hr {
 
 /* === FINAL FIX: Align left, center, and right columns under navbar === */
 
-#quartz-body {
-  max-width: 1200px;
-  margin: 0 auto;
-  column-gap: 2rem !important;
-  padding-top: 0 !important;
-}
-
+/* === Align left, center, and right columns under navbar === */
 #quartz-body .sidebar.left,
-#quartz-body .sidebar.right,
-#quartz-body .center {
-  padding-top: 1.5rem !important;
-  margin-top: 0 !important;
-  box-sizing: border-box;
-}
-
-#quartz-body .sidebar.left,
+#quartz-body .center,
 #quartz-body .sidebar.right {
-  width: 260px;
-}
-
-#quartz-body .center {
-  max-width: 100%;
+  margin-top: 1rem !important;
+  padding-top: 0 !important;
 }
