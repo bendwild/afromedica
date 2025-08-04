@@ -849,15 +849,20 @@ hr {
   border-top: 1px solid var(--gray); /* Or your preferred color */
 }
 
-/* === Align center, left and right columns === */
-#quartz-body .sidebar.left,
-#quartz-body .sidebar.right,
-#quartz-body .center {
-  padding-top: 1rem !important;
+/* === Fix inconsistent top spacing under navbar for all columns === */
+#quartz-body {
+  padding-top: 0 !important;
   margin-top: 0 !important;
 }
 
-/* Remove inherited spacing from inner children */
+#quartz-body .sidebar.left,
+#quartz-body .center,
+#quartz-body .sidebar.right {
+  padding-top: 1rem !important;
+  margin-top: 0 !important;
+  align-self: flex-start;
+}
+
 #quartz-body .sidebar.left > *,
 #quartz-body .sidebar.right > *,
 #quartz-body .center > * {
