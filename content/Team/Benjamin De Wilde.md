@@ -4,7 +4,7 @@ publish: true
 tags:
   - team
 description: 
-modified: 2025-08-02
+modified: 2025-08-04
 ---
 <div class="inline-profile">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
@@ -22,6 +22,13 @@ My name is Benjamin and I'm a medical doctor with a passion for global health. I
 
 - [[Afromedica Academy]]
 - internal administration
+
+
+---
+
+
+## Contact me! 
+- 📧 [benjamin.dewilde@afromedica.be](mailto:benjamin.dewilde@gmail.com)
 
 
 ---
