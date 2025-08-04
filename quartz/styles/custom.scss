@@ -929,30 +929,38 @@ main {
 
 /* === Remove right sidebar === */
 .sidebar.right,
-.page-columns > .right {
+.page-columns > .right,
+#quartz-body .sidebar.right {
   display: none !important;
 }
 
-/* === Two-column layout: Left + Center only === */
+/* === Page layout: left + center only === */
 .page-columns {
   display: grid !important;
-  grid-template-columns: 250px 1fr !important; /* adjust left column width as needed */
-  gap: 2rem !important;
-  width: 100% !important;
+  grid-template-columns: 250px 1fr !important; /* left: 250px, center: fill */
+  gap: 2rem;
+  width: 100%;
   margin-top: 0 !important;
   padding-top: 0 !important;
+  align-items: flex-start;
 }
 
-/* === Expand center column to full remaining width === */
+/* === Left column === */
+.page-columns > .left {
+  width: 250px !important;
+}
+
+/* === Center column === */
 .page-columns > .center {
-  grid-column: 2 / 3 !important;
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+  grid-column: 2 / 3 !important;
 }
 
-/* === Stretch all nested content inside center === */
+/* === Force center content to fill width === */
+.center,
 .center > *,
 .center > article,
 .center > main,
@@ -963,18 +971,8 @@ main {
   padding: 0 !important;
 }
 
-#quartz-body {
-  grid-template-columns: 1fr 4fr !important;
-  grid-template-areas:
-    "grid-sidebar-left grid-center" !important;
-}
-
-/* Expand center column fully */
-#quartz-body .center {
-  grid-area: grid-center;
-  max-width: 100% !important;
-  width: 100% !important;
+/* === Optional: remove default margins inside left column === */
+.page-columns > .left > * {
   margin: 0 !important;
   padding: 0 !important;
 }
-
