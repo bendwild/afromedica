@@ -1,4 +1,4 @@
-@use "./base.scss";
+dd@use "./base.scss";
 
 // === Color Tokens ===
 :root {
@@ -850,40 +850,7 @@ hr {
 }
 
 /* === Fix inconsistent top spacing under navbar for all columns === */
-#quartz-body {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-}
-
-#quartz-body .sidebar.left,
-#quartz-body .center,
-#quartz-body .sidebar.right {
-  padding-top: 1rem !important;
-  margin-top: 0 !important;
-  align-self: flex-start;
-}
-
-#quartz-body .sidebar.left > *,
-#quartz-body .sidebar.right > *,
-#quartz-body .center > * {
+#quartz-body .center > main {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
-
-/* DEBUG: Add outline to each main area */
-#quartz-body {
-  outline: 4px solid red;
-}
-
-#quartz-body .sidebar.left {
-  outline: 4px solid blue;
-}
-
-#quartz-body .center {
-  outline: 4px solid green;
-}
-
-#quartz-body .sidebar.right {
-  outline: 4px solid orange;
-}
-
