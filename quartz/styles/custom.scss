@@ -854,3 +854,29 @@ hr {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
+/* 🔧 Universal fix: eliminate all top margin/padding from nested children */
+#quartz-body .sidebar.left,
+#quartz-body .sidebar.right,
+#quartz-body .center {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Remove spacing from nested content wrappers */
+#quartz-body .center > main,
+#quartz-body .center > main > .page,
+#quartz-body .center > main > .page > .content-page,
+#quartz-body .center > main > .page > .content-page > article,
+#quartz-body .center > main > *:first-child,
+#quartz-body .center > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Just to be safe, do the same for sidebars */
+#quartz-body .sidebar.left > *:first-child,
+#quartz-body .sidebar.right > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
