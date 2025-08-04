@@ -962,3 +962,19 @@ main {
   margin: 0 auto !important;
   padding: 0 !important;
 }
+
+#quartz-body {
+  grid-template-columns: 1fr 4fr !important;
+  grid-template-areas:
+    "grid-sidebar-left grid-center" !important;
+}
+
+/* Expand center column fully */
+#quartz-body .center {
+  grid-area: grid-center;
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
