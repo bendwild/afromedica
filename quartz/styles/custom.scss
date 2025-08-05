@@ -259,6 +259,33 @@ main {
   border-bottom: 1px solid var(--tertiary);
 }
 
+// === TOC collapsed <summary> styling ===
+.toc summary {
+  background-color: var(--lightgray);
+  padding: 0.75rem 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid var(--gray);
+  color: var(--dark);
+  font-weight: 600;
+  font-family: 'Cabin', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.toc summary:hover {
+  background-color: var(--lightgray);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+}
+
+.toc summary::marker,
+.toc summary::-webkit-details-marker {
+  display: none;
+}
+
 // === Footer ===
 footer {
   background-color: var(--light);
@@ -515,15 +542,19 @@ h6 > a.anchor {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 1.25rem 2rem;
   font-size: 1rem;
   font-weight: 500;
   color: var(--light);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(to top, rgba(87, 82, 121, 0.9), rgba(87, 82, 121, 0.1));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   text-align: left;
   font-family: 'Cabin', sans-serif;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .inline-profile {
