@@ -851,7 +851,10 @@ hr {
 /* Align left, center, and right columns under the navbar */
 .page-columns > .left,
 .page-columns > .center,
-.page-columns > .right {
+.page-columns > .right,
+.sidebar.left,
+.sidebar.right {
+  align-self: flex-start;
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
@@ -859,7 +862,9 @@ hr {
 /* Reset top spacing for the first visible child in each column */
 .page-columns > .left > *:first-child,
 .page-columns > .center > *:first-child,
-.page-columns > .right > *:first-child {
+.page-columns > .right > *:first-child,
+.sidebar.left > *:first-child,
+.sidebar.right > *:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
@@ -880,14 +885,7 @@ hr {
   padding-top: 0 !important;
 }
 
-/* FINAL ALIGNMENT TWEAK */
-.page-columns > .left > *:first-child,
-.page-columns > .right > *:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Clear top margin of first child inside sidebar cards or graphs */
+/* Clear top margin of first card/graph inside left or right sidebar */
 .sidebar.left .card:first-child,
 .sidebar.right .graph-container:first-child,
 .sidebar.right .card:first-child {
