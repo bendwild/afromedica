@@ -4,7 +4,7 @@ publish: true
 tags:
   - team
 description: 
-modified: 2025-08-04
+modified: 2025-08-11
 ---
 <div class="inline-profile">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
@@ -18,7 +18,7 @@ My name is Benjamin and I'm a medical doctor with a passion for global health. I
 ---
 
 
-## [Taskforces](taskforces) I'm involved in!
+## [Taskforces](taskforces.md) I'm involved in!
 
 - [[Afromedica Academy]]
 - Internal administration

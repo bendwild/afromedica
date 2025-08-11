@@ -117,4 +117,4 @@ modified: 2025-08-11
 > [!attention]+ Want to learn more about how we work?
 > From [[policy]] suggestions to our very own knowledge platform [[Afromedica Academy]]; our team makes meaningful impact!
 > 
-> **[→ Explore our taskforces](taskforces)**
+> **[→ Explore our taskforces](taskforces.md)**

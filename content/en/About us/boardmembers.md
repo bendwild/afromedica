@@ -12,11 +12,11 @@ The next step is figuring out where you fit in our team. We distributed our obje
 
 For now, the profiles we're looking for are those who have a special interest in PR & taskforces. 
 
-If you feel at home in one of the taskforces you can press join which will take you to a google forms. Don't worry if you have more than one preference. You can opt for multiple taskforces in the google forms. If you have any questions, don't hesitate to [contact us](contact)!
+If you feel at home in one of the taskforces you can press join which will take you to a google forms. Don't worry if you have more than one preference. You can opt for multiple taskforces in the google forms. If you have any questions, don't hesitate to [contact us](contact.md)!
 
 <a class="button" href="/About-us/application">Join Us →</a>
 
 ---
 
 > [!attention]+ Are you politically involved?
-> We have historically tried to keep our distance from any type of political involvement. However, **this does not exclude you** from becoming a board member. Fill in the [form](application) and we will discuss how we can make this work!
+> We have historically tried to keep our distance from any type of political involvement. However, **this does not exclude you** from becoming a board member. Fill in the [form](application.md) and we will discuss how we can make this work!

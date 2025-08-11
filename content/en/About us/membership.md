@@ -4,9 +4,9 @@ publish: true
 tags:
   - about-us
 description: 
-modified: 2025-08-04
+modified: 2025-08-11
 ---
-So you're interested in becoming a member of AfroMedica? Great! Take a look at the information below to get a feel of what it means to become a member. If you have any questions, don't hesitate to [contact us](contact)!
+So you're interested in becoming a member of AfroMedica? Great! Take a look at the information below to get a feel of what it means to become a member. If you have any questions, don't hesitate to [contact us](contact.md)md)!
 
 ## Why become a member?
 

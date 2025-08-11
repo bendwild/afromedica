@@ -4,7 +4,7 @@ publish: true
 tags:
   - team
 description: 
-modified: 2025-08-04
+modified: 2025-08-11
 ---
 <div class="inline-profile">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
@@ -14,7 +14,7 @@ modified: 2025-08-04
 
 Introductory text. Talk about who you are and why you joined AfroMedica. 
 
-## [Taskforces](taskforces) I'm involved in!
+## [Taskforces](taskforces.md) I'm involved in!
 
 - [[Afromedica Talks]]
 - [[Afromedica Connects]]

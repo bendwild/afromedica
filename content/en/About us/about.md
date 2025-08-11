@@ -1,7 +1,7 @@
 ---
 title: About us
 publish: true
-modified: 2025-08-04
+modified: 2025-08-11
 tags:
   - about-us
 ---
@@ -49,15 +49,15 @@ We maintain a high level of academic and structural engagement. While we deeply 
 
 > [!tip]+ Join the Movement! 
 > Become a member, attend a journal club, or collaborate with us on impactful change.  
-> [→ Get involved](/content/membership)
+> [→ Get involved](content/en/About%20us/membership.md)
 
 ---
 
 
 ## Our Work
 
-AfroMedica operates as a horizontal, collective organization led by a dedicated board. The board consists of volunteers. We practice shared leadership; each [boardmember](boardmembers) actively helps shape the organization’s direction. The president and vice-president provide overall coordination and are responsible for maintaining strategic alignment.
+AfroMedica operates as a horizontal, collective organization led by a dedicated board. The board consists of volunteers. We practice shared leadership; each [boardmember](boardmembers.md) actively helps shape the organization’s direction. The president and vice-president provide overall coordination and are responsible for maintaining strategic alignment.
 
 > [!info]+ Learn more about how we work!
 > Taskforces are the backbone of AfroMedica. Each group focuses on a specific domain, contributes to long-term goals, and is reviewed annually. 
-> [→ Explore our taskforces](/content/taskforces)
+> [→ Explore our taskforces](taskforces.md)

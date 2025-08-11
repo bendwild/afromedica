@@ -1,7 +1,7 @@
 ---
 publish: true
 title: Get in touch!
-modified: 2025-08-04
+modified: 2025-08-11
 ---
 AfroMedica welcomes anyone who shares our vision of an equitable, inclusive healthcare system. Below you'll find the best ways to connect with us depending on your query or background.
 
@@ -63,6 +63,6 @@ AfroMedica welcomes anyone who shares our vision of an equitable, inclusive heal
 
 ---
 
-**Thank you for supporting AfroMedica and [our mission](about)!**
+**Thank you for supporting AfroMedica and [our mission](about.md)!**
 
 
