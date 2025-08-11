@@ -70,6 +70,7 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({ 
         enableInHtmlEmbed: true, 
         enableCheckbox: true,
+        removePredefinedAnchor: true,
       }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
