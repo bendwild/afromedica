@@ -892,3 +892,14 @@ hr {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
+/* Hide anchor icons completely and remove gap */
+.heading-anchor {
+  display: none !important;
+  margin-left: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding-right: 0 !important; /* remove extra space reserved for icon */
+}
+
