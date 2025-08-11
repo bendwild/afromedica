@@ -259,6 +259,33 @@ main {
   border-bottom: 1px solid var(--tertiary);
 }
 
+// === TOC collapsed <summary> styling ===
+.toc summary {
+  background-color: var(--lightgray);
+  padding: 0.75rem 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid var(--gray);
+  color: var(--dark);
+  font-weight: 600;
+  font-family: 'Cabin', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.toc summary:hover {
+  background-color: var(--lightgray);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+}
+
+.toc summary::marker,
+.toc summary::-webkit-details-marker {
+  display: none;
+}
+
 // === Footer ===
 footer {
   background-color: var(--light);
@@ -515,15 +542,19 @@ h6 > a.anchor {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 1.25rem 2rem;
   font-size: 1rem;
   font-weight: 500;
   color: var(--light);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(to top, rgba(87, 82, 121, 0.9), rgba(87, 82, 121, 0.1));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   text-align: left;
   font-family: 'Cabin', sans-serif;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .inline-profile {
@@ -642,33 +673,6 @@ main > *:first-child,
 .tags-group .tag:hover {
   background-color: var(--accent);
   color: var(--light);
-}
-
-// === Fix excess space under navbar ===
-.page-header,
-#quartz-body > .center,
-main,
-main > *:first-child,
-.page-columns,
-.page-columns > *:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-// Also eliminate any outer spacing on article content
-.center > article {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-// === Align sidebars with main content ===
-.sidebar.left,
-.sidebar.right,
-#quartz-body .sidebar.left,
-#quartz-body .sidebar.right {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  align-self: flex-start;
 }
 
 .pathways-wrapper {
@@ -790,11 +794,6 @@ main > *:first-child,
   border-radius: 12px;
 }
 
-.sidebar.left,
-.sidebar.right {
-  padding-top: 2rem !important;
-}
-
 .contact-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -849,34 +848,58 @@ hr {
   border-top: 1px solid var(--gray); /* Or your preferred color */
 }
 
-/* === Fix inconsistent top spacing under navbar for all columns === */
-#quartz-body .center > main {
+/* Align left, center, and right columns under the navbar */
+.page-columns > .left,
+.page-columns > .center,
+.page-columns > .right,
+.sidebar.left,
+.sidebar.right {
+  align-self: flex-start;
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* 🔧 Universal fix: eliminate all top margin/padding from nested children */
-#quartz-body .sidebar.left,
-#quartz-body .sidebar.right,
-#quartz-body .center {
+/* Reset top spacing for the first visible child in each column */
+.page-columns > .left > *:first-child,
+.page-columns > .center > *:first-child,
+.page-columns > .right > *:first-child,
+.sidebar.left > *:first-child,
+.sidebar.right > *:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* Remove spacing from nested content wrappers */
-#quartz-body .center > main,
-#quartz-body .center > main > .page,
-#quartz-body .center > main > .page > .content-page,
-#quartz-body .center > main > .page > .content-page > article,
-#quartz-body .center > main > *:first-child,
-#quartz-body .center > *:first-child {
+/* Recursively clear top spacing for inner wrappers */
+.page-columns > .center > *:first-child > *:first-child,
+.page-columns > .left > *:first-child > *:first-child,
+.page-columns > .right > *:first-child > *:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* Just to be safe, do the same for sidebars */
-#quartz-body .sidebar.left > *:first-child,
-#quartz-body .sidebar.right > *:first-child {
+/* Optional: force override cards, callouts, graphs, etc. */
+.card:first-child,
+.callout:first-child,
+.graph-container:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
+/* Clear top margin of first card/graph inside left or right sidebar */
+.sidebar.left .card:first-child,
+.sidebar.right .graph-container:first-child,
+.sidebar.right .card:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Hide anchor icons completely and remove gap */
+.heading-anchor {
+  display: none !important;
+  margin-left: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding-right: 0 !important; /* remove extra space reserved for icon */
+}
+
