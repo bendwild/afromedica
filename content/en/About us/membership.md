@@ -11,7 +11,7 @@ So you're interested in becoming a member of AfroMedica? Great! Take a look at t
 ## Why become a member?
 
 ### 1. Be the first one to know about our activities!
-By signing up as a member you will be the first one to be notified about our various events and activities. This way you can make sure you're always up to date with monthly sessions of [[Afromedica Talks]] or the membership community program of [[Afromedica Connects]]. 
+By signing up as a member you will be the first one to be notified about our various events and activities. This way you can make sure you're always up to date with monthly sessions of [[Afromedica Talks]] or the membership community program of [[content/en/Afromedica Connects/Afromedica Connects]]. 
 
 ### 2. Get access to exclusive platforms
 We run various private online groups where members can share their own experiences, explore unique insights and stay up to date with all the initiatives and organizations sharing our [vision and mission](about us). 

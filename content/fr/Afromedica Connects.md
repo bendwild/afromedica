@@ -1,8 +1,7 @@
 ---
-title: Bonjour
+title: 
 publish: false
 tags: 
 description: 
 modified: 2025-08-11
 ---
-dfqsd

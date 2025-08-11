@@ -10,7 +10,7 @@ tags:
   <a class="button" href="About-us">→ Learn More</a>
 </div>
 
-**🌍 Languages:** [Français](content/fr/Home-fr) | [Nederlands](content/nl/Home-nl) | **English** | [Language Selector](../)
+**🌍 Languages:** [Français](Home-fr) | [Nederlands](Home-nl) | **English** | [Language Selector](../)
 ---
 ## Upcoming events 
 <div class="timeline">

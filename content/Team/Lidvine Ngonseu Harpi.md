@@ -17,7 +17,7 @@ Introductory text. Talk about who you are and why you joined AfroMedica.
 ## [Taskforces](taskforces.md) I'm involved in!
 
 - [[Afromedica Talks]]
-- [[Afromedica Connects]]
+- [[content/en/Afromedica Connects/Afromedica Connects]]
 
 
 ## Contact me!
