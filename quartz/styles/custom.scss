@@ -997,78 +997,106 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// === Full Width Layout (Remove Right Sidebar) ===
+// === Full Width Layout (Remove Right Sidebar) - Aggressive Override ===
 
-// Override the default page layout to remove right sidebar space
-.page {
-  // Desktop layout - expand center content to fill right sidebar space
-  @media (min-width: 1200px) {
-    grid-template-columns: 
-      minmax(0, 1fr) 
-      min(900px, calc(100% - 4rem)) 
-      minmax(0, 1fr);
-    
-    grid-template-areas:
-      "left-sidebar center ."
-      "left-sidebar center .";
-  }
-  
-  // Tablet layout - maintain two-column layout
-  @media (max-width: 1199px) and (min-width: 800px) {
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      "left-sidebar center"
-      "left-sidebar center";
-  }
-}
-
-// Expand the center content area
-.center {
-  // Allow center content to use more available width
-  max-width: none;
-  
-  // Add proper spacing to prevent content from touching edges
-  @media (min-width: 1200px) {
-    margin-right: 2rem;
-    padding-right: 1rem;
-  }
-  
-  @media (max-width: 1199px) and (min-width: 800px) {
-    margin-right: 1rem;
-  }
-}
-
-// Alternative: If you want to set a maximum width but still expand beyond default
-// Uncomment this block and comment out the above .center rule
-/*
-.center {
-  max-width: min(1000px, calc(100% - 2rem));
-  margin-right: 2rem;
-}
-*/
-
-// Hide right sidebar completely
-.right {
+// Hide right sidebar completely first
+.right,
+.sidebar.right,
+.page-columns > .right {
   display: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
 }
 
-// Ensure page columns layout works properly without right sidebar
+// Override Quartz's main page grid layout
+.page,
+.page-container,
 .page-columns {
-  // Override any existing right column spacing
-  > .right {
-    display: none !important;
+  // Force two-column layout on desktop
+  @media (min-width: 1200px) {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    grid-template-areas: "left center" !important;
+    gap: 2rem !important;
+    max-width: none !important;
+  }
+  
+  // Tablet layout
+  @media (max-width: 1199px) and (min-width: 800px) {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    grid-template-areas: "left center" !important;
+    gap: 1.5rem !important;
+  }
+  
+  // Mobile - stack vertically
+  @media (max-width: 799px) {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
   }
 }
 
-// Optional: Adjust afterBody components styling if you moved components there
-.after-body {
-  max-width: none;
-  margin: 2rem 0;
+// Target the main content area more specifically
+.center,
+.page-columns .center,
+main.center {
+  grid-area: center !important;
+  max-width: none !important;
+  width: 100% !important;
+  flex: 1 !important;
   
-  // Style the moved components nicely
-  .graph-container,
-  .toc,
-  .backlinks {
-    margin-bottom: 2rem;
+  // Remove any right margin/padding that was accounting for right sidebar
+  margin-right: 0 !important;
+  padding-right: 1rem !important;
+  
+  @media (min-width: 1200px) {
+    // Allow content to expand but add some right padding for readability
+    max-width: min(1200px, 100%) !important;
+    padding-right: 2rem !important;
+  }
+}
+
+// Make sure left sidebar stays properly sized
+.left,
+.sidebar.left,
+.page-columns .left {
+  grid-area: left !important;
+  width: auto !important;
+  min-width: 250px !important;
+  max-width: 300px !important;
+  flex-shrink: 0 !important;
+}
+
+// Override any Quartz container max-widths that might be limiting expansion
+.page-container,
+.container {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+// Ensure the main article/content expands properly
+article,
+.article-container {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+// Alternative approach - if the above doesn't work, try this more specific targeting
+body .page {
+  @media (min-width: 1200px) {
+    display: grid !important;
+    grid-template-columns: minmax(250px, 300px) 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 2rem !important;
+    align-items: start !important;
+  }
+}
+
+// Force override any inline styles or computed widths
+[style*="grid-template-columns"] {
+  @media (min-width: 1200px) {
+    grid-template-columns: minmax(250px, 300px) 1fr !important;
   }
 }
