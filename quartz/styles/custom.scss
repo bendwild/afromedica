@@ -903,3 +903,96 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 0 !important; /* remove extra space reserved for icon */
 }
 
+/* === Language Switcher Styles === */
+.language-switcher {
+  position: relative;
+  margin-left: 1rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: 1px solid var(--lightgray);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 600;
+  color: var(--dark);
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.dropdown-toggle:hover {
+  background-color: var(--lightgray);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  min-width: 150px;
+  font-family: 'IBM Plex Serif', serif;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--lightgray);
+  color: var(--accent);
+}
+
+.dropdown-menu a.current-lang {
+  background-color: var(--accent);
+  color: var(--light);
+  font-weight: 700;
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 768px) {
+  .nav-menu {
+    gap: 1rem;
+  }
+  
+  .language-switcher {
+    margin-left: 0.5rem;
+  }
+  
+  .dropdown-toggle {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .dropdown-menu {
+    min-width: 120px;
+    right: -10px;
+  }
+}
