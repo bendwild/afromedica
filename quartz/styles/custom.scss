@@ -996,3 +996,79 @@ h1, h2, h3, h4, h5, h6 {
     right: -10px;
   }
 }
+
+// === Full Width Layout (Remove Right Sidebar) ===
+
+// Override the default page layout to remove right sidebar space
+.page {
+  // Desktop layout - expand center content to fill right sidebar space
+  @media (min-width: 1200px) {
+    grid-template-columns: 
+      minmax(0, 1fr) 
+      min(900px, calc(100% - 4rem)) 
+      minmax(0, 1fr);
+    
+    grid-template-areas:
+      "left-sidebar center ."
+      "left-sidebar center .";
+  }
+  
+  // Tablet layout - maintain two-column layout
+  @media (max-width: 1199px) and (min-width: 800px) {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "left-sidebar center"
+      "left-sidebar center";
+  }
+}
+
+// Expand the center content area
+.center {
+  // Allow center content to use more available width
+  max-width: none;
+  
+  // Add proper spacing to prevent content from touching edges
+  @media (min-width: 1200px) {
+    margin-right: 2rem;
+    padding-right: 1rem;
+  }
+  
+  @media (max-width: 1199px) and (min-width: 800px) {
+    margin-right: 1rem;
+  }
+}
+
+// Alternative: If you want to set a maximum width but still expand beyond default
+// Uncomment this block and comment out the above .center rule
+/*
+.center {
+  max-width: min(1000px, calc(100% - 2rem));
+  margin-right: 2rem;
+}
+*/
+
+// Hide right sidebar completely
+.right {
+  display: none !important;
+}
+
+// Ensure page columns layout works properly without right sidebar
+.page-columns {
+  // Override any existing right column spacing
+  > .right {
+    display: none !important;
+  }
+}
+
+// Optional: Adjust afterBody components styling if you moved components there
+.after-body {
+  max-width: none;
+  margin: 2rem 0;
+  
+  // Style the moved components nicely
+  .graph-container,
+  .toc,
+  .backlinks {
+    margin-bottom: 2rem;
+  }
+}
