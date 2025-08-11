@@ -997,106 +997,139 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// === Full Width Layout (Remove Right Sidebar) - Aggressive Override ===
+// === QUARTZ FULL WIDTH - Alternative Approach ===
 
-// Hide right sidebar completely first
-.right,
-.sidebar.right,
-.page-columns > .right {
-  display: none !important;
-  width: 0 !important;
-  min-width: 0 !important;
-  max-width: 0 !important;
+// First, let's try targeting the actual rendered elements that Quartz generates
+// Based on typical Quartz v4 structure
+
+// Method 1: Target the main layout container
+#quartz-root,
+.quartz-body,
+body {
+  .page {
+    // Force override any grid template
+    display: grid !important;
+    grid-template-areas: "sidebar content" !important;
+    grid-template-columns: auto 1fr !important;
+    gap: 2rem !important;
+    
+    @media (max-width: 800px) {
+      grid-template-areas: 
+        "sidebar"
+        "content" !important;
+      grid-template-columns: 1fr !important;
+    }
+  }
 }
 
-// Override Quartz's main page grid layout
-.page,
-.page-container,
-.page-columns {
-  // Force two-column layout on desktop
-  @media (min-width: 1200px) {
-    display: grid !important;
-    grid-template-columns: auto 1fr !important;
-    grid-template-areas: "left center" !important;
-    gap: 2rem !important;
+// Method 2: Direct CSS Grid override
+.page {
+  grid-template-columns: auto 1fr !important;
+  grid-template-areas: "left center" !important;
+  
+  // Remove any reference to right column
+  > *:nth-child(3),
+  > .right {
+    display: none !important;
+  }
+}
+
+// Method 3: Flexbox fallback
+.page-columns,
+.content-container,
+.layout-container {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 2rem !important;
+  
+  .left {
+    flex: 0 0 auto !important;
+    width: 250px !important;
+  }
+  
+  .center {
+    flex: 1 !important;
     max-width: none !important;
+    width: auto !important;
   }
   
-  // Tablet layout
-  @media (max-width: 1199px) and (min-width: 800px) {
-    display: grid !important;
-    grid-template-columns: auto 1fr !important;
-    grid-template-areas: "left center" !important;
-    gap: 1.5rem !important;
-  }
-  
-  // Mobile - stack vertically
-  @media (max-width: 799px) {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1rem !important;
+  .right {
+    display: none !important;
   }
 }
 
-// Target the main content area more specifically
+// Method 4: CSS Variables override (if Quartz uses CSS custom properties)
+:root {
+  --content-max-width: none !important;
+  --page-max-width: none !important;
+  --sidebar-width: 250px !important;
+}
+
+// Method 5: Specific component targeting
+.sidebar.left {
+  grid-column: 1 !important;
+}
+
+main,
 .center,
-.page-columns .center,
-main.center {
-  grid-area: center !important;
+.content-area {
+  grid-column: 2 !important;
   max-width: none !important;
   width: 100% !important;
-  flex: 1 !important;
-  
-  // Remove any right margin/padding that was accounting for right sidebar
-  margin-right: 0 !important;
-  padding-right: 1rem !important;
-  
-  @media (min-width: 1200px) {
-    // Allow content to expand but add some right padding for readability
-    max-width: min(1200px, 100%) !important;
-    padding-right: 2rem !important;
+}
+
+.sidebar.right {
+  display: none !important;
+  grid-column: none !important;
+}
+
+// Method 6: Nuclear option - override everything with flexbox
+body {
+  .page,
+  .page-container,
+  .layout {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    
+    > * {
+      &:first-child {
+        // Left sidebar
+        flex: 0 0 250px !important;
+      }
+      
+      &:nth-child(2) {
+        // Main content
+        flex: 1 !important;
+        max-width: none !important;
+      }
+      
+      &:nth-child(3),
+      &:last-child {
+        // Right sidebar - hide it
+        display: none !important;
+      }
+    }
   }
 }
 
-// Make sure left sidebar stays properly sized
-.left,
-.sidebar.left,
-.page-columns .left {
-  grid-area: left !important;
-  width: auto !important;
-  min-width: 250px !important;
-  max-width: 300px !important;
-  flex-shrink: 0 !important;
-}
-
-// Override any Quartz container max-widths that might be limiting expansion
-.page-container,
-.container {
-  max-width: none !important;
-  width: 100% !important;
-}
-
-// Ensure the main article/content expands properly
-article,
-.article-container {
-  max-width: none !important;
-  width: 100% !important;
-}
-
-// Alternative approach - if the above doesn't work, try this more specific targeting
-body .page {
-  @media (min-width: 1200px) {
+// Method 7: Container query approach
+@container (min-width: 800px) {
+  .page {
     display: grid !important;
-    grid-template-columns: minmax(250px, 300px) 1fr !important;
-    grid-template-rows: auto !important;
+    grid-template-columns: 250px 1fr !important;
     gap: 2rem !important;
-    align-items: start !important;
   }
 }
 
-// Force override any inline styles or computed widths
-[style*="grid-template-columns"] {
-  @media (min-width: 1200px) {
-    grid-template-columns: minmax(250px, 300px) 1fr !important;
+// Make sure content expands properly
+article,
+.article-container,
+.content {
+  max-width: none !important;
+  width: 100% !important;
+  
+  // Add some max-width for readability if needed
+  > p, > h1, > h2, > h3, > h4, > h5, > h6 {
+    max-width: 65ch;
   }
 }
