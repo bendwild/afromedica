@@ -61,11 +61,11 @@ tags:
   - _2025_
   - jacqueline-nwando-olayiwola
 description: Welcome to Afromedica Academy, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
-modified: 2025-08-04
+modified: 2025-08-08
 ---
 <div class="hero">
-  <h2>Welcome to Afromedica Academy!</h2>
-  <p>This is a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.</p>
+  <h2>Welcome to our very own knowledge platform!</h2>
+  <p>This is a curated space where we provide a reliable source of information on a variety of topics regarding race, health(care) and everything in between.</p>
 </div>
 
 > [!info]+ How to navigate Afromedica Academy?
@@ -78,12 +78,12 @@ modified: 2025-08-04
 ## Explore by Media
 
 <div class="tag-scroll">
-  <a href="/tags/articles" class="tag">#articles</a>
-  <a href="/tags/books" class="tag">#books</a>
-  <a href="/tags/interviews" class="tag">#interviews</a>
-  <a href="/tags/podcasts" class="tag">#podcasts</a>
-  <a href="/tags/research" class="tag">#research</a>
-  <a href="/tags/videos" class="tag">#videos</a>
+  <a href="/tags/articles" class="tag">#Articles</a>
+  <a href="/tags/books" class="tag">#Books</a>
+  <a href="/tags/interviews" class="tag">#Interviews</a>
+  <a href="/tags/podcasts" class="tag">#Podcasts</a>
+  <a href="/tags/research" class="tag">#Research</a>
+  <a href="/tags/videos" class="tag">#Videos</a>
 </div>
 
 
@@ -92,14 +92,14 @@ modified: 2025-08-04
 ## Explore by Subject
 
 <div class="tag-scroll">
-  <a href="/tags/colonialism" class="tag">#colonialism</a>
-  <a href="/tags/clinical-medicine" class="tag">#clinical medicine</a>
-  <a href="/tags/culturally-sensitive-healthcare" class="tag">#culturally-sensitive-healthcare</a>
-  <a href="/tags/dermatology" class="tag">#dermatology</a>
-  <a href="/tags/global-health" class="tag">#global-health</a>
-  <a href="/tags/health-equity" class="tag">#health equity</a>
-  <a href="/tags/intersectionality" class="tag">#intersectionality</a>
-  <a href="/tags/racism-and-health" class="tag">#racism-and-health</a>
+  <a href="/tags/colonialism" class="tag">#Colonialism</a>
+  <a href="/tags/clinical-medicine" class="tag">#Clinical medicine</a>
+  <a href="/tags/culturally-sensitive-healthcare" class="tag">#Culturally sensitive healthcare</a>
+  <a href="/tags/dermatology" class="tag">#Dermatology</a>
+  <a href="/tags/global-health" class="tag">#Global health</a>
+  <a href="/tags/health-equity" class="tag">#Health equity</a>
+  <a href="/tags/intersectionality" class="tag">#Intersectionality</a>
+  <a href="/tags/racism-and-health" class="tag">#Racism & Health</a>
 </div>
 
 ---

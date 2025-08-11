@@ -4,11 +4,11 @@ publish: true
 tags:
   - team
 description: 
-modified: 2025-08-04
+modified: 2025-08-11
 ---
 <figure class="team-banner">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/Group.jpeg" alt="AfroMedica Team" />
-  <figcaption>AfroMedica is made up of a group of dedicated professionals students who have a passion for making a difference in their community. Our team is composed of bright and talented individuals who are committed to improving healthcare and supporting people in need. Get to know our team further by reading below.</figcaption>
+  <figcaption>AfroMedica is made up of a group of dedicated professionals & students who have a passion for making a difference in their community. Our team is composed of bright and talented individuals who are committed to improving healthcare and supporting people in need. Get to know our team further by reading below.</figcaption>
 </figure>
 
 ## Meet the AfroMedica Team

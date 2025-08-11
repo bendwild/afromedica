@@ -2,12 +2,12 @@
 title: Updates
 slug: updates
 layout: updates
-modified: 2025-08-03
+modified: 2025-08-04
 publish: true
 description: Stay up to date with AfroMedica’s latest news, articles, and achievements.
 ---
 <div class="hero">
-  <h2>What's New at AfroMedica!</h2>
+  <h2>What's new at AfroMedica!</h2>
   <p>Discover our latest work, team milestones, articles, and community impact. This page is regularly updated to keep you in the loop.</p>
 </div>
 

@@ -1,7 +1,7 @@
 ---
 title: Welcome to AfroMedica!
 publish: true
-modified: 2025-08-03
+modified: 2025-08-11
 tags: 
 ---
 <div class="hero">
@@ -12,51 +12,32 @@ tags:
 
 
 ---
+## Upcoming events 
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-date">20 SEP</div>
+    <div class="timeline-content">
+      <h3>AfroMedica Founded</h3>
+      <p>Grassroots organization started focusing on racial health equity.</p>
+    </div>
+  </div>
 
-<div class="pathways-wrapper">
+  <div class="timeline-item">
+    <div class="timeline-date">31 NOV</div>
+    <div class="timeline-content">
+      <h3>Launch of Education Program</h3>
+      <p>Started workshops and training for healthcare professionals.</p>
+    </div>
+  </div>
 
-<div class="pathway-card">
-<h3>I’m a Student</h3>
-<ul>
-  <li>Dive into diversity in med ed</li>
-  <li>Explore POC-specific diseases</li>
-  <li>Join the AfroMedica Academy</li>
-</ul>
-<a href="/Academy" class="cta-link">Explore Student Resources →</a>
+  <div class="timeline-item">
+    <div class="timeline-date">3 DEC</div>
+    <div class="timeline-content">
+      <h3>International Collaboration</h3>
+      <p>Partnered with global health bodies for advocacy.</p>
+    </div>
+  </div>
 </div>
-
-<div class="pathway-card">
-<h3>🩺 I’m a Healthcare Worker</h3>
-<ul>
-  <li>Unpack diagnostic biases</li>
-  <li>Access inclusive clinical tools</li>
-  <li>Improve cultural competence</li>
-</ul>
-<a href="/Clinician-Resources" class="cta-link">Visit Clinician Tools →</a>
-</div>
-
-<div class="pathway-card">
-<h3>🏛 I’m a Policymaker / Advocate</h3>
-<ul>
-  <li>Review our equity recommendations</li>
-  <li>Explore AfroMedica’s advocacy work</li>
-  <li>Find policy collaboration options</li>
-</ul>
-<a href="/Advocacy" class="cta-link">See Our Advocacy Work →</a>
-</div>
-
-<div class="pathway-card">
-<h3>🤝 I’m an Ally / Curious Visitor</h3>
-<ul>
-  <li>Understand health disparities</li>
-  <li>Support racial health justice</li>
-  <li>Join our events or donate</li>
-</ul>
-<a href="/Get-Involved" class="cta-link">Support the Movement →</a>
-</div>
-
-</div>
-
 
 <div class="cta">
   <h2>Stay up to date with our mission</h2>
