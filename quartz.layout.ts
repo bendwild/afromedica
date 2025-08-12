@@ -8,14 +8,14 @@ export const sharedPageComponents: SharedLayout = {
   header: [CustomNavbar()], // 👈 Add navbar here
   afterBody: [],
   footer: Component.Footer({
-  links: {
-    "https://www.linkedin.com/company/afromedica/?viewAsMember=true": "linkedin",
-    "https://www.facebook.com/AfroMedica": "facebook",
-    "https://www.instagram.com/_afromedica_/?hl=nl": "instagram",
-    "https://discord.gg/qUcCAHassB": "discord",
-    "https://www.youtube.com/@AfroMedica": "youtube",
-  },
-}),
+    links: {
+      "https://www.linkedin.com/company/afromedica/?viewAsMember=true": "linkedin",
+      "https://www.facebook.com/AfroMedica": "facebook",
+      "https://www.instagram.com/_afromedica_/?hl=nl": "instagram",
+      "https://discord.gg/qUcCAHassB": "discord",
+      "https://www.youtube.com/@AfroMedica": "youtube",
+    },
+  }),
 }
 
 // Components for individual content pages (notes, pages)
@@ -44,7 +44,10 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.RecentNotes(),
   ],
-  right: [
+  // Remove right sidebar completely - set to empty array
+  right: [],
+  // Optional: Move some right sidebar components to afterBody if you want them below content
+  afterBody: [
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
@@ -72,5 +75,5 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer(),
   ],
-  right: [],
+  right: [], // Already empty - keep as is
 }

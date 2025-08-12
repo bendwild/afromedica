@@ -1,30 +1,30 @@
 @use "./base.scss";
 
-// === Color Tokens ===
+/* === Color Tokens === */
 :root {
-  --light: #fffaf3;
-  --lightgray: #f2e9e1;
-  --gray: #9893a5;
-  --darkgray: #797593;
-  --dark: #575279;
-  --secondary: #d7827e;
-  --tertiary: #b4637a;
-  --accent: #b4637a;
-  --highlight: rgba(143, 159, 169, 0.15);
-  --textHighlight: rgba(246, 193, 119, 0.28);
+  --light: #fffcdb; /* warm cream */
+  --lightgray: #d1c3f2; /* soft lavender */
+  --gray: #a389db; /* medium lavender */
+  --darkgray: #5e388e; /* deep purple */
+  --dark: #2d1f17; /* dark brown */
+  --secondary: #8effe1; /* aqua */
+  --tertiary: #378f8a; /* teal */
+  --accent: #378f8a; /* teal accent */
+  --highlight: rgba(142, 255, 225, 0.15); /* aqua highlight */
+  --textHighlight: rgba(255, 205, 159, 0.28); /* warm peach highlight */
 }
 
 html[data-theme="dark"] {
-  --light: #1f1d30;
-  --lightgray: #26233a;
-  --gray: #6e6a86;
-  --darkgray: #908caa;
-  --dark: #e0def4;
-  --secondary: #ebbcba;
-  --tertiary: #eb6f92;
-  --accent: #eb6f92;
-  --highlight: rgba(143, 159, 169, 0.15);
-  --textHighlight: #b3aa0288;
+  --light: #2d1f17; /* dark brown background */
+  --lightgray: #5e388e; /* deep purple-gray */
+  --gray: #a389db; /* soft lavender */
+  --darkgray: #d1c3f2; /* light lavender */
+  --dark: #fffcdb; /* cream for text */
+  --secondary: #f4ac6a; /* warm orange */
+  --tertiary: #cf772e; /* deep orange */
+  --accent: #cf772e; /* deep orange accent */
+  --highlight: rgba(244, 172, 106, 0.15); /* warm orange highlight */
+  --textHighlight: rgba(142, 255, 225, 0.28); /* aqua highlight */
 }
 
 * {
@@ -903,3 +903,206 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 0 !important; /* remove extra space reserved for icon */
 }
 
+/* === Language Switcher Styles === */
+.language-switcher {
+  position: relative;
+  margin-left: 1rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: 1px solid var(--lightgray);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 600;
+  color: var(--dark);
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.dropdown-toggle:hover {
+  background-color: var(--lightgray);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  min-width: 150px;
+  font-family: 'IBM Plex Serif', serif;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--lightgray);
+  color: var(--accent);
+}
+
+.dropdown-menu a.current-lang {
+  background-color: var(--accent);
+  color: var(--light);
+  font-weight: 700;
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 768px) {
+  .nav-menu {
+    gap: 1rem;
+  }
+  
+  .language-switcher {
+    margin-left: 0.5rem;
+  }
+  
+  .dropdown-toggle {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .dropdown-menu {
+    min-width: 120px;
+    right: -10px;
+  }
+}
+
+// === REMOVE DEBUG CSS FIRST, then add this ===
+
+// Based on your debug screenshot, here's the correct solution:
+
+// 1. Hide the right sidebar completely
+.right {
+  display: none !important;
+}
+
+// 2. Override the main page grid to use only 2 columns instead of 3
+.page {
+  // Force 2-column layout: left sidebar + expanded center
+  grid-template-columns: auto 1fr !important;
+  grid-template-areas: "left center" !important;
+  
+  @media (min-width: 1200px) {
+    // Desktop: left sidebar with fixed width, center takes remaining space
+    grid-template-columns: minmax(250px, 300px) 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  @media (max-width: 1199px) and (min-width: 800px) {
+    // Tablet: smaller left sidebar, center takes remaining space
+    grid-template-columns: 250px 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  @media (max-width: 799px) {
+    // Mobile: stack vertically
+    grid-template-columns: 1fr !important;
+    grid-template-areas: 
+      "left"
+      "center" !important;
+    gap: 1rem !important;
+  }
+}
+
+// 3. Make sure center content expands properly
+.center {
+  // Allow center to use all available space
+  max-width: none !important;
+  width: 100% !important;
+  
+  // Add some padding on the right for better readability
+  @media (min-width: 1200px) {
+    padding-right: 2rem !important;
+  }
+  
+  @media (max-width: 1199px) and (min-width: 800px) {
+    padding-right: 1rem !important;
+  }
+}
+
+// 4. Ensure left sidebar maintains proper width
+.left {
+  // Keep left sidebar at reasonable width
+  @media (min-width: 1200px) {
+    min-width: 250px !important;
+    max-width: 300px !important;
+  }
+  
+  @media (max-width: 1199px) and (min-width: 800px) {
+    width: 250px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+// 5. Make sure main content doesn't get too wide for readability
+.center article,
+.center main,
+.center .content {
+  // Optional: limit text line length for better readability
+  > p, > h1, > h2, > h3, > h4, > h5, > h6 {
+    max-width: 75ch; // About 75 characters per line for optimal reading
+  }
+  
+  // But allow other elements (images, cards, etc.) to use full width
+  > .hero,
+  > .card-grid,
+  > .team-grid,
+  > .contact-card-grid,
+  > .pathways-wrapper,
+  > img,
+  > figure {
+    max-width: none !important;
+  }
+}
+
+// 6. Additional safety overrides
+.page > *:nth-child(3),
+.page > .right,
+.sidebar.right {
+  display: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  grid-column: none !important;
+}
+
+// 7. If you moved components to afterBody, style them nicely
+.after-body {
+  margin: 2rem 0 !important;
+  
+  .graph-container,
+  .toc,
+  .backlinks {
+    margin-bottom: 2rem !important;
+    max-width: none !important;
+  }
+}
