@@ -47,7 +47,7 @@ const CustomNavbar: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
   
   // Define language-specific links
   const getLanguageLinks = (lang: string) => {
-    const langPrefix = lang === "en" ? "/en" : `/${lang}`
+    const langPrefix = `/${lang}`
     return [
       { href: `${langPrefix}/About-us/about`, label: translations["About Us"] },
       { href: `${langPrefix}/Afromedica-Academy/Afromedica-Academy`, label: translations["Afromedica Academy"] },
@@ -70,7 +70,7 @@ const CustomNavbar: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
 
   // Get current page path without language prefix for switching
   const getCurrentPagePath = (): string => {
-    const pathWithoutLang = currentPath.replace(/^\/(en|fr|ar|pt)/, "")
+    const pathWithoutLang = currentPath.replace(/^\/(en|fr|nl)/, "")
     return pathWithoutLang || "/"
   }
 
@@ -80,7 +80,7 @@ const CustomNavbar: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
     <nav className="main-navigation">
       <div className="nav-container">
         <div className="nav-logo">
-          <a href={currentLang === "en" ? "/en/" : `/${currentLang}/`}>
+          <a href={`/${currentLang}/`}>
             <img
               src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/afromedica%20(6).png"
               alt="AfroMedica Logo"
@@ -108,13 +108,14 @@ const CustomNavbar: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
           <li className="language-switcher">
             <div className="dropdown">
               <button className="dropdown-toggle">
-                {languageOptions.find(opt => opt.code === currentLang)?.flag} {languageOptions.find(opt => opt.code === currentLang)?.name} ▼
+                {languageOptions.find(opt => opt.code === currentLang)?.flag}{" "}
+                {languageOptions.find(opt => opt.code === currentLang)?.name} ▼
               </button>
               <ul className="dropdown-menu">
                 {languageOptions.map((option) => (
                   <li key={option.code}>
                     <a 
-                      href={option.code === "en" ? `/en${currentPagePath}` : `/${option.code}${currentPagePath}`}
+                      href={`/${option.code}${currentPagePath}`}
                       className={currentLang === option.code ? "current-lang" : ""}
                     >
                       {option.flag} {option.name}
@@ -126,8 +127,6 @@ const CustomNavbar: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
           </li>
         </ul>
       </div>
-      
-
     </nav>
   )
 }
