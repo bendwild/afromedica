@@ -1173,3 +1173,16 @@ div.right.sidebar {
   }
 }
 
+.nav-link.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+.nav-link.active:hover {
+  color: var(--accent);
+}
+
+.language-switcher .current-lang {
+  font-weight: 600;
+  text-decoration: underline;
+}
