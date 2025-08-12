@@ -15,12 +15,12 @@ modified: 2025-08-11
 Introductory text. Talk about who you are and why you joined AfroMedica. 
 
 ## [Taskforces](taskforces.md) I'm involved in!
-
-- [Policy](policy)
+- [Policy](policy.md)
+- [[Afromedica Academy]]
 
 
 ## Contact me!
-- 📧 [janne.vandevoorde@afromedica.be](mailto:janne.vandevoorde@afromedica.be)
+- 📧 [yasmine.abchaoui@afromedica.be](mailto:yasmine.abchaoui@afromedica.be)
 
 
 ## Follow me!

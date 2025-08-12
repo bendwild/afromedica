@@ -16,12 +16,11 @@ Introductory text. Talk about who you are and why you joined AfroMedica.
 
 ## [Taskforces](taskforces.md) I'm involved in!
 
-- PR
-- [Policy](policy)
+- [Policy](policy.md)
 
 
 ## Contact me!
-- 📧 [alessio.capobianco@afromedica.be](mailto:alessio.capobianco@afromedica.be)
+- 📧 [janne.vandevoorde@afromedica.be](mailto:janne.vandevoorde@afromedica.be)
 
 
 ## Follow me!
