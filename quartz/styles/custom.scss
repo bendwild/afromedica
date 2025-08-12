@@ -997,62 +997,52 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// === REMOVE DEBUG CSS FIRST, then add this ===
+// === FINAL SOLUTION - Based on actual HTML structure ===
 
-// Based on your debug screenshot, here's the correct solution:
+// Remove all previous attempts and use this:
 
-// 1. Hide the right sidebar completely
-.right {
+// 1. Target the exact HTML structure from your screenshot
+#quartz-root.page {
+  // Override the grid layout
+  #quartz-body {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    grid-template-areas: "sidebar content" !important;
+    gap: 2rem !important;
+    
+    @media (min-width: 1200px) {
+      grid-template-columns: minmax(250px, 300px) 1fr !important;
+    }
+    
+    @media (max-width: 1199px) and (min-width: 800px) {
+      grid-template-columns: 250px 1fr !important;
+      gap: 1.5rem !important;
+    }
+    
+    @media (max-width: 799px) {
+      grid-template-columns: 1fr !important;
+      grid-template-areas: 
+        "sidebar"
+        "content" !important;
+      gap: 1rem !important;
+    }
+  }
+}
+
+// 2. Hide the right sidebar completely
+.right.sidebar {
   display: none !important;
 }
 
-// 2. Override the main page grid to use only 2 columns instead of 3
-.page {
-  // Force 2-column layout: left sidebar + expanded center
-  grid-template-columns: auto 1fr !important;
-  grid-template-areas: "left center" !important;
-  
-  @media (min-width: 1200px) {
-    // Desktop: left sidebar with fixed width, center takes remaining space
-    grid-template-columns: minmax(250px, 300px) 1fr !important;
-    gap: 2rem !important;
-  }
-  
-  @media (max-width: 1199px) and (min-width: 800px) {
-    // Tablet: smaller left sidebar, center takes remaining space
-    grid-template-columns: 250px 1fr !important;
-    gap: 1.5rem !important;
-  }
-  
-  @media (max-width: 799px) {
-    // Mobile: stack vertically
-    grid-template-columns: 1fr !important;
-    grid-template-areas: 
-      "left"
-      "center" !important;
-    gap: 1rem !important;
-  }
+// Alternative selector in case the above doesn't work
+div.right.sidebar {
+  display: none !important;
 }
 
-// 3. Make sure center content expands properly
-.center {
-  // Allow center to use all available space
-  max-width: none !important;
-  width: 100% !important;
+// 3. Make sure left sidebar is properly positioned
+.left.sidebar {
+  grid-area: sidebar !important;
   
-  // Add some padding on the right for better readability
-  @media (min-width: 1200px) {
-    padding-right: 2rem !important;
-  }
-  
-  @media (max-width: 1199px) and (min-width: 800px) {
-    padding-right: 1rem !important;
-  }
-}
-
-// 4. Ensure left sidebar maintains proper width
-.left {
-  // Keep left sidebar at reasonable width
   @media (min-width: 1200px) {
     min-width: 250px !important;
     max-width: 300px !important;
@@ -1064,45 +1054,73 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// 5. Make sure main content doesn't get too wide for readability
-.center article,
-.center main,
-.center .content {
-  // Optional: limit text line length for better readability
-  > p, > h1, > h2, > h3, > h4, > h5, > h6 {
-    max-width: 75ch; // About 75 characters per line for optimal reading
+// 4. Make center content expand to fill available space
+.center {
+  grid-area: content !important;
+  max-width: none !important;
+  width: 100% !important;
+  
+  @media (min-width: 1200px) {
+    padding-right: 2rem !important;
   }
   
-  // But allow other elements (images, cards, etc.) to use full width
+  @media (max-width: 1199px) and (min-width: 800px) {
+    padding-right: 1rem !important;
+  }
+}
+
+// 5. Nuclear option - if the above grid approach doesn't work, use flexbox
+#quartz-root.page #quartz-body {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 2rem !important;
+  
+  .left.sidebar {
+    flex: 0 0 250px !important;
+  }
+  
+  .center {
+    flex: 1 !important;
+    max-width: none !important;
+  }
+  
+  .right.sidebar {
+    display: none !important;
+  }
+  
+  @media (max-width: 799px) {
+    flex-direction: column !important;
+    
+    .left.sidebar {
+      flex: 0 0 auto !important;
+      width: 100% !important;
+    }
+  }
+}
+
+// 6. Even more specific targeting if needed
+html body #quartz-root.page #quartz-body {
+  .right.sidebar {
+    display: none !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+}
+
+// 7. Make sure content doesn't get too wide for readability
+.center article,
+.center main {
+  > p, > h1, > h2, > h3, > h4, > h5, > h6 {
+    max-width: 75ch;
+  }
+  
+  // Allow full width for special elements
   > .hero,
   > .card-grid,
   > .team-grid,
-  > .contact-card-grid,
-  > .pathways-wrapper,
   > img,
   > figure {
-    max-width: none !important;
-  }
-}
-
-// 6. Additional safety overrides
-.page > *:nth-child(3),
-.page > .right,
-.sidebar.right {
-  display: none !important;
-  width: 0 !important;
-  min-width: 0 !important;
-  grid-column: none !important;
-}
-
-// 7. If you moved components to afterBody, style them nicely
-.after-body {
-  margin: 2rem 0 !important;
-  
-  .graph-container,
-  .toc,
-  .backlinks {
-    margin-bottom: 2rem !important;
     max-width: none !important;
   }
 }
