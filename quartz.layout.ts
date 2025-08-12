@@ -46,12 +46,6 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   // Remove right sidebar completely - set to empty array
   right: [],
-  // Optional: Move some right sidebar components to afterBody if you want them below content
-  afterBody: [
-    Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
-  ],
 }
 
 // Components for list pages (tags, folders, etc.)

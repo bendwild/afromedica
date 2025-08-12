@@ -19,7 +19,6 @@ const config: QuartzConfig = {
     baseUrl: "https://afromedica.be",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
-    generateSocialImages: true,
     theme: {
       cdnCaching: true,
       fontOrigin: "googleFonts",
@@ -70,7 +69,6 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({ 
         enableInHtmlEmbed: true, 
         enableCheckbox: true,
-        removePredefinedAnchor: true,
       }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),

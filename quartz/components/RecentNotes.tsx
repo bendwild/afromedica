@@ -19,7 +19,7 @@ interface Options {
 
 const defaultOptions = (cfg: GlobalConfiguration): Options => ({
   limit: 3,
-  linkToMore: "Updates",
+  linkToMore: "updates" as SimpleSlug,
   showTags: true,
   filter: () => true,
   sort: byDateAndAlphabetical(cfg),
@@ -28,7 +28,6 @@ const defaultOptions = (cfg: GlobalConfiguration): Options => ({
 export default ((userOpts?: Partial<Options>) => {
   const RecentNotes: QuartzComponent = ({
     allFiles,
-    fileData,
     displayClass,
     cfg,
   }: QuartzComponentProps) => {
@@ -36,8 +35,7 @@ export default ((userOpts?: Partial<Options>) => {
     const pages = allFiles.filter(opts.filter).sort(opts.sort)
     const remaining = Math.max(0, pages.length - opts.limit)
 
-    // ✅ Use only path portion of baseUrl
-    const basePath = new URL(cfg.configuration?.baseUrl ?? "/", "https://dummy.com").pathname.replace(/\/$/, "")
+    const basePath = "/"
 
     return (
       <div class={classNames(displayClass, "recent-notes")}>
@@ -52,7 +50,7 @@ export default ((userOpts?: Partial<Options>) => {
                 <div class="section">
                   <div class="desc">
                     <h3>
-                      <a href={`${basePath}/${page.slug}`} class="internal">
+                      <a href={`${basePath}${page.slug}`} class="internal">
                         {title}
                       </a>
                     </h3>
@@ -66,7 +64,7 @@ export default ((userOpts?: Partial<Options>) => {
                     <ul class="tags">
                       {tags.map((tag) => (
                         <li key={tag}>
-                          <a class="internal tag-link" href={`${basePath}/tags/${tag}`}>
+                          <a class="internal tag-link" href={`${basePath}tags/${tag}`}>
                             {tag}
                           </a>
                         </li>
@@ -80,7 +78,7 @@ export default ((userOpts?: Partial<Options>) => {
         </ul>
         {opts.linkToMore && remaining > 0 && (
           <p>
-            <a href={`${basePath}/${opts.linkToMore}`}>
+            <a href={`${basePath}${opts.linkToMore}`}>
               {i18n(cfg.locale).components.recentNotes.seeRemainingMore({ remaining })}
             </a>
           </p>
