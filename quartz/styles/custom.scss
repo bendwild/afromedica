@@ -1124,3 +1124,65 @@ html body #quartz-root.page #quartz-body {
     max-width: none !important;
   }
 }
+
+/* === FIX FOR CONTENT OVERFLOW === */
+
+/* Main grid without right sidebar */
+#quartz-root.page #quartz-body {
+  display: grid !important;
+  grid-template-columns: minmax(250px, 300px) 1fr !important;
+  grid-template-areas: "sidebar content" !important;
+  gap: 2rem !important;
+  max-width: 100% !important; /* Prevents container from exceeding screen */
+  box-sizing: border-box;
+}
+
+/* Hide right sidebar completely */
+.right.sidebar,
+div.right.sidebar {
+  display: none !important;
+}
+
+/* Left sidebar */
+.left.sidebar {
+  grid-area: sidebar !important;
+}
+
+/* Center content */
+.center {
+  grid-area: content !important;
+  width: 100% !important;
+  max-width: 100% !important; /* Keeps content inside screen */
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+  padding-inline: 1rem !important; /* Keeps text away from edges */
+}
+
+/* Constrain text width for readability but allow wide images/cards */
+.center article,
+.center main {
+  > p, > h1, > h2, > h3, > h4, > h5, > h6 {
+    max-width: 75ch;
+  }
+  > img,
+  > figure,
+  > .hero,
+  > .card-grid,
+  > .team-grid {
+    max-width: 100% !important;
+  }
+}
+
+.nav-link.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+.nav-link.active:hover {
+  color: var(--accent);
+}
+
+.language-switcher .current-lang {
+  font-weight: 600;
+  text-decoration: underline;
+}
