@@ -56,8 +56,8 @@ We maintain a high level of academic and structural engagement. While we deeply 
 
 ## Our Work
 
-AfroMedica operates as a horizontal, collective organization led by a dedicated board. The board consists of volunteers. We practice shared leadership; each [boardmember](content/en/About%20us/boardmembers.md) actively helps shape the organization’s direction. The president and vice-president provide overall coordination and are responsible for maintaining strategic alignment.
+AfroMedica operates as a horizontal, collective organization led by a dedicated board. The board consists of volunteers. We practice shared leadership; each [boardmember](content/nl/About%20us/boardmembers.md) actively helps shape the organization’s direction. The president and vice-president provide overall coordination and are responsible for maintaining strategic alignment.
 
 > [!info]+ Learn more about how we work!
 > Taskforces are the backbone of AfroMedica. Each group focuses on a specific domain, contributes to long-term goals, and is reviewed annually. 
-> [→ Explore our taskforces](content/en/About%20us/taskforces.md)
+> [→ Explore our taskforces](content/nl/About%20us/taskforces.md)

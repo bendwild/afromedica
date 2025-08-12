@@ -1,7 +1,7 @@
 ---
 title: Welcome to AfroMedica!
 publish: true
-modified: 2025-08-11
+modified: 2025-08-12
 tags: 
 ---
 <div class="hero">
@@ -10,7 +10,6 @@ tags:
   <a class="button" href="About-us">→ Learn More</a>
 </div>
 
-**🌍 Languages:** [Français](Home-fr) | [Nederlands](Home-nl) | **English** | [Language Selector](../)
 ---
 ## Upcoming events 
 <div class="timeline">

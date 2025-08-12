@@ -1,5 +1,5 @@
 ---
-modified: 2025-08-04
+modified: 2025-08-12
 ---
 Little guide for other obsidian editors: 
 
@@ -21,7 +21,7 @@ Everything in afroacademy is based on tags, make sure this is done so the tags c
 2. Add the tags to the properties section
 	1. ![[Pasted image 20250804204940.png]]
 3. Then add the tags to the code
-4. Then add the tags to the [[Afromedica Academy]] site (both in the properties section and in the code)
+4. Then add the tags to the [[content/en/Afromedica Academy/Afromedica Academy]] site (both in the properties section and in the code)
 
 # Properties
 ![[Pasted image 20250804205309.png]]
