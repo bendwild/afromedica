@@ -22,34 +22,34 @@ const config: QuartzConfig = {
     generateSocialImages: true,
     theme: {
       cdnCaching: true,
-      fontOrigin: "googleFonts", // changed from "local" to "googleFonts"
+      fontOrigin: "googleFonts",
       typography: {
-        header: "IBM Plex Serif",  // modern serif similar to Parclo
+        header: "IBM Plex Serif",
         body: "IBM Plex Serif",
-        code: "Fira Code",         // similar to Berkeley Mono
-      },
-      colors: {
-        lightMode: {
-          light: "#fffaf3",
-          lightgray: "#f2e9e1",
-          gray: "#9893a5",
-          darkgray: "#797593",
-          dark: "#575279",
-          secondary: "#d7827e",
-          tertiary: "#b4637a",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "rgba(246, 193, 119, 0.28)",
-        },
-        darkMode: {
-          light: "#1f1d30",
-          lightgray: "#26233a",
-          gray: "#6e6a86",
-          darkgray: "#908caa",
-          dark: "#e0def4",
-          secondary: "#ebbcba",
-          tertiary: "#eb6f92",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+        code: "Fira Code",
+    },
+    colors: {
+    lightMode: {
+      light: "#fffcdb",        // warm background
+      lightgray: "#d1c3f2",    // soft lavender
+      gray: "#a389db",         // medium lavender
+      darkgray: "#5e388e",     // deep purple
+      dark: "#2d1f17",         // dark brown
+      secondary: "#8effe1",    // aqua accent
+      tertiary: "#378f8a",     // teal accent
+      highlight: "rgba(142, 255, 225, 0.15)", // subtle aqua highlight
+      textHighlight: "rgba(255, 205, 159, 0.28)", // warm peach highlight
+    },
+    darkMode: {
+      light: "#2d1f17",        // deep brown background
+      lightgray: "#5e388e",    // deep purple-gray
+      gray: "#a389db",         // soft lavender
+      darkgray: "#d1c3f2",     // light lavender
+      dark: "#fffcdb",         // light warm cream
+      secondary: "#f4ac6a",    // warm orange
+      tertiary: "#cf772e",     // deep orange
+      highlight: "rgba(244, 172, 106, 0.15)", // warm orange highlight
+      textHighlight: "rgba(142, 255, 225, 0.28)", // aqua highlight
         },
       },
     },
