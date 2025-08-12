@@ -1186,3 +1186,47 @@ div.right.sidebar {
   font-weight: 600;
   text-decoration: underline;
 }
+
+/* === Final override: expand center content to fill previous right column === */
+#quartz-root.page #quartz-body {
+  display: grid !important;
+  grid-template-columns: minmax(250px, 300px) 1fr !important;
+  grid-template-areas: "sidebar content" !important;
+  gap: 2rem !important;
+}
+
+.left.sidebar {
+  grid-area: sidebar !important;
+}
+
+.center {
+  grid-area: content !important;
+  width: 100% !important;
+  max-width: none !important;
+  padding-right: 0 !important;
+}
+
+.right.sidebar,
+div.right.sidebar {
+  display: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+}
+
+/* Remove any text width caps so main content can use the full center width */
+.center article > p,
+.center article > h1,
+.center article > h2,
+.center article > h3,
+.center article > h4,
+.center article > h5,
+.center article > h6,
+.center main > p,
+.center main > h1,
+.center main > h2,
+.center main > h3,
+.center main > h4,
+.center main > h5,
+.center main > h6 {
+  max-width: none !important;
+}
