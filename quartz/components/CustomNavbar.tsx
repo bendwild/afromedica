@@ -40,20 +40,20 @@ const languageOptions = [
 
 const CustomNavbar: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
   const [currentLang, setCurrentLang] = useState("en")
-  const [currentPath, setCurrentPath] = useState("")
+  const [currentPath, setCurrentPath] = useState("/")
 
   useEffect(() => {
     const path = window.location.pathname
     setCurrentPath(path)
 
-    if (path.startsWith("/fr/") || path === "/fr") setCurrentLang("fr")
-    else if (path.startsWith("/nl/") || path === "/nl") setCurrentLang("nl")
-    else setCurrentLang("en")
+    // Detect language from first path segment, e.g. /en/..., /fr/..., /nl/...
+    const langMatch = path.match(/^\/(en|fr|nl)(\/|$)/)
+    setCurrentLang(langMatch ? langMatch[1] : "en")
   }, [])
 
   const translations = navTranslations[currentLang] || navTranslations.en
 
-  // Compose links with current language prefix
+  // Build nav links with current language prefix
   const langPrefix = `/${currentLang}`
   const links = [
     { href: `${langPrefix}/About-us/about`, label: translations["About Us"] },
@@ -65,8 +65,10 @@ const CustomNavbar: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
     { href: `${langPrefix}/Contact/contact`, label: translations["Contact"] },
   ]
 
-  // Remove language prefix from current path safely
-  const currentPagePath = currentPath.replace(/^\/(en|fr|nl)(\/|$)/, "/") || "/"
+  // Remove current language prefix from current path but keep the rest
+  // e.g. /en/About-us/about → /About-us/about
+  // so we can reuse for language switcher URLs
+  const currentPagePath = currentPath.replace(/^\/(en|fr|nl)(\/|$)/, "/")
 
   return (
     <nav className="main-navigation">
@@ -103,7 +105,7 @@ const CustomNavbar: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
                 {languageOptions.map(option => (
                   <li key={option.code}>
                     <a
-                      href={`${option.code}${currentPagePath}`}
+                      href={`/${option.code}${currentPagePath}`}
                       className={currentLang === option.code ? "current-lang" : ""}
                     >
                       {option.flag} {option.name}
