@@ -1,5 +1,5 @@
 import { useEffect, useState } from "preact/hooks"
-import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
 // Navigation translations
 const navTranslations = {
@@ -30,28 +30,48 @@ const navTranslations = {
     "Team": "Team",
     "Contact": "Contact",
   },
-}
+} as const
+
+type SupportedLang = keyof typeof navTranslations
 
 const languageOptions = [
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "nl", name: "Nederlands", flag: "🇳🇱" },
-]
+] as const
 
-const CustomNavbar: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
-  const [currentLang, setCurrentLang] = useState("en")
+const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
+  // mark props as used to satisfy noUnusedParameters
+  void props
+
+  const [currentLang, setCurrentLang] = useState<SupportedLang>("en")
   const [currentPath, setCurrentPath] = useState("/")
 
   useEffect(() => {
-    const path = window.location.pathname
-    setCurrentPath(path)
+    const updateFromLocation = () => {
+      const path = window.location.pathname
+      setCurrentPath(path)
+      const langMatch = path.match(/^\/(en|fr|nl)(\/|$)/)
+      setCurrentLang((langMatch ? langMatch[1] : "en") as SupportedLang)
+    }
 
-    // Detect language from first path segment, e.g. /en/..., /fr/..., /nl/...
-    const langMatch = path.match(/^\/(en|fr|nl)(\/|$)/)
-    setCurrentLang(langMatch ? langMatch[1] : "en")
+    // Initial detection on mount
+    updateFromLocation()
+
+    // Update on SPA navigations (Quartz dispatches a custom 'nav' event)
+    const onNav = () => updateFromLocation()
+    document.addEventListener("nav", onNav as EventListener)
+
+    // Also update on browser back/forward
+    window.addEventListener("popstate", updateFromLocation)
+
+    return () => {
+      document.removeEventListener("nav", onNav as EventListener)
+      window.removeEventListener("popstate", updateFromLocation)
+    }
   }, [])
 
-  const translations = navTranslations[currentLang] || navTranslations.en
+  const translations = navTranslations[currentLang]
 
   // Build nav links with current language prefix
   const langPrefix = `/${currentLang}`
@@ -63,7 +83,7 @@ const CustomNavbar: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
     { href: `${langPrefix}/Policy/policy`, label: translations["Policy"] },
     { href: `${langPrefix}/Team/team`, label: translations["Team"] },
     { href: `${langPrefix}/Contact/contact`, label: translations["Contact"] },
-  ]
+  ] as const
 
   // Remove current language prefix from current path but keep the rest
   // e.g. /en/About-us/about → /About-us/about
