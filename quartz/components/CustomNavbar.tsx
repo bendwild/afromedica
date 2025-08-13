@@ -59,7 +59,7 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
 
   const [currentLang, setCurrentLang] = useState<SupportedLang>("en")
   const [currentPath, setCurrentPath] = useState("/")
-  const [dropdownOpen, setDropdownOpen] = useState(false)
+
 
   useEffect(() => {
     const updateFromLocation = () => {
@@ -87,18 +87,11 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
     window.addEventListener("popstate", updateFromLocation)
 
     // Close dropdown when clicking outside
-    const closeDropdown = (e: MouseEvent) => {
-      const target = e.target as HTMLElement
-      if (!target.closest('.language-switcher')) {
-        setDropdownOpen(false)
-      }
-    }
-    document.addEventListener('click', closeDropdown)
+    // Note: Using CSS hover instead of JS state management
 
     return () => {
       document.removeEventListener("nav", onNav as EventListener)
       window.removeEventListener("popstate", updateFromLocation)
-      document.removeEventListener('click', closeDropdown)
     }
   }, [])
 
@@ -162,22 +155,15 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
 
           <li className="language-switcher">
             <div className="dropdown">
-              <button 
-                className="dropdown-toggle"
-                onClick={(e) => {
-                  e.stopPropagation()
-                  setDropdownOpen(!dropdownOpen)
-                }}
-              >
+              <button className="dropdown-toggle">
                 {currentLangOption?.flag} {currentLangOption?.name} ▼
               </button>
-              <ul className={`dropdown-menu${dropdownOpen ? ' show' : ''}`}>
+              <ul className="dropdown-menu">
                 {languageOptions.map(option => (
                   <li key={option.code}>
                     <a
                       href={getLanguageUrl(option.code)}
                       className={currentLang === option.code ? "current-lang" : ""}
-                      onClick={() => setDropdownOpen(false)}
                     >
                       {option.flag} {option.name}
                     </a>
