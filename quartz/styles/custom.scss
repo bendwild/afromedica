@@ -1186,3 +1186,45 @@ div.right.sidebar {
   font-weight: 600;
   text-decoration: underline;
 }
+
+/* === Final override: expand center content to fill previous right column === */
+#quartz-root.page #quartz-body {
+  display: grid !important;
+  grid-template-columns: minmax(250px, 300px) 1fr !important;
+  grid-template-areas: "sidebar content" !important;
+  gap: 2rem !important;
+}
+
+.left.sidebar {
+  grid-area: sidebar !important;
+}
+
+.center {
+  grid-area: content !important;
+  width: 100% !important;
+  max-width: none !important;
+  padding-right: 0 !important;
+}
+
+.right.sidebar,
+div.right.sidebar {
+  display: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+}
+
+/* Keep readable text width but allow special elements to span full center width */
+.center article,
+.center main {
+  > p, > h1, > h2, > h3, > h4, > h5, > h6 {
+    max-width: 75ch !important;
+  }
+  > .hero,
+  > .card-grid,
+  > .team-grid,
+  > .contact-card-grid,
+  > img,
+  > figure {
+    max-width: 100% !important;
+  }
+}
