@@ -32,25 +32,41 @@ const languageOptions = [
 
 // Define the path mapping for language switching
 const pathMappings = {
-  // English to Dutch
+  // English to Dutch (with and without trailing slashes)
   "/en/About-us/about": { nl: "/nl/About-us/about" },
+  "/en/About-us/about/": { nl: "/nl/About-us/about/" },
   "/en/Afromedica-Academy/Afromedica-Academy": { nl: "/nl/Afromedica-Academy/Afromedica-Academy" },
+  "/en/Afromedica-Academy/Afromedica-Academy/": { nl: "/nl/Afromedica-Academy/Afromedica-Academy/" },
   "/en/Afromedica-Talks/Afromedica-Talks": { nl: "/nl/Afromedica-Talks/Afromedica-Talks" },
+  "/en/Afromedica-Talks/Afromedica-Talks/": { nl: "/nl/Afromedica-Talks/Afromedica-Talks/" },
   "/en/Afromedica-Connects/Afromedica-Connects": { nl: "/nl/Afromedica-Connects/Afromedica-Connects" },
+  "/en/Afromedica-Connects/Afromedica-Connects/": { nl: "/nl/Afromedica-Connects/Afromedica-Connects/" },
   "/en/Policy/policy": { nl: "/nl/Policy/policy" },
+  "/en/Policy/policy/": { nl: "/nl/Policy/policy/" },
   "/en/Team/team": { nl: "/nl/Team/team" },
+  "/en/Team/team/": { nl: "/nl/Team/team/" },
   "/en/Contact/contact": { nl: "/nl/Contact/contact" },
+  "/en/Contact/contact/": { nl: "/nl/Contact/contact/" },
   "/en/": { nl: "/nl/" },
+  "/en": { nl: "/nl" },
   
-  // Dutch to English
+  // Dutch to English (with and without trailing slashes)
   "/nl/About-us/about": { en: "/en/About-us/about" },
+  "/nl/About-us/about/": { en: "/en/About-us/about/" },
   "/nl/Afromedica-Academy/Afromedica-Academy": { en: "/en/Afromedica-Academy/Afromedica-Academy" },
+  "/nl/Afromedica-Academy/Afromedica-Academy/": { en: "/en/Afromedica-Academy/Afromedica-Academy/" },
   "/nl/Afromedica-Talks/Afromedica-Talks": { en: "/en/Afromedica-Talks/Afromedica-Talks" },
+  "/nl/Afromedica-Talks/Afromedica-Talks/": { en: "/en/Afromedica-Talks/Afromedica-Talks/" },
   "/nl/Afromedica-Connects/Afromedica-Connects": { en: "/en/Afromedica-Connects/Afromedica-Connects" },
+  "/nl/Afromedica-Connects/Afromedica-Connects/": { en: "/en/Afromedica-Connects/Afromedica-Connects/" },
   "/nl/Policy/policy": { en: "/en/Policy/policy" },
+  "/nl/Policy/policy/": { en: "/en/Policy/policy/" },
   "/nl/Team/team": { en: "/en/Team/team" },
+  "/nl/Team/team/": { en: "/en/Team/team/" },
   "/nl/Contact/contact": { en: "/en/Contact/contact" },
+  "/nl/Contact/contact/": { en: "/en/Contact/contact/" },
   "/nl/": { en: "/en/" },
+  "/nl": { en: "/en" },
 } as const
 
 const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
