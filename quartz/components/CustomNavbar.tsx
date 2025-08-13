@@ -32,35 +32,25 @@ const languageOptions = [
 
 // Define the path mapping for language switching
 const pathMappings = {
-  // English to other languages
-  "/en/About-us/about": { nl: "/nl/About-us/about", fr: "/fr/About-us/about" },
-  "/en/Afromedica-Academy/Afromedica-Academy": { nl: "/nl/Afromedica-Academy/Afromedica-Academy", fr: "/fr/Afromedica-Academy/Afromedica-Academy" },
-  "/en/Afromedica-Talks/Afromedica-Talks": { nl: "/nl/Afromedica-Talks/Afromedica-Talks", fr: "/fr/Afromedica-Talks/Afromedica-Talks" },
-  "/en/Afromedica-Connects/Afromedica-Connects": { nl: "/nl/Afromedica-Connects/Afromedica-Connects", fr: "/fr/Afromedica-Connects/Afromedica-Connects" },
-  "/en/Policy/policy": { nl: "/nl/Policy/policy", fr: "/fr/Policy/policy" },
-  "/en/Team/team": { nl: "/nl/Team/team", fr: "/fr/Team/team" },
-  "/en/Contact/contact": { nl: "/nl/Contact/contact", fr: "/fr/Contact/contact" },
-  "/en/": { nl: "/nl/", fr: "/fr/" },
+  // English to Dutch
+  "/en/About-us/about": { nl: "/nl/About-us/about" },
+  "/en/Afromedica-Academy/Afromedica-Academy": { nl: "/nl/Afromedica-Academy/Afromedica-Academy" },
+  "/en/Afromedica-Talks/Afromedica-Talks": { nl: "/nl/Afromedica-Talks/Afromedica-Talks" },
+  "/en/Afromedica-Connects/Afromedica-Connects": { nl: "/nl/Afromedica-Connects/Afromedica-Connects" },
+  "/en/Policy/policy": { nl: "/nl/Policy/policy" },
+  "/en/Team/team": { nl: "/nl/Team/team" },
+  "/en/Contact/contact": { nl: "/nl/Contact/contact" },
+  "/en/": { nl: "/nl/" },
   
-  // Dutch to other languages
-  "/nl/About-us/about": { en: "/en/About-us/about", fr: "/fr/About-us/about" },
-  "/nl/Afromedica-Academy/Afromedica-Academy": { en: "/en/Afromedica-Academy/Afromedica-Academy", fr: "/fr/Afromedica-Academy/Afromedica-Academy" },
-  "/nl/Afromedica-Talks/Afromedica-Talks": { en: "/en/Afromedica-Talks/Afromedica-Talks", fr: "/fr/Afromedica-Talks/Afromedica-Talks" },
-  "/nl/Afromedica-Connects/Afromedica-Connects": { en: "/en/Afromedica-Connects/Afromedica-Connects", fr: "/fr/Afromedica-Connects/Afromedica-Connects" },
-  "/nl/Policy/policy": { en: "/en/Policy/policy", fr: "/fr/Policy/policy" },
-  "/nl/Team/team": { en: "/en/Team/team", fr: "/fr/Team/team" },
-  "/nl/Contact/contact": { en: "/en/Contact/contact", fr: "/fr/Contact/contact" },
-  "/nl/": { en: "/en/", fr: "/fr/" },
-  
-  // French to other languages
-  "/fr/About-us/about": { en: "/en/About-us/about", nl: "/nl/About-us/about" },
-  "/fr/Afromedica-Academy/Afromedica-Academy": { en: "/en/Afromedica-Academy/Afromedica-Academy", nl: "/nl/Afromedica-Academy/Afromedica-Academy" },
-  "/fr/Afromedica-Talks/Afromedica-Talks": { en: "/en/Afromedica-Talks/Afromedica-Talks", nl: "/nl/Afromedica-Talks/Afromedica-Talks" },
-  "/fr/Afromedica-Connects/Afromedica-Connects": { en: "/en/Afromedica-Connects/Afromedica-Connects", nl: "/nl/Afromedica-Connects/Afromedica-Connects" },
-  "/fr/Policy/policy": { en: "/en/Policy/policy", nl: "/nl/Policy/policy" },
-  "/fr/Team/team": { en: "/en/Team/team", nl: "/nl/Team/team" },
-  "/fr/Contact/contact": { en: "/en/Contact/contact", nl: "/nl/Contact/contact" },
-  "/fr/": { en: "/en/", nl: "/nl/" },
+  // Dutch to English
+  "/nl/About-us/about": { en: "/en/About-us/about" },
+  "/nl/Afromedica-Academy/Afromedica-Academy": { en: "/en/Afromedica-Academy/Afromedica-Academy" },
+  "/nl/Afromedica-Talks/Afromedica-Talks": { en: "/en/Afromedica-Talks/Afromedica-Talks" },
+  "/nl/Afromedica-Connects/Afromedica-Connects": { en: "/en/Afromedica-Connects/Afromedica-Connects" },
+  "/nl/Policy/policy": { en: "/en/Policy/policy" },
+  "/nl/Team/team": { en: "/en/Team/team" },
+  "/nl/Contact/contact": { en: "/en/Contact/contact" },
+  "/nl/": { en: "/en/" },
 } as const
 
 const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
@@ -78,7 +68,7 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
       setCurrentPath(path)
       
       // More robust language detection
-      const langMatch = path.match(/^\/(en|fr|nl)(?:\/|$)/)
+      const langMatch = path.match(/^\/(en|nl)(?:\/|$)/)
       const detectedLang = langMatch ? langMatch[1] as SupportedLang : "en"
       console.log("Detected language:", detectedLang) // Debug log
       setCurrentLang(detectedLang)
@@ -137,7 +127,7 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
     }
     
     // Fallback: simple language prefix replacement
-    const pathWithoutLang = normalizedPath.replace(/^\/(en|fr|nl)/, '') || '/'
+    const pathWithoutLang = normalizedPath.replace(/^\/(en|nl)/, '') || '/'
     return `/${targetLang}${pathWithoutLang}`
   }
 
@@ -199,71 +189,7 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
         </ul>
       </div>
 
-      <style jsx>{`
-        .dropdown {
-          position: relative;
-        }
 
-        .dropdown-toggle {
-          background: none;
-          border: none;
-          color: inherit;
-          cursor: pointer;
-          padding: 0.5rem;
-          border-radius: 4px;
-          transition: background-color 0.2s;
-        }
-
-        .dropdown-toggle:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .dropdown-menu {
-          position: absolute;
-          top: 100%;
-          right: 0;
-          background: white;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-          min-width: 150px;
-          z-index: 1000;
-          opacity: 0;
-          visibility: hidden;
-          transform: translateY(-10px);
-          transition: all 0.2s ease;
-          list-style: none;
-          margin: 0;
-          padding: 0;
-        }
-
-        .dropdown-menu.show {
-          opacity: 1;
-          visibility: visible;
-          transform: translateY(0);
-        }
-
-        .dropdown-menu li {
-          margin: 0;
-        }
-
-        .dropdown-menu a {
-          display: block;
-          padding: 0.5rem 1rem;
-          color: #333;
-          text-decoration: none;
-          transition: background-color 0.2s;
-        }
-
-        .dropdown-menu a:hover {
-          background-color: #f5f5f5;
-        }
-
-        .dropdown-menu a.current-lang {
-          background-color: #e3f2fd;
-          font-weight: bold;
-        }
-      `}</style>
     </nav>
   )
 }
