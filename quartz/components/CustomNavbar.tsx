@@ -113,15 +113,24 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
   const getLanguageUrl = (targetLang: SupportedLang): string => {
     const normalizedPath = currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath
     
+    console.log("Getting language URL for:", targetLang)
+    console.log("Current path:", currentPath)
+    console.log("Normalized path:", normalizedPath)
+    
     // Check if we have a direct mapping
     const mappings = pathMappings[normalizedPath as keyof typeof pathMappings]
+    console.log("Found mappings:", mappings)
+    
     if (mappings && mappings[targetLang]) {
+      console.log("Using direct mapping:", mappings[targetLang])
       return mappings[targetLang]
     }
     
     // Fallback: simple language prefix replacement
     const pathWithoutLang = normalizedPath.replace(/^\/(en|nl)/, '') || '/'
-    return `/${targetLang}${pathWithoutLang}`
+    const fallbackUrl = `/${targetLang}${pathWithoutLang}`
+    console.log("Using fallback URL:", fallbackUrl)
+    return fallbackUrl
   }
 
   const currentLangOption = languageOptions.find(opt => opt.code === currentLang)
