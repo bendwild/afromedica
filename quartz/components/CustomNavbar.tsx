@@ -111,8 +111,20 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
   ] as const
 
   // Language switch: keep same subpage, just swap the first segment
-  const makeLangHref = (target: SupportedLang) =>
-    restSegments.length ? `/${target}/${restSegments.join("/")}` : `/${target}/`
+  const makeLangHref = (target: SupportedLang) => {
+  // On the server, just replace the lang in the slug if possible
+  if (typeof window === "undefined") {
+    if (restSegments && restSegments.length > 0) {
+      return `/${target}/${restSegments.join("/")}`
+    }
+    return `/${target}/`
+  }
+
+  // Client side: preserve full path
+  const path = stripTrailingSlash(window.location.pathname || "/")
+  const { rest } = parsePath(path)
+  return rest.length ? `/${target}/${rest.join("/")}` : `/${target}/`
+}
 
   const isActive = (href: string) => {
     const a = stripTrailingSlash(href)
