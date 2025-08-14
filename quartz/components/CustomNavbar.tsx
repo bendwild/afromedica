@@ -2,7 +2,6 @@
 import { useEffect, useState } from "preact/hooks"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
-// Translations
 const navTranslations = {
   en: {
     "About Us": "About Us",
@@ -31,12 +30,8 @@ const stripTrailingSlash = (p: string) => (p !== "/" ? p.replace(/\/+$/, "") : "
 
 const parsePath = (path: string) => {
   const parts = (path || "").split("/").filter(Boolean)
-  const lang = (parts[0] && SUPPORTED.includes(parts[0] as SupportedLang))
-    ? (parts[0] as SupportedLang)
-    : "en"
-  const rest = (parts[0] && SUPPORTED.includes(parts[0] as SupportedLang))
-    ? parts.slice(1)
-    : parts
+  const lang = SUPPORTED.includes(parts[0] as SupportedLang) ? (parts[0] as SupportedLang) : "en"
+  const rest = SUPPORTED.includes(parts[0] as SupportedLang) ? parts.slice(1) : parts
   return { lang, rest }
 }
 
@@ -48,12 +43,8 @@ const fromPropsOrDefault = (props: QuartzComponentProps) => {
     slugArr = window.location.pathname.split("/").filter(Boolean)
   }
 
-  const lang = (slugArr[0] && SUPPORTED.includes(slugArr[0] as SupportedLang))
-    ? (slugArr[0] as SupportedLang)
-    : "en"
-  const rest = (slugArr[0] && SUPPORTED.includes(slugArr[0] as SupportedLang))
-    ? slugArr.slice(1)
-    : slugArr
+  const lang = SUPPORTED.includes(slugArr[0] as SupportedLang) ? (slugArr[0] as SupportedLang) : "en"
+  const rest = SUPPORTED.includes(slugArr[0] as SupportedLang) ? slugArr.slice(1) : slugArr
   const path = "/" + [lang, ...rest].filter(Boolean).join("/")
 
   return { lang, rest, path: stripTrailingSlash(path || "/") }
@@ -62,16 +53,14 @@ const fromPropsOrDefault = (props: QuartzComponentProps) => {
 const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
   const initial = fromPropsOrDefault(props)
   const [currentLang, setCurrentLang] = useState<SupportedLang>(initial.lang)
-  const [restSegments, setRestSegments] = useState<string[]>(initial.rest)
   const [currentPath, setCurrentPath] = useState<string>(initial.path)
 
   useEffect(() => {
     const updateFromLocation = () => {
       if (typeof window === "undefined") return
       const path = stripTrailingSlash(window.location.pathname || "/")
-      const { lang, rest } = parsePath(path)
+      const { lang } = parsePath(path)
       setCurrentLang(lang)
-      setRestSegments(rest)
       setCurrentPath(path)
     }
 
@@ -89,6 +78,7 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
     }
   }, [])
 
+  const { rest: restSegments } = parsePath(currentPath)
   const t = navTranslations[currentLang]
   const langPrefix = `/${currentLang}`
 
@@ -103,8 +93,7 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
   ] as const
 
   const makeLangHref = (target: SupportedLang) => {
-    const safeRest = Array.isArray(restSegments) ? restSegments : []
-    return safeRest.length > 0 ? `/${target}/${safeRest.join("/")}` : `/${target}/`
+    return restSegments.length ? `/${target}/${restSegments.join("/")}` : `/${target}/`
   }
 
   const isActive = (href: string) => {
@@ -131,10 +120,7 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
         <ul className="nav-menu">
           {links.map(link => (
             <li key={link.href}>
-              <a
-                href={link.href}
-                className={`nav-link${isActive(link.href) ? " active" : ""}`}
-              >
+              <a href={link.href} className={`nav-link${isActive(link.href) ? " active" : ""}`}>
                 {link.label}
               </a>
             </li>
@@ -147,20 +133,12 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
               </button>
               <ul className="dropdown-menu">
                 <li>
-                  <a
-                    href={makeLangHref("en")}
-                    onClick={() => setCurrentLang("en")}
-                    className={currentLang === "en" ? "current-lang" : ""}
-                  >
+                  <a href={makeLangHref("en")} className={currentLang === "en" ? "current-lang" : ""}>
                     🇺🇸 English
                   </a>
                 </li>
                 <li>
-                  <a
-                    href={makeLangHref("nl")}
-                    onClick={() => setCurrentLang("nl")}
-                    className={currentLang === "nl" ? "current-lang" : ""}
-                  >
+                  <a href={makeLangHref("nl")} className={currentLang === "nl" ? "current-lang" : ""}>
                     🇳🇱 Nederlands
                   </a>
                 </li>
