@@ -27,7 +27,6 @@ const navTranslations = {
 type SupportedLang = keyof typeof navTranslations
 const SUPPORTED: SupportedLang[] = ["en", "nl"]
 
-// --- helpers (SSR-safe) ---
 const stripTrailingSlash = (p: string) => (p !== "/" ? p.replace(/\/+$/, "") : "/")
 
 const parsePath = (path: string) => {
@@ -45,7 +44,6 @@ const fromPropsOrDefault = (props: QuartzComponentProps) => {
   const anyProps = props as any
   let slugArr: string[] = Array.isArray(anyProps?.fileData?.slug) ? anyProps.fileData.slug : []
 
-  // If slugArr is missing or empty, try to parse from pathname (client only)
   if (slugArr.length === 0 && typeof window !== "undefined") {
     slugArr = window.location.pathname.split("/").filter(Boolean)
   }
@@ -62,14 +60,11 @@ const fromPropsOrDefault = (props: QuartzComponentProps) => {
 }
 
 const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
-  // Initial state derived from SSR props (works in `quartz build`)
   const initial = fromPropsOrDefault(props)
-
   const [currentLang, setCurrentLang] = useState<SupportedLang>(initial.lang)
   const [restSegments, setRestSegments] = useState<string[]>(initial.rest)
   const [currentPath, setCurrentPath] = useState<string>(initial.path)
 
-  // Keep state in sync on the client for SPA navigations
   useEffect(() => {
     const updateFromLocation = () => {
       if (typeof window === "undefined") return
@@ -80,14 +75,10 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
       setCurrentPath(path)
     }
 
-    // initial client sync
     updateFromLocation()
 
-    // Quartz SPA event
     const onNav = () => setTimeout(updateFromLocation, 0)
     document.addEventListener("nav", onNav as EventListener)
-
-    // Browser history changes
     window.addEventListener("popstate", updateFromLocation)
     window.addEventListener("hashchange", updateFromLocation)
 
@@ -101,7 +92,6 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
   const t = navTranslations[currentLang]
   const langPrefix = `/${currentLang}`
 
-  // Build navbar links for the current language
   const links = [
     { href: `${langPrefix}/About-us/about`, label: t["About Us"] },
     { href: `${langPrefix}/Afromedica-Academy/Afromedica-Academy`, label: t["Afromedica Academy"] },
@@ -112,15 +102,9 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
     { href: `${langPrefix}/Contact/contact`, label: t["Contact"] },
   ] as const
 
-  // Language switch: keep same subpage, just swap the first segment
   const makeLangHref = (target: SupportedLang) => {
     const safeRest = Array.isArray(restSegments) ? restSegments : []
-    if (typeof window === "undefined") {
-      return safeRest.length > 0 ? `/${target}/${safeRest.join("/")}` : `/${target}/`
-    }
-    const path = stripTrailingSlash(window.location.pathname || "/")
-    const { rest } = parsePath(path)
-    return rest.length > 0 ? `/${target}/${rest.join("/")}` : `/${target}/`
+    return safeRest.length > 0 ? `/${target}/${safeRest.join("/")}` : `/${target}/`
   }
 
   const isActive = (href: string) => {
@@ -165,6 +149,7 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
                 <li>
                   <a
                     href={makeLangHref("en")}
+                    onClick={() => setCurrentLang("en")}
                     className={currentLang === "en" ? "current-lang" : ""}
                   >
                     🇺🇸 English
@@ -173,6 +158,7 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
                 <li>
                   <a
                     href={makeLangHref("nl")}
+                    onClick={() => setCurrentLang("nl")}
                     className={currentLang === "nl" ? "current-lang" : ""}
                   >
                     🇳🇱 Nederlands
