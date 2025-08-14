@@ -80,14 +80,18 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
   useEffect(() => {
     const updateFromLocation = () => {
       const path = window.location.pathname
-      console.log("Current path:", path) // Debug log
+      console.log("=== Language Detection Debug ===")
+      console.log("Current path from window.location:", path)
       setCurrentPath(path)
       
       // More robust language detection
       const langMatch = path.match(/^\/(en|nl)(?:\/|$)/)
       const detectedLang = langMatch ? langMatch[1] as SupportedLang : "en"
-      console.log("Detected language:", detectedLang) // Debug log
+      console.log("Language match result:", langMatch)
+      console.log("Detected language:", detectedLang)
+      console.log("Setting current language to:", detectedLang)
       setCurrentLang(detectedLang)
+      console.log("================================")
     }
 
     // Initial detection on mount
