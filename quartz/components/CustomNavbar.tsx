@@ -30,95 +30,39 @@ const languageOptions = [
   { code: "nl", name: "Nederlands", flag: "🇳🇱" },
 ] as const
 
-// Define the path mapping for language switching
-const pathMappings = {
-  // English to Dutch (with and without trailing slashes)
-  "/en/About-us/about": { nl: "/nl/About-us/about" },
-  "/en/About-us/about/": { nl: "/nl/About-us/about/" },
-  "/en/Afromedica-Academy/Afromedica-Academy": { nl: "/nl/Afromedica-Academy/Afromedica-Academy" },
-  "/en/Afromedica-Academy/Afromedica-Academy/": { nl: "/nl/Afromedica-Academy/Afromedica-Academy/" },
-  "/en/Afromedica-Talks/Afromedica-Talks": { nl: "/nl/Afromedica-Talks/Afromedica-Talks" },
-  "/en/Afromedica-Talks/Afromedica-Talks/": { nl: "/nl/Afromedica-Talks/Afromedica-Talks/" },
-  "/en/Afromedica-Connects/Afromedica-Connects": { nl: "/nl/Afromedica-Connects/Afromedica-Connects" },
-  "/en/Afromedica-Connects/Afromedica-Connects/": { nl: "/nl/Afromedica-Connects/Afromedica-Connects/" },
-  "/en/Policy/policy": { nl: "/nl/Policy/policy" },
-  "/en/Policy/policy/": { nl: "/nl/Policy/policy/" },
-  "/en/Team/team": { nl: "/nl/Team/team" },
-  "/en/Team/team/": { nl: "/nl/Team/team/" },
-  "/en/Contact/contact": { nl: "/nl/Contact/contact" },
-  "/en/Contact/contact/": { nl: "/nl/Contact/contact/" },
-  "/en/": { nl: "/nl/" },
-  "/en": { nl: "/nl" },
-  
-  // Dutch to English (with and without trailing slashes)
-  "/nl/About-us/about": { en: "/en/About-us/about" },
-  "/nl/About-us/about/": { en: "/en/About-us/about/" },
-  "/nl/Afromedica-Academy/Afromedica-Academy": { en: "/en/Afromedica-Academy/Afromedica-Academy" },
-  "/nl/Afromedica-Academy/Afromedica-Academy/": { en: "/en/Afromedica-Academy/Afromedica-Academy/" },
-  "/nl/Afromedica-Talks/Afromedica-Talks": { en: "/en/Afromedica-Talks/Afromedica-Talks" },
-  "/nl/Afromedica-Talks/Afromedica-Talks/": { en: "/en/Afromedica-Talks/Afromedica-Talks/" },
-  "/nl/Afromedica-Connects/Afromedica-Connects": { en: "/en/Afromedica-Connects/Afromedica-Connects" },
-  "/nl/Afromedica-Connects/Afromedica-Connects/": { en: "/en/Afromedica-Connects/Afromedica-Connects/" },
-  "/nl/Policy/policy": { en: "/en/Policy/policy" },
-  "/nl/Policy/policy/": { en: "/en/Policy/policy/" },
-  "/nl/Team/team": { en: "/en/Team/team" },
-  "/nl/Team/team/": { en: "/en/Team/team/" },
-  "/nl/Contact/contact": { en: "/en/Contact/contact" },
-  "/nl/Contact/contact/": { en: "/en/Contact/contact/" },
-  "/nl/": { en: "/en/" },
-  "/nl": { en: "/en" },
-} as const
-
 const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
-  // mark props as used to satisfy noUnusedParameters
   void props
 
   const [currentLang, setCurrentLang] = useState<SupportedLang>("en")
   const [currentPath, setCurrentPath] = useState("/")
 
+  // Detect language + path from URL
+  const detectFromUrl = () => {
+    const path = window.location.pathname
+    setCurrentPath(path)
+
+    const langMatch = path.match(/^\/(en|nl)(?:\/|$)/)
+    const detectedLang = langMatch ? (langMatch[1] as SupportedLang) : "en"
+    setCurrentLang(detectedLang)
+  }
 
   useEffect(() => {
-    const updateFromLocation = () => {
-      const path = window.location.pathname
-      console.log("=== Language Detection Debug ===")
-      console.log("Current path from window.location:", path)
-      setCurrentPath(path)
-      
-      // More robust language detection
-      const langMatch = path.match(/^\/(en|nl)(?:\/|$)/)
-      const detectedLang = langMatch ? langMatch[1] as SupportedLang : "en"
-      console.log("Language match result:", langMatch)
-      console.log("Detected language:", detectedLang)
-      console.log("Setting current language to:", detectedLang)
-      setCurrentLang(detectedLang)
-      console.log("================================")
-    }
+    detectFromUrl()
 
-    // Initial detection on mount
-    updateFromLocation()
-
-    // Update on SPA navigations (Quartz dispatches a custom 'nav' event)
-    const onNav = () => {
-      setTimeout(updateFromLocation, 10) // Small delay to ensure DOM is updated
-    }
+    // Listen to Quartz SPA nav event
+    const onNav = () => setTimeout(detectFromUrl, 50) // small delay to let URL settle
     document.addEventListener("nav", onNav as EventListener)
-
-    // Also update on browser back/forward
-    window.addEventListener("popstate", updateFromLocation)
-
-    // Close dropdown when clicking outside
-    // Note: Using CSS hover instead of JS state management
+    window.addEventListener("popstate", detectFromUrl)
 
     return () => {
       document.removeEventListener("nav", onNav as EventListener)
-      window.removeEventListener("popstate", updateFromLocation)
+      window.removeEventListener("popstate", detectFromUrl)
     }
   }, [])
 
   const translations = navTranslations[currentLang]
-
-  // Build nav links with current language prefix
   const langPrefix = `/${currentLang}`
+
   const links = [
     { href: `${langPrefix}/About-us/about`, label: translations["About Us"] },
     { href: `${langPrefix}/Afromedica-Academy/Afromedica-Academy`, label: translations["Afromedica Academy"] },
@@ -129,46 +73,14 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
     { href: `${langPrefix}/Contact/contact`, label: translations["Contact"] },
   ] as const
 
-  // Function to get the equivalent page in another language
-  const getLanguageUrl = (targetLang: SupportedLang): string => {
-    // Check if we're in a browser environment
-    if (typeof window === 'undefined') {
-      // Server-side rendering fallback - use simple path replacement
-      const simplePath = currentPath.replace(/^\/(?:en|nl)/, '') || '/'
-      return `/${targetLang}${simplePath}`
-    }
-    
-    // Get the current URL directly from window.location
-    const fullUrl = window.location.href
-    const currentUrl = new URL(fullUrl)
-    const currentPathname = currentUrl.pathname
-    
-    console.log("=== Language Switch Debug ===")
-    console.log("Full URL:", fullUrl)
-    console.log("Current pathname:", currentPathname)
-    console.log("Target language:", targetLang)
-    console.log("Current language:", currentLang)
-    
-    // Simple replacement: change the language code in the path
-    let newPath
-    
-    if (currentPathname.startsWith('/en/')) {
-      newPath = currentPathname.replace(/^\/en\//, `/${targetLang}/`)
-    } else if (currentPathname.startsWith('/nl/')) {
-      newPath = currentPathname.replace(/^\/nl\//, `/${targetLang}/`)
-    } else if (currentPathname === '/en' || currentPathname === '/en/') {
-      newPath = `/${targetLang}/`
-    } else if (currentPathname === '/nl' || currentPathname === '/nl/') {
-      newPath = `/${targetLang}/`
-    } else {
-      // No language prefix detected, add one
-      newPath = `/${targetLang}${currentPathname}`
-    }
-    
-    console.log("Generated new path:", newPath)
-    console.log("============================")
-    
-    return newPath
+  // Language switch function
+  const getLanguageUrl = (targetLang: SupportedLang) => {
+    const pathname = window.location.pathname
+    if (pathname.startsWith("/en/")) return pathname.replace(/^\/en\//, `/${targetLang}/`)
+    if (pathname.startsWith("/nl/")) return pathname.replace(/^\/nl\//, `/${targetLang}/`)
+    if (pathname === "/en" || pathname === "/en/") return `/${targetLang}/`
+    if (pathname === "/nl" || pathname === "/nl/") return `/${targetLang}/`
+    return `/${targetLang}${pathname}`
   }
 
   const currentLangOption = languageOptions.find(opt => opt.code === currentLang)
@@ -188,9 +100,10 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
         <ul className="nav-menu">
           {links.map(link => {
             const isActive =
-              currentPath === link.href || 
+              currentPath === link.href ||
               currentPath.startsWith(link.href + "/") ||
-              (currentPath.endsWith('/') && currentPath.slice(0, -1) === link.href)
+              (currentPath.endsWith("/") && currentPath.slice(0, -1) === link.href)
+
             return (
               <li key={link.href}>
                 <a href={link.href} className={`nav-link${isActive ? " active" : ""}`}>
@@ -221,8 +134,6 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
           </li>
         </ul>
       </div>
-
-
     </nav>
   )
 }
