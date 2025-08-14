@@ -40,15 +40,22 @@ const parsePath = (path: string) => {
 }
 
 const fromPropsOrDefault = (props: QuartzComponentProps) => {
-  // Use slug from props at build time (SSR), fallback to '/'.
   const anyProps = props as any
-  const slugArr: string[] = anyProps?.fileData?.slug ?? []
-  // slug likely includes language as first segment (en/nl/...)
+  let slugArr: string[] = anyProps?.fileData?.slug ?? []
+
+  // If slugArr is missing or empty, try to parse from pathname (client only)
+  if ((!slugArr || slugArr.length === 0) && typeof window !== "undefined") {
+    slugArr = window.location.pathname.split("/").filter(Boolean)
+  }
+
   const lang = (slugArr[0] && SUPPORTED.includes(slugArr[0] as SupportedLang))
     ? (slugArr[0] as SupportedLang)
     : "en"
-  const rest = (slugArr[0] && SUPPORTED.includes(slugArr[0] as SupportedLang)) ? slugArr.slice(1) : slugArr
+  const rest = (slugArr[0] && SUPPORTED.includes(slugArr[0] as SupportedLang))
+    ? slugArr.slice(1)
+    : slugArr
   const path = "/" + [lang, ...rest].filter(Boolean).join("/")
+
   return { lang, rest, path: stripTrailingSlash(path || "/") }
 }
 
