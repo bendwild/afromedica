@@ -127,49 +127,37 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
 
   // Function to get the equivalent page in another language
   const getLanguageUrl = (targetLang: SupportedLang): string => {
-    console.log("Getting language URL for:", targetLang)
-    console.log("Current path:", currentPath)
+    // Get the current URL directly from window.location
+    const fullUrl = window.location.href
+    const currentUrl = new URL(fullUrl)
+    const currentPathname = currentUrl.pathname
     
-    // Try exact match first
-    let mappings = pathMappings[currentPath as keyof typeof pathMappings]
-    console.log("Exact match mappings:", mappings)
+    console.log("=== Language Switch Debug ===")
+    console.log("Full URL:", fullUrl)
+    console.log("Current pathname:", currentPathname)
+    console.log("Target language:", targetLang)
+    console.log("Current language:", currentLang)
     
-    if (mappings && mappings[targetLang]) {
-      console.log("Using exact match:", mappings[targetLang])
-      return mappings[targetLang]
+    // Simple replacement: change the language code in the path
+    let newPath
+    
+    if (currentPathname.startsWith('/en/')) {
+      newPath = currentPathname.replace(/^\/en\//, `/${targetLang}/`)
+    } else if (currentPathname.startsWith('/nl/')) {
+      newPath = currentPathname.replace(/^\/nl\//, `/${targetLang}/`)
+    } else if (currentPathname === '/en' || currentPathname === '/en/') {
+      newPath = `/${targetLang}/`
+    } else if (currentPathname === '/nl' || currentPathname === '/nl/') {
+      newPath = `/${targetLang}/`
+    } else {
+      // No language prefix detected, add one
+      newPath = `/${targetLang}${currentPathname}`
     }
     
-    // Try normalized path (remove trailing slash)
-    const normalizedPath = currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath
-    console.log("Normalized path:", normalizedPath)
+    console.log("Generated new path:", newPath)
+    console.log("============================")
     
-    mappings = pathMappings[normalizedPath as keyof typeof pathMappings]
-    console.log("Normalized match mappings:", mappings)
-    
-    if (mappings && mappings[targetLang]) {
-      console.log("Using normalized match:", mappings[targetLang])
-      return mappings[targetLang]
-    }
-    
-    // Enhanced fallback: preserve the exact structure
-    if (currentPath.startsWith('/en/')) {
-      const pathWithoutLang = currentPath.substring(3) // Remove '/en'
-      const newUrl = `/nl${pathWithoutLang}`
-      console.log("Enhanced fallback for EN->NL:", newUrl)
-      return newUrl
-    }
-    
-    if (currentPath.startsWith('/nl/')) {
-      const pathWithoutLang = currentPath.substring(3) // Remove '/nl'
-      const newUrl = `/en${pathWithoutLang}`
-      console.log("Enhanced fallback for NL->EN:", newUrl)
-      return newUrl
-    }
-    
-    // Last resort fallback
-    const fallbackUrl = `/${targetLang}/`
-    console.log("Last resort fallback:", fallbackUrl)
-    return fallbackUrl
+    return newPath
   }
 
   const currentLangOption = languageOptions.find(opt => opt.code === currentLang)
