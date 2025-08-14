@@ -127,6 +127,13 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
 
   // Function to get the equivalent page in another language
   const getLanguageUrl = (targetLang: SupportedLang): string => {
+    // Check if we're in a browser environment
+    if (typeof window === 'undefined') {
+      // Server-side rendering fallback - use simple path replacement
+      const simplePath = currentPath.replace(/^\/(?:en|nl)/, '') || '/'
+      return `/${targetLang}${simplePath}`
+    }
+    
     // Get the current URL directly from window.location
     const fullUrl = window.location.href
     const currentUrl = new URL(fullUrl)
