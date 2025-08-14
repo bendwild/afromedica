@@ -16,22 +16,40 @@ const languageOptions = [
 
 const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
   void props
+
   const [currentLang, setCurrentLang] = useState<SupportedLang>("en")
   const [currentPath, setCurrentPath] = useState("/")
 
   // SSR-safe: only access window inside useEffect
   useEffect(() => {
-    const path = window.location.pathname
-    setCurrentPath(path)
+    const updateFromLocation = () => {
+      const path = window.location.pathname
+      setCurrentPath(path)
+      const langMatch = path.match(/^\/(en|nl)(?:\/|$)/)
+      setCurrentLang(langMatch ? (langMatch[1] as SupportedLang) : "en")
+    }
 
-    const langMatch = path.match(/^\/(en|nl)(?:\/|$)/)
-    setCurrentLang(langMatch ? (langMatch[1] as SupportedLang) : "en")
+    // Initial detection
+    updateFromLocation()
+
+    // Update on Quartz SPA navigation
+    const onNav = () => {
+      setTimeout(updateFromLocation, 10)
+    }
+    document.addEventListener("nav", onNav as EventListener)
+
+    // Update on browser back/forward
+    window.addEventListener("popstate", updateFromLocation)
+
+    return () => {
+      document.removeEventListener("nav", onNav as EventListener)
+      window.removeEventListener("popstate", updateFromLocation)
+    }
   }, [])
 
   const translations = navTranslations[currentLang]
-
-  // Build nav links
   const langPrefix = `/${currentLang}`
+
   const links = [
     { href: `${langPrefix}/About-us/about`, label: translations["About Us"] },
     { href: `${langPrefix}/Afromedica-Academy/Afromedica-Academy`, label: translations["Afromedica Academy"] },
@@ -42,8 +60,8 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
     { href: `${langPrefix}/Contact/contact`, label: translations["Contact"] },
   ] as const
 
-  // Build language switch URLs safely
   const getLanguageUrl = (targetLang: SupportedLang) => {
+    // Replace the current language prefix with targetLang
     const pathWithoutLang = currentPath.replace(/^\/(en|nl)/, "") || "/"
     return `/${targetLang}${pathWithoutLang}`
   }
@@ -81,7 +99,10 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
               <ul className="dropdown-menu">
                 {languageOptions.map(option => (
                   <li key={option.code}>
-                    <a href={getLanguageUrl(option.code)} className={currentLang === option.code ? "current-lang" : ""}>
+                    <a
+                      href={getLanguageUrl(option.code)}
+                      className={currentLang === option.code ? "current-lang" : ""}
+                    >
                       {option.flag} {option.name}
                     </a>
                   </li>
