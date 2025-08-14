@@ -31,20 +31,22 @@ const SUPPORTED: SupportedLang[] = ["en", "nl"]
 const stripTrailingSlash = (p: string) => (p !== "/" ? p.replace(/\/+$/, "") : "/")
 
 const parsePath = (path: string) => {
-  const parts = path.split("/").filter(Boolean)
-  const lang = (parts[0] && SUPPORTED.includes(parts[0] as SupportedLang)
+  const parts = (path || "").split("/").filter(Boolean)
+  const lang = (parts[0] && SUPPORTED.includes(parts[0] as SupportedLang))
     ? (parts[0] as SupportedLang)
-    : "en")
-  const rest = (parts[0] && SUPPORTED.includes(parts[0] as SupportedLang)) ? parts.slice(1) : parts
+    : "en"
+  const rest = (parts[0] && SUPPORTED.includes(parts[0] as SupportedLang))
+    ? parts.slice(1)
+    : parts
   return { lang, rest }
 }
 
 const fromPropsOrDefault = (props: QuartzComponentProps) => {
   const anyProps = props as any
-  let slugArr: string[] = anyProps?.fileData?.slug ?? []
+  let slugArr: string[] = Array.isArray(anyProps?.fileData?.slug) ? anyProps.fileData.slug : []
 
   // If slugArr is missing or empty, try to parse from pathname (client only)
-  if ((!slugArr || slugArr.length === 0) && typeof window !== "undefined") {
+  if (slugArr.length === 0 && typeof window !== "undefined") {
     slugArr = window.location.pathname.split("/").filter(Boolean)
   }
 
@@ -81,7 +83,7 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
     // initial client sync
     updateFromLocation()
 
-    // Quartz SPA event (some builds dispatch 'nav' after internal routing)
+    // Quartz SPA event
     const onNav = () => setTimeout(updateFromLocation, 0)
     document.addEventListener("nav", onNav as EventListener)
 
@@ -112,19 +114,14 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
 
   // Language switch: keep same subpage, just swap the first segment
   const makeLangHref = (target: SupportedLang) => {
-  // On the server, just replace the lang in the slug if possible
-  if (typeof window === "undefined") {
-    if (restSegments && restSegments.length > 0) {
-      return `/${target}/${restSegments.join("/")}`
+    const safeRest = Array.isArray(restSegments) ? restSegments : []
+    if (typeof window === "undefined") {
+      return safeRest.length > 0 ? `/${target}/${safeRest.join("/")}` : `/${target}/`
     }
-    return `/${target}/`
+    const path = stripTrailingSlash(window.location.pathname || "/")
+    const { rest } = parsePath(path)
+    return rest.length > 0 ? `/${target}/${rest.join("/")}` : `/${target}/`
   }
-
-  // Client side: preserve full path
-  const path = stripTrailingSlash(window.location.pathname || "/")
-  const { rest } = parsePath(path)
-  return rest.length ? `/${target}/${rest.join("/")}` : `/${target}/`
-}
 
   const isActive = (href: string) => {
     const a = stripTrailingSlash(href)
@@ -132,7 +129,6 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
     return b === a || b.startsWith(a + "/")
   }
 
-  // Current language option label
   const currentLangLabel = currentLang === "nl" ? "Nederlands" : "English"
   const currentLangFlag = currentLang === "nl" ? "🇳🇱" : "🇺🇸"
 
