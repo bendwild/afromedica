@@ -996,3 +996,18 @@ h1, h2, h3, h4, h5, h6 {
     right: -10px;
   }
 }
+
+.custom-navbar a {
+  color: var(--dark);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.custom-navbar a:hover {
+  color: var(--accent);
+}
+
+.custom-navbar a.active {
+  color: var(--accent);
+  font-weight: bold;
+}
