@@ -1,141 +1,93 @@
-import { useEffect, useState } from "preact/hooks"
-import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
+import { QuartzComponent } from "../types"
+import React from "react"
 
-// Navigation translations
-const navTranslations = {
-  en: {
-    "About Us": "About Us",
-    "Afromedica Academy": "Afromedica Academy",
-    "Afromedica Talks": "Afromedica Talks",
-    "Afromedica Connects": "Afromedica Connects",
-    "Policy": "Policy",
-    "Team": "Team",
-    "Contact": "Contact",
-  },
-  nl: {
-    "About Us": "Over Ons",
-    "Afromedica Academy": "Afromedica Academie",
-    "Afromedica Talks": "Afromedica Gesprekken",
-    "Afromedica Connects": "Afromedica Verbindt",
-    "Policy": "Beleid",
-    "Team": "Team",
-    "Contact": "Contact",
-  },
-} as const
+const languages = ["en", "fr", "nl"]
 
-type SupportedLang = keyof typeof navTranslations
+// Safely get the current path
+function getCurrentPath() {
+  if (typeof window !== "undefined") {
+    return window.location.pathname
+  }
+  return "/" // default for build time
+}
 
-const languageOptions = [
-  { code: "en", name: "English", flag: "🇺🇸" },
-  { code: "nl", name: "Nederlands", flag: "🇳🇱" },
-] as const
+// Create a new URL for switching languages
+function getLanguageUrl(lang: string) {
+  const currentPath = getCurrentPath()
+  const pathParts = currentPath.split("/").filter(Boolean)
 
-const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
-  void props
-
-  const [currentLang, setCurrentLang] = useState<SupportedLang>("en")
-  const [currentPath, setCurrentPath] = useState("/")
-
-  // Detect language + path from URL
-  const detectFromUrl = () => {
-    const path = window.location.pathname
-    setCurrentPath(path)
-
-    const langMatch = path.match(/^\/(en|nl)(?:\/|$)/)
-    const detectedLang = langMatch ? (langMatch[1] as SupportedLang) : "en"
-    setCurrentLang(detectedLang)
+  // Replace first segment if it's a language code
+  if (["en", "fr", "nl"].includes(pathParts[0])) {
+    pathParts[0] = lang
+  } else {
+    pathParts.unshift(lang)
   }
 
-  useEffect(() => {
-    detectFromUrl()
+  return "/" + pathParts.join("/")
+}
 
-    // Listen to Quartz SPA nav event
-    const onNav = () => setTimeout(detectFromUrl, 50) // small delay to let URL settle
-    document.addEventListener("nav", onNav as EventListener)
-    window.addEventListener("popstate", detectFromUrl)
-
-    return () => {
-      document.removeEventListener("nav", onNav as EventListener)
-      window.removeEventListener("popstate", detectFromUrl)
-    }
-  }, [])
-
-  const translations = navTranslations[currentLang]
-  const langPrefix = `/${currentLang}`
+const CustomNavbar: QuartzComponent = () => {
+  const currentPath = getCurrentPath()
+  const pathParts = currentPath.split("/").filter(Boolean)
+  const currentLang = ["en", "fr", "nl"].includes(pathParts[0]) ? pathParts[0] : "en"
 
   const links = [
-    { href: `${langPrefix}/About-us/about`, label: translations["About Us"] },
-    { href: `${langPrefix}/Afromedica-Academy/Afromedica-Academy`, label: translations["Afromedica Academy"] },
-    { href: `${langPrefix}/Afromedica-Talks/Afromedica-Talks`, label: translations["Afromedica Talks"] },
-    { href: `${langPrefix}/Afromedica-Connects/Afromedica-Connects`, label: translations["Afromedica Connects"] },
-    { href: `${langPrefix}/Policy/policy`, label: translations["Policy"] },
-    { href: `${langPrefix}/Team/team`, label: translations["Team"] },
-    { href: `${langPrefix}/Contact/contact`, label: translations["Contact"] },
-  ] as const
-
-  // Language switch function
-  const getLanguageUrl = (targetLang: SupportedLang) => {
-    const pathname = window.location.pathname
-    if (pathname.startsWith("/en/")) return pathname.replace(/^\/en\//, `/${targetLang}/`)
-    if (pathname.startsWith("/nl/")) return pathname.replace(/^\/nl\//, `/${targetLang}/`)
-    if (pathname === "/en" || pathname === "/en/") return `/${targetLang}/`
-    if (pathname === "/nl" || pathname === "/nl/") return `/${targetLang}/`
-    return `/${targetLang}${pathname}`
-  }
-
-  const currentLangOption = languageOptions.find(opt => opt.code === currentLang)
+    { href: `/${currentLang}/about`, label: currentLang === "fr" ? "À propos" : currentLang === "nl" ? "Over ons" : "About Us" },
+    { href: `/${currentLang}/academy`, label: currentLang === "fr" ? "Académie" : currentLang === "nl" ? "Academie" : "Academy" },
+    { href: `/${currentLang}/resources`, label: currentLang === "fr" ? "Ressources" : currentLang === "nl" ? "Middelen" : "Resources" },
+  ]
 
   return (
-    <nav className="main-navigation">
-      <div className="nav-container">
-        <div className="nav-logo">
-          <a href={`${langPrefix}/`}>
-            <img
-              src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/afromedica%20(6).png"
-              alt="AfroMedica Logo"
-            />
+    <nav style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "1rem" }}>
+      {/* Left: Site Links */}
+      <div style={{ display: "flex", gap: "1rem" }}>
+        {links.map((link) => {
+          const isActive = currentPath === link.href || currentPath.startsWith(link.href + "/")
+          return (
+            <a
+              key={link.href}
+              href={link.href}
+              style={{
+                textDecoration: "none",
+                color: isActive ? "var(--accent)" : "inherit",
+                borderBottom: isActive ? "2px solid var(--accent)" : "none",
+                paddingBottom: "2px",
+                transition: "color 0.2s ease, border-color 0.2s ease",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = isActive ? "var(--accent)" : "inherit"
+              }}
+            >
+              {link.label}
+            </a>
+          )
+        })}
+      </div>
+
+      {/* Right: Language Switcher */}
+      <div style={{ display: "flex", gap: "0.5rem" }}>
+        {languages.map((lang) => (
+          <a
+            key={lang}
+            href={getLanguageUrl(lang)}
+            style={{
+              textDecoration: "none",
+              fontWeight: lang === currentLang ? "bold" : "normal",
+              color: lang === currentLang ? "var(--accent)" : "inherit",
+              transition: "color 0.2s ease",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = lang === currentLang ? "var(--accent)" : "inherit"
+            }}
+          >
+            {lang.toUpperCase()}
           </a>
-        </div>
-
-        <ul className="nav-menu">
-          {links.map(link => {
-            const isActive =
-              currentPath === link.href ||
-              currentPath.startsWith(link.href + "/") ||
-              (currentPath.endsWith("/") && currentPath.slice(0, -1) === link.href)
-
-            return (
-              <li key={link.href}>
-                <a href={link.href} className={`nav-link${isActive ? " active" : ""}`}>
-                  {link.label}
-                </a>
-              </li>
-            )
-          })}
-
-          <li className="language-switcher">
-            <div className="dropdown">
-              <button className="dropdown-toggle">
-                {currentLangOption?.flag} {currentLangOption?.name} ▼
-              </button>
-              <ul className="dropdown-menu">
-                {languageOptions.map(option => (
-                  <li key={option.code}>
-                    <a
-                      href={getLanguageUrl(option.code)}
-                      className={currentLang === option.code ? "current-lang" : ""}
-                    >
-                      {option.flag} {option.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </li>
-        </ul>
+        ))}
       </div>
     </nav>
   )
 }
 
-export default (() => CustomNavbar) satisfies QuartzComponentConstructor
+export default CustomNavbar
