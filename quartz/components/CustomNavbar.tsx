@@ -2,6 +2,7 @@
 import { useEffect, useState } from "preact/hooks"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
+// Translations
 const navTranslations = {
   en: {
     "About Us": "About Us",
@@ -26,6 +27,7 @@ const navTranslations = {
 type SupportedLang = keyof typeof navTranslations
 const SUPPORTED: SupportedLang[] = ["en", "nl"]
 
+// --- helpers (SSR-safe) ---
 const stripTrailingSlash = (p: string) => (p !== "/" ? p.replace(/\/+$/, "") : "/")
 
 const parsePath = (path: string) => {
@@ -35,53 +37,69 @@ const parsePath = (path: string) => {
   return { lang, rest }
 }
 
-const fromPropsOrDefault = (props: QuartzComponentProps) => {
+// Get a reasonable initial path from SSR props; fall back to "/"
+const initialFromProps = (props: QuartzComponentProps) => {
   const anyProps = props as any
-  let slugArr: string[] = Array.isArray(anyProps?.fileData?.slug) ? anyProps.fileData.slug : []
-
-  if (slugArr.length === 0 && typeof window !== "undefined") {
-    slugArr = window.location.pathname.split("/").filter(Boolean)
-  }
-
-  const lang = SUPPORTED.includes(slugArr[0] as SupportedLang) ? (slugArr[0] as SupportedLang) : "en"
-  const rest = SUPPORTED.includes(slugArr[0] as SupportedLang) ? slugArr.slice(1) : slugArr
-  const path = "/" + [lang, ...rest].filter(Boolean).join("/")
-
-  return { lang, rest, path: stripTrailingSlash(path || "/") }
+  const slugArr: string[] = Array.isArray(anyProps?.fileData?.slug) ? anyProps.fileData.slug : []
+  const inferred = "/" + slugArr.filter(Boolean).join("/")
+  const path = stripTrailingSlash(inferred || "/")
+  const { lang } = parsePath(path)
+  return { path, lang }
 }
 
 const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
-  const initial = fromPropsOrDefault(props)
-  const [currentLang, setCurrentLang] = useState<SupportedLang>(initial.lang)
-  const [currentPath, setCurrentPath] = useState<string>(initial.path)
+  const init = initialFromProps(props)
 
+  // Single source of truth for where we are
+  const [currentPath, setCurrentPath] = useState<string>(init.path)
+  const { lang: derivedLang, rest: restSegments } = parsePath(currentPath)
+  const currentLang: SupportedLang = derivedLang
+  const t = navTranslations[currentLang]
+
+  // Keep currentPath in sync with SPA navigations
   useEffect(() => {
+    if (typeof window === "undefined") return
+
     const updateFromLocation = () => {
-      if (typeof window === "undefined") return
       const path = stripTrailingSlash(window.location.pathname || "/")
-      const { lang } = parsePath(path)
-      setCurrentLang(lang)
       setCurrentPath(path)
     }
 
+    // Run now
     updateFromLocation()
 
-    const onNav = () => setTimeout(updateFromLocation, 0)
-    document.addEventListener("nav", onNav as EventListener)
-    window.addEventListener("popstate", updateFromLocation)
-    window.addEventListener("hashchange", updateFromLocation)
+    // Patch history to detect SPA route changes
+    const origPush = history.pushState
+    const origReplace = history.replaceState
+    ;(history.pushState as any) = function (...args: any[]) {
+      const ret = origPush.apply(this, args as any)
+      window.dispatchEvent(new Event("locationchange"))
+      return ret
+    }
+    ;(history.replaceState as any) = function (...args: any[]) {
+      const ret = origReplace.apply(this, args as any)
+      window.dispatchEvent(new Event("locationchange"))
+      return ret
+    }
+
+    // Listen to all ways URL can change
+    const onLoc = () => updateFromLocation()
+    window.addEventListener("locationchange", onLoc)
+    window.addEventListener("popstate", onLoc)
+    window.addEventListener("hashchange", onLoc)
 
     return () => {
-      document.removeEventListener("nav", onNav as EventListener)
-      window.removeEventListener("popstate", updateFromLocation)
-      window.removeEventListener("hashchange", updateFromLocation)
+      window.removeEventListener("locationchange", onLoc)
+      window.removeEventListener("popstate", onLoc)
+      window.removeEventListener("hashchange", onLoc)
+      history.pushState = origPush
+      history.replaceState = origReplace
     }
   }, [])
 
-  const { rest: restSegments } = parsePath(currentPath)
-  const t = navTranslations[currentLang]
   const langPrefix = `/${currentLang}`
 
+  // Build navbar links for the current language
   const links = [
     { href: `${langPrefix}/About-us/about`, label: t["About Us"] },
     { href: `${langPrefix}/Afromedica-Academy/Afromedica-Academy`, label: t["Afromedica Academy"] },
@@ -92,8 +110,17 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
     { href: `${langPrefix}/Contact/contact`, label: t["Contact"] },
   ] as const
 
-  const makeLangHref = (target: SupportedLang) => {
-    return restSegments.length ? `/${target}/${restSegments.join("/")}` : `/${target}/`
+  // Compute a target language URL for the *current* subpage
+  const makeLangHref = (target: SupportedLang) =>
+    restSegments.length ? `/${target}/${restSegments.join("/")}` : `/${target}/`
+
+  // Force a full navigation on language switch so the UI updates immediately
+  const handleLangClick = (target: SupportedLang) => (e: Event) => {
+    e.preventDefault()
+    if (typeof window === "undefined") return
+    const { rest } = parsePath(window.location.pathname || "/")
+    const dest = rest.length ? `/${target}/${rest.join("/")}` : `/${target}/`
+    window.location.assign(dest) // full reload; Quartz can't intercept this
   }
 
   const isActive = (href: string) => {
@@ -133,12 +160,20 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
               </button>
               <ul className="dropdown-menu">
                 <li>
-                  <a href={makeLangHref("en")} className={currentLang === "en" ? "current-lang" : ""}>
+                  <a
+                    href={makeLangHref("en")}
+                    onClick={handleLangClick("en") as any}
+                    className={currentLang === "en" ? "current-lang" : ""}
+                  >
                     🇺🇸 English
                   </a>
                 </li>
                 <li>
-                  <a href={makeLangHref("nl")} className={currentLang === "nl" ? "current-lang" : ""}>
+                  <a
+                    href={makeLangHref("nl")}
+                    onClick={handleLangClick("nl") as any}
+                    className={currentLang === "nl" ? "current-lang" : ""}
+                  >
                     🇳🇱 Nederlands
                   </a>
                 </li>
