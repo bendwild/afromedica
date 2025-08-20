@@ -1,133 +1,69 @@
-// quartz/components/CustomNavbar.tsx
-import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
+import { QuartzComponent } from "../types"
 
-// Translations
-const navTranslations = {
-  en: {
-    "About Us": "About Us",
-    "Afromedica Academy": "Afromedica Academy",
-    "Afromedica Talks": "Afromedica Talks",
-    "Afromedica Connects": "Afromedica Connects",
-    "Policy": "Policy",
-    "Team": "Team",
-    "Contact": "Contact",
-  },
-  nl: {
-    "About Us": "Over Ons",
-    "Afromedica Academy": "Afromedica Academie",
-    "Afromedica Talks": "Afromedica Gesprekken",
-    "Afromedica Connects": "Afromedica Verbindt",
-    "Policy": "Beleid",
-    "Team": "Team",
-    "Contact": "Contact",
-  },
-} as const
+const CustomNavbar: QuartzComponent = () => {
+  if (typeof window === "undefined") return null
 
-type SupportedLang = keyof typeof navTranslations
-const SUPPORTED: SupportedLang[] = ["en", "nl"]
+  const path = window.location.pathname // e.g. /en/Policy/policy
+  const segments = path.split("/").filter(Boolean) // ["en", "Policy", "policy"]
 
-// ---- small helpers (SSR-safe) ----
-const stripTrailingSlash = (p: string) => (p !== "/" ? p.replace(/\/+$/, "") : "/")
+  // Supported languages
+  const supportedLangs = ["en", "nl", "fr"]
 
-const joinPath = (segments: string[]) => {
-  const p = "/" + segments.filter(Boolean).join("/")
-  return stripTrailingSlash(p || "/")
-}
+  // Detect current language
+  const currentLang = supportedLangs.includes(segments[0]) ? segments[0] : "en"
 
-const buildForLang = (lang: SupportedLang, rest: string[]) =>
-  rest.length ? `/${lang}/${rest.join("/")}` : `/${lang}/`
+  // All other segments after language
+  const restSegments = supportedLangs.includes(segments[0])
+    ? segments.slice(1)
+    : segments
 
-const parseFromProps = (props: QuartzComponentProps) => {
-  const anyProps = props as any
-  const slugArr: string[] = Array.isArray(anyProps?.fileData?.slug) ? anyProps.fileData.slug : []
-  const lang = (slugArr[0] && SUPPORTED.includes(slugArr[0] as SupportedLang))
-    ? (slugArr[0] as SupportedLang)
-    : "en"
-  const rest = (slugArr[0] && SUPPORTED.includes(slugArr[0] as SupportedLang))
-    ? slugArr.slice(1)
-    : slugArr
-  const pathNow = joinPath([lang, ...rest])
-  return { lang, rest, pathNow }
-}
-
-const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
-  const { lang: currentLang, rest: restSegments, pathNow } = parseFromProps(props)
-  const t = navTranslations[currentLang]
-  const langPrefix = `/${currentLang}`
-
-  // Build navbar links for the current language
-  const links = [
-    { href: `${langPrefix}/About-us/about`, label: t["About Us"] },
-    { href: `${langPrefix}/Afromedica-Academy/Afromedica-Academy`, label: t["Afromedica Academy"] },
-    { href: `${langPrefix}/Afromedica-Talks/Afromedica-Talks`, label: t["Afromedica Talks"] },
-    { href: `${langPrefix}/Afromedica-Connects/Afromedica-Connects`, label: t["Afromedica Connects"] },
-    { href: `${langPrefix}/Policy/policy`, label: t["Policy"] },
-    { href: `${langPrefix}/Team/team`, label: t["Team"] },
-    { href: `${langPrefix}/Contact/contact`, label: t["Contact"] },
-  ] as const
-
-  const isActive = (href: string) => {
-    const a = stripTrailingSlash(href)
-    const b = stripTrailingSlash(pathNow)
-    return b === a || b.startsWith(a + "/")
+  // Helper to build language switch URLs
+  const makeLangHref = (lang: string) => {
+    return "/" + [lang, ...restSegments].join("/")
   }
 
-  const currentLangLabel = currentLang === "nl" ? "Nederlands" : "English"
-  const currentLangFlag = currentLang === "nl" ? "🇳🇱" : "🇺🇸"
+  const links = [
+    { href: `/${currentLang}/About-us/about`, label: "About Us" },
+    { href: `/${currentLang}/Policy/policy`, label: "Policy" },
+    { href: `/${currentLang}/Projects/projects`, label: "Projects" },
+  ]
 
   return (
-    <nav className="main-navigation">
-      <div className="nav-container">
-        <div className="nav-logo">
-          <a href={buildForLang(currentLang, restSegments)}>
-            <img
-              src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/afromedica%20(6).png"
-              alt="AfroMedica Logo"
-            />
+    <nav className="flex justify-between items-center px-6 py-3 shadow-md bg-white">
+      {/* Left side links */}
+      <div className="flex space-x-6">
+        {links.map((link) => {
+          const isActive = path.startsWith(link.href)
+          return (
+            <a
+              key={link.href}
+              href={link.href}
+              className={`hover:text-accent ${
+                isActive ? "text-accent font-semibold" : "text-gray-700"
+              }`}
+            >
+              {link.label}
+            </a>
+          )
+        })}
+      </div>
+
+      {/* Language Switcher */}
+      <div className="flex space-x-4">
+        {supportedLangs.map((lang) => (
+          <a
+            key={lang}
+            href={makeLangHref(lang)}
+            className={`uppercase hover:text-accent ${
+              lang === currentLang ? "text-accent font-bold" : "text-gray-600"
+            }`}
+          >
+            {lang}
           </a>
-        </div>
-
-        <ul className="nav-menu">
-          {links.map(link => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className={`nav-link${isActive(link.href) ? " active" : ""}`}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-
-          <li className="language-switcher">
-            <div className="dropdown">
-              <button className="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
-                {currentLangFlag} {currentLangLabel} ▼
-              </button>
-              <ul className="dropdown-menu">
-                <li>
-                  <a
-                    href={buildForLang("en", restSegments)}
-                    className={currentLang === "en" ? "current-lang" : ""}
-                  >
-                    🇺🇸 English
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={buildForLang("nl", restSegments)}
-                    className={currentLang === "nl" ? "current-lang" : ""}
-                  >
-                    🇳🇱 Nederlands
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+        ))}
       </div>
     </nav>
   )
 }
 
-export default (() => CustomNavbar) satisfies QuartzComponentConstructor
+export default CustomNavbar
