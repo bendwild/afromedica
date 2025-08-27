@@ -26,45 +26,58 @@ const navTranslations = {
 type SupportedLang = keyof typeof navTranslations
 const SUPPORTED: ReadonlyArray<SupportedLang> = ["en", "nl"] as const
 
-/** Remove a trailing "index" segment if present */
-function dropTrailingIndex(segments: string[]): string[] {
-  if (!segments || segments.length === 0) return []
-  return segments[segments.length - 1] === "index" ? segments.slice(0, -1) : segments
-}
+// --- helpers (SSR-safe) ---
+const stripTrailingSlash = (p: string) => (p === "/" ? "/" : p.replace(/\/+$/, ""))
+const dropTrailingIndex = (segments: string[]) =>
+  segments.length && segments[segments.length - 1] === "index" ? segments.slice(0, -1) : segments
 
-/** Build a path like "/en/Policy/policy" or "/en" if no rest */
-function buildPath(lang: SupportedLang, rest: string[]): string {
-  const r = rest.filter(Boolean)
-  return r.length ? `/${lang}/${r.join("/")}` : `/${lang}`
-}
+/** Build "/en/Policy/policy" or "/en" if rest is empty */
+const buildPath = (lang: SupportedLang, rest: string[]) =>
+  rest.length ? `/${lang}/${rest.join("/")}` : `/${lang}`
 
-/** Active check with simple normalization (strip trailing slashes) */
-function normalized(p: string): string {
-  if (p === "/") return "/"
-  return p.replace(/\/+$/, "")
+/** Normalize for active check */
+const normalized = (p: string) => (p === "/" ? "/" : p.replace(/\/+$/, ""))
+
+/** Get { path, lang, rest } from Quartz props */
+function deriveFromProps(props: QuartzComponentProps): {
+  path: string
+  lang: SupportedLang
+  rest: string[]
+} {
+  const anyProps = props as any
+  const permalink: string | undefined = anyProps?.fileData?.permalink
+  const slugArr: string[] = Array.isArray(anyProps?.fileData?.slug) ? anyProps.fileData.slug : []
+
+  // Prefer permalink (it reflects the emitted URL including /en or /nl)
+  let path = "/"
+  if (typeof permalink === "string" && permalink.length) {
+    // Allow absolute URLs too (just take pathname)
+    try {
+      const u = new URL(permalink, "https://dummy.local")
+      path = u.pathname || "/"
+    } catch {
+      path = permalink.startsWith("/") ? permalink : `/${permalink}`
+    }
+  } else if (slugArr.length) {
+    path = "/" + slugArr.filter(Boolean).join("/")
+  }
+
+  path = stripTrailingSlash(path || "/")
+  const parts = path.split("/").filter(Boolean)
+
+  const first = parts[0]
+  const lang: SupportedLang = SUPPORTED.includes(first as SupportedLang)
+    ? (first as SupportedLang)
+    : "en"
+
+  const rest = dropTrailingIndex(SUPPORTED.includes(first as SupportedLang) ? parts.slice(1) : parts)
+
+  return { path, lang, rest }
 }
 
 const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
-  // Read slug segments from Quartz props (SSR-safe)
-  const anyProps = props as any
-  const rawSlug: string[] = Array.isArray(anyProps?.fileData?.slug) ? anyProps.fileData.slug : []
-  const slug = dropTrailingIndex(rawSlug).filter(Boolean)
-
-  // Determine language + rest from slug (default to "en")
-  const first = slug[0]
-  const currentLang: SupportedLang = SUPPORTED.includes(first as SupportedLang)
-    ? (first as SupportedLang)
-    : "en"
-  const restSegments: string[] = SUPPORTED.includes(first as SupportedLang) ? slug.slice(1) : slug
-
-  // Current path for "active" state
-  const currentPath = buildPath(currentLang, restSegments)
-
-  // Translations for current language
+  const { path: currentPath, lang: currentLang, rest: restSegments } = deriveFromProps(props)
   const t = navTranslations[currentLang]
-
-  // Helper to make language switch URL for the SAME subpage
-  const makeLangHref = (target: SupportedLang) => buildPath(target, restSegments)
 
   // Build navbar links for the current language
   const links = [
@@ -76,6 +89,9 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
     { href: buildPath(currentLang, ["Team", "team"]), label: t["Team"] },
     { href: buildPath(currentLang, ["Contact", "contact"]), label: t["Contact"] },
   ] as const
+
+  // Language switch preserves the current subpage
+  const makeLangHref = (target: SupportedLang) => buildPath(target, restSegments)
 
   const isActive = (href: string) => {
     const a = normalized(href)
