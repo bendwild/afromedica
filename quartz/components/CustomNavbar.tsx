@@ -1,7 +1,7 @@
 // quartz/components/CustomNavbar.tsx
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
-// Translations
+// Translations for menu
 const navTranslations = {
   en: {
     "About Us": "About Us",
@@ -76,16 +76,29 @@ const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
   const t = navTranslations[currentLang]
 
   const links = [
-    { href: buildPath(currentLang, ["about"]), label: t["About Us"] },
-    { href: buildPath(currentLang, ["afromedica-academy"]), label: t["Afromedica Academy"] },
-    { href: buildPath(currentLang, ["afromedica-talks"]), label: t["Afromedica Talks"] },
-    { href: buildPath(currentLang, ["afromedica-connects"]), label: t["Afromedica Connects"] },
-    { href: buildPath(currentLang, ["policy"]), label: t["Policy"] },
-    { href: buildPath(currentLang, ["team"]), label: t["Team"] },
-    { href: buildPath(currentLang, ["contact"]), label: t["Contact"] },
+    { href: buildPath(currentLang, ["about"]), label: t["About Us"], slug: "about" },
+    { href: buildPath(currentLang, ["afromedica-academy"]), label: t["Afromedica Academy"], slug: "afromedica-academy" },
+    { href: buildPath(currentLang, ["afromedica-talks"]), label: t["Afromedica Talks"], slug: "afromedica-talks" },
+    { href: buildPath(currentLang, ["afromedica-connects"]), label: t["Afromedica Connects"], slug: "afromedica-connects" },
+    { href: buildPath(currentLang, ["policy"]), label: t["Policy"], slug: "policy" },
+    { href: buildPath(currentLang, ["team"]), label: t["Team"], slug: "team" },
+    { href: buildPath(currentLang, ["contact"]), label: t["Contact"], slug: "contact" },
   ] as const
 
-  const makeLangHref = (target: SupportedLang) => buildPath(target, restSegments)
+  // Build href for switching language, with fallback to root
+  const makeLangHref = (target: SupportedLang) => {
+    if (restSegments.length === 0) return `/${target}`
+
+    // Check if this slug is in the menu (means it's translated)
+    const restSlug = restSegments[0].toLowerCase()
+    const validSlugs = links.map(l => l.slug)
+    if (validSlugs.includes(restSlug)) {
+      return buildPath(target, restSegments)
+    } else {
+      return `/${target}`
+    }
+  }
+
   const isActive = (href: string) => normalized(currentPath) === normalized(href)
 
   return (
