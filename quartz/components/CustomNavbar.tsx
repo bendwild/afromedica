@@ -1,123 +1,160 @@
-import React, { useEffect, useMemo, useState } from "react";
+// quartz/components/CustomNavbar.tsx
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
-const SUPPORTED_LOCALES = ["en", "nl", "fr"] as const;
-type Locale = typeof SUPPORTED_LOCALES[number];
-
-// Change if your default locale should be prefixed in URLs
-const DEFAULT_LOCALE: Locale = "en";
-const PREFIX_DEFAULT_LOCALE_IN_PATH = false;
-
-const UI_LABELS: Record<
-  Locale,
-  { languageLabel: string; languages: Record<Locale, string> }
-> = {
+// Translations
+const navTranslations = {
   en: {
-    languageLabel: "Language",
-    languages: { en: "English", nl: "Nederlands", fr: "Français" },
+    "About Us": "About Us",
+    "Afromedica Academy": "Afromedica Academy",
+    "Afromedica Talks": "Afromedica Talks",
+    "Afromedica Connects": "Afromedica Connects",
+    "Policy": "Policy",
+    "Team": "Team",
+    "Contact": "Contact",
   },
   nl: {
-    languageLabel: "Taal",
-    languages: { en: "Engels", nl: "Nederlands", fr: "Frans" },
+    "About Us": "Over Ons",
+    "Afromedica Academy": "Afromedica Academie",
+    "Afromedica Talks": "Afromedica Gesprekken",
+    "Afromedica Connects": "Afromedica Verbindt",
+    "Policy": "Beleid",
+    "Team": "Team",
+    "Contact": "Contact",
   },
-  fr: {
-    languageLabel: "Langue",
-    languages: { en: "Anglais", nl: "Néerlandais", fr: "Français" },
-  },
-};
+} as const
 
-function detectLocaleFromPath(pathname: string): Locale {
-  const first = (pathname.split("/")[1] || "").toLowerCase();
-  return (SUPPORTED_LOCALES as readonly string[]).includes(first)
-    ? (first as Locale)
-    : DEFAULT_LOCALE;
-}
+type SupportedLang = keyof typeof navTranslations
+const SUPPORTED: ReadonlyArray<SupportedLang> = ["en", "nl"] as const
 
-function stripLocaleFromPath(pathname: string): string {
-  const [, first, ...rest] = pathname.split("/");
-  if ((SUPPORTED_LOCALES as readonly string[]).includes((first || "").toLowerCase())) {
-    const restPath = `/${rest.join("/")}`;
-    return restPath === "//" ? "/" : restPath || "/";
+// --- helpers (SSR-safe) ---
+const stripTrailingSlash = (p: string) => (p === "/" ? "/" : p.replace(/\/+$/, ""))
+const dropTrailingIndex = (segments: string[]) =>
+  segments.length && segments[segments.length - 1] === "index" ? segments.slice(0, -1) : segments
+
+/** Build "/en/Policy/policy" or "/en" if rest is empty */
+const buildPath = (lang: SupportedLang, rest: string[]) =>
+  rest.length ? `/${lang}/${rest.join("/")}` : `/${lang}`
+
+/** Normalize for active check */
+const normalized = (p: string) => (p === "/" ? "/" : p.replace(/\/+$/, ""))
+
+/** Get { path, lang, rest } from Quartz props */
+function deriveFromProps(props: QuartzComponentProps): {
+  path: string
+  lang: SupportedLang
+  rest: string[]
+} {
+  const anyProps = props as any
+  const permalink: string | undefined = anyProps?.fileData?.permalink
+  const slugArr: string[] = Array.isArray(anyProps?.fileData?.slug) ? anyProps.fileData.slug : []
+
+  // Prefer permalink (it reflects the emitted URL including /en or /nl)
+  let path = "/"
+  if (typeof permalink === "string" && permalink.length) {
+    // Allow absolute URLs too (just take pathname)
+    try {
+      const u = new URL(permalink, "https://dummy.local")
+      path = u.pathname || "/"
+    } catch {
+      path = permalink.startsWith("/") ? permalink : `/${permalink}`
+    }
+  } else if (slugArr.length) {
+    path = "/" + slugArr.filter(Boolean).join("/")
   }
-  return pathname || "/";
+
+  path = stripTrailingSlash(path || "/")
+  const parts = path.split("/").filter(Boolean)
+
+  const first = parts[0]
+  const lang: SupportedLang = SUPPORTED.includes(first as SupportedLang)
+    ? (first as SupportedLang)
+    : "en"
+
+  const rest = dropTrailingIndex(SUPPORTED.includes(first as SupportedLang) ? parts.slice(1) : parts)
+
+  return { path, lang, rest }
 }
 
-function addLeadingSlash(s: string): string {
-  if (!s) return "/";
-  return s.startsWith("/") ? s : `/${s}`;
-}
+const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
+  const { path: currentPath, lang: currentLang, rest: restSegments } = deriveFromProps(props)
+  const t = navTranslations[currentLang]
 
-function buildLocalizedPath(
-  target: Locale,
-  currentPathname: string,
-  currentSearch: string,
-  currentHash: string
-): string {
-  const rest = stripLocaleFromPath(currentPathname);
-  const restNoDoubleSlash = addLeadingSlash(rest).replace(/\/+/g, "/");
+  // Build navbar links for the current language
+  const links = [
+    { href: buildPath(currentLang, ["About-us", "about"]), label: t["About Us"] },
+    { href: buildPath(currentLang, ["Afromedica-Academy", "Afromedica-Academy"]), label: t["Afromedica Academy"] },
+    { href: buildPath(currentLang, ["Afromedica-Talks", "Afromedica-Talks"]), label: t["Afromedica Talks"] },
+    { href: buildPath(currentLang, ["Afromedica-Connects", "Afromedica-Connects"]), label: t["Afromedica Connects"] },
+    { href: buildPath(currentLang, ["Policy", "policy"]), label: t["Policy"] },
+    { href: buildPath(currentLang, ["Team", "team"]), label: t["Team"] },
+    { href: buildPath(currentLang, ["Contact", "contact"]), label: t["Contact"] },
+  ] as const
 
-  const shouldPrefix =
-    target !== DEFAULT_LOCALE || (target === DEFAULT_LOCALE && PREFIX_DEFAULT_LOCALE_IN_PATH);
+  // Language switch preserves the current subpage
+  const makeLangHref = (target: SupportedLang) => buildPath(target, restSegments)
 
-  const base =
-    shouldPrefix
-      ? `/${target}${restNoDoubleSlash === "/" ? "" : restNoDoubleSlash}`
-      : restNoDoubleSlash;
+  const isActive = (href: string) => {
+    const a = normalized(href)
+    const b = normalized(currentPath)
+    return b === a || b.startsWith(a + "/")
+  }
 
-  return `${base}${currentSearch || ""}${currentHash || ""}`;
-}
-
-export default function CustomNavbar() {
-  const [loc, setLoc] = useState<{ pathname: string; search: string; hash: string }>({
-    pathname: "/",
-    search: "",
-    hash: "",
-  });
-
-  useEffect(() => {
-    setLoc({
-      pathname: window.location.pathname || "/",
-      search: window.location.search || "",
-      hash: window.location.hash || "",
-    });
-  }, []);
-
-  const currentLocale = useMemo(() => detectLocaleFromPath(loc.pathname), [loc.pathname]);
-  const labels = UI_LABELS[currentLocale];
+  const currentLangLabel = currentLang === "nl" ? "Nederlands" : "English"
+  const currentLangFlag = currentLang === "nl" ? "🇳🇱" : "🇺🇸"
 
   return (
-    <nav className="custom-navbar">
-      <div className="custom-navbar__inner">
-        {/* Left side: keep your existing links or logo here if you have them */}
-        <div className="custom-navbar__left">
-          {/* Example placeholder - replace with your actual nav items */}
-          {/* <a href="/">Home</a> */}
+    <nav className="main-navigation">
+      <div className="nav-container">
+        <div className="nav-logo">
+          <a href={makeLangHref(currentLang)}>
+            <img
+              src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/afromedica%20(6).png"
+              alt="AfroMedica Logo"
+            />
+          </a>
         </div>
 
-        {/* Right side: language switcher */}
-        <div className="custom-navbar__right">
-          <div className="language-switcher" aria-label={labels.languageLabel}>
-            <span className="language-switcher__label">{labels.languageLabel}</span>
-            <ul className="language-switcher__list" role="list">
-              {SUPPORTED_LOCALES.map((lang) => {
-                const href = buildLocalizedPath(lang, loc.pathname, loc.search, loc.hash);
-                const isActive = lang === currentLocale;
-                return (
-                  <li key={lang} className="language-switcher__item">
-                    <a
-                      href={href}
-                      lang={lang}
-                      aria-current={isActive ? "true" : undefined}
-                      className={isActive ? "is-active" : undefined}
-                    >
-                      {labels.languages[lang]}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </div>
+        <ul className="nav-menu">
+          {links.map(link => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className={`nav-link${isActive(link.href) ? " active" : ""}`}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+
+          <li className="language-switcher">
+            <div className="dropdown">
+              <button className="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                {currentLangFlag} {currentLangLabel} ▼
+              </button>
+              <ul className="dropdown-menu">
+                <li>
+                  <a
+                    href={makeLangHref("en")}
+                    className={currentLang === "en" ? "current-lang" : ""}
+                  >
+                    🇺🇸 English
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={makeLangHref("nl")}
+                    className={currentLang === "nl" ? "current-lang" : ""}
+                  >
+                    🇳🇱 Nederlands
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </nav>
-  );
+  )
 }
+
+export default (() => CustomNavbar) satisfies QuartzComponentConstructor
