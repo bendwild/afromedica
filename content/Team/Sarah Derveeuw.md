@@ -1,6 +1,6 @@
 ---
 title:
-publish: false
+publish: true
 tags:
   - team
 description:
@@ -15,13 +15,11 @@ modified: 2025-10-10
 Introductory text. Talk about who you are and why you joined AfroMedica. 
 
 ## [Taskforces](content/About%20us/taskforces.md) I'm involved in!
-
-- ...
-- ....
+- Internal administration
 
 
 ## Contact me!
-- 📧 [voornaamnaam.achternaam@afromedica.be](mailto:voornaam.achternaam@afromedica.be)
+- 📧 [sarah.derveeuw@afromedica.be](mailto:sarah.derveeuw@afromedica.be)
 
 
 ## Follow me!

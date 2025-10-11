@@ -1,6 +1,6 @@
 ---
 title:
-publish: false
+publish: true
 tags:
   - team
 description:
@@ -12,16 +12,16 @@ modified: 2025-10-10
   
 ## Hey there!
 
-Introductory text. Talk about who you are and why you joined AfroMedica. 
+I am Alessio, a medical resident in Family Medicine and I am thrilled to be part of AfroMedica and contribute to equal healthcare on a larger scale.
 
 ## [Taskforces](content/About%20us/taskforces.md) I'm involved in!
 
-- ...
-- ....
+- PR
+- [Policy](content/Policy/policy.md)
 
 
 ## Contact me!
-- 📧 [voornaamnaam.achternaam@afromedica.be](mailto:voornaam.achternaam@afromedica.be)
+- 📧 [alessio.capobianco@afromedica.be](mailto:alessio.capobianco@afromedica.be)
 
 
 ## Follow me!

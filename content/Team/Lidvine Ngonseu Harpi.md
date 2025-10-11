@@ -1,6 +1,6 @@
 ---
 title:
-publish: false
+publish: true
 tags:
   - team
 description:
@@ -16,12 +16,12 @@ Introductory text. Talk about who you are and why you joined AfroMedica.
 
 ## [Taskforces](content/About%20us/taskforces.md) I'm involved in!
 
-- ...
-- ....
+- [[content/Afromedica Talks/Afromedica Talks]]
+- [[content/Afromedica Connects/Afromedica Connects]]
 
 
 ## Contact me!
-- 📧 [voornaamnaam.achternaam@afromedica.be](mailto:voornaam.achternaam@afromedica.be)
+- 📧 [lidvine.ngonseuharpi@afromedica.be](mailto:lidvine.ngonseuharpi@afromedica.be)
 
 
 ## Follow me!

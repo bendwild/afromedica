@@ -16,12 +16,12 @@ Introductory text. Talk about who you are and why you joined AfroMedica.
 
 ## [Taskforces](content/About%20us/taskforces.md) I'm involved in!
 
-- ...
-- ....
+- Vice-president
+- [[content/Afromedica Academy/Afromedica Academy]]
 
 
 ## Contact me!
-- 📧 [voornaamnaam.achternaam@afromedica.be](mailto:voornaam.achternaam@afromedica.be)
+- 📧 [bella.manirambona@afromedica.be](mailto:bella.manirambona@afromedica.be)
 
 
 ## Follow me!

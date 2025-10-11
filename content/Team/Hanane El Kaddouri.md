@@ -1,13 +1,13 @@
 ---
 title:
-publish: false
+publish: true
 tags:
   - team
 description:
 modified: 2025-10-10
 ---
 <div class="inline-profile">
-  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Hanane El Kaddouri" />
   <div class="intro-text">
   
 ## Hey there!
@@ -16,13 +16,12 @@ Introductory text. Talk about who you are and why you joined AfroMedica.
 
 ## [Taskforces](content/About%20us/taskforces.md) I'm involved in!
 
-- ...
-- ....
-
+- President
+- Internal administration
+- [[content/Afromedica Talks/Afromedica Talks]]
 
 ## Contact me!
-- 📧 [voornaamnaam.achternaam@afromedica.be](mailto:voornaam.achternaam@afromedica.be)
-
+- 📧 [hanane.elkaddouri@afromedica.be](mailto:hanane.elkaddouri@afromedica.be)
 
 ## Follow me!
 
