@@ -17,6 +17,13 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "https://afromedica.be",
+
+      i18n: {
+    defaultLanguage: "en",
+    defaultLanguageInSubdir: true,
+    languages: ["en", "nl"],
+  },
+
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {

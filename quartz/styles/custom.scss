@@ -997,17 +997,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.custom-navbar a {
-  color: var(--dark);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.custom-navbar a:hover {
+/* Accent on hover and when active */
+.nav-link:hover,
+.nav-link.active {
   color: var(--accent);
-}
-
-.custom-navbar a.active {
-  color: var(--accent);
-  font-weight: bold;
+  border-bottom: 2px solid var(--accent);
 }
