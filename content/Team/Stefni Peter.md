@@ -14,7 +14,7 @@ modified: 2025-10-11
 
 I'm Stefni graduated in Bachelor Nursing. I'm currently furthering my studies, master in sociology and working with people with disabilities. In in PR and I joined because AfroMedica's vision aligns with mine in terms of the future of healthcare for people of color.
 
-## [Taskforces](content/About%20us/taskforces.md) I'm involved in!
+## Role(s) within Afromedica
 - Public relations
 
 

@@ -42,7 +42,7 @@ modified: 2025-10-11
   <h3><a href="/Team/Sarah-Derveeuw">Sarah Derveeuw</a></h3>
   <p><em>Afromedica Connects & Internal Admin</em></p>
   <p>I'm a PhD student at the Ghent University researching intersectional inequalities in (preventive) healthcare uptake in Belgium. I joined Afromedica as part of a commitment to bridge the gap between my academic research and need for grassroots, community action.</p>
-  <a href="sderveeuw.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
+  <a href="https://bsky.app/profile/sderveeuw.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
   <a href="https://www.ugent.be/cessmir/en/members/phd-researchers/sarah-derveeuw" target="_blank" rel="noopener noreferrer">UGent</a>
 </div>
 

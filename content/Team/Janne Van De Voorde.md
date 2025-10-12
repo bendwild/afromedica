@@ -12,9 +12,11 @@ modified: 2025-10-11
   
 ## Hey there!
 
-Hello! My name is Janne, I recently graduated in medicine and am currently training to become a general practitioner. I also have a background in gender and diversity. This academic specialization gave me the opportunity to critically examine how healthcare can reproduce inequality and how there are blind spots when it comes to the structural and sociological factors that influence health and illness. I am particularly interested in how processes of coloniality and racialization continue to affect contemporary institutions: from economic and geopolitical structures to (medical) knowledge production. With this somewhat theoretical background, I want to keep learning and contributing through AfroMedica, working toward a healthcare system that actively challenges inequality.
+Hello! My name is Janne, I recently graduated in medicine and am currently training to become a general practitioner. I also have a background in gender and diversity. This academic specialization gave me the opportunity to critically examine how healthcare can reproduce inequality and how there are blind spots when it comes to the structural and sociological factors that influence health and illness. 
 
-## [Taskforces](content/About%20us/taskforces.md) I'm involved in!
+I am particularly interested in how processes of coloniality and racialization continue to affect contemporary institutions: from economic and geopolitical structures to (medical) knowledge production. With this somewhat theoretical background, I want to keep learning and contributing through AfroMedica, working toward a healthcare system that actively challenges inequality.
+
+## Role(s) within Afromedica
 
 - [Policy](content/Policy/policy.md)
 

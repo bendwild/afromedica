@@ -18,7 +18,7 @@ Before starting my doctoral studies, I worked as an Assistant Psychologist in th
 
 I joined Afromedica to bridge the gap between academic research and grassroots action, and to stay connected to community-driven initiatives. In doing so, I have found a home in Afromedica, joining a collective of motivated and thoughtful healthcare workers whose commitment to equality and diversity in health deeply resonates with my own values.
 
-## [Taskforces](content/About%20us/taskforces.md) I'm involved in!
+## Role(s) within Afromedica
 - Internal administration
 - Afromedica connects
 
@@ -30,5 +30,5 @@ I joined Afromedica to bridge the gap between academic research and grassroots a
 ## Follow me!
 
 If you are interested in connecting, you can find me on these platforms: 
-- [Bluesky](sderveeuw.bsky.social)
+- [Bluesky](https://bsky.app/profile/sderveeuw.bsky.social)
 - [Ugent](https://www.ugent.be/cessmir/en/members/phd-researchers/sarah-derveeuw)

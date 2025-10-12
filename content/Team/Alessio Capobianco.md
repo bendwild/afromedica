@@ -14,7 +14,7 @@ modified: 2025-10-11
 
 Healthcare should be easily accessible to all and of the best of quality for everyone. In my opinion, white privilege is an important hurdle to achieve this. It's a phenomenon that should be more discussed and made aware of amongst the medical community. It happens in basic patient-doctor interaction, as well as on a more systemic level, and of course within myself. With AfroMedica, I hope to address it and spread evidence based facts that are free of racist thinking frames
 
-## [Taskforces](content/About%20us/taskforces.md) I'm involved in!
+## Role(s) within Afromedica
 
 - PR
 - [Policy](content/Policy/policy.md)

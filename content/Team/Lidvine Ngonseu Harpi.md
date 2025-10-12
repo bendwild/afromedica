@@ -20,7 +20,7 @@ Since 2021, I have been involved in various projects within AfroMedica, ranging 
 
 Thanks to being involved with AfroMedica, I've gotten to know a lot of inspiring and warm people. First of all, my fellow board members, but also the people we've worked with and hopefully will continue to work with for a long time to come. With AfroMedica, I hope to contribute to a more inclusive healthcare system, where every voice is heard and every patient is seen.
 
-## [Taskforces](content/About%20us/taskforces.md) I'm involved in!
+## Role(s) within Afromedica
 
 - [[content/Afromedica Talks/Afromedica Talks]]
 - [[content/Afromedica Connects/Afromedica Connects]]
