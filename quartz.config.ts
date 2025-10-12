@@ -24,32 +24,33 @@ const config: QuartzConfig = {
       cdnCaching: true,
       fontOrigin: "googleFonts",
       typography: {
-        header: "IBM Plex Serif",
-        body: "IBM Plex Serif",
+        header: "Montserrat",
+        body: "Cabin",
         code: "Fira Code",
     },
-    colors: {
-    lightMode: {
-      light: "#fffcdb",        // warm background
-      lightgray: "#d1c3f2",    // soft lavender
-      gray: "#a389db",         // medium lavender
-      darkgray: "#5e388e",     // deep purple
-      dark: "#2d1f17",         // dark brown
-      secondary: "#8effe1",    // aqua accent
-      tertiary: "#378f8a",     // teal accent
-      highlight: "rgba(142, 255, 225, 0.15)", // subtle aqua highlight
-      textHighlight: "rgba(255, 205, 159, 0.28)", // warm peach highlight
-    },
-    darkMode: {
-      light: "#2d1f17",        // deep brown background
-      lightgray: "#5e388e",    // deep purple-gray
-      gray: "#a389db",         // soft lavender
-      darkgray: "#d1c3f2",     // light lavender
-      dark: "#fffcdb",         // light warm cream
-      secondary: "#f4ac6a",    // warm orange
-      tertiary: "#cf772e",     // deep orange
-      highlight: "rgba(244, 172, 106, 0.15)", // warm orange highlight
-      textHighlight: "rgba(142, 255, 225, 0.28)", // aqua highlight
+      
+colors: {
+  lightMode: {
+    light: "#fffaf0",        // softer warm cream for better readability
+    lightgray: "#e0d7f8",    // softer lavender for borders
+    gray: "#9a7fd1",         // medium lavender for graphs/links
+    darkgray: "#4b2c7a",     // deep purple for body text
+    dark: "#2b1b0f",         // dark brown for headers/icons
+    secondary: "#00d1c1",    // vibrant aqua for links / active nodes
+    tertiary: "#009688",     // teal for hover / visited states
+    highlight: "rgba(0, 209, 193, 0.15)", // subtle aqua highlight
+    textHighlight: "rgba(255, 223, 160, 0.3)", // warm peach highlight
+  },
+  darkMode: {
+    light: "#2b1b0f",        // deep brown background
+    lightgray: "#4b2c7a",    // deep purple-gray borders
+    gray: "#9a7fd1",         // soft lavender for links / graphs
+    darkgray: "#e0d7f8",     // light lavender for body text
+    dark: "#fffaf0",         // cream for headers/icons
+    secondary: "#ffb166",    // warm orange for active links / nodes
+    tertiary: "#cf772e",     // deep orange for hover / visited states
+    highlight: "rgba(255, 177, 102, 0.15)", // subtle warm highlight
+    textHighlight: "rgba(0, 209, 193, 0.28)", // aqua highlight for markdown
         },
       },
     },
