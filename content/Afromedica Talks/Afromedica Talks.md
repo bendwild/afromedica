@@ -47,3 +47,9 @@ modified: 2025-10-11
     </ul>
   </div>
 </section>
+
+<div class="recent-notes">
+  <h3>Afromedica Talks</h3>
+  <p><strong>Date:</strong> August 18 | <strong>Location:</strong> Zoom</p>
+  <iframe src="https://teams.microsoft.com/l/meetup-join/19%3ameeting_OGQzMjM3YmItZGJjNi00NTdkLTgwMzYtNmIwMjhiYzU4MTc2%40thread.v2/0?context=%7b%22Tid%22%3a%225255a6ba-27db-4d80-8539-dc5043b31f4a%22%2c%22Oid%22%3a%220105659c-8d42-4640-8025-3db6f699b784%22%7d" width="100%" height="350" frameborder="0"></iframe>
+</div>
