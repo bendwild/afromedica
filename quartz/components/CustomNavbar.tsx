@@ -3,14 +3,15 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 
 const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
   const links = [
-    { href: "/about", label: "About Us" },
-    { href: "/afromedica-academy", label: "Afromedica Academy" },
-    { href: "/afromedica-talks", label: "Afromedica Talks" },
-    { href: "/afromedica-connects", label: "Afromedica Connects" },
-    { href: "/policy", label: "Policy" },
-    { href: "/team", label: "Team" },
-    { href: "/contact", label: "Contact" },
-  ] as const
+  { href: "/About-Us/about", label: "About Us" },
+  { href: "/Afromedica-Academy/Afromedica-Academy", label: "Afromedica Academy" },
+  { href: "/Afromedica-Talks/Afromedica-Talks", label: "Afromedica Talks" },
+  { href: "/Afromedica-Connects/Afromedica-Connects", label: "Afromedica Connects" },
+  { href: "/Policy/policy", label: "Policy" },
+  { href: "/Team/team", label: "Team" },
+  { href: "/Contact/contact", label: "Contact" },
+] as const
+
 
   const currentPath = (props as any)?.fileData?.permalink || "/"
   const normalized = (p: string) => (p === "/" ? "/" : p.replace(/\/+$/, ""))
