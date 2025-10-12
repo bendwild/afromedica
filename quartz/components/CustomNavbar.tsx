@@ -2,15 +2,16 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
 const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
-  const links = [
-  { href: "/About-Us/about", label: "About Us" },
-  { href: "/Afromedica-Academy/Afromedica-Academy", label: "Afromedica Academy" },
-  { href: "/Afromedica-Talks/Afromedica-Talks", label: "Afromedica Talks" },
-  { href: "/Afromedica-Connects/Afromedica-Connects", label: "Afromedica Connects" },
+const links = [
+  { href: "/About-us/about", label: "About Us" },
+  { href: "/Afromedica-Academy/afromedica-academy", label: "Afromedica Academy" },
+  { href: "/Afromedica-Talks/afromedica-talks", label: "Afromedica Talks" },
+  { href: "/Afromedica-Connects/afromedica-connects", label: "Afromedica Connects" },
   { href: "/Policy/policy", label: "Policy" },
   { href: "/Team/team", label: "Team" },
   { href: "/Contact/contact", label: "Contact" },
 ] as const
+
 
 
   const currentPath = (props as any)?.fileData?.permalink || "/"
