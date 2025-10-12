@@ -18,7 +18,7 @@ I am particularly interested in how processes of coloniality and racialization c
 
 ## Role(s) within Afromedica
 
-- [Policy](content/Policy/policy.md)
+- [Policy](Policy/policy.md)
 
 ## Contact me!
 - 📧 [janne.vandevoorde@afromedica.be](mailto:janne.vandevoorde@afromedica.be)

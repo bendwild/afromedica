@@ -17,7 +17,7 @@ Healthcare should be easily accessible to all and of the best of quality for eve
 ## Role(s) within Afromedica
 
 - PR
-- [Policy](content/Policy/policy.md)
+- [Policy](/Policy/policy.md)
 
 
 ## Contact me!

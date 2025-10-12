@@ -20,7 +20,7 @@ I joined Afromedica to bridge the gap between academic research and grassroots a
 
 ## Role(s) within Afromedica
 - Internal administration
-- Afromedica connects
+- [[Afromedica Connects/Afromedica Connects]]
 
 
 ## Contact me!

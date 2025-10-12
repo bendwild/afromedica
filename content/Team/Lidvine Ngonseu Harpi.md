@@ -22,8 +22,8 @@ Thanks to being involved with AfroMedica, I've gotten to know a lot of inspiring
 
 ## Role(s) within Afromedica
 
-- [[content/Afromedica Talks/Afromedica Talks]]
-- [[content/Afromedica Connects/Afromedica Connects]]
+- [[Afromedica Talks/Afromedica Talks]]
+- [[Afromedica Connects/Afromedica Connects]]
 
 
 ## Contact me!

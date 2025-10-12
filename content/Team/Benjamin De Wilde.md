@@ -20,7 +20,7 @@ My name is Benjamin and I'm a medical doctor with a passion for global health. I
 
 ## Role(s) within Afromedica
 
-- [[content/Afromedica Academy/Afromedica Academy]]
+- [[/Afromedica Academy/Afromedica Academy]]
 - Internal administration
 
 
