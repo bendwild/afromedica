@@ -1003,3 +1003,29 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent);
   border-bottom: 2px solid var(--accent);
 }
+
+.upcoming-topics {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f6f5ff;
+  border-radius: 12px;
+}
+
+.upcoming-topics h4 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.upcoming-topics ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.upcoming-topics li {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
