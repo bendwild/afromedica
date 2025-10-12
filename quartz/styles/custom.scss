@@ -1047,3 +1047,29 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
 }
 
+/* Ensure left and right sidebars start below the fixed navbar */
+.page-columns > .left,
+.page-columns > .right,
+.sidebar.left,
+.sidebar.right {
+  margin-top: 64px; /* same as navbar height */
+  padding-top: 1rem; /* optional extra spacing */
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional: prevent TOC / related pages from overflowing */
+.toc,
+.related-pages,
+.recent-notes,
+.backlinks {
+  max-height: calc(100vh - 80px); /* fit inside viewport below navbar */
+  overflow-y: auto;
+}
+
+/* Optional: add small spacing at top of left column content */
+.page-columns > .left > *:first-child,
+.sidebar.left > *:first-child {
+  margin-top: 0.5rem !important;
+}
