@@ -11,8 +11,6 @@ export const sharedPageComponents: SharedLayout = {
     "https://www.linkedin.com/company/afromedica/?viewAsMember=true": "linkedin",
     "https://www.facebook.com/AfroMedica": "facebook",
     "https://www.instagram.com/_afromedica_/?hl=nl": "instagram",
-    "https://discord.gg/qUcCAHassB": "discord",
-    "https://www.youtube.com/@AfroMedica": "youtube",
   },
 }),
 }
@@ -36,7 +34,6 @@ export const defaultContentPageLayout: PageLayout = {
           Component: Component.Search(),
           grow: true,
         },
-        { Component: Component.Darkmode() },
         { Component: Component.ReaderMode() },
       ],
     }),
