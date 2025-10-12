@@ -4,7 +4,7 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 const CustomNavbar: QuartzComponent = (props: QuartzComponentProps) => {
 const links = [
   { href: "/About-us/about", label: "About Us" },
-  { href: "/Afromedica-Academy/afromedica-academy", label: "Afromedica Academy" },
+  { href: "/Afromedica-Academy/Afromedica-Academy", label: "Afromedica Academy" },
   { href: "/Afromedica-Talks/Afromedica-Talks", label: "Afromedica Talks" },
   { href: "/Afromedica-Connects/Afromedica-Connects", label: "Afromedica Connects" },
   { href: "/Policy/policy", label: "Policy" },
