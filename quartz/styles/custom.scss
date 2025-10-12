@@ -2,29 +2,29 @@
 
 /* === Color Tokens === */
 :root {
-  --light: #fffcdb; /* warm cream */
-  --lightgray: #d1c3f2; /* soft lavender */
-  --gray: #a389db; /* medium lavender */
-  --darkgray: #5e388e; /* deep purple */
-  --dark: #2d1f17; /* dark brown */
-  --secondary: #8effe1; /* aqua */
-  --tertiary: #378f8a; /* teal */
-  --accent: #378f8a; /* teal accent */
-  --highlight: rgba(142, 255, 225, 0.15); /* aqua highlight */
-  --textHighlight: rgba(255, 205, 159, 0.28); /* warm peach highlight */
+  --light: #fffaf0; /* soft cream, lighter for better readability */
+  --lightgray: #e0d7f8; /* softer lavender for borders */
+  --gray: #9a7fd1; /* medium lavender for graphs and heavier borders */
+  --darkgray: #4b2c7a; /* deep purple for body text, readable on light background */
+  --dark: #2b1b0f; /* dark brown for headers and icons, high contrast */
+  --secondary: #00d1c1; /* vibrant aqua for links and current graph node */
+  --tertiary: #009688; /* teal for hover/visited states */
+  --accent: #009688; /* matches tertiary for consistency */
+  --highlight: rgba(0, 209, 193, 0.15); /* soft aqua highlight */
+  --textHighlight: rgba(255, 223, 160, 0.3); /* warm peach highlight for markdown */
 }
 
 html[data-theme="dark"] {
-  --light: #2d1f17; /* dark brown background */
-  --lightgray: #5e388e; /* deep purple-gray */
-  --gray: #a389db; /* soft lavender */
-  --darkgray: #d1c3f2; /* light lavender */
-  --dark: #fffcdb; /* cream for text */
-  --secondary: #f4ac6a; /* warm orange */
-  --tertiary: #cf772e; /* deep orange */
-  --accent: #cf772e; /* deep orange accent */
-  --highlight: rgba(244, 172, 106, 0.15); /* warm orange highlight */
-  --textHighlight: rgba(142, 255, 225, 0.28); /* aqua highlight */
+  --light: #2b1b0f; /* dark brown background */
+  --lightgray: #4b2c7a; /* deep purple-gray for borders */
+  --gray: #9a7fd1; /* soft lavender for links */
+  --darkgray: #e0d7f8; /* light lavender for body text */
+  --dark: #fffaf0; /* cream for header text and icons */
+  --secondary: #ffb166; /* warm orange for links and active nodes */
+  --tertiary: #cf772e; /* deep orange for hover/visited states */
+  --accent: #cf772e; /* matches tertiary */
+  --highlight: rgba(255, 177, 102, 0.15); /* soft warm highlight */
+  --textHighlight: rgba(0, 209, 193, 0.28); /* aqua highlight for markdown */
 }
 
 * {
