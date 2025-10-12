@@ -1074,54 +1074,50 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem !important;
 }
 
-// Add this CSS to your custom.scss file after the existing .page-columns styles
+// Add this CSS to your custom.scss file - more forceful override
 
-// === Layout: Make center content stretch when right column is empty ===
-.page-columns {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  min-height: 60vh;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-// Left sidebar
-.page-columns > .left {
-  flex: 0 0 250px; // Fixed width for left column
-  min-width: 250px;
-}
-
-// Center content - stretches to fill available space
+// === Force full-width layout when right column is empty ===
 .page-columns > .center {
-  flex: 1 1 auto; // Grows to fill available space
-  min-width: 0; // Allows flexbox to shrink below content size if needed
-  max-width: 100%; // When no right column, takes full remaining width
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
 }
 
-// Right sidebar - only takes space when it has content
+.page-columns > .left {
+  flex: 0 0 250px !important;
+  width: 250px !important;
+  max-width: 250px !important;
+}
+
 .page-columns > .right {
-  flex: 0 0 250px; // Fixed width when present
-  min-width: 250px;
+  flex: 0 0 250px !important;
+  width: 250px !important;
   
-  // Hide completely when empty
+  // Completely hide when empty
   &:empty {
-    display: none;
+    display: none !important;
+    width: 0 !important;
+    flex: 0 0 0 !important;
   }
+}
+
+// Alternative: if right column still appears, force hide it
+.page-columns > .right:not(:has(*)) {
+  display: none !important;
 }
 
 // Mobile responsive
 @media (max-width: 1024px) {
   .page-columns {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   
   .page-columns > .left,
   .page-columns > .center,
   .page-columns > .right {
-    flex: 1 1 auto;
-    width: 100%;
-    max-width: 100%;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
