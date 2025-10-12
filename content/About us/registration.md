@@ -1,7 +1,7 @@
 ---
 title: Membership registration
 publish: true
-tags: 
-description: 
+tags:
+description:
 modified: 2025-08-11
 ---

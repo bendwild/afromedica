@@ -1,5 +1,5 @@
 ---
-title: 
+title:
 publish: true
 tags:
   - articles

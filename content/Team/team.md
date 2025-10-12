@@ -30,7 +30,7 @@ modified: 2025-10-11
 </div>
 
 <div class="team-card">
-  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoLidvine.jpg" alt="Lidvine Ngonseu Harpi" />
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoLidvine.jpeg" alt="Lidvine Ngonseu Harpi" />
   <h3><a href="/Team/Lidvine-Ngonseu-Harpi">Lidvine Ngonseu Harpi</a></h3>
   <p><em>Afromedica Talks & Afromedica Connects</em></p>
   <p>I am Lidvine, a doctor in training in medical genetics. I dedicate myself to promoting more inclusive healthcare. Because I believe that EVERYONE has the right to receive quality care.</p>
@@ -47,7 +47,7 @@ modified: 2025-10-11
 </div>
 
 <div class="team-card">
-  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoAlessio.jpg" alt="Alessio Capobianco" />
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoAlessio.jpeg" alt="Alessio Capobianco" />
   <h3><a href="/Team/Alessio-Capobianco">Alessio Capobianco</a></h3>
   <p><em>Public relations & Policy</em></p>
   <p>I am Alessio, a medical resident in Family Medicine and I am thrilled to be part of AfroMedica and contribute to equal healthcare on a larger scale.</p>

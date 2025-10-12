@@ -7,7 +7,7 @@ description:
 modified: 2025-10-11
 ---
 <div class="inline-profile">
-  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoStefni.jpg" alt="Benjamin De Wilde" />
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoStefni.jpg" alt="Stefni Peter" />
   <div class="intro-text">
   
 ## Hey there!

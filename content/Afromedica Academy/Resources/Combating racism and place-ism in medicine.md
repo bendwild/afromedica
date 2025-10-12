@@ -1,5 +1,5 @@
 ---
-title: 
+title:
 publish: true
 modified: 2025-08-11
 tags:

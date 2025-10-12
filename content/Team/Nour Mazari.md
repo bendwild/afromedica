@@ -7,7 +7,7 @@ description:
 modified: 2025-10-11
 ---
 <div class="inline-profile">
-  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Nour El-Houda Mazari" />
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoNour.jpg" alt="Nour Mazari" />
   <div class="intro-text">
   
 ## Hey there!

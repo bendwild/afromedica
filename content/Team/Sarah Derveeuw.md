@@ -7,7 +7,7 @@ description:
 modified: 2025-10-11
 ---
 <div class="inline-profile">
-  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
+  <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoSarah.jpg" alt="Sarah Derveeuw" />
   <div class="intro-text">
   
 ## Hey there!

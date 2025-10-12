@@ -2,7 +2,7 @@
 title: Welcome to AfroMedica!
 publish: true
 modified: 2025-08-12
-tags: 
+tags:
 ---
 <div class="hero">
   <h2>Discover who we are!</h2>
