@@ -4,7 +4,7 @@ publish: true
 tags:
   - team
 description:
-modified: 2025-10-10
+modified: 2025-10-11
 ---
 <div class="inline-profile">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
@@ -12,7 +12,7 @@ modified: 2025-10-10
   
 ## Hey there!
 
-I am Alessio, a medical resident in Family Medicine and I am thrilled to be part of AfroMedica and contribute to equal healthcare on a larger scale.
+Healthcare should be easily accessible to all and of the best of quality for everyone. In my opinion, white privilege is an important hurdle to achieve this. It's a phenomenon that should be more discussed and made aware of amongst the medical community. It happens in basic patient-doctor interaction, as well as on a more systemic level, and of course within myself. With AfroMedica, I hope to address it and spread evidence based facts that are free of racist thinking frames
 
 ## [Taskforces](content/About%20us/taskforces.md) I'm involved in!
 
@@ -22,11 +22,3 @@ I am Alessio, a medical resident in Family Medicine and I am thrilled to be part
 
 ## Contact me!
 - 📧 [alessio.capobianco@afromedica.be](mailto:alessio.capobianco@afromedica.be)
-
-
-## Follow me!
-
-If you are interested in connecting, you can find me on these platforms: 
-- [Instagram](...)
-- [Linkedin](...)
-- ...
