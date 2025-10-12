@@ -7,8 +7,8 @@
   --gray: #9a7fd1; /* medium lavender for graphs and heavier borders */
   --darkgray: #4b2c7a; /* deep purple for body text, readable on light background */
   --dark: #2b1b0f; /* dark brown for headers and icons, high contrast */
-  --secondary: #00d1c1; /* vibrant aqua for links and current graph node */
-  --tertiary: #009688; /* teal for hover/visited states */
+  --secondary: #009688; /* vibrant aqua for links and current graph node */
+  --tertiary: #00d1c1; /* teal for hover/visited states */
   --accent: #009688; /* matches tertiary for consistency */
   --highlight: rgba(0, 209, 193, 0.15); /* soft aqua highlight */
   --textHighlight: rgba(255, 223, 160, 0.3); /* warm peach highlight for markdown */
@@ -41,7 +41,7 @@ html[data-theme="dark"] {
   height: 64px; /* increased height */
   background-color: var(--light);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  font-family: 'IBM Plex Serif', serif;
+  font-family: 'Montserrat', sans-serif; /* header-style navbar */
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -90,24 +90,20 @@ html[data-theme="dark"] {
 }
 
 // === Layout ===
+/* === Layout: Columns and TOC Alignment === */
 body {
-  padding-top: 64px; /* adjusted to match navbar height */
+  padding-top: 64px; /* match navbar height */
+  margin: 0;
   background-color: var(--light);
   color: var(--dark);
-  font-family: 'IBM Plex Serif', serif;
-  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif; /* header-style navbar */
 }
 
 .page-columns {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
-  margin-top: 0rem;
   min-height: 60vh;
-}
-
-.page-columns > .left {
-  border-top: none !important;
 }
 
 .page-columns > .left,
@@ -115,8 +111,30 @@ body {
 .page-columns > .right {
   display: flex;
   flex-direction: column;
+  align-self: flex-start; /* ensures all columns align at the top */
+  margin-top: 0;
+  padding-top: 0;
   height: 100%;
 }
+
+/* Reset top spacing for first visible child in each column */
+.page-columns > .left > *:first-child,
+.page-columns > .center > *:first-child,
+.page-columns > .right > *:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Optional: ensure cards, TOC, related pages, callouts align without extra margin */
+.card:first-child,
+.toc:first-child,
+.recent-notes:first-child,
+.backlinks:first-child,
+.explorer:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 
 main {
   margin-bottom: 1rem;
@@ -154,7 +172,7 @@ main {
 .button {
   background-color: var(--accent);  /* more vibrant */
   color: var(--light);
-  font-family: 'IBM Plex Serif', serif;
+  font-family: 'Montserrat', sans-serif; /* header-style navbar */
   font-weight: 600;
   padding: 0.6rem 1.2rem;
   border-radius: 0.75rem;
@@ -920,7 +938,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9rem;
-  font-family: 'IBM Plex Serif', serif;
+  font-family: 'Montserrat', sans-serif; /* header-style navbar */
   font-weight: 600;
   color: var(--dark);
   white-space: nowrap;
@@ -948,7 +966,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 1001;
   min-width: 150px;
-  font-family: 'IBM Plex Serif', serif;
+  font-family: 'Montserrat', sans-serif; /* header-style navbar */
 }
 
 .dropdown-menu li {
