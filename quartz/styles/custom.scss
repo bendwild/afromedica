@@ -171,7 +171,7 @@ main {
 // === Buttons ===
 .button {
   background-color: var(--accent);  /* more vibrant */
-  color: var(--light);
+  color: var(--secondary);
   font-family: 'Montserrat', sans-serif; /* header-style navbar */
   font-weight: 600;
   padding: 0.6rem 1.2rem;
@@ -185,7 +185,7 @@ main {
 
 .button:hover {
   background-color: var(--darkgray);
-  color: var(--lightgray);
+  color: var(--secondary);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
@@ -285,7 +285,7 @@ main {
   border: 1px solid var(--gray);
   color: var(--dark);
   font-weight: 600;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -568,7 +568,7 @@ h6 > a.anchor {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   text-align: left;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
   border-bottom-left-radius: 1rem;
@@ -826,7 +826,7 @@ main > *:first-child,
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .contact-card:hover {
