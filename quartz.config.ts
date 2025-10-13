@@ -36,8 +36,8 @@ colors: {
     gray: "#9a7fd1",         // medium lavender for graphs/links
     darkgray: "#4b2c7a",     // deep purple for body text
     dark: "#2b1b0f",         // dark brown for headers/icons
-    secondary: "#00d1c1",    // vibrant aqua for links / active nodes
-    tertiary: "#009688",     // teal for hover / visited states
+    secondary: "#009688",    // vibrant aqua for links / active nodes
+    tertiary: "#00d1c1",     // teal for hover / visited states
     highlight: "rgba(0, 209, 193, 0.15)", // subtle aqua highlight
     textHighlight: "rgba(255, 223, 160, 0.3)", // warm peach highlight
   },
