@@ -1,7 +1,7 @@
 ---
 title: "Raciale vooroordelen in de zorg: 'Omdat ik zwart ben, denkt mijn arts dat ik sterk ben'"
 publish: true
-modified: 2025-10-10
+modified: 2025-10-13
 tags:
   - articles
   - racism-and-health
@@ -50,14 +50,14 @@ tags:
   <a href="/tags/_2025_" class="tag">#2025</a>
 </div>
 
-## Cover
-
+---
 ## Description
 Zuiderse types houden van overdrijven, ook als ze ziek zijn. Zwarte vrouwen zijn sterk, dus kunnen veel meer pijn verdragen. Die foute ideeën leven soms bij huisartsen, wat patiënten niet alleen een schuldgevoel geeft, maar ook veel ongemak en gêne. Om meer bewustzijn te creëren rond gender en raciale bias organiseert belangenorganisatie Afromedica een open gesprek over het onderwerp. “Dokters reageren vaak defensief wanneer ze op hun raciale vooroordelen worden aangesproken.”
 
 > “Vooroordelen bij het zorgpersoneel zijn vaak de uiting van het diepgewortelde koloniale denken in de geneeskunde”
-> - [[content/Team/Hanane El Kaddouri]]
+> - [[Hanane El Kaddouri]]
 
+---
 ## Link
 ["Raciale vooroordelen in de zorg: 'Omdat ik zwart ben, denkt mijn arts dat ik sterk ben'" by BRUZZ](https://www.bruzz.be/actua/gezondheid/raciale-vooroordelen-de-zorg-omdat-ik-zwart-ben-denkt-mijn-arts-dat-ik-sterk-ben)
 

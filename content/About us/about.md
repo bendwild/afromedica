@@ -28,7 +28,6 @@ We are committed to naming systemic injustice and putting decolonization into pr
 
 ---
 
-
 ## Our Community
 
 Our main audience includes:

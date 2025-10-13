@@ -14,8 +14,7 @@ modified: 2025-10-13
 # Eligibility
 We are looking for motivated **students and early-career professionals** who want to contribute to AfroMedica’s mission by helping us communicate, organise, and connect. 
 
-
-> [!info] A medical background is not necessary to apply!
+> [!info]+ A medical background is not necessary to apply!
 > We welcome medical students, nursing students, allied health professionals, researchers, and anyone passionate about equitable healthcare.
 
 # Responsibilities
@@ -29,7 +28,7 @@ Example tasks include:
 - Gathering and organising relevant materials (articles, reports, visuals)
 
 
-> [!INFO] Time commitment
+> [!INFO]+ Time commitment
 > We expect a time commitment of approximately 2–4 hours per month (flexible and remote). This includes optional quarterly team calls or brief check-ins 
 
 # Benefits

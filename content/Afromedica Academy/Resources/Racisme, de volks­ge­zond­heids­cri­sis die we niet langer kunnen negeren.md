@@ -1,7 +1,7 @@
 ---
 title:
 publish: true
-modified: 2025-08-04
+modified: 2025-10-13
 tags:
   - articles
   - racism-and-health
@@ -33,9 +33,12 @@ tags:
   <span class="tag-scroll-title"><strong>Year:</strong></span>
   <a href="/tags/_2020_" class="tag">#2020</a>
 </div>
+
+---
 ## Description
 Al vele maanden worden we wereldwijd in beslag genomen door de gezondheidscrisis die het coronavirus veroorzaakte. In diezelfde periode zagen we ook in vele landen antiracistische protesten ontstaan. De verbanden tussen beiden worden echter al te weinig opgemerkt. Enkele gerenommeerde onderzoekers willen daar verandering in brengen en maken duidelijk wat de impact van racisme is op de volksgezondheid. En ze roepen hun collega's op om hun taak ernstig te nemen.
 
+---
 ## Link
 ["Racisme, de volks­ge­zond­heids­cri­sis die we niet langer kunnen negeren" by Kif Kif](https://www.kifkif.be/bijdragen/racisme-de-volksgezondheidscrisis-die-we-niet-langer-kunnen-negeren)
 

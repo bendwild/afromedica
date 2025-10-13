@@ -1,7 +1,7 @@
 ---
 title: Welcome to AfroMedica!
 publish: true
-modified: 2025-08-12
+modified: 2025-10-13
 tags:
 ---
 <div class="hero">
@@ -43,3 +43,6 @@ tags:
   <p>Follow us on social media or reach out to collaborate.</p>
   <a class="button" href="contact">→ Contact Us</a>
 </div>
+
+
+<a class="button" href="https://chat.whatsapp.com/G3Jw7sIAfmHLhCf5XKD6zj">Join Us →</a>

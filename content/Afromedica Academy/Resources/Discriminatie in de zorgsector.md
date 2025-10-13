@@ -1,7 +1,7 @@
 ---
 title:
 publish: true
-modified: 2025-10-10
+modified: 2025-10-13
 tags:
   - podcasts
   - racism-and-health
@@ -50,4 +50,4 @@ tags:
 
 Op Den Duur is een podcast door PXL Green Office. Hierin praten studenten met diverse gastsprekers, of met elkaar, over thema's rond duurzaamheid. Ons doel is om mensen, niet alleen studenten, te informeren, motiveren en activeren tot het nemen van stappen richting een duurzamere wereld.
 
-In deze aflevering spreken Aaron en Sinan met [[content/Team/Lidvine Ngonseu Harpi]] en Elke Van de Moortel over discriminatie in de zorgsector. Er wordt gesproken over hoe discriminatie optreed en hoe dit probleem verholpen kan worden.
+In deze aflevering spreken Aaron en Sinan met [[Lidvine Ngonseu Harpi]] en Elke Van de Moortel over discriminatie in de zorgsector. Er wordt gesproken over hoe discriminatie optreed en hoe dit probleem verholpen kan worden.

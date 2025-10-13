@@ -42,6 +42,9 @@ Afromedica Talks hosts a **journal club every second Wednesday of the month**. S
 </section>
 
 
+> [!INFO] Do you have any questions for upcoming talks?
+> Fill in this form!
+
 ---
 
 ## Want to participate?

@@ -1,7 +1,7 @@
 ---
 title:
 publish: true
-modified: 2025-08-04
+modified: 2025-10-13
 tags:
   - books
   - intersectionality
@@ -35,9 +35,12 @@ tags:
   <span class="tag-scroll-title"><strong>Year:</strong></span>
   <a href="/tags/_2024_" class="tag">#2024</a>
 </div>
+
+---
 ## Cover
 ![[Pasted image 20250727215213.png]]
 
+---
 ## Description
 Black bodies are regularly hindered in a white world, women's bodies are shielded and slowed down in a misogynistic world, fat bodies do not fit into a world that is tailored to the average body, wheelchair-bound bodies cannot use the stairs, and depressed bodies become inert because the world no longer invites them.  
   
@@ -45,9 +48,11 @@ The examples show that bodies never stand alone. They always function in relatio
   
 A fundamentally different view of health, illness, disabilities and social exclusion
 
+---
 ## Link
 ["Nieuwe lichamelijkheid" by Jenny Slatman](https://www.jennyslatman.nl/publications/books)
 
+---
 ## Resource
 
 **Open source:**
