@@ -170,7 +170,7 @@ main {
 
 // === Buttons ===
 .button {
-  background-color: var(--secondary); /* use vibrant aqua as base */
+  background-color: var(--gray); /* use vibrant aqua as base */
   color: var(--light); /* white text for contrast */
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -184,7 +184,7 @@ main {
 }
 
 .button:hover {
-  background-color: var(--tertiary); /* teal hover shade */
+  background-color: var(--darkgray); /* teal hover shade */
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
