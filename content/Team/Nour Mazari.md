@@ -4,7 +4,7 @@ publish: true
 tags:
   - team
 description:
-modified: 2025-10-11
+modified: 2025-10-13
 ---
 <div class="inline-profile">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoNour.jpg" alt="Nour Mazari" />
@@ -18,10 +18,13 @@ As a psychiatry resident, I am driven by the conviction that mental health is a 
 
 Through my commitment to Afromedica, I stand with our powerful vision of expanding and improving access to fair, inclusive and culturally aware healthcare and thus contributing to a healthier, more equitable society for all.
 
+---
+
 ## Role(s) within Afromedica
 
 - Finances
 
+---
 
 ## Contact me!
 - 📧 [nourelhouda.mazari@afromedica.be](mailto:nourelhouda.mazari@afromedica.be)

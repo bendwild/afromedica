@@ -4,7 +4,7 @@ publish: true
 tags:
   - team
 description:
-modified: 2025-10-11
+modified: 2025-10-13
 ---
 <div class="inline-profile">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoSarah.jpg" alt="Sarah Derveeuw" />
@@ -18,14 +18,18 @@ Before starting my doctoral studies, I worked as an Assistant Psychologist in th
 
 I joined Afromedica to bridge the gap between academic research and grassroots action, and to stay connected to community-driven initiatives. In doing so, I have found a home in Afromedica, joining a collective of motivated and thoughtful healthcare workers whose commitment to equality and diversity in health deeply resonates with my own values.
 
+---
+
 ## Role(s) within Afromedica
 - Internal administration
 - [[Afromedica Connects/Afromedica Connects]]
 
+---
 
 ## Contact me!
 - 📧 [sarah.derveeuw@afromedica.be](mailto:sarah.derveeuw@afromedica.be)
 
+---
 
 ## Follow me!
 

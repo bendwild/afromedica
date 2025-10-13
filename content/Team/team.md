@@ -72,7 +72,7 @@ modified: 2025-10-13
 
 </div>
 
-> [!attention]+ interested in becoming a boardmember?
+> [!attention]+ Interested in becoming a boardmember?
 > We welcome anyone who shares our vision and mission to reach out to us at connect@afromedica.be!
 > 
 > **[→ Apply to become a boardmember](/About%20us/boardmembers.md)**

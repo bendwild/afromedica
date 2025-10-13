@@ -4,7 +4,7 @@ publish: true
 tags:
   - team
 description:
-modified: 2025-10-11
+modified: 2025-10-13
 ---
 <div class="inline-profile">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoLidvine.jpeg" alt="Lidvine Ngonseu Harpi" />
@@ -20,15 +20,19 @@ Since 2021, I have been involved in various projects within AfroMedica, ranging 
 
 Thanks to being involved with AfroMedica, I've gotten to know a lot of inspiring and warm people. First of all, my fellow board members, but also the people we've worked with and hopefully will continue to work with for a long time to come. With AfroMedica, I hope to contribute to a more inclusive healthcare system, where every voice is heard and every patient is seen.
 
+---
+
 ## Role(s) within Afromedica
 
 - [[Afromedica Talks/Afromedica Talks]]
 - [[Afromedica Connects/Afromedica Connects]]
 
+---
 
 ## Contact me!
 - 📧 [lidvine.ngonseuharpi@afromedica.be](mailto:lidvine.ngonseuharpi@afromedica.be)
 
+---
 
 ## Follow me!
 

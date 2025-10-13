@@ -4,7 +4,7 @@ publish: true
 tags:
   - team
 description:
-modified: 2025-10-11
+modified: 2025-10-13
 ---
 <div class="inline-profile">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoJanne.jpg" alt="Janne Van De Voorde" />
@@ -16,9 +16,13 @@ Hello! My name is Janne, I recently graduated in medicine and am currently train
 
 I am particularly interested in how processes of coloniality and racialization continue to affect contemporary institutions: from economic and geopolitical structures to (medical) knowledge production. With this somewhat theoretical background, I want to keep learning and contributing through AfroMedica, working toward a healthcare system that actively challenges inequality.
 
+---
+
 ## Role(s) within Afromedica
 
 - [Policy](Policy/policy.md)
+
+---
 
 ## Contact me!
 - 📧 [janne.vandevoorde@afromedica.be](mailto:janne.vandevoorde@afromedica.be)
