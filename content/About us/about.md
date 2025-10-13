@@ -1,17 +1,13 @@
 ---
 title: About us
 publish: true
-modified: 2025-10-11
+modified: 2025-10-13
 tags:
   - about-us
 ---
-## Our origin
+AfroMedica was **founded in 2020**, during a time marked by the **Black Lives Matter** movement and the **COVID-19** pandemic—two events that revealed the structural inequalities in our healthcare system. What started as an initiative by a group of medical students has since evolved into a growing network of students and professionals dedicated to addressing the impact of racism on health and healthcare in Belgium.
 
----
-
-AfroMedica was founded in 2020, during a time marked by the Black Lives Matter movement and the COVID-19 pandemic—two events that starkly revealed the structural inequalities in our healthcare system. What started as an initiative by a group of medical students has since evolved into a growing network of students and professionals dedicated to addressing the impact of racism on health and healthcare in Belgium.
-
-Today, AfroMedica is an interdisciplinary collective active across the broader healthcare and medical landscape. We bring together perspectives from medicine, sociology, psychology, public policy, and activism to advocate for healthcare that is equitable, accessible, and conscious of racial dynamics. Working at the intersection of care, education, activism, and policy, we build bridges between grassroots movements, institutions, and decision-makers—**always grounded in evidence and scientific understanding.
+Today, AfroMedica is an **interdisciplinary collective** active across the broader healthcare and medical landscape. We bring together perspectives from medicine, sociology, psychology, public policy, and activism to advocate for healthcare that is equitable, accessible, and conscious of racial dynamics. Working at the intersection of care, education, activism, and policy, we build bridges between grassroots movements, institutions, and decision-makers—**always grounded in evidence and scientific understanding.
 
 
 ---
@@ -28,9 +24,6 @@ AfroMedica works to **promote inclusive healthcare** by uncovering, questioning,
 **AfroMedica is not a student club or an academic think tank.** We are a critical and independent voice linking grassroots communities with academic and policy spaces. Our members include healthcare workers, researchers, and activists—many of whom have firsthand experience as racialized professionals in clinical settings. Others contribute expertise in global health, decolonial thinking, and health education.
 
 We are committed to naming systemic injustice and putting decolonization into practice—without compromise. We engage in intentional partnerships that respect our values and autonomy. That’s why we do not collaborate with political parties or act as consultants on racism for individuals or institutions. Instead, we focus on sharing knowledge and pushing for systemic change.
-
-Aangepaste versie: 
-
 
 
 ---
@@ -56,4 +49,4 @@ We maintain a high level of academic and structural engagement. While we deeply 
 
 ## Our Work
 
-AfroMedica operates as a horizontal, collective organization led by a dedicated board. The board consists of volunteers. We practice shared leadership; each [boardmember](content/About%20us/boardmembers.md) actively helps shape the organization’s direction. The president and vice-president provide overall coordination and are responsible for maintaining strategic alignment.
+AfroMedica operates as a horizontal, collective organization led by a dedicated board. The board consists of volunteers. We practice shared leadership; each [boardmember](About%20us/boardmembers.md) actively helps shape the organization’s direction. The president and vice-president provide overall coordination and are responsible for maintaining strategic alignment.

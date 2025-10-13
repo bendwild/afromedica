@@ -1,34 +1,47 @@
 ---
-title: Becoming a member!
+title: Afromedica Associates
 publish: true
 tags:
   - about-us
 description:
-modified: 2025-10-10
+modified: 2025-10-13
 ---
-So you're interested in becoming a member of AfroMedica? Great! Take a look at the information below to get a feel of what it means to become a member. If you have any questions, don't hesitate to [contact us](content/Contact/contact.md)md)!
+<div class="hero">
+  <h2>Join our associates program!</h2>
+  <p>Our work spans teaching, advocacy, and community engagement : from delivering lectures and workshops to advising on equitable healthcare practices. As our impact grows, we’re launching the Afromedica Associates to welcome new voices who can help us share our message, build resources, and support our mission of anti-racist healthcare in Belgium.</p>
+</div>
 
-## Why become a member?
-
-### 1. Be the first one to know about our activities!
-By signing up as a member you will be the first one to be notified about our various events and activities. This way you can make sure you're always up to date with monthly sessions of [[content/Afromedica Talks/Afromedica Talks]] or the membership community program of [[content/Afromedica Connects/Afromedica Connects]]. 
-
-### 2. Get access to exclusive platforms
-We run various private online groups where members can share their own experiences, explore unique insights and stay up to date with all the initiatives and organizations sharing our [vision and mission](about us). 
-
-### 3. Be part of change
-Do you agree with our mission and want to help make this become reality? Well, as a member, you're spreading the mindset and keeping the dream alive.
-
-# What does it mean to be a member?
-
-### 1. Voluntary participation in AfroMedica events
-
-### 2. ?
+# Eligibility
+We are looking for motivated **students and early-career professionals** who want to contribute to AfroMedica’s mission by helping us communicate, organise, and connect. 
 
 
-# How to become a member?
-If you feel at home in our membership program you can press join which will take you to a google forms. This is completely free and your contact info will only be used to inform you about our organization and events. 
+> [!info] A medical background is not necessary to apply!
+> We welcome medical students, nursing students, allied health professionals, researchers, and anyone passionate about anti-racist healthcare.
 
-See you soon!
+# Responsibilities
+As an AfroMedica Associate, you will support our **communications and public engagement activitie**s, including social media and digital resources. 
 
-<a class="button" href="/join">Join Us →</a>
+Example tasks include: 
+- Curating and scheduling posts on social media platforms (Instagram, LinkedIn) 
+- Turning Afromedica talks, events, and research into engaging posts or visuals * Helping prepare newsletters and educational resources 
+- Assisting in event promotion 
+- Gathering and organising relevant materials (articles, reports, visuals)
+
+
+> [!INFO] Time commitment
+> We expect a time commitment of approximately 2–4 hours per month (flexible and remote). This includes optional quarterly team calls or brief check-ins 
+
+# Benefits
+By joining the AfroMedica Associates you will: 
+- gain access to our speaking and teaching events 
+- receive mentorship from other AfroMedica members 
+- gain experience in healthcare communication, advocacy, and social media strategy 
+- receive recognition and certification of your contribution
+- be surrounded by asupportive, like-minded network of peers and professionals 
+- have opportunities to contribute ideas and develop your voice in health equity 
+
+# How to join?
+Interested in becoming an Afromedica Associate? Please send a mail to connects@afromedica.be with your motivation (150–200 words) that includes: 
+- who you are and what motivates you to join
+- any relevant experience or skills (communications, design, advocacy, etc.)
+- one idea you’d love to see Afromedica share or explore
