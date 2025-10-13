@@ -16,14 +16,15 @@ We are looking for motivated **students and early-career professionals** who wan
 
 
 > [!info] A medical background is not necessary to apply!
-> We welcome medical students, nursing students, allied health professionals, researchers, and anyone passionate about anti-racist healthcare.
+> We welcome medical students, nursing students, allied health professionals, researchers, and anyone passionate about equitable healthcare.
 
 # Responsibilities
-As an AfroMedica Associate, you will support our **communications and public engagement activitie**s, including social media and digital resources. 
+As an AfroMedica Associate, you will support our **communications and public engagement activities**, including social media and digital resources. 
 
 Example tasks include: 
 - Curating and scheduling posts on social media platforms (Instagram, LinkedIn) 
-- Turning Afromedica talks, events, and research into engaging posts or visuals * Helping prepare newsletters and educational resources 
+- Turning [[Afromedica Talks]], events, and research into engaging posts or visuals 
+- Helping prepare newsletters and educational resources 
 - Assisting in event promotion 
 - Gathering and organising relevant materials (articles, reports, visuals)
 
@@ -37,11 +38,11 @@ By joining the AfroMedica Associates you will:
 - receive mentorship from other AfroMedica members 
 - gain experience in healthcare communication, advocacy, and social media strategy 
 - receive recognition and certification of your contribution
-- be surrounded by asupportive, like-minded network of peers and professionals 
+- be surrounded by a supportive, like-minded network of peers and professionals 
 - have opportunities to contribute ideas and develop your voice in health equity 
 
 # How to join?
-Interested in becoming an Afromedica Associate? Please send a mail to connects@afromedica.be with your motivation (150–200 words) that includes: 
+Interested in becoming an Afromedica Associate? Please send a mail to connects@afromedica.be with your **motivation (150–200 words)** that includes: 
 - who you are and what motivates you to join
 - any relevant experience or skills (communications, design, advocacy, etc.)
 - one idea you’d love to see Afromedica share or explore

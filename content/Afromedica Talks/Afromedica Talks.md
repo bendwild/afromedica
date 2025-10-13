@@ -9,9 +9,20 @@ modified: 2025-10-13
   <p>Join our monthly journal club for professionals, scholars, and anyone interested in social and medical-scientific topics.</p>
 </div>
 
+---
+
 ## What are we?
 
 Afromedica Talks hosts a **journal club every second Wednesday of the month**. Speakers deliver presentations of approximately 20 minutes on diverse social or medical-scientific topics, followed by a discussion session. All topics are evidence-based, with a focus on sharing scientific knowledge. We welcome everyone to participate and contribute to the conversation.
+
+> [!attention]+ Upcoming talks 
+> - **Sept:** Global Health Equity and Decolonization
+> - **Oct:** Gender and Reproductive Health in Conflict Zones
+> - **Nov:** Cost-Effective Healthcare in Low-Income Settings
+> - **Dec:** Intersectionality in Medical Research
+
+
+---
 
 ## How to join?
 <section class="next-journal container">
@@ -30,11 +41,8 @@ Afromedica Talks hosts a **journal club every second Wednesday of the month**. S
   </div>
 </section>
 
-> [!ATTENTION] Upcoming talks
-> - **Sept:** Global Health Equity and Decolonization
-> - **Oct:** Gender and Reproductive Health in Conflict Zones
-> - **Nov:** Cost-Effective Healthcare in Low-Income Settings
-> - **Dec:** Intersectionality in Medical Research
+
+---
 
 ## Want to participate?
 

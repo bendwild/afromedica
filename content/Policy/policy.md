@@ -8,6 +8,8 @@ modified: 2025-10-13
   <p>We aim to drive structural change and address institutional racism in healthcare. Through dialogue with hospitals, policymakers and media we make our perspectives visible and strengthen awareness of systemic inequities in healthcare. </p>
 </div>
 
+---
+
 ## What we do 
 
 We are currently working on **policy recommendations, guidelines, and opinion pieces**, while keeping space for diverse initiatives that advance our mission.  
@@ -31,7 +33,5 @@ We regularly share ongoing efforts and ways to get involved:
 - **Events** and collaborative opportunities  
 
 
-> [!ATTENTION] Interested in contributing? 
-> Reach out to policy@afromedica.be to propose an idea or share your initiative!
-
-
+> [!attention]+ Interested in contributing?
+>  Reach out to policy@afromedica.be to propose an idea or share your initiative!
