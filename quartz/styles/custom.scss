@@ -170,25 +170,29 @@ main {
 
 // === Buttons ===
 .button {
-  background-color: var(--accent);  /* more vibrant */
-  color: var(--light);
-  font-family: 'Montserrat', sans-serif; /* header-style navbar */
+  background-color: var(--secondary); /* use vibrant aqua as base */
+  color: var(--light); /* white text for contrast */
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  padding: 0.6rem 1.2rem;
+  padding: 0.7rem 1.6rem;
   border-radius: 0.75rem;
   border: none;
-  box-shadow: 0 4px 12px rgba(180, 99, 122, 0.3); /* stronger contrast */
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .button:hover {
-  background-color: var(--darkgray);
-  color: var(--lightgray);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  background-color: var(--tertiary); /* teal hover shade */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
 
 // === Cards, TOC, Recent Notes, Backlinks, Explorer ===
 .card,
@@ -285,7 +289,7 @@ main {
   border: 1px solid var(--gray);
   color: var(--dark);
   font-weight: 600;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -533,10 +537,20 @@ h6 > a.anchor {
 }
 
 .hero .button {
-  font-size: 1rem;
-  padding: 0.6rem 1.4rem;
-  border-radius: 0.75rem;
+  background-color: var(--accent);
+  color: var(--light);
+  font-size: 1.05rem;
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
+
+.hero .button:hover {
+  background-color: var(--tertiary);
+  color: var(--light);
+  transform: translateY(-2px);
+}
+
 
 /* === Team Banner Section === */
 .team-banner {
@@ -568,7 +582,7 @@ h6 > a.anchor {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   text-align: left;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
   border-bottom-left-radius: 1rem;
@@ -826,7 +840,7 @@ main > *:first-child,
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .contact-card:hover {
