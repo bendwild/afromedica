@@ -170,25 +170,29 @@ main {
 
 // === Buttons ===
 .button {
-  background-color: var(--accent);  /* more vibrant */
-  color: var(--secondary);
-  font-family: 'Montserrat', sans-serif; /* header-style navbar */
+  background-color: var(--secondary); /* use vibrant aqua as base */
+  color: var(--light); /* white text for contrast */
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  padding: 0.6rem 1.2rem;
+  padding: 0.7rem 1.6rem;
   border-radius: 0.75rem;
   border: none;
-  box-shadow: 0 4px 12px rgba(180, 99, 122, 0.3); /* stronger contrast */
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .button:hover {
-  background-color: var(--darkgray);
-  color: var(--secondary);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  background-color: var(--tertiary); /* teal hover shade */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
 
 // === Cards, TOC, Recent Notes, Backlinks, Explorer ===
 .card,
@@ -533,10 +537,20 @@ h6 > a.anchor {
 }
 
 .hero .button {
-  font-size: 1rem;
-  padding: 0.6rem 1.4rem;
-  border-radius: 0.75rem;
+  background-color: var(--accent);
+  color: var(--light);
+  font-size: 1.05rem;
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
+
+.hero .button:hover {
+  background-color: var(--tertiary);
+  color: var(--light);
+  transform: translateY(-2px);
+}
+
 
 /* === Team Banner Section === */
 .team-banner {
