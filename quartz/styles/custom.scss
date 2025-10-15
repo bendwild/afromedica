@@ -184,7 +184,6 @@ main {
 }
 
 .button:hover {
-  background-color: var(--darkgray); /* teal hover shade */
   color: var(--dark);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
@@ -1108,3 +1107,111 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar.left > *:first-child {
   margin-top: 0.5rem !important;
 }
+
+/* --- PDF Embed Full-Width Fix --- */
+iframe[src*=".pdf"],
+embed[src*=".pdf"] {
+    width: 100% !important;
+    height: 90vh !important;
+    max-width: 100% !important;
+    border: none;
+    display: block;
+    margin: 1rem 0;
+}
+
+.quartz-embed,
+.quartz-embed iframe,
+.quartz-embed embed {
+    width: 100% !important;
+}
+
+@media (max-width: 768px) {
+    iframe[src*=".pdf"], embed[src*=".pdf"] {
+        height: 70vh;
+    }
+}
+/* --- End PDF Embed Full-Width Fix --- */
+
+/* --- Align left, center, and right columns --- */
+.page {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem; /* keep spacing between columns */
+}
+
+/* Ensure all columns start from the same top margin */
+.sidebar,
+.content,
+.right-sidebar {
+  margin-top: 1.5rem !important;  /* adjust to match your navbar spacing */
+}
+
+/* Remove inconsistent padding that causes misalignment */
+.sidebar > *:first-child,
+.right-sidebar > *:first-child,
+.content > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Create consistent vertical spacing between sections */
+main section, article > * {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Modern card styling */
+.card, .sidebar > div, .right-sidebar > div {
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover, .sidebar > div:hover, .right-sidebar > div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+a {
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+a:hover {
+  color: var(--accent); /* e.g. your teal or purple accent */
+}
+
+body {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+iframe[src*=".pdf"], img, video {
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+footer {
+  border-top: 1px solid rgba(0,0,0,0.05);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+}
+
