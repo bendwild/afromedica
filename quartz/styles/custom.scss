@@ -184,7 +184,6 @@ main {
 }
 
 .button:hover {
-  background-color: var(--darkgray); /* teal hover shade */
   color: var(--dark);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
@@ -1108,3 +1107,28 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar.left > *:first-child {
   margin-top: 0.5rem !important;
 }
+
+/* --- PDF Embed Full-Width Fix --- */
+iframe[src*=".pdf"],
+embed[src*=".pdf"] {
+    width: 100% !important;
+    height: 90vh !important;
+    max-width: 100% !important;
+    border: none;
+    display: block;
+    margin: 1rem 0;
+}
+
+.quartz-embed,
+.quartz-embed iframe,
+.quartz-embed embed {
+    width: 100% !important;
+}
+
+@media (max-width: 768px) {
+    iframe[src*=".pdf"], embed[src*=".pdf"] {
+        height: 70vh;
+    }
+}
+/* --- End PDF Embed Full-Width Fix --- */
+
