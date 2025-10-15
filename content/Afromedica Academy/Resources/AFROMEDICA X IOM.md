@@ -58,3 +58,14 @@ tags:
     Download PDF
   </a>
 </p>
+
+/* Make all embedded PDFs full width */
+iframe[src*=".pdf"], 
+embed[src*=".pdf"] {
+    width: 100% !important;   /* full width */
+    height: 90vh !important;  /* almost full viewport height */
+    max-width: 100% !important;
+    border: none;             /* remove border */
+    display: block;
+    margin: 1rem 0;           /* spacing around PDF */
+}
