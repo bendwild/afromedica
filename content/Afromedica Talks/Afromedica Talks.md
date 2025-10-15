@@ -7,7 +7,9 @@ modified: 2025-10-14
 <div class="hero">
   <h2>Welcome to Afromedica Talks!</h2>
   <p>We host monthly journal club for professionals, scholars, and anyone interested in social and medical-scientific topics.</</p>
-  <a class="button" href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_OGQzMjM3YmItZGJjNi00NTdkLTgwMzYtNmIwMjhiYzU4MTc2%40thread.v2/0?context=%7b%22Tid%22%3a%225255a6ba-27db-4d80-8539-dc5043b31f4a%22%2c%22Oid%22%3a%220105659c-8d42-4640-8025-3db6f699b784%22%7d"> Join our meeting → </a>
+  <a class="button" 
+  href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_OGQzMjM3YmItZGJjNi00NTdkLTgwMzYtNmIwMjhiYzU4MTc2%40thread.v2/0?context=%7b%22Tid%22%3a%225255a6ba-27db-4d80-8539-dc5043b31f4a%22%2c%22Oid%22%3a%220105659c-8d42-4640-8025-3db6f699b784%22%7d"> Join our meeting → 
+  </a>
 </div>
 ---
 
