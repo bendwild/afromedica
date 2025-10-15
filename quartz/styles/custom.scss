@@ -846,6 +846,7 @@ main > *:first-child,
   border-radius: 12px;
 }
 
+/* --- AfroMedica Contact Cards --- */
 .contact-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -853,46 +854,57 @@ main > *:first-child,
   margin: 2rem 0;
 }
 
+/* Matches the site’s soft violet box style */
 .contact-card {
-  background-color: var(--lightgray);
-  border: 1px solid var(--gray);
+  background-color: var(--purple-light, #E9D8FF); /* fallback to match sidebar tone */
+  border: none;
   border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.contact-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-}
-
-.contact-card h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
+  font-family: 'Cabin', sans-serif; /* your body font for readability */
   color: var(--dark);
 }
 
+/* Smooth hover lift with accent glow */
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  background-color: var(--purple-hover, #E0C8FF);
+}
+
+/* Name/title */
+.contact-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif; /* header font */
+  color: var(--dark);
+}
+
+/* Description text */
 .contact-card p {
   margin: 0 0 1rem 0;
   font-size: 0.95rem;
-  color: var(--darkgray);
-  line-height: 1.5;
+  line-height: 1.6;
+  color: var(--darkgray, #5a4f64);
 }
 
+/* Links (accent teal or brand highlight) */
 .contact-card a {
   display: inline-block;
   font-weight: 600;
-  color: var(--tertiary);
+  color: var(--accent, #008C8C);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
   font-size: 0.95rem;
 }
 
 .contact-card a:hover {
-  color: var(--accent);
+  color: var(--tertiary, #5B2E91);
+  text-decoration: underline;
 }
+
 
 hr {
   margin: 2rem 0; /* Adds vertical space above and below */
@@ -1139,20 +1151,40 @@ embed[src*=".pdf"] {
   gap: 1.5rem; /* keep spacing between columns */
 }
 
-/* Ensure all columns start from the same top margin */
-.sidebar,
-.content,
-.right-sidebar {
-  margin-top: 1.5rem !important;  /* adjust to match your navbar spacing */
+/* --- Fix Column Alignment Under Navbar --- */
+
+/* Ensure the whole page layout starts below navbar at the same height */
+.layout {
+  display: grid !important;
+  align-items: start !important;
+  grid-template-columns: var(--sidebar-width) 1fr var(--right-sidebar-width);
+  gap: 2rem;
+  margin-top: 0 !important;
+  padding-top: 6rem; /* adjust to your navbar height */
 }
 
-/* Remove inconsistent padding that causes misalignment */
+/* Force each column to begin at the same vertical position */
+.sidebar,
+.page,
+.right-sidebar {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  align-self: start !important;
+}
+
+/* Make sure nested blocks don’t add unexpected space */
 .sidebar > *:first-child,
 .right-sidebar > *:first-child,
-.content > *:first-child {
+.page > *:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
+/* Prevent misalignment caused by box borders or shadows */
+.sidebar, .right-sidebar {
+  box-sizing: border-box;
+}
+
 
 /* Create consistent vertical spacing between sections */
 main section, article > * {
