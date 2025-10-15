@@ -537,8 +537,8 @@ h6 > a.anchor {
 }
 
 .hero .button {
-  background-color: var(--accent);
-  color: var(--light);
+  background-color: var(--gray);
+  color: var(--dark);
   font-size: 1.05rem;
   padding: 0.8rem 2rem;
   border-radius: 1rem;
@@ -546,7 +546,7 @@ h6 > a.anchor {
 }
 
 .hero .button:hover {
-  background-color: var(--tertiary);
+  background-color: var(--gray);
   color: var(--light);
   transform: translateY(-2px);
 }
@@ -1151,38 +1151,46 @@ embed[src*=".pdf"] {
   gap: 1.5rem; /* keep spacing between columns */
 }
 
-/* --- Fix Column Alignment Under Navbar --- */
+/* ----- Force column alignment under the navbar ----- */
 
-/* Ensure the whole page layout starts below navbar at the same height */
-.layout {
+/* The main layout container */
+.page {
   display: grid !important;
+  grid-template-columns: var(--sidebar-width, auto) 1fr var(--right-sidebar-width, auto);
   align-items: start !important;
-  grid-template-columns: var(--sidebar-width) 1fr var(--right-sidebar-width);
-  gap: 2rem;
+  gap: 2rem; /* or whatever spacing between columns you want */
   margin-top: 0 !important;
-  padding-top: 6rem; /* adjust to your navbar height */
+  padding-top: 0 !important;
 }
 
-/* Force each column to begin at the same vertical position */
+/* Normalize top offsets for each column */
 .sidebar,
-.page,
+.content,
 .right-sidebar {
   margin-top: 0 !important;
   padding-top: 0 !important;
   align-self: start !important;
 }
 
-/* Make sure nested blocks don’t add unexpected space */
+/* Remove first-child margins that push content down */
 .sidebar > *:first-child,
-.right-sidebar > *:first-child,
-.page > *:first-child {
+.content > *:first-child,
+.right-sidebar > *:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* Prevent misalignment caused by box borders or shadows */
-.sidebar, .right-sidebar {
-  box-sizing: border-box;
+/* If there is a wrapper around .page, reset its spacing */
+.page-wrapper,
+.main-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* If your navbar overlaps, push the whole layout down */
+body .page {
+  position: relative;
+  top: var(--navbar-height, 4rem); /* adjust 4rem to your navbar height */
 }
 
 
