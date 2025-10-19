@@ -1256,7 +1256,11 @@ footer {
 }
 
 /* Force sidebar elements behind search overlay */
+/* Force all elements behind search overlay when active */
 body:has(.search-container.active) {
+  overflow: hidden;
+  height: 100vh;
+  
   .page-columns > .left,
   .page-columns > .right,
   .sidebar,
@@ -1265,11 +1269,12 @@ body:has(.search-container.active) {
   .backlinks,
   .explorer,
   .card,
-  .related-pages {
+  .related-pages,
+  .timeline,
+  .timeline-date,
+  .timeline-item,
+  .timeline-content {
     z-index: 1 !important;
     position: relative;
   }
-  
-  /* Prevent scrolling on body when search is open */
-  overflow: hidden;
 }
