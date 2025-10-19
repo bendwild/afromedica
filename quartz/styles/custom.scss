@@ -1255,7 +1255,6 @@ footer {
   padding-top: 1.5rem;
 }
 
-/* Force sidebar elements behind search overlay */
 /* Force all elements behind search overlay when active */
 body:has(.search-container.active) {
   overflow: hidden;
@@ -1273,7 +1272,11 @@ body:has(.search-container.active) {
   .timeline,
   .timeline-date,
   .timeline-item,
-  .timeline-content {
+  .timeline-content,
+  .main-navigation,
+  .nav-container,
+  header,
+  nav {
     z-index: 1 !important;
     position: relative;
   }
