@@ -79,6 +79,7 @@
         box-shadow: 0 14px 50px rgba(27, 33, 48, 0.12), 0 10px 30px rgba(27, 33, 48, 0.16);
         margin-bottom: 2em;
         position: relative;
+        z-index: 100001;
       }
 
       & > input {
@@ -88,6 +89,8 @@
         color: var(--dark);
         font-size: 1.1em;
         border: 1px solid var(--lightgray);
+        position: relative;
+        z-index: 100002;
 
         &:focus {
           outline: none;
@@ -101,6 +104,8 @@
         border: 1px solid var(--lightgray);
         flex: 0 0 100%;
         box-sizing: border-box;
+        position: relative;
+        z-index: 100001;
 
         &.display-results {
           display: flex;
