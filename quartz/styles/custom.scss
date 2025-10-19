@@ -1255,3 +1255,21 @@ footer {
   padding-top: 1.5rem;
 }
 
+/* Force sidebar elements behind search overlay */
+body:has(.search-container.active) {
+  .page-columns > .left,
+  .page-columns > .right,
+  .sidebar,
+  .toc,
+  .recent-notes,
+  .backlinks,
+  .explorer,
+  .card,
+  .related-pages {
+    z-index: 1 !important;
+    position: relative;
+  }
+  
+  /* Prevent scrolling on body when search is open */
+  overflow: hidden;
+}
