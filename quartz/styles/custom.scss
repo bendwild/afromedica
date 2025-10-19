@@ -1255,11 +1255,26 @@ footer {
   padding-top: 1.5rem;
 }
 
-/* Force all elements behind search overlay when active */
+/* Force all elements behind search when active */
 body:has(.search-container.active) {
-  overflow: hidden;
-  
-  * :not(.search *) {
+  .page-columns > .left,
+  .page-columns > .right,
+  .sidebar,
+  .toc,
+  .recent-notes,
+  .backlinks,
+  .explorer,
+  .card,
+  .related-pages,
+  .timeline,
+  .timeline-date,
+  .timeline-item,
+  .timeline-content,
+  .main-navigation,
+  nav,
+  header,
+  main,
+  footer {
     z-index: 1 !important;
   }
 }
