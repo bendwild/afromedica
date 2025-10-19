@@ -1255,30 +1255,22 @@ footer {
   padding-top: 1.5rem;
 }
 
-/* Force all elements behind search when active */
-body:has(.search-container.active) {
-  & > *:not(.search),
-  .page-columns,
-  .page-columns > .left,
-  .page-columns > .right,
-  .page-columns > .center,
-  .sidebar,
-  .toc,
-  .recent-notes,
-  .backlinks,
-  .explorer,
-  .card,
-  .related-pages,
-  .timeline,
-  .timeline-date,
-  .timeline-item,
-  .timeline-content,
-  .main-navigation,
-  nav,
-  header,
-  main,
-  footer,
-  article {
-    z-index: 1 !important;
-  }
+/* Ensure all site elements have lower z-index than search */
+.main-navigation,
+.page-columns,
+.sidebar,
+.toc,
+.recent-notes,
+.backlinks,
+.explorer,
+.card,
+.related-pages,
+.timeline,
+.timeline-date,
+main,
+article,
+header,
+footer {
+  position: relative;
+  z-index: auto;
 }
