@@ -53,15 +53,20 @@
     height: 100vh;
     overflow-y: auto;
     display: none;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: linear-gradient(
+      to bottom,
+      rgba(43, 27, 15, 0.85),
+      rgba(43, 27, 15, 0.75)
+    );
     isolation: isolate;
     
     &.active {
       display: flex;
       align-items: flex-start;
       justify-content: center;
+      padding: 2rem 1rem;
     }
 
     & > .search-space {
