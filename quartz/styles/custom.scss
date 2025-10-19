@@ -1258,26 +1258,8 @@ footer {
 /* Force all elements behind search overlay when active */
 body:has(.search-container.active) {
   overflow: hidden;
-  height: 100vh;
   
-  .page-columns > .left,
-  .page-columns > .right,
-  .sidebar,
-  .toc,
-  .recent-notes,
-  .backlinks,
-  .explorer,
-  .card,
-  .related-pages,
-  .timeline,
-  .timeline-date,
-  .timeline-item,
-  .timeline-content,
-  .main-navigation,
-  .nav-container,
-  header,
-  nav {
+  * :not(.search *) {
     z-index: 1 !important;
-    position: relative;
   }
 }
