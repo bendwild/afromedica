@@ -3,6 +3,7 @@
 .search {
   min-width: fit-content;
   max-width: 14rem;
+
   @media all and ($mobile) {
     flex-grow: 0.3;
   }
@@ -53,9 +54,12 @@
     overflow-y: auto;
     display: none;
     backdrop-filter: blur(4px);
-
+    background-color: rgba(0, 0, 0, 0.4);
+    
     &.active {
-      display: inline-block;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
     }
 
     & > .search-space {
@@ -72,9 +76,7 @@
         width: 100%;
         border-radius: 7px;
         background: var(--light);
-        box-shadow:
-          0 14px 50px rgba(27, 33, 48, 0.12),
-          0 10px 30px rgba(27, 33, 48, 0.16);
+        box-shadow: 0 14px 50px rgba(27, 33, 48, 0.12), 0 10px 30px rgba(27, 33, 48, 0.16);
         margin-bottom: 2em;
       }
 
@@ -88,6 +90,7 @@
 
         &:focus {
           outline: none;
+          border-color: var(--secondary);
         }
       }
 
@@ -185,7 +188,6 @@
             width: 100%;
             display: block;
             box-sizing: border-box;
-
             // normalize card props
             font-family: inherit;
             font-size: 100%;
@@ -200,6 +202,10 @@
             &:focus,
             &.focus {
               background: var(--lightgray);
+            }
+
+            &:last-child {
+              border-bottom: none;
             }
 
             & > h3 {
