@@ -45,28 +45,28 @@
 
   & > .search-container {
     position: fixed;
-    z-index: 99999;
+    z-index: 999999;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
     overflow-y: auto;
     display: none;
-    background-color: transparent;
     pointer-events: none;
     
     &.active {
-      display: block;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
       pointer-events: auto;
     }
 
     & > .search-space {
       width: 65%;
       margin-top: 12vh;
-      margin-left: auto;
-      margin-right: auto;
       position: relative;
-      z-index: 100000;
+      z-index: 1000000;
+      pointer-events: auto;
 
       @media all and not ($desktop) {
         width: 90%;
