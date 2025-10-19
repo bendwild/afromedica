@@ -1257,8 +1257,11 @@ footer {
 
 /* Force all elements behind search when active */
 body:has(.search-container.active) {
+  & > *:not(.search),
+  .page-columns,
   .page-columns > .left,
   .page-columns > .right,
+  .page-columns > .center,
   .sidebar,
   .toc,
   .recent-notes,
@@ -1274,7 +1277,8 @@ body:has(.search-container.active) {
   nav,
   header,
   main,
-  footer {
+  footer,
+  article {
     z-index: 1 !important;
   }
 }
