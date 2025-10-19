@@ -61,7 +61,7 @@ tags:
   - _2025_
   - jacqueline-nwando-olayiwola
 description: Welcome to Afromedica Academy, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
-modified: 2025-10-13
+modified: 2025-10-18
 ---
 <div class="hero">
   <h2>Welcome to our very own knowledge platform!</h2>
@@ -72,6 +72,7 @@ modified: 2025-10-13
 > 1. We use **#tags** to add a subject and media type to all of our resources. You can click on a tag to find other resources that have the same tags!
 > 2. You can search for various pages by typing the tag **(#example)** in the searchbar.
 > 3. By utilizing **"AND"** & **"OR"** functions in the search bar you can easily find pages that fullfill multiple requirements. For example: #books AND #dutch AND #racism-and-health.
+> 4. You can use the **site map** to explore the various tags and pages
 
 ---
 
@@ -187,7 +188,3 @@ modified: 2025-10-13
 Do you have a suggestion to add to the library? Click below to suggest a resource! 
 
 <a class="button" href="/Afromedica Academy/Suggestions">Suggest a resource →</a>
-
-[Suggest a resource](Afromedica Academy/Suggestions)
-
-Suggest a resource -> 

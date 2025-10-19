@@ -1,7 +1,7 @@
 ---
 title: Afromedica Talks
 publish: true
-modified: 2025-10-14
+modified: 2025-10-18
 ---
 
 <div class="hero">
@@ -20,10 +20,9 @@ Afromedica Talks hosts a **journal club every second Wednesday of the month**. S
 
 
 > [!attention]+ Upcoming talks 
-> - **Sept:** Global Health Equity and Decolonization
-> - **Oct:** Gender and Reproductive Health in Conflict Zones
-> - **Nov:** Cost-Effective Healthcare in Low-Income Settings
-> - **Dec:** Intersectionality in Medical Research
+> - **Nov:** TBD
+> - **Dec:** TBD
+> - **Jan**: TBD
 
 
 ---

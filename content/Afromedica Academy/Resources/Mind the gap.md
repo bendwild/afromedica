@@ -1,7 +1,7 @@
 ---
 title:
 publish: true
-modified: 2025-10-13
+modified: 2025-10-18
 tags:
   - books
   - clinical-medicine
@@ -69,3 +69,9 @@ Mind the Gap is a Clinical Handbook of signs and symptoms in BlackandBrownskin. 
 ## Resource
 
 ![[MIND THE GAP FINAL.pdf]]
+
+<p style="margin-top: 1rem;">
+  <a href="/MIND THE GAP FINAL.pdf" download class="button">
+    Download PDF
+  </a>
+</p>

@@ -1,7 +1,7 @@
 ---
 publish: true
 title: Get in touch!
-modified: 2025-10-14
+modified: 2025-10-18
 ---
 AfroMedica welcomes anyone who shares our vision of an equitable, inclusive healthcare system. Below you'll find the best ways to connect with us depending on your query or background.
 
@@ -10,13 +10,6 @@ AfroMedica welcomes anyone who shares our vision of an equitable, inclusive heal
     <h3>General queries</h3>
     <p>Are you looking to collaborate, partner, or invite us for a project? Send us a mail and your message will be reviewed at our general assembly — responses may take up to 4 weeks.</p>
     <a href="mailto:info@afromedica.be">📧 info@afromedica.be</a>
-  </div>
-
-<div class="contact-card">
-    <h3>Leadership</h3>
-    <p>For messages specifically directed to our president or vice-president you can use these mail addresses. </p>
-    <a href="mailto:Hanane.elkaddouri@afromedica.be">📧 hanane.elkaddouri@afromedica.be</a><br />
-    <a href="mailto:Bella.Manirambona@afromedica.be">📧 bella.manirambona@afromedica.be</a>
   </div>
 
   <div class="contact-card">

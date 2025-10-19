@@ -1,7 +1,7 @@
 ---
 title:
 publish: true
-modified: 2025-10-13
+modified: 2025-10-18
 tags:
   - books
   - intersectionality
@@ -57,3 +57,9 @@ A fundamentally different view of health, illness, disabilities and social exclu
 
 **Open source:**
 ![[507442_BIW.pdf]]
+
+<p style="margin-top: 1rem;">
+  <a href="/507442_BIW.pdf" download class="button">
+    Download PDF
+  </a>
+</p>

@@ -1,7 +1,7 @@
 ---
 publish: true
 title: Policy
-modified: 2025-10-13
+modified: 2025-10-18
 ---
 <div class="hero">
   <h2>Welcome to our policy division!</h2>
@@ -31,6 +31,7 @@ We regularly share ongoing efforts and ways to get involved:
 - **Mail scripts** for advocacy campaigns  
 - **Opinion pieces** and policy recommendations  
 - **Events** and collaborative opportunities  
+
 
 
 > [!attention]+ Interested in contributing?
