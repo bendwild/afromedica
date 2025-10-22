@@ -3,30 +3,28 @@
 .search {
   min-width: fit-content;
   max-width: 14rem;
-
   @media all and ($mobile) {
     flex-grow: 0.3;
   }
 
   & > .search-button {
-    background-color: color-mix(in srgb, var(--lightgray) 60%, var(--light));
-    border: none;
+    background-color: transparent;
+    border: 1px var(--lightgray) solid;
     border-radius: 4px;
     font-family: inherit;
     font-size: inherit;
     height: 2rem;
-    padding: 0;
+    padding: 0 1rem 0 0;
     display: flex;
     align-items: center;
     text-align: inherit;
     cursor: pointer;
     white-space: nowrap;
     width: 100%;
-    justify-content: space-between;
 
     & > p {
       display: inline;
-      padding: 0 1rem;
+      color: var(--gray);
     }
 
     & svg {
@@ -37,7 +35,7 @@
 
       .search-path {
         stroke: var(--darkgray);
-        stroke-width: 2px;
+        stroke-width: 1.5px;
         transition: stroke 0.5s ease;
       }
     }
@@ -45,28 +43,25 @@
 
   & > .search-container {
     position: fixed;
-    z-index: 999999;
+    contain: layout;
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
     overflow-y: auto;
     display: none;
-    pointer-events: none;
-    
+    backdrop-filter: blur(4px);
+
     &.active {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      pointer-events: auto;
+      display: inline-block;
     }
 
     & > .search-space {
       width: 65%;
       margin-top: 12vh;
-      position: relative;
-      z-index: 1000000;
-      pointer-events: auto;
+      margin-left: auto;
+      margin-right: auto;
 
       @media all and not ($desktop) {
         width: 90%;
@@ -76,10 +71,10 @@
         width: 100%;
         border-radius: 7px;
         background: var(--light);
-        box-shadow: 0 14px 50px rgba(27, 33, 48, 0.12), 0 10px 30px rgba(27, 33, 48, 0.16);
+        box-shadow:
+          0 14px 50px rgba(27, 33, 48, 0.12),
+          0 10px 30px rgba(27, 33, 48, 0.16);
         margin-bottom: 2em;
-        position: relative;
-        z-index: 100001;
       }
 
       & > input {
@@ -89,12 +84,9 @@
         color: var(--dark);
         font-size: 1.1em;
         border: 1px solid var(--lightgray);
-        position: relative;
-        z-index: 100002;
 
         &:focus {
           outline: none;
-          border-color: var(--secondary);
         }
       }
 
@@ -104,8 +96,6 @@
         border: 1px solid var(--lightgray);
         flex: 0 0 100%;
         box-sizing: border-box;
-        position: relative;
-        z-index: 100001;
 
         &.display-results {
           display: flex;
@@ -194,6 +184,7 @@
             width: 100%;
             display: block;
             box-sizing: border-box;
+
             // normalize card props
             font-family: inherit;
             font-size: 100%;
@@ -208,10 +199,6 @@
             &:focus,
             &.focus {
               background: var(--lightgray);
-            }
-
-            &:last-child {
-              border-bottom: none;
             }
 
             & > h3 {
