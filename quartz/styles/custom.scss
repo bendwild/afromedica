@@ -1254,23 +1254,3 @@ footer {
   margin-top: 2rem;
   padding-top: 1.5rem;
 }
-
-/* Ensure all site elements have lower z-index than search */
-.main-navigation,
-.page-columns,
-.sidebar,
-.toc,
-.recent-notes,
-.backlinks,
-.explorer,
-.card,
-.related-pages,
-.timeline,
-.timeline-date,
-main,
-article,
-header,
-footer {
-  position: relative;
-  z-index: auto;
-}
