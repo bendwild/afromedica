@@ -1206,3 +1206,22 @@ footer {
   isolation: isolate; /* creates their own layer but keeps z-order stable */
 }
 
+/* === Fix: Search bar hidden behind content === */
+
+/* Always keep search bar and its dropdown above everything */
+.search-bar, .search-results, .search-container {
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+/* Keep navbar high as well */
+nav, .navbar {
+  position: relative !important;
+  z-index: 9998 !important;
+}
+
+/* Push all page content below it */
+main, .page, .content, .article, .whats-new, .recent-updates, .component {
+  position: relative !important;
+  z-index: 1 !important;
+}
