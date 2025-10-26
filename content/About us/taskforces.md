@@ -4,7 +4,7 @@ publish: false
 tags:
   - about-us
 description:
-modified: 2025-10-11
+modified: 2025-10-25
 ---
 Taskforces are the backbone of AfroMedica. Each group focuses on a specific domain and is coordinated by at least one lead and one co-lead, working collaboratively to ensure smooth operations and alignment with our mission. 
 
