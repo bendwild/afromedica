@@ -1,7 +1,7 @@
 ---
 title: Welcome to AfroMedica!
 publish: true
-modified: 2025-10-14
+modified: 2025-10-18
 tags:
 ---
 <div class="hero">
@@ -14,35 +14,22 @@ tags:
 ## Upcoming events 
 <div class="timeline">
   <div class="timeline-item">
-    <div class="timeline-date">20 SEP</div>
+    <div class="timeline-date">8 NOV</div>
     <div class="timeline-content">
-      <h3>AfroMedica Founded</h3>
-      <p>Grassroots organization started focusing on racial health equity.</p>
+      <h3>AfroMedica Talks</h3>
     </div>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">31 NOV</div>
+    <div class="timeline-date">16 DEC</div>
     <div class="timeline-content">
-      <h3>Launch of Education Program</h3>
-      <p>Started workshops and training for healthcare professionals.</p>
+      <h3>Rebelle vzw lecture</h3>
     </div>
   </div>
 
-  <div class="timeline-item">
-    <div class="timeline-date">3 DEC</div>
-    <div class="timeline-content">
-      <h3>International Collaboration</h3>
-      <p>Partnered with global health bodies for advocacy.</p>
-    </div>
   </div>
-</div>
 
-<div class="cta">
-  <h2>Stay up to date with our mission</h2>
-  <p>Follow us on social media or reach out to collaborate.</p>
-  <a class="button" href="contact">→ Contact Us</a>
-</div>
+---
 
-
-<a class="button" href="https://chat.whatsapp.com/G3Jw7sIAfmHLhCf5XKD6zj">Join Us →</a>
+## Stay up to date with our mission
+Follow us on social media or [reach out](Contac/contact.md) to collaborate!
