@@ -43,10 +43,14 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph({
       localGraph: {
         showTags: false,
+        drag: true, 
+        zoom: true,
        },
       globalGraph: {
         repelForce: 0.5,
         showTags: true,
+        drag: true, 
+        zoom: true,
         enableRadial: true,
            },
     }),
