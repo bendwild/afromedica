@@ -1041,9 +1041,15 @@ footer {
   padding-top: 1.5rem;
 }
 
-/* --- Final Fix: Restore normal layout while keeping search visible --- */
+/* === FINAL STABILITY PATCH === */
 
-/* Navbar always on top, fixed and smooth */
+/* --- Global stacking context fix --- */
+* {
+  transform: none !important;
+  perspective: none !important;
+}
+
+/* --- Navbar --- */
 .main-navigation {
   position: fixed !important;
   top: 0;
@@ -1051,50 +1057,54 @@ footer {
   width: 100%;
   z-index: 3000 !important;
   background-color: var(--light);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
-/* Search bar and dropdown: visible but aligned naturally */
-.search {
+/* --- Search components: always above everything --- */
+.search,
+.search-container,
+.search-bar,
+.search-space,
+.search-layout {
   position: relative !important;
-  z-index: 2500 !important;
+  z-index: 4000 !important;
 }
 
-.search-container {
-  position: absolute !important;
-  top: 100%; /* directly below the search bar */
-  left: 0;
-  width: 100%;
-  z-index: 2600 !important;
-  background: var(--light);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-radius: 0.75rem;
-  padding: 0.5rem 1rem;
-}
-
-/* Search input style consistency */
-.search-bar {
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-
-/* Prevent sidebars and graph from overlapping */
-.page-columns,
+/* --- Prevent sidebars, cards, or timeline from overlapping --- */
 .recent-notes,
 .card,
 .toc,
 .backlinks,
 .explorer,
+.timeline,
+.timeline-date {
+  position: relative !important;
+  z-index: 1 !important;
+  isolation: isolate !important; /* contains blur but keeps inside layer */
+}
+
+/* --- Graph map stable, no flicker --- */
 .graph-container {
   position: relative !important;
   z-index: 1 !important;
-  isolation: isolate; /* keeps backdrop effects contained */
-}
-
-/* Stabilize graph */
-.graph-container {
   opacity: 1 !important;
   pointer-events: auto !important;
   transition: none !important;
+}
+
+/* --- Optional: restore subtle depth for your timeline dates without breaking order --- */
+.timeline-date {
+  background-color: var(--light);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Optional: keep blur aesthetic safely --- */
+.card,
+.toc,
+.recent-notes,
+.backlinks,
+.explorer {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  isolation: isolate !important;
 }
 
