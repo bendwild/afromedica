@@ -1014,9 +1014,9 @@ footer {
   padding-top: 1.5rem;
 }
 
-/* === FINAL OVERRIDE PATCH (Fix jumping sidebars and timeline clipping) === */
+/* === FINAL FIX: Restore correct stacking & interactivity === */
 
-/* Navbar always stays above */
+/* Keep navbar always visible */
 .main-navigation {
   position: fixed !important;
   top: 0;
@@ -1026,7 +1026,7 @@ footer {
   background-color: var(--light);
 }
 
-/* Search bar and dropdown highest priority */
+/* Ensure search elements are always on top when active */
 .search,
 .search-container,
 .search-space,
@@ -1036,14 +1036,31 @@ footer {
   z-index: 4000 !important;
 }
 
-/* --- Critical: flatten any stacking contexts from sidebar & timeline --- */
+/* Make search overlay visible only when active */
+.search-container {
+  position: fixed !important;
+  top: 70px !important;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 4000 !important;
+  background: transparent;
+  pointer-events: none; /* allow click-through by default */
+}
+
+.search-container:has(.search-bar:focus),
+.search-container.active {
+  pointer-events: auto !important; /* clickable only when active */
+}
+
+/* Remove stacking contexts from sidebars & cards */
 .recent-notes,
 .card,
 .toc,
 .backlinks,
 .explorer,
 .timeline,
-.timeline-item, 
+.timeline-item,
 .timeline-content,
 .timeline-date {
   position: relative !important;
@@ -1054,7 +1071,7 @@ footer {
   isolation: isolate !important;
 }
 
-/* If the blur is important aesthetically, reapply it *safely* below */
+/* Restore blur aesthetic without stacking issues */
 .recent-notes,
 .card,
 .toc,
@@ -1065,7 +1082,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-/* Stabilize the site map (graph) */
+/* Graph interactivity fix */
 .graph-container {
   position: relative !important;
   z-index: 1 !important;
@@ -1074,21 +1091,7 @@ footer {
   transition: none !important;
 }
 
-/* --- Prevent page from jumping when typing in the search bar --- */
-
-/* Freeze the body scroll when search is focused */
+/* Prevent scroll jump when typing */
 body:has(.search-bar:focus) {
   overflow: hidden !important;
-}
-
-/* Make sure the search container is fixed to viewport, not flow */
-.search-container {
-  position: fixed !important;
-  top: 70px !important; /* a bit below your navbar */
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  z-index: 4000 !important;
-  background: transparent;
-  pointer-events: auto;
 }
