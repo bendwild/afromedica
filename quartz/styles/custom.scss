@@ -1168,21 +1168,32 @@ footer {
   padding-top: 1.5rem;
 }
 
-/* --- Fix search bar clipping under other elements --- */
+/* --- Fix: Search bar clipping under sidebar / "What's New" sections --- */
 
+/* Make sure the search dropdown always sits above everything else */
 .search,
-.search-bar,
-.search-container {
+.search-container,
+.search-space,
+.search-layout {
   position: relative;
-  z-index: 2000; /* keep on top of all content */
+  z-index: 3000 !important;
 }
 
+/* Ensure navbar itself also forms a top stacking layer */
+.main-navigation {
+  position: relative;
+  z-index: 2500;
+}
+
+/* Prevent side sections from overlapping the search box */
 .recent-notes,
 .card,
 .toc,
 .backlinks,
 .explorer {
   position: relative;
-  z-index: 0; /* reset stacking context so it doesn’t overlap */
+  z-index: 0 !important;
+}
+
 }
 
