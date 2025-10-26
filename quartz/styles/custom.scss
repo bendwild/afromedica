@@ -1191,31 +1191,50 @@ footer {
   z-index: 1;
 }
 
-// === Dropdown/Site Map Fix ===
+// === Fix Graph Component Flickering ===
 
-// Keep dropdown visible when hovering over the menu itself
-.dropdown-menu:hover {
-  display: block !important;
+// Disable transitions on graph elements
+.graph-container,
+.graph-container *,
+#graph-container,
+#graph-container * {
+  transition: none !important;
 }
 
-// Add invisible bridge between button and menu to prevent gaps
-.dropdown {
+// Stable graph rendering
+.graph-container {
+  pointer-events: auto !important;
   position: relative;
 }
 
-.dropdown-toggle::after {
-  content: '';
-  position: absolute;
-  bottom: -2px; /* bridges the gap */
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: transparent;
-  pointer-events: auto;
+// Prevent SVG elements from flickering
+.graph-container svg,
+.graph-container canvas {
+  transition: none !important;
+  pointer-events: auto !important;
 }
 
-// Ensure smooth dropdown behavior
-.dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu {
-  display: block;
+// Stable node and link behavior
+.graph-node,
+.graph-link {
+  transition: none !important;
+  pointer-events: auto !important;
+}
+
+// Only allow smooth color transitions on hover (not position/transform)
+.graph-node:hover {
+  fill: var(--accent);
+  transition: fill 0.2s ease !important; /* Only transition the color */
+}
+
+// Prevent text labels from flickering
+.graph-container text,
+.graph-label {
+  transition: none !important;
+  pointer-events: none !important; /* Labels shouldn't interfere with hover */
+}
+
+// Make sure the graph canvas/svg doesn't lose hover state
+.graph-container {
+  isolation: isolate; /* Creates new stacking context */
 }
