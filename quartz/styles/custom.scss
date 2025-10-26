@@ -1168,18 +1168,21 @@ footer {
   padding-top: 1.5rem;
 }
 
-// === TEMPORARY TEST - Search Bar Debug ===
-.page-columns > .left,
-.sidebar.left {
-  transform: none !important;
+/* --- Fix search bar clipping under other elements --- */
+
+.search,
+.search-bar,
+.search-container {
+  position: relative;
+  z-index: 2000; /* keep on top of all content */
 }
 
-.card, .recent-notes {
-  transform: none !important;
-}
-
-.search, #search-container {
-  z-index: 9999 !important;
-  position: relative !important;
+.recent-notes,
+.card,
+.toc,
+.backlinks,
+.explorer {
+  position: relative;
+  z-index: 0; /* reset stacking context so it doesn’t overlap */
 }
 
