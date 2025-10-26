@@ -1093,33 +1093,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
 }
 
-/* Ensure left and right sidebars start below the fixed navbar */
-.page-columns > .left,
-.page-columns > .right,
-.sidebar.left,
-.sidebar.right {
-  margin-top: 64px; /* same as navbar height */
-  padding-top: 1rem; /* optional extra spacing */
-  box-sizing: border-box;
-  position: relative;
-  z-index: 1;
-}
-
-/* Optional: prevent TOC / related pages from overflowing */
-.toc,
-.related-pages,
-.recent-notes,
-.backlinks {
-  max-height: calc(100vh - 80px); /* fit inside viewport below navbar */
-  overflow-y: auto;
-}
-
-/* Optional: add small spacing at top of left column content */
-.page-columns > .left > *:first-child,
-.sidebar.left > *:first-child {
-  margin-top: 0.5rem !important;
-}
-
 /* --- PDF Embed Full-Width Fix --- */
 iframe[src*=".pdf"],
 embed[src*=".pdf"] {
@@ -1144,61 +1117,6 @@ embed[src*=".pdf"] {
 }
 /* --- End PDF Embed Full-Width Fix --- */
 
-/* --- Align left, center, and right columns --- */
-.page {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem; /* keep spacing between columns */
-}
-
-/* ----- Force column alignment under the navbar ----- */
-
-/* The main layout container */
-.page {
-  display: grid !important;
-  grid-template-columns: var(--sidebar-width, auto) 1fr var(--right-sidebar-width, auto);
-  align-items: start !important;
-  gap: 2rem; /* or whatever spacing between columns you want */
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Normalize top offsets for each column */
-.sidebar,
-.content,
-.right-sidebar {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  align-self: start !important;
-}
-
-/* Remove first-child margins that push content down */
-.sidebar > *:first-child,
-.content > *:first-child,
-.right-sidebar > *:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* If there is a wrapper around .page, reset its spacing */
-.page-wrapper,
-.main-container {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* If your navbar overlaps, push the whole layout down */
-body .page {
-  position: relative;
-  top: var(--navbar-height, 4rem); /* adjust 4rem to your navbar height */
-}
-
-
-/* Create consistent vertical spacing between sections */
-main section, article > * {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
 
 /* Modern card styling */
 .card, .sidebar > div, .right-sidebar > div {
@@ -1255,3 +1173,25 @@ footer {
   padding-top: 1.5rem;
 }
 
+// Add this to your custom.scss file
+
+// === Fix for sidebar overlapping navbar search ===
+.sidebar.left,
+.page-columns > .left {
+  position: relative;
+  z-index: 1; // Lower than navbar's z-index: 1000
+}
+
+// Ensure all cards in the sidebar respect the z-index hierarchy
+.sidebar.left .card,
+.sidebar.left > * {
+  position: relative;
+  z-index: 1;
+}
+
+// If you have a specific "What's new" class, target it directly
+.whats-new,
+.card.whats-new {
+  position: relative;
+  z-index: 1;
+}

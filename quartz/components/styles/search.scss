@@ -3,30 +3,28 @@
 .search {
   min-width: fit-content;
   max-width: 14rem;
-
   @media all and ($mobile) {
     flex-grow: 0.3;
   }
 
   & > .search-button {
-    background-color: color-mix(in srgb, var(--lightgray) 60%, var(--light));
-    border: none;
+    background-color: transparent;
+    border: 1px var(--lightgray) solid;
     border-radius: 4px;
     font-family: inherit;
     font-size: inherit;
     height: 2rem;
-    padding: 0;
+    padding: 0 1rem 0 0;
     display: flex;
     align-items: center;
     text-align: inherit;
     cursor: pointer;
     white-space: nowrap;
     width: 100%;
-    justify-content: space-between;
 
     & > p {
       display: inline;
-      padding: 0 1rem;
+      color: var(--gray);
     }
 
     & svg {
@@ -37,7 +35,7 @@
 
       .search-path {
         stroke: var(--darkgray);
-        stroke-width: 2px;
+        stroke-width: 1.5px;
         transition: stroke 0.5s ease;
       }
     }
@@ -54,12 +52,9 @@
     overflow-y: auto;
     display: none;
     backdrop-filter: blur(4px);
-    background-color: rgba(0, 0, 0, 0.4);
-    
+
     &.active {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
+      display: inline-block;
     }
 
     & > .search-space {
@@ -76,7 +71,9 @@
         width: 100%;
         border-radius: 7px;
         background: var(--light);
-        box-shadow: 0 14px 50px rgba(27, 33, 48, 0.12), 0 10px 30px rgba(27, 33, 48, 0.16);
+        box-shadow:
+          0 14px 50px rgba(27, 33, 48, 0.12),
+          0 10px 30px rgba(27, 33, 48, 0.16);
         margin-bottom: 2em;
       }
 
@@ -90,7 +87,6 @@
 
         &:focus {
           outline: none;
-          border-color: var(--secondary);
         }
       }
 
@@ -188,6 +184,7 @@
             width: 100%;
             display: block;
             box-sizing: border-box;
+
             // normalize card props
             font-family: inherit;
             font-size: 100%;
@@ -202,10 +199,6 @@
             &:focus,
             &.focus {
               background: var(--lightgray);
-            }
-
-            &:last-child {
-              border-bottom: none;
             }
 
             & > h3 {
