@@ -1168,64 +1168,18 @@ footer {
   padding-top: 1.5rem;
 }
 
-// Add this to your custom.scss file
-
-// === Fix for sidebar overlapping navbar search ===
-.sidebar.left,
-.page-columns > .left {
-  position: relative;
-  z-index: 1; // Lower than navbar's z-index: 1000
+// === TEMPORARY TEST - Search Bar Debug ===
+.page-columns > .left,
+.sidebar.left {
+  transform: none !important;
 }
 
-// Ensure all cards in the sidebar respect the z-index hierarchy
-.sidebar.left .card,
-.sidebar.left > * {
-  position: relative;
-  z-index: 1;
+.card, .recent-notes {
+  transform: none !important;
 }
 
-// If you have a specific "What's new" class, target it directly
-.whats-new,
-.card.whats-new {
-  position: relative;
-  z-index: 1;
-}
-
-// === Search Bar Always Visible Fix ===
-
-// Make search container always stay above sidebar content
-.search,
-#search-container,
-.search-button,
-input[type="search"],
-.search-bar {
+.search, #search-container {
+  z-index: 9999 !important;
   position: relative !important;
-  z-index: 100 !important; // Higher than sidebar (z-index: 1) but lower than navbar (z-index: 1000)
 }
 
-// Also ensure the Flex container holding the search stays elevated
-.left .flex,
-.sidebar.left .flex {
-  position: relative;
-  z-index: 100;
-}
-
-// Make sure search results/dropdown also stay above
-#search-results,
-.search-results,
-.search-dropdown {
-  z-index: 150 !important;
-}
-
-// Ensure left column content stays properly layered
-.page-columns > .left {
-  position: relative;
-  z-index: 50; // Elevate the entire left column
-}
-
-// But keep "What's new" cards below
-.page-columns > .left .card,
-.page-columns > .left .recent-notes {
-  position: relative;
-  z-index: 1; // Lower than the search bar's z-index: 100
-}
