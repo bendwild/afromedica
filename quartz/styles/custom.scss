@@ -1214,12 +1214,6 @@ footer {
   z-index: 9999 !important;
 }
 
-/* Keep navbar high as well */
-nav, .navbar {
-  position: relative !important;
-  z-index: 9998 !important;
-}
-
 /* Push all page content below it */
 main, .page, .content, .article, .whats-new, .recent-updates, .component {
   position: relative !important;
