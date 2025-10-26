@@ -27,11 +27,6 @@ html[data-theme="dark"] {
   --textHighlight: rgba(0, 209, 193, 0.28); /* aqua highlight for markdown */
 }
 
-* {
-  transition: all 0.25s ease-in-out;
-  box-sizing: border-box;
-}
-
 // === Navbar ===
 .main-navigation {
   position: fixed;
