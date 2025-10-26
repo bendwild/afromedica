@@ -1191,50 +1191,28 @@ footer {
   z-index: 1;
 }
 
-// === Fix Graph Component Flickering ===
+// === Search Bar Always Visible Fix ===
 
-// Disable transitions on graph elements
-.graph-container,
-.graph-container *,
-#graph-container,
-#graph-container * {
-  transition: none !important;
+// Make search container always stay above sidebar content
+.search,
+#search-container,
+.search-button,
+input[type="search"],
+.search-bar {
+  position: relative !important;
+  z-index: 100 !important; // Higher than sidebar (z-index: 1) but lower than navbar (z-index: 1000)
 }
 
-// Stable graph rendering
-.graph-container {
-  pointer-events: auto !important;
+// Also ensure the Flex container holding the search stays elevated
+.left .flex,
+.sidebar.left .flex {
   position: relative;
+  z-index: 100;
 }
 
-// Prevent SVG elements from flickering
-.graph-container svg,
-.graph-container canvas {
-  transition: none !important;
-  pointer-events: auto !important;
-}
-
-// Stable node and link behavior
-.graph-node,
-.graph-link {
-  transition: none !important;
-  pointer-events: auto !important;
-}
-
-// Only allow smooth color transitions on hover (not position/transform)
-.graph-node:hover {
-  fill: var(--accent);
-  transition: fill 0.2s ease !important; /* Only transition the color */
-}
-
-// Prevent text labels from flickering
-.graph-container text,
-.graph-label {
-  transition: none !important;
-  pointer-events: none !important; /* Labels shouldn't interfere with hover */
-}
-
-// Make sure the graph canvas/svg doesn't lose hover state
-.graph-container {
-  isolation: isolate; /* Creates new stacking context */
+// Make sure search results/dropdown also stay above
+#search-results,
+.search-results,
+.search-dropdown {
+  z-index: 150 !important;
 }
