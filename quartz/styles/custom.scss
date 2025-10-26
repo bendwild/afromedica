@@ -1216,3 +1216,16 @@ input[type="search"],
 .search-dropdown {
   z-index: 150 !important;
 }
+
+// Ensure left column content stays properly layered
+.page-columns > .left {
+  position: relative;
+  z-index: 50; // Elevate the entire left column
+}
+
+// But keep "What's new" cards below
+.page-columns > .left .card,
+.page-columns > .left .recent-notes {
+  position: relative;
+  z-index: 1; // Lower than the search bar's z-index: 100
+}
