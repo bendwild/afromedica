@@ -1168,31 +1168,41 @@ footer {
   padding-top: 1.5rem;
 }
 
-/* --- Fix: Search bar clipping under sidebar / "What's New" sections --- */
+/* --- Fix search bar visibility + restore navbar on top --- */
 
-/* Make sure the search dropdown always sits above everything else */
+/* Keep navbar fixed and above all other content */
+.main-navigation {
+  position: sticky; /* or fixed if you prefer always on top */
+  top: 0;
+  z-index: 4000 !important;
+  background-color: var(--background-color, #fff);
+}
+
+/* Ensure the search bar and its dropdown always display above side sections */
 .search,
 .search-container,
 .search-space,
 .search-layout {
   position: relative;
-  z-index: 3000 !important;
+  z-index: 4500 !important;
 }
 
-/* Ensure navbar itself also forms a top stacking layer */
-.main-navigation {
-  position: relative;
-  z-index: 2500;
-}
-
-/* Prevent side sections from overlapping the search box */
+/* Prevent sidebar and card containers from covering the search */
 .recent-notes,
 .card,
 .toc,
 .backlinks,
 .explorer {
   position: relative;
-  z-index: 0 !important;
+  z-index: 1 !important;
 }
 
+/* Optional: make sure no unwanted blur or filter creates stacking issues */
+.recent-notes,
+.card,
+.toc,
+.backlinks,
+.explorer {
+  isolation: isolate; /* creates their own layer but keeps z-order stable */
+}
 
