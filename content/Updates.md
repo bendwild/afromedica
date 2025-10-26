@@ -2,7 +2,7 @@
 title: Updates
 slug: updates
 layout: updates
-modified: 2025-10-18
+modified: 2025-10-25
 publish: true
 description: Stay up to date with AfroMedica’s latest news, articles, and achievements.
 ---
@@ -12,24 +12,31 @@ description: Stay up to date with AfroMedica’s latest news, articles, and achi
 </div>
 
 ---
-
 ## Recent highlights
 
 <div class="contact-card-grid">
   <div class="contact-card">
-    <h3>New board!</h3>
-    <p>Check us out!<a href="/Team/team"> </p>
+    <h3>New board 2025!</h3>
+    <p>Check out our new <a href="/Team/team">team!</a> </p>
   </div>
 
   <div class="contact-card">
-    <h3>Our first Afromedica talks! </h3>
-    <p>Want to learn what we talked about?<a href="/Afromedica Talks/Afromedica talks"> </p>
-  </div>
+    <h3>Our first AfroMedica talks!</h3>
+    <p>Want to be there at our next talk? Take a look at our page <a href="/Afromedica-Talks/Afromedica-Talks">page!</a></p>
   </div>
 
+  <div class="contact-card">
+    <h3>New logo and brand design!</h3>
+    <p>Check out our new <a href="/Afromedica-Academy/Suggestions">designs!</a>. </p>
+  </div>
+
+  <div class="contact-card">
+    <h3>Launch of Afromedica Academy</h3>
+    <p>Learn more about race and health at <a href="/Afromedica-Academy/Afromedica-Academy">Afromedica Academy!</a></p>
+  </div>
+  </div>
 
 ---
-
 
 ## Milestones
 
@@ -46,7 +53,7 @@ description: Stay up to date with AfroMedica’s latest news, articles, and achi
     <div class="timeline-date">2023</div>
     <div class="timeline-content">
       <h3>Publication open letter</h3>
-      <p>Raciale ongelijkheden in de medische wereld</p>
+      <p><a href="/Afromedica Academy/Resources/Raciale ongelijkheden in de medische wereld">Raciale ongelijkheden in de medische wereld</a></p>
     </div>
   </div>
 
