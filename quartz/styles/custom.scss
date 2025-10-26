@@ -1190,3 +1190,32 @@ footer {
   position: relative;
   z-index: 1;
 }
+
+// === Dropdown/Site Map Fix ===
+
+// Keep dropdown visible when hovering over the menu itself
+.dropdown-menu:hover {
+  display: block !important;
+}
+
+// Add invisible bridge between button and menu to prevent gaps
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* bridges the gap */
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: transparent;
+  pointer-events: auto;
+}
+
+// Ensure smooth dropdown behavior
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
