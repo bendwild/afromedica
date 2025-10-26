@@ -1043,13 +1043,6 @@ footer {
 
 /* --- Fix search bar visibility + restore navbar on top --- */
 
-/* Keep navbar fixed and above all other content */
-.main-navigation {
-  position: sticky; /* or fixed if you prefer always on top */
-  top: 0;
-  z-index: 4000 !important;
-  background-color: var(--background-color, #fff);
-}
 
 /* Ensure the search bar and its dropdown always display above side sections */
 .search,
