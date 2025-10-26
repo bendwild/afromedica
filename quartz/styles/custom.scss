@@ -1191,31 +1191,41 @@ footer {
   z-index: 1;
 }
 
-// === Dropdown/Site Map Fix ===
+// === Search Bar Always Visible Fix ===
 
-// Keep dropdown visible when hovering over the menu itself
-.dropdown-menu:hover {
-  display: block !important;
+// Make search container always stay above sidebar content
+.search,
+#search-container,
+.search-button,
+input[type="search"],
+.search-bar {
+  position: relative !important;
+  z-index: 100 !important; // Higher than sidebar (z-index: 1) but lower than navbar (z-index: 1000)
 }
 
-// Add invisible bridge between button and menu to prevent gaps
-.dropdown {
+// Also ensure the Flex container holding the search stays elevated
+.left .flex,
+.sidebar.left .flex {
   position: relative;
+  z-index: 100;
 }
 
-.dropdown-toggle::after {
-  content: '';
-  position: absolute;
-  bottom: -2px; /* bridges the gap */
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: transparent;
-  pointer-events: auto;
+// Make sure search results/dropdown also stay above
+#search-results,
+.search-results,
+.search-dropdown {
+  z-index: 150 !important;
 }
 
-// Ensure smooth dropdown behavior
-.dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu {
-  display: block;
+// Ensure left column content stays properly layered
+.page-columns > .left {
+  position: relative;
+  z-index: 50; // Elevate the entire left column
+}
+
+// But keep "What's new" cards below
+.page-columns > .left .card,
+.page-columns > .left .recent-notes {
+  position: relative;
+  z-index: 1; // Lower than the search bar's z-index: 100
 }
