@@ -135,33 +135,6 @@ main {
   margin-bottom: 1rem;
 }
 
-// === Graph View ===
-.graph-container {
-  margin-top: 2rem;
-  background: transparent;
-  border: none;
-  pointer-events: auto !important;
-  z-index: 10;
-}
-
-.graph-container * {
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-.graph-node {
-  stroke: var(--accent);
-  fill: var(--tertiary);
-  transition: fill 0.3s;
-}
-
-.graph-node:hover {
-  fill: var(--accent);
-}
-
-.graph-link {
-  stroke: var(--gray);
-}
 
 // === Buttons ===
 .button {
@@ -1041,15 +1014,9 @@ footer {
   padding-top: 1.5rem;
 }
 
-/* === FINAL STABILITY PATCH === */
+/* === FINAL OVERRIDE PATCH (Fix jumping sidebars and timeline clipping) === */
 
-/* --- Global stacking context fix --- */
-* {
-  transform: none !important;
-  perspective: none !important;
-}
-
-/* --- Navbar --- */
+/* Navbar always stays above */
 .main-navigation {
   position: fixed !important;
   top: 0;
@@ -1059,52 +1026,51 @@ footer {
   background-color: var(--light);
 }
 
-/* --- Search components: always above everything --- */
+/* Search bar and dropdown highest priority */
 .search,
 .search-container,
-.search-bar,
 .search-space,
-.search-layout {
+.search-layout,
+.search-bar {
   position: relative !important;
   z-index: 4000 !important;
 }
 
-/* --- Prevent sidebars, cards, or timeline from overlapping --- */
+/* --- Critical: flatten any stacking contexts from sidebar & timeline --- */
 .recent-notes,
 .card,
 .toc,
 .backlinks,
 .explorer,
 .timeline,
+.timeline-item, 
+.timeline-content,
 .timeline-date {
   position: relative !important;
-  z-index: 1 !important;
-  isolation: isolate !important; /* contains blur but keeps inside layer */
+  z-index: 0 !important;
+  transform: none !important;
+  filter: none !important;
+  will-change: auto !important;
+  isolation: isolate !important;
 }
 
-/* --- Graph map stable, no flicker --- */
+/* If the blur is important aesthetically, reapply it *safely* below */
+.recent-notes,
+.card,
+.toc,
+.backlinks,
+.explorer {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Stabilize the site map (graph) */
 .graph-container {
   position: relative !important;
   z-index: 1 !important;
   opacity: 1 !important;
   pointer-events: auto !important;
   transition: none !important;
-}
-
-/* --- Optional: restore subtle depth for your timeline dates without breaking order --- */
-.timeline-date {
-  background-color: var(--light);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* --- Optional: keep blur aesthetic safely --- */
-.card,
-.toc,
-.recent-notes,
-.backlinks,
-.explorer {
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  isolation: isolate !important;
 }
 
