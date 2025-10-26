@@ -1041,25 +1041,39 @@ footer {
   padding-top: 1.5rem;
 }
 
-/* --- Fix search bar visibility + restore navbar on top --- */
+/* TEMP FIX TEST — removes the blur and isolates z-index layers */
 
+.card,
+.toc,
+.recent-notes,
+.backlinks,
+.explorer {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  z-index: auto !important;
+}
 
-/* Ensure the search bar and its dropdown always display above side sections */
+/* Reset navbar and search stacking order */
+.main-navigation {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000 !important;
+}
+
 .search,
 .search-container,
 .search-space,
 .search-layout {
-  position: relative;
-  z-index: 4500 !important;
+  position: relative !important;
+  z-index: 3000 !important;
 }
 
-/* Prevent sidebar and card containers from covering the search */
-.recent-notes,
-.card,
-.toc,
-.backlinks,
-.explorer {
-  position: relative;
+/* Reset graph */
+.graph-container {
   z-index: 1 !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
