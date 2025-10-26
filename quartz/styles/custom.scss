@@ -1172,3 +1172,26 @@ footer {
   margin-top: 2rem;
   padding-top: 1.5rem;
 }
+
+// Add this to your custom.scss file
+
+// === Fix for sidebar overlapping navbar search ===
+.sidebar.left,
+.page-columns > .left {
+  position: relative;
+  z-index: 1; // Lower than navbar's z-index: 1000
+}
+
+// Ensure all cards in the sidebar respect the z-index hierarchy
+.sidebar.left .card,
+.sidebar.left > * {
+  position: relative;
+  z-index: 1;
+}
+
+// If you have a specific "What's new" class, target it directly
+.whats-new,
+.card.whats-new {
+  position: relative;
+  z-index: 1;
+}
