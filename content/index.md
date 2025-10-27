@@ -16,7 +16,7 @@ tags:
   <div class="timeline-item">
     <div class="timeline-date">8 NOV</div>
     <div class="timeline-content">
-      <h3>AfroMedica Talks</h3>
+      <h3><a href="/Afromedica-Talks/Afromedica-Talks">Afromedica Talks</a></h3>
     </div>
   </div>
 

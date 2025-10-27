@@ -1,7 +1,7 @@
 ---
 title:
 publish: true
-modified: 2025-10-18
+modified: 2025-10-25
 tags:
   - articles
   - intersectionality
@@ -68,8 +68,3 @@ De brief maakt ons bewust van raciale ongelijkheden in de medische wereld, voora
 ## Resource
 ![[open-brief_raciale-ongelijkheden-in-de-medische-wereld.pdf]]
 
-<p style="margin-top: 1rem;">
-  <a href="/open-brief_raciale-ongelijkheden-in-de-medische-wereld.pdf] download class="button">
-    Download PDF
-  </a>
-</p>

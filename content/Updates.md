@@ -17,17 +17,17 @@ description: Stay up to date with AfroMedica’s latest news, articles, and achi
 <div class="contact-card-grid">
   <div class="contact-card">
     <h3>New board 2025!</h3>
-    <p>Check out our new <a href="/Team/team">team!</a> </p>
+    <p>Check out our new <a href="/Team/team">team</a> !</p>
   </div>
 
   <div class="contact-card">
     <h3>Our first AfroMedica talks!</h3>
-    <p>Want to be there at our next talk? Take a look at our page <a href="/Afromedica-Talks/Afromedica-Talks">page!</a></p>
+    <p>Want to be there at our next talk? Take a look at our page <a href="/Afromedica-Talks/Afromedica-Talks">page</a>!</p>
   </div>
 
   <div class="contact-card">
     <h3>New logo and brand design!</h3>
-    <p>Check out our new <a href="/Afromedica-Academy/Suggestions">designs!</a>. </p>
+    <p>Check out our new <a href="/Afromedica-Academy/Suggestions">designs</a>!</p>
   </div>
 
   <div class="contact-card">

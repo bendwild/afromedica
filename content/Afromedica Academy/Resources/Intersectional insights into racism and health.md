@@ -1,7 +1,7 @@
 ---
 title: "Intersectional insights into racism and health: not just a question of identity"
 publish: true
-modified: 2025-10-18
+modified: 2025-10-25
 tags:
   - research
   - racism-and-health
@@ -54,8 +54,4 @@ Intersectionality is a useful tool to address health inequalities, by helping us
 ## Resource
 ![[PIIS0140673622023042 (1).pdf]]
 
-<p style="margin-top: 1rem;">
-  <a href="/PIIS0140673622023042 (1).pdf" download class="button">
-    Download PDF
-  </a>
-</p>
+

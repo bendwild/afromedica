@@ -61,7 +61,7 @@ tags:
   - _2025_
   - jacqueline-nwando-olayiwola
 description: Welcome to Afromedica Academy, a curated space where we provide a reliable source of information on a variety of topics in the medical field. We are committed to helping you stay up-to-date and well-informed on the latest developments and breakthroughs in the industry. Dive into our library of impactful resources and critical topics.
-modified: 2025-10-18
+modified: 2025-10-26
 ---
 <div class="hero">
   <h2>Welcome to our very own knowledge platform!</h2>
@@ -188,3 +188,95 @@ modified: 2025-10-18
 Do you have a suggestion to add to the library? Click below to suggest a resource! 
 
 <a class="button" href="/Afromedica Academy/Suggestions">Suggest a resource →</a>
+
+
+<!-- Tag Filter -->
+<div id="tag-filter" class="card">
+  <div class="filter-controls">
+    <p><strong>Filter by tags:</strong></p>
+    <div class="mode-toggle">
+      <button id="and-mode" class="mode-btn active">AND</button>
+      <button id="or-mode" class="mode-btn">OR</button>
+      <button id="clear-tags" class="clear-btn">Clear all</button>
+    </div>
+  </div>
+
+  <div class="tag-buttons">
+    <button class="tag" data-tag="interviews">#Interviews</button>
+    <button class="tag" data-tag="research">#Research</button>
+    <button class="tag" data-tag="videos">#Videos</button>
+    <button class="tag" data-tag="global-health">#Global Health</button>
+    <button class="tag" data-tag="english">#English</button>
+    <button class="tag" data-tag="2024">#2024</button>
+  </div>
+</div>
+
+<!-- Example Resource Cards -->
+<section id="resources" class="card-grid">
+  <article class="card resource"
+           data-tags="interviews,culturally-sensitive-healthcare,english,afromedica,iom,2024">
+    <h3><a href="#">AfroMedica × IOM: On the Importance of Culturally Sensitive Healthcare</a></h3>
+  </article>
+
+  <article class="card resource"
+           data-tags="research,global-health,english,2023">
+    <h3><a href="#">Global Health Equity Study</a></h3>
+  </article>
+
+  <article class="card resource"
+           data-tags="videos,english,2024,dermatology">
+    <h3><a href="#">Skin of Color in Medical Education</a></h3>
+  </article>
+</section>
+
+
+<script>
+const buttons = document.querySelectorAll('#tag-filter .tag');
+const resources = document.querySelectorAll('.resource');
+const andBtn = document.getElementById('and-mode');
+const orBtn = document.getElementById('or-mode');
+const clearBtn = document.getElementById('clear-tags');
+let mode = 'and';
+
+function applyFilter() {
+  const activeTags = [...buttons]
+    .filter(b => b.classList.contains('active'))
+    .map(b => b.dataset.tag);
+
+  resources.forEach(card => {
+    const tags = card.dataset.tags.split(',');
+    const match =
+      !activeTags.length ||
+      (mode === 'and'
+        ? activeTags.every(t => tags.includes(t))
+        : activeTags.some(t => tags.includes(t)));
+    card.style.display = match ? '' : 'none';
+  });
+}
+
+andBtn.addEventListener('click', () => {
+  mode = 'and';
+  andBtn.classList.add('active');
+  orBtn.classList.remove('active');
+  applyFilter();
+});
+
+orBtn.addEventListener('click', () => {
+  mode = 'or';
+  orBtn.classList.add('active');
+  andBtn.classList.remove('active');
+  applyFilter();
+});
+
+clearBtn.addEventListener('click', () => {
+  buttons.forEach(b => b.classList.remove('active'));
+  applyFilter();
+});
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    applyFilter();
+  });
+});
+</script>
