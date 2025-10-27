@@ -1,7 +1,7 @@
 ---
 title: "Superior: The Return of Race Science"
 publish: true
-modified: 2025-10-13
+modified: 2025-10-26
 tags:
   - books
   - racism-and-health

@@ -1,7 +1,7 @@
 ---
 title: Afromedica Talks
 publish: true
-modified: 2025-10-26
+modified: 2025-10-27
 ---
 
 <div class="hero">
@@ -20,7 +20,7 @@ Afromedica Talks hosts a **journal club every second Wednesday of the month**. S
 
 
 > [!attention]+ Upcoming talks 
-> - **Nov:** TBD
+> - **12 Nov:** Racism and genderbias in healthcare (Dr. [[Alessio Capobianco]] & [[Sarah Derveeuw]]). The session will be given in dutch. 
 > - **Dec:** TBD
 > - **Jan**: TBD
 

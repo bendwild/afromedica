@@ -1,7 +1,7 @@
 ---
 title: Afromedica Connects
 publish: true
-modified: 2025-10-14
+modified: 2025-10-26
 ---
 <div class="hero">
   <h2>Ready to connect?</h2>

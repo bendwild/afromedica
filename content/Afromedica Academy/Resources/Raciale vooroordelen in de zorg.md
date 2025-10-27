@@ -1,7 +1,7 @@
 ---
 title: "Raciale vooroordelen in de zorg: 'Omdat ik zwart ben, denkt mijn arts dat ik sterk ben'"
 publish: true
-modified: 2025-10-13
+modified: 2025-10-26
 tags:
   - articles
   - racism-and-health

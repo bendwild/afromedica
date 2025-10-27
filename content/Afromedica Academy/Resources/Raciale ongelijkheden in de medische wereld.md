@@ -1,7 +1,7 @@
 ---
 title:
 publish: true
-modified: 2025-10-25
+modified: 2025-10-26
 tags:
   - articles
   - intersectionality
