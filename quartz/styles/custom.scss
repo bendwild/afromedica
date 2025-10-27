@@ -1997,28 +1997,6 @@ footer {
 }
 .team-card p:last-child{ margin-top: auto; }  /* pushes links to bottom */
 
-/* --- TEAM GRID: ADD SPACING BETWEEN CARDS --- */
-.team-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
-  gap: 3rem 3rem !important; /* balanced white space horizontally + vertically */
-  justify-items: center !important;
-  align-items: start !important;
-  margin: 3rem auto !important;
-  padding: 1rem 0 !important; /* slight breathing room inside container */
-  max-width: 1200px !important;
-  width: 100% !important;
-}
-
-/* ensure cards don't touch edges even on narrow viewports */
-.team-card {
-  margin: 0.5rem !important; /* creates additional white space buffer */
-  background-color: var(--lightgray) !important;
-  border-radius: 1rem !important;
-  padding: 2rem 1.5rem !important;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-}
 
 /* --- Unified Card Styling (matches sidebar & team cards) --- */
 .card-grid {
@@ -2059,6 +2037,51 @@ footer {
 }
 
 /* Subtle hover for consistency */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* --- UNIFIED CARD GRID --- */
+.card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+  gap: 2.5rem !important;             /* even white space between cards */
+  justify-items: stretch !important;
+  align-items: start !important;
+  margin: 3rem auto !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  padding: 0 1rem !important;
+}
+
+/* --- CARD STYLE (same lavender as other boxes) --- */
+.card {
+  background-color: var(--lightgray) !important; /* consistent purple */
+  border-radius: 1rem !important;
+  padding: 2rem 1.5rem !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  margin: 0 !important;
+}
+
+.card h3 {
+  color: var(--dark) !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.card p {
+  color: var(--darkgray) !important;
+  line-height: 1.55 !important;
+}
+
+/* --- Subtle hover like other components --- */
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
