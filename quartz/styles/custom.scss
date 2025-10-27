@@ -1014,142 +1014,94 @@ footer {
   padding-top: 1.5rem;
 }
 
-/* === CLEAN RESET FIX === */
-
-/* Navbar fixed on top */
-.main-navigation {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2000 !important;
-  background-color: var(--light);
-}
-
-/* Keep body spacing below navbar */
-body {
-  padding-top: 64px !important;
-}
-
-/* Search container naturally below navbar */
-.search-container {
-  position: absolute !important;
-  top: 100%; /* directly below search bar */
-  left: 0;
-  width: 100%;
-  z-index: 2100 !important;
-  background-color: var(--light);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-}
-
-/* Make sure the search bar & layout stay visible above content */
-.search,
-.search-bar,
-.search-space,
-.search-layout {
-  position: relative !important;
-  z-index: 2200 !important;
-}
-
-/* Prevent “recent notes” and timeline from overlapping */
-.recent-notes,
-.card,
-.toc,
-.backlinks,
-.explorer,
-.timeline,
-.timeline-item,
-.timeline-content,
-.timeline-date {
-  position: relative !important;
-  z-index: 0 !important;
+/* --- A. Neutralize stacking-context creators on side blocks --- */
+/* Any transform/filter/backdrop-filter creates a new stacking context.
+   Disable them on hover so they can't jump above overlays. */
+.card:hover,
+.toc:hover,
+.recent-notes:hover,
+.backlinks:hover,
+.explorer:hover,
+.timeline-item:hover .timeline-content,
+.team-banner:hover img {
   transform: none !important;
   filter: none !important;
-  will-change: auto !important;
-  isolation: isolate !important;
 }
 
-/* Keep your blur aesthetic */
+/* Backdrop blur also creates a stacking context; make it cosmetic-only via a pseudo layer */
 .card,
 .toc,
 .recent-notes,
 .backlinks,
 .explorer {
+  backdrop-filter: none !important;         /* kill stacking context */
+  -webkit-backdrop-filter: none !important; /* Safari */
+  position: static !important;              /* remove raised contexts */
+  z-index: auto !important;
+}
+
+/* Optional: keep the “lifted” feel using shadow only */
+.card:hover,
+.toc:hover,
+.recent-notes:hover,
+.backlinks:hover,
+.explorer:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,.08) !important;
+}
+
+/* --- B. Make the search dropdown a real overlay --- */
+.main-navigation {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 3000; /* stays above content */
+}
+
+body { padding-top: 64px; }
+
+/* The overlay itself */
+.search-container {
+  position: fixed !important;
+  top: 64px !important;            /* just under your navbar */
+  left: 0; right: 0;
+  margin: 0 auto;
+  z-index: 4000 !important;
+  max-width: 1200px;               /* match your .nav-container width if you like */
+  pointer-events: auto;
+}
+
+/* Ensure the inner layout can scroll without moving the page */
+.search-layout {
+  max-height: calc(100vh - 80px);
+  overflow: auto;
+}
+
+/* Prevent the page from scrolling while the input is active */
+:focus-within .search-bar,
+.search-bar:focus {
+  /* nothing needed here; the fixed dropdown and its own scroll prevent page jumps */
+}
+
+/* --- C. Keep the graph above content cards but below the search --- */
+.graph-container {
+  position: relative;
+  z-index: 2000;          /* below the search (4000), above cards (auto) */
+  pointer-events: auto;   /* ensure clicks pass to the graph */
+}
+/* If a floating date ever overlaps the graph, don't let it steal clicks */
+.timeline-date { pointer-events: none; }
+
+/* Optional: soft frosted feel without creating a new stacking context on the block */
+.card {
+  position: relative;
+  overflow: hidden; /* contain the pseudo */
+}
+
+.card::before {
+  content: "";
+  position: absolute; inset: 0;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-}
-
-/* Graph should stay clickable and stable */
-.graph-container {
-  position: relative !important;
-  z-index: 1 !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-  transition: none !important;
-}
-
-#tag-filter .filter-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: .5rem;
-}
-
-#tag-filter .mode-toggle {
-  display: inline-flex;
-  gap: .3rem;
-  border: 1px solid var(--gray);
-  border-radius: 999px;
-  overflow: hidden;
-  padding: .2rem;
-  background: var(--lightgray);
-}
-
-#tag-filter .mode-btn, #tag-filter .clear-btn {
-  background: var(--light);
-  color: var(--dark);
-  border: none;
-  padding: .3rem .8rem;
-  cursor: pointer;
-  font-weight: 600;
-  border-radius: 999px;
-}
-
-#tag-filter .mode-btn.active {
-  background: var(--accent);
-  color: var(--light);
-}
-
-#tag-filter .clear-btn {
-  background: var(--lightgray);
-  color: var(--darkgray);
-}
-
-#tag-filter .clear-btn:hover {
-  background: var(--accent);
-  color: var(--light);
-}
-
-#tag-filter .tag-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
-  margin-top: .5rem;
-}
-
-#tag-filter .tag {
-  border: 1px solid var(--gray);
-  border-radius: 999px;
-  background: var(--lightgray);
-  color: var(--dark);
-  padding: .3rem .8rem;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-#tag-filter .tag.active {
-  background: var(--accent);
-  color: var(--light);
-  border-color: var(--accent);
+  background: rgba(255,255,255,0.55);
+  z-index: -1;          /* sit behind the card content */
+  pointer-events: none;
 }
