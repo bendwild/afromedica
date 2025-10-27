@@ -1444,3 +1444,252 @@ footer .social-icons {
   gap: 1.2rem;
   margin-top: 0.5rem;
 }
+
+/* --- Improved Team Banner Styling --- */
+.team-banner {
+  position: relative;
+  margin: 2.5rem 0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background-color: var(--lightgray);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Smooth zoom on hover */
+.team-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: inherit;
+  filter: brightness(0.95);
+  transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+.team-banner:hover img {
+  transform: scale(1.03);
+  filter: brightness(1);
+}
+
+/* Caption overlay fix */
+.team-banner figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  color: var(--light);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+  background: linear-gradient(
+    to top,
+    rgba(43, 27, 15, 0.8) 0%,
+    rgba(43, 27, 15, 0.5) 50%,
+    rgba(43, 27, 15, 0.1) 100%
+  );
+  backdrop-filter: blur(4px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+/* Optional: slightly fade in caption */
+.team-banner figcaption {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.4s ease;
+}
+
+.team-banner:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Sidebar Consistency Fix --- */
+
+/* Match sidebar cards styling */
+.recent-notes,
+.toc,
+.backlinks {
+  background-color: var(--lightgray);
+  border: 1px solid var(--gray);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--darkgray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* Make all headings equal size and weight */
+.recent-notes h3,
+.toc summary,
+.backlinks h3 {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: var(--dark) !important;
+  margin-bottom: 0.6rem;
+}
+
+/* Align list and link styles */
+.recent-notes a,
+.toc a,
+.backlinks a {
+  font-size: 0.95rem;
+  color: var(--darkgray);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--darkgray);
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.recent-notes a:hover,
+.toc a:hover,
+.backlinks a:hover {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+/* Subtle equal padding inside each block */
+.recent-notes ul,
+.toc ul,
+.backlinks ul {
+  padding-left: 1rem;
+  margin: 0;
+  list-style: none;
+}
+
+/* Match hover and spacing transitions */
+.recent-notes:hover,
+.toc:hover,
+.backlinks:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* === Team Grid Layout Fix === */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem; /* consistent spacing between cards */
+  align-items: stretch; /* ensures all cards are same height */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* === Team Card Styling Fix === */
+.team-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--lightgray);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%; /* critical for equal height */
+}
+
+/* Keep hover smooth and subtle */
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* === Image and Text Alignment === */
+.team-card img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 1rem;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
+
+/* Keep names, roles, and bios consistent */
+.team-card h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+
+.team-card p {
+  color: var(--darkgray);
+  flex-grow: 1;
+  margin-bottom: 0.75rem;
+}
+
+.team-card em {
+  display: block;
+  color: var(--gray);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+/* Links in cards */
+.team-card a {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.team-card a:hover {
+  color: var(--tertiary);
+}
+
+/* --- Brand Assets Grid --- */
+.brand-assets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+  justify-items: center;
+  align-items: start;
+}
+
+.brand-card {
+  background-color: var(--lightgray);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.brand-card img {
+  max-width: 160px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.brand-card .button {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--light);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.brand-card .button:hover {
+  background-color: var(--tertiary);
+}
