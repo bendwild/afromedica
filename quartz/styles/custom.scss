@@ -2019,3 +2019,47 @@ footer {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
+
+/* --- Unified Card Styling (matches sidebar & team cards) --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin: 2rem auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.card {
+  background-color: var(--lightgray) !important; /* same purple tone */
+  border-radius: 1rem !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem !important;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: var(--dark) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Titles & Texts inside */
+.card h3 {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--dark);
+}
+
+.card p {
+  color: var(--darkgray);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Subtle hover for consistency */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
