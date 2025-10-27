@@ -1048,3 +1048,60 @@ footer {
 .explorer:hover {
   box-shadow: 0 8px 16px rgba(0,0,0,.08) !important;
 }
+
+/* --- B. Make the search dropdown a real overlay --- */
+.main-navigation {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 3000; /* stays above content */
+}
+
+body { padding-top: 64px; }
+
+/* The overlay itself */
+.search-container {
+  position: fixed !important;
+  top: 64px !important;            /* just under your navbar */
+  left: 0; right: 0;
+  margin: 0 auto;
+  z-index: 4000 !important;
+  max-width: 1200px;               /* match your .nav-container width if you like */
+  pointer-events: auto;
+}
+
+/* Ensure the inner layout can scroll without moving the page */
+.search-layout {
+  max-height: calc(100vh - 80px);
+  overflow: auto;
+}
+
+/* Prevent the page from scrolling while the input is active */
+:focus-within .search-bar,
+.search-bar:focus {
+  /* nothing needed here; the fixed dropdown and its own scroll prevent page jumps */
+}
+
+/* --- C. Keep the graph above content cards but below the search --- */
+.graph-container {
+  position: relative;
+  z-index: 2000;          /* below the search (4000), above cards (auto) */
+  pointer-events: auto;   /* ensure clicks pass to the graph */
+}
+/* If a floating date ever overlaps the graph, don't let it steal clicks */
+.timeline-date { pointer-events: none; }
+
+/* Optional: soft frosted feel without creating a new stacking context on the block */
+.card {
+  position: relative;
+  overflow: hidden; /* contain the pseudo */
+}
+
+.card::before {
+  content: "";
+  position: absolute; inset: 0;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.55);
+  z-index: -1;          /* sit behind the card content */
+  pointer-events: none;
+}
