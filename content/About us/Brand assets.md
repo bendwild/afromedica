@@ -5,9 +5,6 @@ tags:
 description:
 modified: 2025-10-26
 ---
----
-# AfroMedica Brand Assets
-
 Our logos and brand visuals are provided for partners, media, and collaborators who wish to represent AfroMedica accurately.  
 
 ---
