@@ -2086,3 +2086,59 @@ footer {
   transform: translateY(-4px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
+
+/* === TEAM GRID LAYOUT FIX === */
+.team-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 2.5rem !important;
+  justify-items: center !important;
+  align-items: start !important;
+  margin: 3rem auto !important;
+  width: min(95%, 1200px) !important;  /* lets grid expand beyond narrow column */
+  padding: 0 1rem !important;
+}
+
+/* --- TEAM CARD --- */
+.team-card {
+  background-color: var(--lightgray) !important; /* exact same purple as other cards */
+  border-radius: 1rem !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
+  padding: 2rem 1.5rem !important;
+  text-align: center !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  max-width: 360px !important;
+  width: 100% !important;
+}
+
+.team-card img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 1rem !important;
+  margin-bottom: 1rem !important;
+  object-fit: cover !important;
+}
+
+.team-card h3 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.25rem !important;
+  font-weight: 700 !important;
+  color: var(--dark) !important;
+}
+
+.team-card p {
+  color: var(--darkgray) !important;
+  line-height: 1.55 !important;
+  margin-top: 0.5rem !important;
+}
+
+/* --- SPACING BETWEEN ROWS --- */
+.team-card + .team-card {
+  margin-top: 0 !important;
+}
+
+/* --- HOVER EFFECT --- */
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
