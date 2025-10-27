@@ -4,7 +4,7 @@ publish: true
 tags:
   - team
 description:
-modified: 2025-10-13
+modified: 2025-10-26
 ---
 <figure class="team-banner">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/Group.jpeg" alt="AfroMedica Team" />
@@ -66,7 +66,7 @@ modified: 2025-10-13
     <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/FotoBenjamin.jpg" alt="Benjamin De Wilde" />
     <h3><a href="/Team/Benjamin-De-Wilde">Benjamin De Wilde</a></h3>
     <p><em>Afromedica Academy & Internal Admin</em></p>
-    <p>Benjamin is a medical doctor and global health advocate. He co-founded AfroMedica to address racial inequities in healthcare through education, research, and youth-led activism.</p>
+    <p>Hey there! I'm a medical doctor and global health advocate. I co-founded AfroMedica to address racial inequities in healthcare through education, research, and youth-led activism.</p>
     <p><a href="https://www.linkedin.com/in/benjamindewilde" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
   </div>
 

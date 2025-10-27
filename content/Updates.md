@@ -2,7 +2,7 @@
 title: Updates
 slug: updates
 layout: updates
-modified: 2025-10-25
+modified: 2025-10-26
 publish: true
 description: Stay up to date with AfroMedica’s latest news, articles, and achievements.
 ---
@@ -27,7 +27,7 @@ description: Stay up to date with AfroMedica’s latest news, articles, and achi
 
   <div class="contact-card">
     <h3>New logo and brand design!</h3>
-    <p>Check out our new <a href="/Afromedica-Academy/Suggestions">designs</a>!</p>
+    <p>Check out our new <a href="/About-us/Brand-assets">designs</a>!</p>
   </div>
 
   <div class="contact-card">
@@ -60,7 +60,7 @@ description: Stay up to date with AfroMedica’s latest news, articles, and achi
   <div class="timeline-item">
     <div class="timeline-date">2024</div>
     <div class="timeline-content">
-      <h3>Physician's royal dinner</h3>
+      <h3><a href="https://www.instagram.com/p/DG5CBdNIZ9p/?img_index=1" target="_blank" rel="noopener noreferrer">Physician's Royal Dinner</a></h3>
       <p>A crucial opportunity to emphasize the importance of culturally sensitive healthcare in Belgium and reaffirm AfroMedica's commitment to fostering a future of inclusive and equitable care.</p>
     </div>
   </div>
