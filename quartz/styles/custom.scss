@@ -1927,3 +1927,72 @@ footer {
   }
 }
 
+/* --- Team grid: always 2+ columns on desktop, with even spacing --- */
+.team-grid{
+  display:grid !important;
+  grid-template-columns: 1fr;              /* mobile default */
+  gap: 2rem !important;
+  width:100% !important;
+}
+
+/* ≥ 720px: force two columns even in Quartz' narrow center column */
+@media (min-width: 720px){
+  .team-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* ≥ 1100px: allow three columns when there’s room */
+@media (min-width: 1100px){
+  .team-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Cards must be allowed to shrink, and all inner pieces should align */
+.team-card{
+  max-width: none !important;      /* remove previous 340px cap */
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  background: var(--lightgray);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,.08);
+  min-height: 520px;               /* keeps heights consistent */
+}
+
+/* Equal photo zone */
+.team-card img{
+  width: 100% !important;
+  max-width: 190px !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Name + role lines aligned across cards */
+.team-card h3{
+  margin: .4rem 0 .25rem;
+  font-size: 1.12rem;
+  font-weight: 700;
+  min-height: 2.2rem;              /* same line height for names */
+  display:flex; align-items:center; justify-content:center;
+}
+
+.team-card em{
+  color: var(--gray);
+  display:flex; align-items:center; justify-content:center;
+  min-height: 1.4rem;              /* same line height for roles */
+  margin-bottom: .8rem;
+}
+
+/* Bio grows to fill so bottom links align */
+.team-card p{
+  color: var(--darkgray);
+  line-height: 1.55;
+}
+.team-card p:last-child{ margin-top: auto; }  /* pushes links to bottom */
