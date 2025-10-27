@@ -1089,3 +1089,67 @@ body {
   transition: none !important;
 }
 
+#tag-filter .filter-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+}
+
+#tag-filter .mode-toggle {
+  display: inline-flex;
+  gap: .3rem;
+  border: 1px solid var(--gray);
+  border-radius: 999px;
+  overflow: hidden;
+  padding: .2rem;
+  background: var(--lightgray);
+}
+
+#tag-filter .mode-btn, #tag-filter .clear-btn {
+  background: var(--light);
+  color: var(--dark);
+  border: none;
+  padding: .3rem .8rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+#tag-filter .mode-btn.active {
+  background: var(--accent);
+  color: var(--light);
+}
+
+#tag-filter .clear-btn {
+  background: var(--lightgray);
+  color: var(--darkgray);
+}
+
+#tag-filter .clear-btn:hover {
+  background: var(--accent);
+  color: var(--light);
+}
+
+#tag-filter .tag-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .5rem;
+}
+
+#tag-filter .tag {
+  border: 1px solid var(--gray);
+  border-radius: 999px;
+  background: var(--lightgray);
+  color: var(--dark);
+  padding: .3rem .8rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#tag-filter .tag.active {
+  background: var(--accent);
+  color: var(--light);
+  border-color: var(--accent);
+}
