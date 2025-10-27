@@ -1996,3 +1996,149 @@ footer {
   line-height: 1.55;
 }
 .team-card p:last-child{ margin-top: auto; }  /* pushes links to bottom */
+
+
+/* --- Unified Card Styling (matches sidebar & team cards) --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin: 2rem auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.card {
+  background-color: var(--lightgray) !important; /* same purple tone */
+  border-radius: 1rem !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem !important;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: var(--dark) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Titles & Texts inside */
+.card h3 {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--dark);
+}
+
+.card p {
+  color: var(--darkgray);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Subtle hover for consistency */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* --- UNIFIED CARD GRID --- */
+.card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+  gap: 2.5rem !important;             /* even white space between cards */
+  justify-items: stretch !important;
+  align-items: start !important;
+  margin: 3rem auto !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  padding: 0 1rem !important;
+}
+
+/* --- CARD STYLE (same lavender as other boxes) --- */
+.card {
+  background-color: var(--lightgray) !important; /* consistent purple */
+  border-radius: 1rem !important;
+  padding: 2rem 1.5rem !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  margin: 0 !important;
+}
+
+.card h3 {
+  color: var(--dark) !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.card p {
+  color: var(--darkgray) !important;
+  line-height: 1.55 !important;
+}
+
+/* --- Subtle hover like other components --- */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* === TEAM GRID LAYOUT FIX === */
+.team-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 2.5rem !important;
+  justify-items: center !important;
+  align-items: start !important;
+  margin: 3rem auto !important;
+  width: min(95%, 1200px) !important;  /* lets grid expand beyond narrow column */
+  padding: 0 1rem !important;
+}
+
+/* --- TEAM CARD --- */
+.team-card {
+  background-color: var(--lightgray) !important; /* exact same purple as other cards */
+  border-radius: 1rem !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
+  padding: 2rem 1.5rem !important;
+  text-align: center !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  max-width: 360px !important;
+  width: 100% !important;
+}
+
+.team-card img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 1rem !important;
+  margin-bottom: 1rem !important;
+  object-fit: cover !important;
+}
+
+.team-card h3 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.25rem !important;
+  font-weight: 700 !important;
+  color: var(--dark) !important;
+}
+
+.team-card p {
+  color: var(--darkgray) !important;
+  line-height: 1.55 !important;
+  margin-top: 0.5rem !important;
+}
+
+/* --- SPACING BETWEEN ROWS --- */
+.team-card + .team-card {
+  margin-top: 0 !important;
+}
+
+/* --- HOVER EFFECT --- */
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
