@@ -1647,3 +1647,49 @@ footer .social-icons {
 .team-card a:hover {
   color: var(--tertiary);
 }
+
+/* --- Brand Assets Grid --- */
+.brand-assets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+  justify-items: center;
+  align-items: start;
+}
+
+.brand-card {
+  background-color: var(--lightgray);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.brand-card img {
+  max-width: 160px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.brand-card .button {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--light);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.brand-card .button:hover {
+  background-color: var(--tertiary);
+}
