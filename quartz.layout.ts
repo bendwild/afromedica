@@ -35,23 +35,6 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    // 👇 New “Popular Topics” section
-    Component.HTML({
-      html: `
-        <div class="card">
-          <h3>Popular Topics</h3>
-          <div class="tags-group">
-            <a href="/tags/health-equity" class="tag">#Health Equity</a>
-            <a href="/tags/global-health" class="tag">#Global Health</a>
-            <a href="/tags/culturally-sensitive-healthcare" class="tag">#Culturally Sensitive Care</a>
-            <a href="/tags/racism-and-health" class="tag">#Racism & Health</a>
-            <a href="/tags/education" class="tag">#Education</a>
-            <a href="/tags/policy" class="tag">#Policy</a>
-            <a href="/tags/inclusion" class="tag">#Inclusion</a>
-          </div>
-        </div>
-      `,
-    }),
   ],
 }
 
