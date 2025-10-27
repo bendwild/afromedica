@@ -1014,46 +1014,45 @@ footer {
   padding-top: 1.5rem;
 }
 
-/* === FINAL FIX: Restore correct stacking & interactivity === */
+/* === CLEAN RESET FIX === */
 
-/* Keep navbar always visible */
+/* Navbar fixed on top */
 .main-navigation {
   position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 3000 !important;
+  z-index: 2000 !important;
   background-color: var(--light);
 }
 
-/* Ensure search elements are always on top when active */
-.search,
-.search-container,
-.search-space,
-.search-layout,
-.search-bar {
-  position: relative !important;
-  z-index: 4000 !important;
+/* Keep body spacing below navbar */
+body {
+  padding-top: 64px !important;
 }
 
-/* Make search overlay visible only when active */
+/* Search container naturally below navbar */
 .search-container {
-  position: fixed !important;
-  top: 70px !important;
+  position: absolute !important;
+  top: 100%; /* directly below search bar */
   left: 0;
-  right: 0;
-  margin: 0 auto;
-  z-index: 4000 !important;
-  background: transparent;
-  pointer-events: none; /* allow click-through by default */
+  width: 100%;
+  z-index: 2100 !important;
+  background-color: var(--light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
 }
 
-.search-container:has(.search-bar:focus),
-.search-container.active {
-  pointer-events: auto !important; /* clickable only when active */
+/* Make sure the search bar & layout stay visible above content */
+.search,
+.search-bar,
+.search-space,
+.search-layout {
+  position: relative !important;
+  z-index: 2200 !important;
 }
 
-/* Remove stacking contexts from sidebars & cards */
+/* Prevent “recent notes” and timeline from overlapping */
 .recent-notes,
 .card,
 .toc,
@@ -1071,18 +1070,17 @@ footer {
   isolation: isolate !important;
 }
 
-/* Restore blur aesthetic without stacking issues */
-.recent-notes,
+/* Keep your blur aesthetic */
 .card,
 .toc,
+.recent-notes,
 .backlinks,
 .explorer {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  background-color: rgba(255, 255, 255, 0.7);
 }
 
-/* Graph interactivity fix */
+/* Graph should stay clickable and stable */
 .graph-container {
   position: relative !important;
   z-index: 1 !important;
@@ -1091,7 +1089,3 @@ footer {
   transition: none !important;
 }
 
-/* Prevent scroll jump when typing */
-body:has(.search-bar:focus) {
-  overflow: hidden !important;
-}
