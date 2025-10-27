@@ -1826,45 +1826,53 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* === CLEAN FIX: Uniform Team Grid Layout === */
-
+/* === FINAL TEAM GRID FIX (Quartz-safe) === */
 .team-grid {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
-  gap: 3rem 3rem !important; /* white space between cards horizontally and vertically */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 3rem 2rem !important;
   justify-items: center !important;
   align-items: start !important;
-  margin: 4rem auto !important;
+  margin: 3rem auto !important;
   max-width: 1200px !important;
   width: 100% !important;
   box-sizing: border-box !important;
+  position: relative !important;
+  z-index: 1 !important;
 }
 
-/* Team Card */
+/* Reset inherited Quartz layout quirks */
+.team-grid > * {
+  grid-column: auto !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* --- Team Card --- */
 .team-card {
   background-color: var(--lightgray) !important;
   border-radius: 1rem !important;
   padding: 2rem 1.5rem !important;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08) !important;
+  text-align: center !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  text-align: center !important;
-  width: 100% !important;
+  justify-content: flex-start !important;
   max-width: 360px !important;
-  min-height: 580px !important; /* ensures cards in a row are equal height */
-  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  min-height: 540px !important;
 }
 
 .team-card:hover {
   transform: translateY(-6px) !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12) !important;
 }
 
-/* Image Section */
+/* Image */
 .team-card img {
   width: 100% !important;
-  max-width: 220px !important;
+  max-width: 200px !important;
   aspect-ratio: 1 / 1 !important;
   object-fit: cover !important;
   border-radius: 1rem !important;
@@ -1877,7 +1885,7 @@ footer {
   font-weight: 700 !important;
   color: var(--dark) !important;
   margin: 0.4rem 0 !important;
-  min-height: 2.4rem !important; /* equal space for long/short names */
+  min-height: 2.4rem !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -1899,29 +1907,22 @@ footer {
   font-size: 0.96rem !important;
   line-height: 1.55 !important;
   color: var(--darkgray) !important;
-  flex-grow: 1 !important; /* fills space evenly */
+  flex-grow: 1 !important;
   margin-bottom: 1rem !important;
 }
 
-/* Bottom Links stay at bottom */
+/* Bottom link alignment */
 .team-card p:last-child {
   margin-top: auto !important;
 }
 
-/* Responsive: keep 2 per row until mobile */
-@media (min-width: 769px) and (max-width: 1150px) {
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
+/* Responsive: stack only on mobile */
 @media (max-width: 768px) {
   .team-grid {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
   .team-card {
-    max-width: 100% !important;
     min-height: auto !important;
   }
 }
