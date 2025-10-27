@@ -1996,3 +1996,26 @@ footer {
   line-height: 1.55;
 }
 .team-card p:last-child{ margin-top: auto; }  /* pushes links to bottom */
+
+/* --- TEAM GRID: ADD SPACING BETWEEN CARDS --- */
+.team-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 3rem 3rem !important; /* balanced white space horizontally + vertically */
+  justify-items: center !important;
+  align-items: start !important;
+  margin: 3rem auto !important;
+  padding: 1rem 0 !important; /* slight breathing room inside container */
+  max-width: 1200px !important;
+  width: 100% !important;
+}
+
+/* ensure cards don't touch edges even on narrow viewports */
+.team-card {
+  margin: 0.5rem !important; /* creates additional white space buffer */
+  background-color: var(--lightgray) !important;
+  border-radius: 1rem !important;
+  padding: 2rem 1.5rem !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
