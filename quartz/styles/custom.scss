@@ -1574,79 +1574,97 @@ footer .social-icons {
   transition: all 0.3s ease;
 }
 
-/* === Team Grid Layout Fix === */
+/* === Team Grid Layout === */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem; /* consistent spacing between cards */
-  align-items: stretch; /* ensures all cards are same height */
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem; /* vertical + horizontal space */
+  align-items: start;
+  justify-items: center;
+  margin: 3rem 0;
 }
 
-/* === Team Card Styling Fix === */
+/* === Team Card Styling === */
 .team-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
   background-color: var(--lightgray);
-  padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 340px;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  height: 100%; /* critical for equal height */
+  min-height: 480px; /* ensures consistent height across rows */
 }
 
-/* Keep hover smooth and subtle */
 .team-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* === Image and Text Alignment === */
+/* === Team Card Elements === */
 .team-card img {
   width: 100%;
   max-width: 180px;
   height: auto;
   border-radius: 1rem;
-  margin: 0 auto 1rem;
+  margin-bottom: 1rem;
   object-fit: cover;
 }
 
-/* Keep names, roles, and bios consistent */
 .team-card h3 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   color: var(--dark);
   font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.team-card h3 a {
+  color: var(--dark);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.team-card h3 a:hover {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
 }
 
 .team-card p {
   color: var(--darkgray);
-  flex-grow: 1;
+  line-height: 1.5;
   margin-bottom: 0.75rem;
 }
 
 .team-card em {
   display: block;
   color: var(--gray);
+  margin-bottom: 0.5rem;
   font-style: italic;
-  margin-bottom: 0.75rem;
 }
 
-/* Links in cards */
-.team-card a {
-  display: inline-block;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
+/* Ensure consistent spacing for links at the bottom */
+.team-card p:last-child {
+  margin-top: auto;
 }
 
-.team-card a:hover {
-  color: var(--tertiary);
+/* === Responsive Tuning === */
+@media (max-width: 768px) {
+  .team-grid {
+    gap: 1.5rem;
+  }
+  .team-card {
+    max-width: 100%;
+    min-height: auto;
+  }
 }
+
 
 /* --- Brand Assets Grid --- */
 .brand-assets-grid {
