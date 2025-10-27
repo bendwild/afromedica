@@ -60,7 +60,7 @@ tags:
 
 ## Meet Our Team
 <div class="team-banner">
-  <img src="/Extra/Images/Groupjpeg" alt="AfroMedica Team">
+  <img src="/Extra/Images/Group.jpeg" alt="AfroMedica Team">
   <figcaption>
     AfroMedica is made up of passionate healthcare professionals and students working towards racial equity. 
     <a href="/Team/team" style="color: var(--accent); font-weight: 600;">Meet the team →</a>

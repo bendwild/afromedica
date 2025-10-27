@@ -70,9 +70,7 @@ modified: 2025-10-26
 
 > [!info]+ How to navigate Afromedica Academy?
 > 1. We use **#tags** to add a subject and media type to all of our resources. You can click on a tag to find other resources that have the same tags!
-> 2. You can search for various pages by typing the tag **(#example)** in the searchbar.
-> 3. By utilizing **"AND"** & **"OR"** functions in the search bar you can easily find pages that fullfill multiple requirements. For example: #books AND #dutch AND #racism-and-health.
-> 4. You can use the **site map** to explore the various tags and pages
+> 2. You can check out all our resources on this [page](https://afromedica.be/Afromedica-Academy/Resources)! 
 
 ---
 
