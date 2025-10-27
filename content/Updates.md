@@ -27,7 +27,7 @@ description: Stay up to date with AfroMedica’s latest news, articles, and achi
 
   <div class="contact-card">
     <h3>New logo and brand design!</h3>
-    <p>Check out our new <a href="/Afromedica-Academy/Suggestions">designs</a>!</p>
+    <p>Check out our new <a href="/About-us/Brand-assets">designs</a>!</p>
   </div>
 
   <div class="contact-card">

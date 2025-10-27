@@ -58,23 +58,5 @@ tags:
 
 ---
 
-## Meet Our Team
-<div class="team-banner">
-  <img src="/Extra/Images/Group.jpeg" alt="AfroMedica Team">
-  <figcaption>
-    AfroMedica is made up of passionate healthcare professionals and students working towards racial equity. 
-    <a href="/Team/team" style="color: var(--accent); font-weight: 600;">Meet the team →</a>
-  </figcaption>
-</div>
-
----
-
-## Get Involved
-<div class="hero" style="max-width:700px; margin:auto;">
-  <p>Want to collaborate, volunteer, or contribute to AfroMedica’s mission?</p>
-  <a class="button" href="/Contact/contact">→ Reach Out</a>
-</div>
-
----
 ## Stay up to date with our mission
 Follow us on social media or [reach out](Contac/contact.md) to collaborate!
