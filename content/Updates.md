@@ -60,7 +60,7 @@ description: Stay up to date with AfroMedica’s latest news, articles, and achi
   <div class="timeline-item">
     <div class="timeline-date">2024</div>
     <div class="timeline-content">
-      <h3>Physician's royal dinner</h3>
+      <h3><a href="https://www.instagram.com/p/DG5CBdNIZ9p/?img_index=1"  target="_blank" rel="noopener noreferrer">Physician's royal dinner</a></h3>
       <p>A crucial opportunity to emphasize the importance of culturally sensitive healthcare in Belgium and reaffirm AfroMedica's commitment to fostering a future of inclusive and equitable care.</p>
     </div>
   </div>

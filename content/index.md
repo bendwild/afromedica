@@ -56,7 +56,8 @@ tags:
 
   </div>
 
+
 ---
 
 ## Stay up to date with our mission
-Follow us on social media or [reach out](Contac/contact.md) to collaborate!
+Follow us on social media or [reach out](Contact/contact.md) to collaborate!
