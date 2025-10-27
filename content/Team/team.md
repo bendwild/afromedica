@@ -4,7 +4,7 @@ publish: true
 tags:
   - team
 description:
-modified: 2025-10-26
+modified: 2025-10-27
 ---
 <figure class="team-banner">
   <img src="https://raw.githubusercontent.com/bendwild/afromedica/v4/content/Extra/Images/Group.jpeg" alt="AfroMedica Team" />
@@ -71,6 +71,9 @@ modified: 2025-10-26
   </div>
 
 </div>
+
+
+___
 
 > [!attention]+ Interested in becoming a boardmember?
 > We welcome anyone who shares our vision and mission to reach out to us at connect@afromedica.be!

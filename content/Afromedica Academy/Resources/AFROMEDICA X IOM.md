@@ -1,7 +1,7 @@
 ---
 title: "AfroMedica x IOM: on the importance of culturally sensitive healthcare"
 publish: true
-modified: 2025-10-25
+modified: 2025-10-26
 tags:
   - interviews
   - culturally-sensitive-healthcare
