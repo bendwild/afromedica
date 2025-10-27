@@ -1,7 +1,7 @@
 ---
 title: Afromedica Talks
 publish: true
-modified: 2025-10-18
+modified: 2025-10-26
 ---
 
 <div class="hero">

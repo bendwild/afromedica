@@ -2,7 +2,7 @@
 title: Updates
 slug: updates
 layout: updates
-modified: 2025-10-25
+modified: 2025-10-26
 publish: true
 description: Stay up to date with AfroMedica’s latest news, articles, and achievements.
 ---

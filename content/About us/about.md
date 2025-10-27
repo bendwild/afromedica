@@ -1,7 +1,7 @@
 ---
 title: About us
 publish: true
-modified: 2025-10-13
+modified: 2025-10-26
 tags:
   - about-us
 ---

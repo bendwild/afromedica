@@ -1,5 +1,5 @@
 ---
-modified: 2025-10-10
+modified: 2025-10-26
 ---
 Little guide for other obsidian editors: 
 

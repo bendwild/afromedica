@@ -4,7 +4,7 @@ publish: true
 tags:
   - team
 description:
-modified: 2025-10-18
+modified: 2025-10-26
 ---
 So you're interested in joining the board of AfroMedica? Great!
 
