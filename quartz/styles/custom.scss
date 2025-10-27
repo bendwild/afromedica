@@ -135,33 +135,6 @@ main {
   margin-bottom: 1rem;
 }
 
-// === Graph View ===
-.graph-container {
-  margin-top: 2rem;
-  background: transparent;
-  border: none;
-  pointer-events: auto !important;
-  z-index: 10;
-}
-
-.graph-container * {
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-.graph-node {
-  stroke: var(--accent);
-  fill: var(--tertiary);
-  transition: fill 0.3s;
-}
-
-.graph-node:hover {
-  fill: var(--accent);
-}
-
-.graph-link {
-  stroke: var(--gray);
-}
 
 // === Buttons ===
 .button {
@@ -803,7 +776,7 @@ main > *:first-child,
   padding: 0.3rem 0.5rem;
   box-shadow: 0 0 8px rgba(180, 99, 122, 0.15);
   pointer-events: none;
-  z-index: 2;
+  z-index: 1;
 }
 
 .timeline-content {
@@ -907,133 +880,6 @@ hr {
   border-top: 1px solid var(--gray); /* Or your preferred color */
 }
 
-/* Align left, center, and right columns under the navbar */
-.page-columns > .left,
-.page-columns > .center,
-.page-columns > .right,
-.sidebar.left,
-.sidebar.right {
-  align-self: flex-start;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Reset top spacing for the first visible child in each column */
-.page-columns > .left > *:first-child,
-.page-columns > .center > *:first-child,
-.page-columns > .right > *:first-child,
-.sidebar.left > *:first-child,
-.sidebar.right > *:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Recursively clear top spacing for inner wrappers */
-.page-columns > .center > *:first-child > *:first-child,
-.page-columns > .left > *:first-child > *:first-child,
-.page-columns > .right > *:first-child > *:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Optional: force override cards, callouts, graphs, etc. */
-.card:first-child,
-.callout:first-child,
-.graph-container:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Clear top margin of first card/graph inside left or right sidebar */
-.sidebar.left .card:first-child,
-.sidebar.right .graph-container:first-child,
-.sidebar.right .card:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Hide anchor icons completely and remove gap */
-.heading-anchor {
-  display: none !important;
-  margin-left: 0 !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  padding-right: 0 !important; /* remove extra space reserved for icon */
-}
-
-/* === Language Switcher Styles === */
-.language-switcher {
-  position: relative;
-  margin-left: 1rem;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-toggle {
-  background: none;
-  border: 1px solid var(--lightgray);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-family: 'Montserrat', sans-serif; /* header-style navbar */
-  font-weight: 600;
-  color: var(--dark);
-  white-space: nowrap;
-  transition: all 0.2s ease;
-}
-
-.dropdown-toggle:hover {
-  background-color: var(--lightgray);
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: var(--light);
-  border: 1px solid var(--lightgray);
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 1001;
-  min-width: 150px;
-  font-family: 'Montserrat', sans-serif; /* header-style navbar */
-}
-
-.dropdown-menu li {
-  list-style: none;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 0.75rem 1rem;
-  text-decoration: none;
-  color: var(--dark);
-  font-weight: 500;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-}
-
-.dropdown-menu a:hover {
-  background-color: var(--lightgray);
-  color: var(--accent);
-}
-
-.dropdown-menu a.current-lang {
-  background-color: var(--accent);
-  color: var(--light);
-  font-weight: 700;
-}
 
 /* === Mobile Responsive === */
 @media (max-width: 768px) {
@@ -1168,64 +1014,142 @@ footer {
   padding-top: 1.5rem;
 }
 
-// Add this to your custom.scss file
+/* === CLEAN RESET FIX === */
 
-// === Fix for sidebar overlapping navbar search ===
-.sidebar.left,
-.page-columns > .left {
-  position: relative;
-  z-index: 1; // Lower than navbar's z-index: 1000
+/* Navbar fixed on top */
+.main-navigation {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000 !important;
+  background-color: var(--light);
 }
 
-// Ensure all cards in the sidebar respect the z-index hierarchy
-.sidebar.left .card,
-.sidebar.left > * {
-  position: relative;
-  z-index: 1;
+/* Keep body spacing below navbar */
+body {
+  padding-top: 64px !important;
 }
 
-// If you have a specific "What's new" class, target it directly
-.whats-new,
-.card.whats-new {
-  position: relative;
-  z-index: 1;
+/* Search container naturally below navbar */
+.search-container {
+  position: absolute !important;
+  top: 100%; /* directly below search bar */
+  left: 0;
+  width: 100%;
+  z-index: 2100 !important;
+  background-color: var(--light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
 }
 
-// === Search Bar Always Visible Fix ===
-
-// Make search container always stay above sidebar content
+/* Make sure the search bar & layout stay visible above content */
 .search,
-#search-container,
-.search-button,
-input[type="search"],
-.search-bar {
+.search-bar,
+.search-space,
+.search-layout {
   position: relative !important;
-  z-index: 100 !important; // Higher than sidebar (z-index: 1) but lower than navbar (z-index: 1000)
+  z-index: 2200 !important;
 }
 
-// Also ensure the Flex container holding the search stays elevated
-.left .flex,
-.sidebar.left .flex {
-  position: relative;
-  z-index: 100;
+/* Prevent “recent notes” and timeline from overlapping */
+.recent-notes,
+.card,
+.toc,
+.backlinks,
+.explorer,
+.timeline,
+.timeline-item,
+.timeline-content,
+.timeline-date {
+  position: relative !important;
+  z-index: 0 !important;
+  transform: none !important;
+  filter: none !important;
+  will-change: auto !important;
+  isolation: isolate !important;
 }
 
-// Make sure search results/dropdown also stay above
-#search-results,
-.search-results,
-.search-dropdown {
-  z-index: 150 !important;
+/* Keep your blur aesthetic */
+.card,
+.toc,
+.recent-notes,
+.backlinks,
+.explorer {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
-// Ensure left column content stays properly layered
-.page-columns > .left {
-  position: relative;
-  z-index: 50; // Elevate the entire left column
+/* Graph should stay clickable and stable */
+.graph-container {
+  position: relative !important;
+  z-index: 1 !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transition: none !important;
 }
 
-// But keep "What's new" cards below
-.page-columns > .left .card,
-.page-columns > .left .recent-notes {
-  position: relative;
-  z-index: 1; // Lower than the search bar's z-index: 100
+#tag-filter .filter-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+}
+
+#tag-filter .mode-toggle {
+  display: inline-flex;
+  gap: .3rem;
+  border: 1px solid var(--gray);
+  border-radius: 999px;
+  overflow: hidden;
+  padding: .2rem;
+  background: var(--lightgray);
+}
+
+#tag-filter .mode-btn, #tag-filter .clear-btn {
+  background: var(--light);
+  color: var(--dark);
+  border: none;
+  padding: .3rem .8rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+#tag-filter .mode-btn.active {
+  background: var(--accent);
+  color: var(--light);
+}
+
+#tag-filter .clear-btn {
+  background: var(--lightgray);
+  color: var(--darkgray);
+}
+
+#tag-filter .clear-btn:hover {
+  background: var(--accent);
+  color: var(--light);
+}
+
+#tag-filter .tag-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .5rem;
+}
+
+#tag-filter .tag {
+  border: 1px solid var(--gray);
+  border-radius: 999px;
+  background: var(--lightgray);
+  color: var(--dark);
+  padding: .3rem .8rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#tag-filter .tag.active {
+  background: var(--accent);
+  color: var(--light);
+  border-color: var(--accent);
 }
