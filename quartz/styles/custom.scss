@@ -1287,3 +1287,108 @@ body {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* === UNIFIED CARD STYLE FOR TOC, RELATED PAGES, AND RECENT NOTES === */
+.toc,
+.recent-notes,
+.related-pages,
+.backlinks {
+  background-color: var(--lightgray) !important;
+  border: none !important;
+  border-radius: 1rem !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  color: var(--darkgray) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.toc:hover,
+.recent-notes:hover,
+.related-pages:hover,
+.backlinks:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Unified headings --- */
+.toc summary,
+.recent-notes h3,
+.related-pages h3,
+.backlinks h3 {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  color: var(--dark) !important;
+  border-bottom: 1px solid var(--highlight) !important;
+  padding-bottom: 0.3rem !important;
+  margin-bottom: 0.8rem !important;
+  text-transform: none !important;
+}
+
+/* Remove details arrow from TOC summary */
+.toc summary::marker,
+.toc summary::-webkit-details-marker {
+  display: none !important;
+}
+
+/* --- Links inside all cards --- */
+.toc a,
+.recent-notes a,
+.related-pages a,
+.backlinks a {
+  color: var(--darkgray) !important;
+  text-decoration: underline dotted var(--darkgray) !important;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.toc a:hover,
+.recent-notes a:hover,
+.related-pages a:hover,
+.backlinks a:hover {
+  color: var(--accent) !important;
+  text-decoration: underline solid var(--accent) !important;
+}
+
+/* --- Paragraph and list consistency --- */
+.toc p,
+.recent-notes p,
+.related-pages p,
+.backlinks p,
+.toc li,
+.recent-notes li,
+.related-pages li,
+.backlinks li {
+  color: var(--darkgray) !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* --- Inner spacing for lists --- */
+.toc ul,
+.recent-notes ul,
+.related-pages ul,
+.backlinks ul {
+  margin-left: 1rem !important;
+  padding-left: 0.5rem !important;
+}
+
+/* --- Soft hover highlight on links --- */
+.toc a:hover,
+.recent-notes a:hover,
+.related-pages a:hover,
+.backlinks a:hover {
+  background-color: var(--highlight);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.2rem;
+}
+
+/* --- Mobile adjustment --- */
+@media (max-width: 768px) {
+  .toc,
+  .recent-notes,
+  .related-pages,
+  .backlinks {
+    padding: 1.2rem !important;
+  }
+}
