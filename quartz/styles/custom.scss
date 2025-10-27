@@ -1574,80 +1574,6 @@ footer .social-icons {
   transition: all 0.3s ease;
 }
 
-/* === Team Grid Layout Fix === */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem; /* consistent spacing between cards */
-  align-items: stretch; /* ensures all cards are same height */
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* === Team Card Styling Fix === */
-.team-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--lightgray);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  height: 100%; /* critical for equal height */
-}
-
-/* Keep hover smooth and subtle */
-.team-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-}
-
-/* === Image and Text Alignment === */
-.team-card img {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  border-radius: 1rem;
-  margin: 0 auto 1rem;
-  object-fit: cover;
-}
-
-/* Keep names, roles, and bios consistent */
-.team-card h3 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--dark);
-  font-size: 1.2rem;
-}
-
-.team-card p {
-  color: var(--darkgray);
-  flex-grow: 1;
-  margin-bottom: 0.75rem;
-}
-
-.team-card em {
-  display: block;
-  color: var(--gray);
-  font-style: italic;
-  margin-bottom: 0.75rem;
-}
-
-/* Links in cards */
-.team-card a {
-  display: inline-block;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-.team-card a:hover {
-  color: var(--tertiary);
-}
-
 /* --- Brand Assets Grid --- */
 .brand-assets-grid {
   display: grid;
@@ -1693,3 +1619,147 @@ footer .social-icons {
 .brand-card .button:hover {
   background-color: var(--tertiary);
 }
+
+/* --- Buttons (Fix unreadable text) --- */
+.button {
+  background-color: var(--accent); /* your signature teal */
+  color: var(--light); /* light text for contrast */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.75rem;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--tertiary); /* deeper teal on hover */
+  color: var(--light);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === FINAL TEAM GRID FIX === */
+.team-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 2.5rem !important;
+  justify-items: center !important;
+  align-items: start !important;
+  margin: 3rem 0 !important;
+}
+
+.team-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  background-color: var(--lightgray) !important;
+  border-radius: 1rem !important;
+  padding: 2rem 1.5rem !important;
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 340px !important;
+  min-height: 550px !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.team-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Equalized photo zone */
+.team-card img {
+  width: 100% !important;
+  max-width: 200px !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  border-radius: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Equalized name + role zone */
+.team-card h3 {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: var(--dark) !important;
+  margin: 0.5rem 0 0.25rem !important;
+  min-height: 2.5rem !important; /* keeps all names aligned */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.team-card em {
+  color: var(--gray) !important;
+  font-style: italic !important;
+  margin-bottom: 0.8rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 1.4rem !important; /* keeps roles aligned */
+}
+
+/* Equalized text zone */
+.team-card p {
+  color: var(--darkgray) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  flex-grow: 1 !important;
+  margin-bottom: 0.8rem !important;
+}
+
+/* Keeps final link/CTA aligned at bottom */
+.team-card p:last-child {
+  margin-top: auto !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .team-grid { gap: 1.5rem !important; }
+  .team-card { min-height: auto !important; }
+}
+
+/* === Contact Card Color Unification === */
+.contact-card {
+  background-color: var(--lightgray) !important; /* match all cards */
+  border: 1px solid var(--gray) !important;
+  color: var(--darkgray) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 1rem !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+}
+
+.contact-card:hover {
+  background-color: var(--lightgray) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.contact-card h3 {
+  color: var(--dark) !important;
+}
+
+.contact-card p {
+  color: var(--darkgray) !important;
+}
+
+.contact-card a {
+  color: var(--accent) !important;
+}
+
+.contact-card a:hover {
+  color: var(--tertiary) !important;
+}
+
+
