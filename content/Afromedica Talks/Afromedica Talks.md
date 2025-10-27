@@ -1,7 +1,7 @@
 ---
 title: Afromedica Talks
 publish: true
-modified: 2025-10-26
+modified: 2025-10-18
 ---
 
 <div class="hero">
@@ -46,7 +46,7 @@ Afromedica Talks hosts a **journal club every second Wednesday of the month**. S
 
 
 > [!INFO]+  Do you have any questions for upcoming talks?
-> Fill in this [form](/Afromedicat%Talks/Questions.md)!**
+> Fill in this form!
 
 ---
 
