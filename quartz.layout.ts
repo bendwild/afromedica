@@ -28,32 +28,9 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
     Component.RecentNotes(),
   ],
   right: [
-    Component.Graph({
-      localGraph: {
-        showTags: false,
-        drag: true, 
-        zoom: true,
-       },
-      globalGraph: {
-        repelForce: 0.5,
-        showTags: true,
-        drag: true, 
-        zoom: true,
-        enableRadial: true,
-           },
-    }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -68,14 +45,6 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-      ],
-    }),
     Component.Explorer(),
   ],
   right: [],
