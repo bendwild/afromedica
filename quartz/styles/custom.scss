@@ -2087,58 +2087,119 @@ footer {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
-/* === TEAM GRID LAYOUT FIX === */
+/* === COMPACT TEAM GRID === */
 .team-grid {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
-  gap: 2.5rem !important;
+  grid-template-columns: 1fr !important;
+  gap: 1.75rem !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 2.5rem auto !important;
+  padding: 0 0.5rem !important;
   justify-items: center !important;
   align-items: start !important;
-  margin: 3rem auto !important;
-  width: min(95%, 1200px) !important;  /* lets grid expand beyond narrow column */
-  padding: 0 1rem !important;
+  box-sizing: border-box !important;
 }
 
-/* --- TEAM CARD --- */
+/* ≥720px → two columns even in Quartz narrow column */
+@media (min-width: 720px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* ≥1100px → three columns */
+@media (min-width: 1100px) {
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* === TEAM CARD === */
 .team-card {
-  background-color: var(--lightgray) !important; /* exact same purple as other cards */
-  border-radius: 1rem !important;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
-  padding: 2rem 1.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  background-color: var(--lightgray) !important;
+  border-radius: 0.8rem !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06) !important;
+  padding: 1.25rem 1rem !important;
   text-align: center !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-  max-width: 360px !important;
   width: 100% !important;
+  max-width: 340px !important;
+  min-height: 440px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
+/* Hover lift */
+.team-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Image zone */
 .team-card img {
   width: 100% !important;
-  height: auto !important;
-  border-radius: 1rem !important;
-  margin-bottom: 1rem !important;
+  max-width: 170px !important;
+  aspect-ratio: 1 / 1 !important;
   object-fit: cover !important;
+  border-radius: 0.8rem !important;
+  margin-bottom: 0.75rem !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
+/* Name */
 .team-card h3 {
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.25rem !important;
+  font-size: 1.05rem !important;
   font-weight: 700 !important;
   color: var(--dark) !important;
+  margin: 0.3rem 0 0.2rem !important;
+  min-height: 2rem !important;
 }
 
+.team-card h3 a {
+  color: var(--dark) !important;
+  text-decoration: none !important;
+  border-bottom: 1px dotted transparent !important;
+  transition: color 0.2s ease, border-bottom 0.2s ease !important;
+}
+
+.team-card h3 a:hover {
+  color: var(--accent) !important;
+  border-bottom: 1px solid var(--accent) !important;
+}
+
+/* Role */
+.team-card em {
+  color: var(--gray) !important;
+  font-style: italic !important;
+  margin-bottom: 0.6rem !important;
+  min-height: 1.2rem !important;
+}
+
+/* Description */
 .team-card p {
+  font-size: 0.92rem !important;
+  line-height: 1.45 !important;
   color: var(--darkgray) !important;
-  line-height: 1.55 !important;
-  margin-top: 0.5rem !important;
+  margin-bottom: 0.6rem !important;
+  flex-grow: 1 !important;
 }
 
-/* --- SPACING BETWEEN ROWS --- */
-.team-card + .team-card {
-  margin-top: 0 !important;
+/* Bottom links */
+.team-card p:last-child {
+  margin-top: auto !important;
 }
 
-/* --- HOVER EFFECT --- */
-.team-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+/* Responsive spacing tweak */
+@media (max-width: 768px) {
+  .team-card {
+    min-height: auto !important;
+    padding: 1rem !important;
+  }
+  .team-card img {
+    max-width: 150px !important;
+    margin-bottom: 0.6rem !important;
+  }
 }
