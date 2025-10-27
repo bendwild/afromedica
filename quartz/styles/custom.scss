@@ -1014,142 +1014,37 @@ footer {
   padding-top: 1.5rem;
 }
 
-/* === CLEAN RESET FIX === */
-
-/* Navbar fixed on top */
-.main-navigation {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2000 !important;
-  background-color: var(--light);
-}
-
-/* Keep body spacing below navbar */
-body {
-  padding-top: 64px !important;
-}
-
-/* Search container naturally below navbar */
-.search-container {
-  position: absolute !important;
-  top: 100%; /* directly below search bar */
-  left: 0;
-  width: 100%;
-  z-index: 2100 !important;
-  background-color: var(--light);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-}
-
-/* Make sure the search bar & layout stay visible above content */
-.search,
-.search-bar,
-.search-space,
-.search-layout {
-  position: relative !important;
-  z-index: 2200 !important;
-}
-
-/* Prevent “recent notes” and timeline from overlapping */
-.recent-notes,
-.card,
-.toc,
-.backlinks,
-.explorer,
-.timeline,
-.timeline-item,
-.timeline-content,
-.timeline-date {
-  position: relative !important;
-  z-index: 0 !important;
+/* --- A. Neutralize stacking-context creators on side blocks --- */
+/* Any transform/filter/backdrop-filter creates a new stacking context.
+   Disable them on hover so they can't jump above overlays. */
+.card:hover,
+.toc:hover,
+.recent-notes:hover,
+.backlinks:hover,
+.explorer:hover,
+.timeline-item:hover .timeline-content,
+.team-banner:hover img {
   transform: none !important;
   filter: none !important;
-  will-change: auto !important;
-  isolation: isolate !important;
 }
 
-/* Keep your blur aesthetic */
+/* Backdrop blur also creates a stacking context; make it cosmetic-only via a pseudo layer */
 .card,
 .toc,
 .recent-notes,
 .backlinks,
 .explorer {
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: none !important;         /* kill stacking context */
+  -webkit-backdrop-filter: none !important; /* Safari */
+  position: static !important;              /* remove raised contexts */
+  z-index: auto !important;
 }
 
-/* Graph should stay clickable and stable */
-.graph-container {
-  position: relative !important;
-  z-index: 1 !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-  transition: none !important;
-}
-
-#tag-filter .filter-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: .5rem;
-}
-
-#tag-filter .mode-toggle {
-  display: inline-flex;
-  gap: .3rem;
-  border: 1px solid var(--gray);
-  border-radius: 999px;
-  overflow: hidden;
-  padding: .2rem;
-  background: var(--lightgray);
-}
-
-#tag-filter .mode-btn, #tag-filter .clear-btn {
-  background: var(--light);
-  color: var(--dark);
-  border: none;
-  padding: .3rem .8rem;
-  cursor: pointer;
-  font-weight: 600;
-  border-radius: 999px;
-}
-
-#tag-filter .mode-btn.active {
-  background: var(--accent);
-  color: var(--light);
-}
-
-#tag-filter .clear-btn {
-  background: var(--lightgray);
-  color: var(--darkgray);
-}
-
-#tag-filter .clear-btn:hover {
-  background: var(--accent);
-  color: var(--light);
-}
-
-#tag-filter .tag-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
-  margin-top: .5rem;
-}
-
-#tag-filter .tag {
-  border: 1px solid var(--gray);
-  border-radius: 999px;
-  background: var(--lightgray);
-  color: var(--dark);
-  padding: .3rem .8rem;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-#tag-filter .tag.active {
-  background: var(--accent);
-  color: var(--light);
-  border-color: var(--accent);
+/* Optional: keep the “lifted” feel using shadow only */
+.card:hover,
+.toc:hover,
+.recent-notes:hover,
+.backlinks:hover,
+.explorer:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,.08) !important;
 }
