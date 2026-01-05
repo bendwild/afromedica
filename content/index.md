@@ -1,7 +1,7 @@
 ---
 title: Welcome to AfroMedica!
 publish: true
-modified: 2025-10-26
+modified: 2026-01-05
 tags:
 ---
 <div class="hero">
@@ -41,21 +41,12 @@ tags:
 ## Upcoming events 
 <div class="timeline">
   <div class="timeline-item">
-    <div class="timeline-date">8 NOV</div>
+    <div class="timeline-date">19 MAY 2026</div>
     <div class="timeline-content">
-      <h3><a href="/Afromedica-Talks/Afromedica-Talks">Afromedica Talks</a></h3>
+      <h3>Lezing - Gelijke Zorg Ongelijke Gezondheid Leuven</h3>
     </div>
   </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">16 DEC</div>
-    <div class="timeline-content">
-      <h3>Rebelle vzw lecture</h3>
-    </div>
   </div>
-
-  </div>
-
 
 ---
 
