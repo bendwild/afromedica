@@ -41,7 +41,7 @@ tags:
 ## Upcoming events 
 <div class="timeline">
   <div class="timeline-item">
-    <div class="timeline-date">19 MAY 2026</div>
+    <div class="timeline-date">19 MAY</div>
     <div class="timeline-content">
       <h3>Lezing - Gelijke Zorg Ongelijke Gezondheid Leuven</h3>
     </div>
