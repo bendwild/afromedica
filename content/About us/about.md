@@ -9,16 +9,15 @@ AfroMedica was **founded in 2020**, during a time marked by the **Black Lives Ma
 
 Today, AfroMedica is an **interdisciplinary collective** active across the broader healthcare and medical landscape. We bring together perspectives from medicine, sociology, psychology, public policy, and activism to advocate for healthcare that is equitable, accessible, and conscious of racial dynamics. Working at the intersection of care, education, activism, and policy, we build bridges between grassroots movements, institutions, and decision-makers—always **grounded in evidence and scientific understanding.**
 
-
 <div class="recent-notes">
-   <video
-    controls
-    preload="metadata"
-    style="width:100%; border-radius:12px; margin-top:0.5rem;"
-  >
-    <source src="/images/Afromedica Video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <iframe
+    src="https://www.youtube.com/embed/e-DaJ-Nmtc0"
+    width="100%"
+    height="350"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
 </div>
 
 
