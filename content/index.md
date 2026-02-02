@@ -1,13 +1,24 @@
 ---
 title: Welcome to AfroMedica!
 publish: true
-modified: 2026-01-05
+modified: 2026-02-01
 tags:
 ---
 <div class="hero">
   <h2>Discover who we are!</h2>
   <p>Championing racial equity in healthcare through education, advocacy, and community action.</p>
   <a class="button" href="About-us/about">→ Learn More</a>
+</div>
+
+<div class="recent-notes">
+   <video
+    controls
+    preload="metadata"
+    style="width:100%; border-radius:12px; margin-top:0.5rem;"
+  >
+    <source src="/content/Extra/Images/Afromedica Video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </div>
 
 ---
