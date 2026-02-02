@@ -10,17 +10,6 @@ tags:
   <a class="button" href="About-us/about">→ Learn More</a>
 </div>
 
-<div class="recent-notes">
-   <video
-    controls
-    preload="metadata"
-    style="width:100%; border-radius:12px; margin-top:0.5rem;"
-  >
-    <source src="/content/Extra/Images/Afromedica Video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-
 ---
 
 ## What we do

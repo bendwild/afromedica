@@ -1,13 +1,25 @@
 ---
 title: About us
 publish: true
-modified: 2025-10-26
+modified: 2026-02-01
 tags:
   - about-us
 ---
 AfroMedica was **founded in 2020**, during a time marked by the **Black Lives Matter** movement and the **COVID-19** pandemic—two events that revealed the structural inequalities in our healthcare system. What started as an initiative by a group of medical students has since evolved into a growing network of students and professionals dedicated to addressing the impact of racism on health and healthcare in Belgium.
 
 Today, AfroMedica is an **interdisciplinary collective** active across the broader healthcare and medical landscape. We bring together perspectives from medicine, sociology, psychology, public policy, and activism to advocate for healthcare that is equitable, accessible, and conscious of racial dynamics. Working at the intersection of care, education, activism, and policy, we build bridges between grassroots movements, institutions, and decision-makers—always **grounded in evidence and scientific understanding.**
+
+
+<div class="recent-notes">
+   <video
+    controls
+    preload="metadata"
+    style="width:100%; border-radius:12px; margin-top:0.5rem;"
+  >
+    <source src="/content/Extra/Images/Afromedica Video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 
 ---
