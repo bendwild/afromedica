@@ -16,7 +16,7 @@ Today, AfroMedica is an **interdisciplinary collective** active across the broad
     preload="metadata"
     style="width:100%; border-radius:12px; margin-top:0.5rem;"
   >
-    <source src="/static/images/Afromedica Video.mp4" type="video/mp4">
+    <source src="/images/Afromedica Video.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
