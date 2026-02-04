@@ -41,12 +41,6 @@ tags:
 ## Upcoming events 
 <div class="timeline">
   <div class="timeline-item">
-    <div class="timeline-date">11 FEB</div>
-    <div class="timeline-content">
-      <h3>Boekvoorstelling - Witte zorg, zwart leed</h3>
-    </div>
-  </div>
-  <div class="timeline-item">
     <div class="timeline-date">19 MAY</div>
     <div class="timeline-content">
       <h3>Lezing - Gelijke Zorg Ongelijke Gezondheid Leuven</h3>
